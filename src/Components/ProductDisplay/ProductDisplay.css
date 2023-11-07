@@ -76,3 +76,38 @@
 	margin: 30px 0;
 	gap: 20px;
 }
+
+.productdisplay-right-sizes div {
+	padding: 18px 24px;
+	background: #fbfbfb;
+	border: 1px solid #ebebeb;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.productdisplay-right button {
+	padding: 20px 40px;
+	width: 200px;
+	font-size: 16px;
+	font-weight: 600;
+	color: white;
+	background: #ff4141;
+	margin-bottom: 40px;
+	border: 1px solid black;
+	outline: none;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+.productdisplay-right button:hover {
+	color: #ff4141;
+	background: white;
+}
+
+.productdisplay-right-category {
+	margin-top: 10px;
+}
+
+.productdisplay-right-category span {
+	font-weight: 600;
+}
