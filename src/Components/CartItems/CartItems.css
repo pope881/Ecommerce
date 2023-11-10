@@ -69,6 +69,12 @@
 	font-size: 16px;
 	font-weight: 600;
 	cursor: pointer;
+	transition: 0.3s;
+}
+
+.cartitems-total button:hover {
+	color: #ff5a5a;
+	background: #fff;
 }
 
 .cartitems-promocode {
