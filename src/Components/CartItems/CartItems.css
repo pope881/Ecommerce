@@ -75,6 +75,7 @@
 .cartitems-total button:hover {
 	color: #ff5a5a;
 	background: #fff;
+	border: 1px solid black;
 }
 
 .cartitems-promocode {
