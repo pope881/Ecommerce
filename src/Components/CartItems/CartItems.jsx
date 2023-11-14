@@ -34,7 +34,7 @@ const CartItems = () => {
 									onClick={() => {
 										removeFromCart(e.id)
 									}}
-									alt=""
+									alt="cart's remove icon"
 								/>
 							</div>
 							<hr />
