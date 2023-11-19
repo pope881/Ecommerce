@@ -2,50 +2,49 @@ import './Navbar.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 import { useContext, useState } from 'react'
-import { Link } from 'react-router-dom'
-import { useSelector } from 'react-redux'
+import { NavLink, Link } from 'react-router-dom'
+import { useSelector, useDispatch } from 'react-redux'
 import { ShopContext } from '../../Context/ShopContext'
+import { authActions } from '../store/auth'
 
 const Navbar = () => {
-	const [menu, setMenu] = useState('shop')
 	const { getTotalCartItems } = useContext(ShopContext)
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
-	
+	const dispatch = useDispatch()
+
+	const logoutHandler = () => {
+		dispatch(authActions.logout())
+	}
+	console.log(isAuth)
 
 	return (
 		<div className="navbar">
 			<div className="nav-logo">
 				<img src={logo} alt="" />
-				<p>SHOPPER</p>
+				<Link to="/">
+					<p>SHOPPER</p>
+				</Link>
 			</div>
 			<ul className="nav-menu">
-				<li
-					onClick={() => {
-						setMenu('shop')
-					}}>
-					<Link to="/">Shop</Link>
-					{menu === 'shop' ? <hr /> : null}
+				<li>
+					<NavLink to="/" className={({ isActive }) => (isActive ? 'active' : undefined)} end>
+						Shop
+					</NavLink>
 				</li>
-				<li
-					onClick={() => {
-						setMenu('mens')
-					}}>
-					<Link to="/mens">Men</Link>
-					{menu === 'mens' ? <hr /> : null}
+				<li>
+					<NavLink to="/mens" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+						Men
+					</NavLink>
 				</li>
-				<li
-					onClick={() => {
-						setMenu('womens')
-					}}>
-					<Link to="/womens">Woman</Link>
-					{menu === 'womens' ? <hr /> : null}
+				<li>
+					<NavLink to="/womens" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+						Woman
+					</NavLink>
 				</li>
-				<li
-					onClick={() => {
-						setMenu('kids')
-					}}>
-					<Link to="/kids">Kids</Link>
-					{menu === 'kids' ? <hr /> : null}
+				<li>
+					<NavLink to="/kids" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+						Kids
+					</NavLink>
 				</li>
 			</ul>
 			<div className="nav-login-cart">
@@ -56,7 +55,7 @@ const Navbar = () => {
 				)}
 				{isAuth && (
 					<Link to="/">
-						<button>Logout</button>
+						<button onClick={logoutHandler}>Logout</button>
 					</Link>
 				)}
 				<Link to="/cart">

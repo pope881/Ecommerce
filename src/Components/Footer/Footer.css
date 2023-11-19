@@ -3,19 +3,24 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	gap: 50px;
+	gap: 16px;
 }
 
 .footer-logo {
 	display: flex;
 	align-items: center;
 	gap: 20px;
+	transform: scale(.6);
 }
 
 .footer-logo p {
 	color: #383838;
 	font-size: 46px;
 	font-weight: 700;
+}
+
+.footer-logo a {
+	text-decoration: none;
 }
 
 .footer-links {

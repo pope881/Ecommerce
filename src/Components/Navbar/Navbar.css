@@ -17,6 +17,10 @@
 	font-weight: 600;
 }
 
+.nav-logo a {
+	text-decoration: none;
+}
+
 .nav-menu {
 	display: flex;
 	align-items: center;
@@ -29,12 +33,15 @@
 .nav-menu li {
 	cursor: pointer;
 }
-.nav-menu hr {
-	border: none;
-	width: 100%;
-	height: 3px;
-	border-radius: 10px;
-	background: #ff4141;
+
+.nav-menu a {
+	text-decoration: none;
+}
+
+.nav-menu a:hover,
+.nav-menu a.active {
+	color: yellow;
+	text-decoration: underline;
 }
 
 .nav-login-cart {
