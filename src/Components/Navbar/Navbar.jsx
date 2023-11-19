@@ -1,13 +1,16 @@
 import './Navbar.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
-import { useCallback, useContext, useState } from 'react'
+import { useContext, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { useSelector } from 'react-redux'
 import { ShopContext } from '../../Context/ShopContext'
 
 const Navbar = () => {
 	const [menu, setMenu] = useState('shop')
 	const { getTotalCartItems } = useContext(ShopContext)
+	const isAuth = useSelector(state => state.auth.isAuthenticated)
+	
 
 	return (
 		<div className="navbar">
@@ -46,9 +49,16 @@ const Navbar = () => {
 				</li>
 			</ul>
 			<div className="nav-login-cart">
-				<Link to="/login">
-					<button>Login</button>
-				</Link>
+				{!isAuth && (
+					<Link to="/login">
+						<button>Login</button>
+					</Link>
+				)}
+				{isAuth && (
+					<Link to="/">
+						<button>Logout</button>
+					</Link>
+				)}
 				<Link to="/cart">
 					<img src={cart_icon} />
 				</Link>
