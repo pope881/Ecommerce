@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { authActions } from '../Components/store/auth'
 
-import './CSS/LoginSignup.css'
+import classes from './CSS/LoginSignup.module.css'
 import { useNavigate } from 'react-router-dom'
 const LoginSignup = () => {
 	// const [enteredEmail, setEnteredEmail] = useState('')
@@ -66,8 +66,9 @@ const LoginSignup = () => {
 	return (
 		<form onSubmit={handleSubmit}>
 			<h2>Login</h2>
-			<div className="control-row">
-				<div className="control no-margin">
+			<div className={classes['control-row']}>
+				{/* <div className="control no-margin"> */}
+				<div className={`${classes['control']} ${classes['no-margin']}}`}>
 					<label htmlFor="email">Email</label>
 					<input
 						id="email"
@@ -79,10 +80,22 @@ const LoginSignup = () => {
 						// value={enteredEmail}
 						value={enteredValues.email}
 					/>
+
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
+					{/* ZMIENIC KLASY  */}
 					<div className="control-error">{emailIsInvalid && <p>Please enter a valid email address.</p>}</div>
 				</div>
 
-				<div className="control no-margin">
+				<div className={`${classes['control']} ${classes['no-margin']}}`}>
 					<label htmlFor="password">Password</label>
 					<input
 						id="password"

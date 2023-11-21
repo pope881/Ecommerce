@@ -1,4 +1,4 @@
-import './Navbar.css'
+import classes from './Navbar.module.css'
 import logo from '../Assets/logo.png'
 import cart_icon from '../Assets/cart_icon.png'
 import { useContext, useState } from 'react'
@@ -18,36 +18,36 @@ const Navbar = () => {
 	console.log(isAuth)
 
 	return (
-		<div className="navbar">
-			<div className="nav-logo">
+		<div className={classes.navbar}>
+			<div className={classes['nav-logo']}>
 				<img src={logo} alt="" />
 				<Link to="/">
 					<p>SHOPPER</p>
 				</Link>
 			</div>
-			<ul className="nav-menu">
+			<ul className={classes['nav-menu']}>
 				<li>
-					<NavLink to="/" className={({ isActive }) => (isActive ? 'active' : undefined)} end>
+					<NavLink to="/" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)} end>
 						Shop
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/mens" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+					<NavLink to="/mens" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
 						Men
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/womens" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+					<NavLink to="/womens" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
 						Woman
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to="/kids" className={({ isActive }) => (isActive ? 'active' : undefined)}>
+					<NavLink to="/kids" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
 						Kids
 					</NavLink>
 				</li>
 			</ul>
-			<div className="nav-login-cart">
+			<div className={classes['nav-login-cart']}>
 				{!isAuth && (
 					<Link to="/login">
 						<button>Login</button>
@@ -61,7 +61,7 @@ const Navbar = () => {
 				<Link to="/cart">
 					<img src={cart_icon} />
 				</Link>
-				<div className="nav-cart-count">{getTotalCartItems()}</div>
+				<div className={classes['nav-cart-count']}>{getTotalCartItems()}</div>
 			</div>
 		</div>
 	)

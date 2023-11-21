@@ -1,14 +1,14 @@
 import React from 'react'
-import './RelatedProducts.css'
+import classes from './RelatedProducts.module.css'
 import Item from '../Item/Item'
 import data_product from '../Assets/data'
 
 const RelatedProducts = () => {
 	return (
-		<div className="relatedproducts">
+		<div className={classes['relatedproducts']}>
 			<h1>Related Products</h1>
 			<hr />
-			<div className="relatedproducts-item">
+			<div className={classes['relatedproducts-item']}>
 				{data_product.map((item, i) => {
 					return (
 						<Item
