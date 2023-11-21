@@ -1,13 +1,13 @@
 import React from 'react'
-import './DescriptionBox.css'
+import classes from './DescriptionBox.module.css'
 const DescriptionBox = () => {
 	return (
-		<div className="descriptionbox">
-			<div className="descriptionbox-navigator">
-				<div className="descriptionbox-nav-box">Description</div>
-				<div className="descriptionbox-nav-box fade">Reviews (122)</div>
+		<div className={classes['descriptionbox']}>
+			<div className={classes['descriptionbox-navigator']}>
+				<div className={classes['descriptionbox-nav-box']}>Description</div>
+				<div className={`${classes['descriptionbox-nav-box']} ${classes['fade']}`}>Reviews (122)</div>
 			</div>
-			<div className="descriptionbox-description">
+			<div className={classes['descriptionbox-description']}>
 				<p>
 					An e-commerce website is an online platform that facilitates that buying and selling of products or services
 					over the Internet. It serves as a virtual marketplace where businesses and individuals can showcase their

@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import classes from './Footer.module.css'
 import footer_logo from '../Assets/logo_big.png'
 import instagram_icon from '../Assets/instagram_icon.png'
 import pintester_icon from '../Assets/pintester_icon.png'
@@ -8,14 +8,14 @@ import { Link } from 'react-router-dom'
 
 const Footer = () => {
 	return (
-		<div className="footer">
-			<div className="footer-logo">
+		<div className={classes.footer}>
+			<div className={classes['footer-logo']}>
 				<img src={footer_logo} alt="" />
 				<Link to="">
 					<p>SHOPPER</p>
 				</Link>
 			</div>
-			<ul className="footer-links">
+			<ul className={classes['footer-links']}>
 				<li>About</li>
 				<li>Offices</li>
 				<li>Contact</li>
@@ -31,7 +31,7 @@ const Footer = () => {
 					<img src={whatsapp_icon} alt="" />
 				</div>
 			</div> */}
-			<div className="footer-copyright">
+			<div className={classes['footer-copyright']}>
 				<hr />
 				<p>Copyright @{new Date().getFullYear()} - All rights reserved </p>
 			</div>
