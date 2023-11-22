@@ -17,6 +17,21 @@ const CartItems = () => {
 		setIsCheckout(false)
 	}
 
+	// let btn
+	// if (getTotalCartAmount() === 0) {
+	// 	const btn = (
+	// 		<button disabled onClick={orderHandler}>
+	// 			<i class="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-down"></i>
+	// 		</button>
+	// 	)
+	// } else {
+	// 	const btn = (
+	// 		<button onClick={orderHandler}>
+	// 			<i class="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-down"></i>
+	// 		</button>
+	// 	)
+	// }
+
 	return (
 		<div className={classes.cartitems}>
 			<div className={classes['cartitems-format-main']}>
@@ -73,9 +88,10 @@ const CartItems = () => {
 						</div>
 					</div>
 					<button onClick={orderHandler}>
-						<i class="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-down"></i>
+						<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
 					</button>
-					{isCheckout && <Checkout onClose={orderCloseHandler} />}
+
+					{isCheckout && <Checkout onCancel={orderCloseHandler} />}
 				</div>
 				<div className={classes['cartitems-promocode']}>
 					<p>If you have a promo code, enter it here</p>
