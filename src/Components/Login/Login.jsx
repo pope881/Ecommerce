@@ -66,7 +66,7 @@ const Login = () => {
 	// }
 
 	return (
-		<form onSubmit={handleSubmit}>
+		<form className={classes['form-login']} onSubmit={handleSubmit}>
 			<h2>Login</h2>
 			<div className={classes['control-row']}>
 				{/* <div className="control no-margin"> */}

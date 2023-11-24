@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useRef, useState } from 'react'
 import classes from './CartItems.module.css'
 import { ShopContext } from '../../Context/ShopContext'
 import remove_icon from '../Assets/cart_cross_icon.png'
@@ -7,30 +7,39 @@ import Checkout from '../Checkout/Checkout'
 const CartItems = () => {
 	const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext)
 	const [isCheckout, setIsCheckout] = useState(false)
+	const [showShippingFee, setShowShippingFee] = useState(false)
+	const [promoCodeValidity, setPromoCodeValidity] = useState(true)
+
+	const isFiveChars = value => value.trim().length === 5
+	const promoCodeInputRef = useRef()
+
 	// console.log(all_product)
 	// console.log(cartItems)
+	const promoCodeHandler = event => {
+		event.preventDefault()
+		const enteredPromoCode = promoCodeInputRef.current.value
+		const enteredPromoCodeIsValid = isFiveChars(enteredPromoCode)
+
+		setPromoCodeValidity(enteredPromoCodeIsValid)
+
+		if (!enteredPromoCodeIsValid) {
+			return
+		}
+
+		alert('Your promo code is valid. Your shipping will be free!')
+		setShowShippingFee(true)
+
+		promoCodeInputRef.current.value = ''
+	}
 
 	const orderHandler = params => {
+		window.scrollTo(0, document.body.scrollHeight)
 		setIsCheckout(true)
+		// window.scrollY(1000)
 	}
 	const orderCloseHandler = params => {
 		setIsCheckout(false)
 	}
-
-	// let btn
-	// if (getTotalCartAmount() === 0) {
-	// 	const btn = (
-	// 		<button disabled onClick={orderHandler}>
-	// 			<i class="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-down"></i>
-	// 		</button>
-	// 	)
-	// } else {
-	// 	const btn = (
-	// 		<button onClick={orderHandler}>
-	// 			<i class="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i class="fa-solid fa-arrow-down"></i>
-	// 		</button>
-	// 	)
-	// }
 
 	return (
 		<div className={classes.cartitems}>
@@ -77,16 +86,19 @@ const CartItems = () => {
 							<p>${getTotalCartAmount()}</p>
 						</div>
 						<hr />
-						<div className={classes['cartitems-total-item']}>
-							<p>Shipping Fee</p>
-							<p>Free</p>
-						</div>
+						{showShippingFee && (
+							<div className={classes['cartitems-total-item']}>
+								<p>Shipping Fee</p>
+								<p>Free</p>
+							</div>
+						)}
 						<hr />
 						<div className={classes['cartitems-total-item']}>
 							<h3>Total</h3>
 							<h3>${getTotalCartAmount()}</h3>
 						</div>
 					</div>
+
 					<button onClick={orderHandler}>
 						<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
 					</button>
@@ -94,10 +106,13 @@ const CartItems = () => {
 					{isCheckout && <Checkout onCancel={orderCloseHandler} />}
 				</div>
 				<div className={classes['cartitems-promocode']}>
-					<p>If you have a promo code, enter it here</p>
+					<p>If you have a promo code, enter it here (5 charakters):</p>
 					<div className={classes['cartitems-promobox']}>
-						<input type="text" placeholder="promo code" />
-						<button>Submit</button>
+						<form onSubmit={promoCodeHandler} className={classes['form-promo']}>
+							<input type="text" placeholder="promo code" ref={promoCodeInputRef} />
+							<button>Submit</button>
+						</form>
+						{!promoCodeValidity && <p>ERROR</p>}
 					</div>
 				</div>
 			</div>
