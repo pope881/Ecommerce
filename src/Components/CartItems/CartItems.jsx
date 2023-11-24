@@ -13,6 +13,7 @@ const CartItems = () => {
 	const isFiveChars = value => value.trim().length === 5
 	const promoCodeInputRef = useRef()
 
+	console.log(getTotalCartAmount())
 	// console.log(all_product)
 	// console.log(cartItems)
 	const promoCodeHandler = event => {
@@ -40,6 +41,23 @@ const CartItems = () => {
 	const orderCloseHandler = params => {
 		setIsCheckout(false)
 	}
+
+	let btnCheckout
+	if (getTotalCartAmount() !== 0) {
+		btnCheckout = (
+			<button onClick={orderHandler}>
+				<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
+			</button>
+		)
+	} else {
+		btnCheckout = (
+			<button disabled onClick={orderHandler}>
+				<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
+			</button>
+		)
+	}
+
+	
 
 	return (
 		<div className={classes.cartitems}>
@@ -98,10 +116,11 @@ const CartItems = () => {
 							<h3>${getTotalCartAmount()}</h3>
 						</div>
 					</div>
-
+					{btnCheckout}
+					{/* 
 					<button onClick={orderHandler}>
 						<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
-					</button>
+					</button> */}
 
 					{isCheckout && <Checkout onCancel={orderCloseHandler} />}
 				</div>
@@ -109,10 +128,12 @@ const CartItems = () => {
 					<p>If you have a promo code, enter it here (5 charakters):</p>
 					<div className={classes['cartitems-promobox']}>
 						<form onSubmit={promoCodeHandler} className={classes['form-promo']}>
-							<input type="text" placeholder="promo code" ref={promoCodeInputRef} />
-							<button>Submit</button>
+							<div className={` ${promoCodeValidity ? '' : classes.invalid}`}>
+								<input type="text" placeholder="promo code" ref={promoCodeInputRef} />
+								<button>Submit</button>
+								{!promoCodeValidity && <p>Please enter a valid promo code.</p>}
+							</div>
 						</form>
-						{!promoCodeValidity && <p>ERROR</p>}
 					</div>
 				</div>
 			</div>
