@@ -25,7 +25,7 @@ const ShopContextProvider = props => {
 		setCartItems(prev => ({ ...prev, [itemId]: prev[itemId] - 1 }))
 	}
 
-	const clearCart = params => {
+	const clearCart = () => {
 		setCartItems(getTotalCartAmount())
 	}
 
