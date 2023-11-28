@@ -7,6 +7,9 @@ import { ShopContext } from '../../Context/ShopContext'
 const ProductDisplay = props => {
 	const { product } = props
 	const { addToCart } = useContext(ShopContext)
+	const { options } = useContext(ShopContext)
+	const { handleSelect } = useContext(ShopContext)
+
 
 	return (
 		<div className={classes['productdisplay']}>
@@ -48,6 +51,11 @@ const ProductDisplay = props => {
 						<div>XL</div>
 						<div>XXL</div>
 					</div>
+					<select onChange={handleSelect}>
+						{options.map(option => (
+							<option value={option.value}>{option.label}</option>
+						))}
+					</select>
 				</div>
 				<button
 					onClick={() => {

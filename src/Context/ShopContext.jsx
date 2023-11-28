@@ -10,10 +10,38 @@ const getDefaultCart = () => {
 	}
 	return cart
 }
+
+const options = [
+	{
+		label: 'S',
+		value: 'S',
+	},
+	{
+		label: 'M',
+		value: 'M',
+	},
+	{
+		label: 'L',
+		value: 'L',
+	},
+	{
+		label: 'XL',
+		value: 'XL',
+	},
+	{
+		label: 'XXL',
+		value: 'XXL',
+	},
+]
 // console.log(getDefaultCart());
 
 const ShopContextProvider = props => {
 	const [cartItems, setCartItems] = useState(getDefaultCart())
+	const [value, setValue] = useState('S')
+
+	const handleSelect = event => {
+		setValue(event.target.value)
+	}
 
 	const addToCart = itemId => {
 		setCartItems(prev => ({ ...prev, [itemId]: prev[itemId] + 1 }))
@@ -58,6 +86,9 @@ const ShopContextProvider = props => {
 		removeFromCart,
 		getTotalCartAmount,
 		clearCart,
+		options,
+		handleSelect,
+		value
 	}
 	return <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
 }

@@ -5,7 +5,7 @@ import remove_icon from '../Assets/cart_cross_icon.png'
 import Checkout from '../Checkout/Checkout'
 
 const CartItems = () => {
-	const { getTotalCartAmount, all_product, cartItems, removeFromCart } = useContext(ShopContext)
+	const { getTotalCartAmount, all_product, cartItems, removeFromCart, value } = useContext(ShopContext)
 	const [isCheckout, setIsCheckout] = useState(false)
 	const [showShippingFee, setShowShippingFee] = useState(false)
 	const [promoCodeValidity, setPromoCodeValidity] = useState(true)
@@ -33,6 +33,10 @@ const CartItems = () => {
 		promoCodeInputRef.current.value = ''
 	}
 
+	const clearPromoCode = params => {
+		setShowShippingFee(false)
+	}
+
 	const orderHandler = params => {
 		window.scrollTo(0, document.body.scrollHeight)
 		setIsCheckout(true)
@@ -57,7 +61,6 @@ const CartItems = () => {
 		)
 	}
 
-	
 
 	return (
 		<div className={classes.cartitems}>
@@ -65,19 +68,21 @@ const CartItems = () => {
 				<p>Products</p>
 				<p>Title</p>
 				<p>Price</p>
+				<p>Seize</p>
 				<p>Quantity</p>
 				<p>Total</p>
 				<p>Remove</p>
 			</div>
 			<hr />
 			{all_product.map(e => {
-				if (cartItems[e.id] > 0) {
+				if (cartItems[e.id] > 0 ) {
 					return (
 						<div>
 							<div className={`${classes['cartitems-format']} ${classes['cartitems-format-main']} `}>
 								<img src={e.image} alt="" className={classes['carticon-product-icon']} />
 								<p>{e.name}</p>
 								<p>${e.new_price}</p>
+								<p>{value}</p>
 								<button className={classes['cartitems-quantity']}>{cartItems[e.id]}</button>
 								<p>${e.new_price * cartItems[e.id]}</p>
 								<img
@@ -122,7 +127,7 @@ const CartItems = () => {
 						<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
 					</button> */}
 
-					{isCheckout && <Checkout onCancel={orderCloseHandler} />}
+					{isCheckout && <Checkout onSubmitPromoCode={clearPromoCode} onCancel={orderCloseHandler} />}
 				</div>
 				<div className={classes['cartitems-promocode']}>
 					<p>If you have a promo code, enter it here (5 charakters):</p>

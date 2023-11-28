@@ -72,7 +72,7 @@ const Checkout = props => {
 			city: true,
 			postalCode: true,
 		})
-
+		props.onSubmitPromoCode()
 		alert('Your order is confirmed!')
 		clearCart()
 		// navigate('/')
