@@ -1,15 +1,22 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import classes from './ProductDisplay.module.css'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
-import { ShopContext } from '../../Context/ShopContext'
+// import { ShopContext } from '../../Context/ShopContext'
+import CartContext from '../../Context/cart-context'
 
 const ProductDisplay = props => {
-	const { product } = props
-	const { addToCart } = useContext(ShopContext)
-	const { options } = useContext(ShopContext)
-	const { handleSelect } = useContext(ShopContext)
+	const [value, setValue] = useState('S')
 
+	const { product } = props
+
+	const cartCtx = useContext(CartContext)
+	const { addItem, options } = cartCtx
+
+	const handleSelect = event => {
+		setValue(event.target.value)
+	}
+	console.log(value)
 
 	return (
 		<div className={classes['productdisplay']}>
@@ -53,13 +60,22 @@ const ProductDisplay = props => {
 					</div>
 					<select onChange={handleSelect}>
 						{options.map(option => (
-							<option value={option.value}>{option.label}</option>
+							<option key={option.id} value={option.value}>
+								{option.label}
+							</option>
 						))}
 					</select>
 				</div>
 				<button
 					onClick={() => {
-						addToCart(product.id)
+						addItem({
+							id: product.id,
+							name: product.name,
+							amount: 1,
+							price: product.new_price,
+							image: product.image,
+							size: value,
+						})
 					}}>
 					ADD TO CART
 				</button>

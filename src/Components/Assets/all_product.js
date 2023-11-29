@@ -43,7 +43,6 @@ let all_product = [
 		image: p1_img,
 		new_price: 50.0,
 		old_price: 80.5,
-		seize: ['S', 'M', 'XL', 'XXL'],
 	},
 	{
 		id: 2,
@@ -52,7 +51,6 @@ let all_product = [
 		image: p2_img,
 		new_price: 85.0,
 		old_price: 120.5,
-		seize: ['S', 'M', 'XL', 'XXL'],
 	},
 	{
 		id: 3,

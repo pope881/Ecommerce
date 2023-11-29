@@ -4,18 +4,28 @@ import cart_icon from '../Assets/cart_icon.png'
 import { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-import { ShopContext } from '../../Context/ShopContext'
+// import { ShopContext } from '../../Context/ShopContext'
 import { authActions } from '../store/auth'
 
+import CartContext from '../../Context/cart-context'
+
 const Navbar = () => {
-	const { getTotalCartItems } = useContext(ShopContext)
+	// const { getTotalCartItems } = useContext(ShopContext)
+
+	const cartCtx = useContext(CartContext)
+	const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
+		return curNumber + item.amount
+	}, 0)
+
+	// console.log(numberOfCartItems);
+
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 	const dispatch = useDispatch()
 
 	const logoutHandler = () => {
 		dispatch(authActions.logout())
 	}
-	console.log(isAuth)
+	// console.log(isAuth)
 
 	return (
 		<div className={classes.navbar}>
@@ -61,7 +71,7 @@ const Navbar = () => {
 				<Link to="/cart">
 					<img src={cart_icon} />
 				</Link>
-				<div className={classes['nav-cart-count']}>{getTotalCartItems()}</div>
+				<div className={classes['nav-cart-count']}>{numberOfCartItems}</div>
 			</div>
 		</div>
 	)

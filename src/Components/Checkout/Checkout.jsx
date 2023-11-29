@@ -4,9 +4,14 @@ import classes from './Checkout.module.css'
 import { useNavigate } from 'react-router-dom'
 import { ShopContext } from '../../Context/ShopContext'
 
+import CartContext from '../../Context/cart-context'
+
 const Checkout = props => {
-	const { getTotalCartAmount } = useContext(ShopContext)
-	const { clearCart } = useContext(ShopContext)
+	// const { getTotalCartAmount } = useContext(ShopContext)
+	// const { clearCart } = useContext(ShopContext)
+
+	const cartCtx = useContext(CartContext)
+	const { totalAmount, clearCart } = cartCtx
 
 	const [formInputsValidity, setFormInputsValidity] = useState({
 		name: true,
@@ -24,7 +29,7 @@ const Checkout = props => {
 	const isFiveChars = value => value.trim().length === 5
 
 	let showCheckout
-	if (getTotalCartAmount() !== 0) {
+	if (totalAmount !== 0) {
 		showCheckout = true
 	} else {
 		showCheckout = false

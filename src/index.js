@@ -5,13 +5,14 @@ import store from './Components/store/index'
 
 import './index.css'
 import App from './App'
-import ShopContextProvider from './Context/ShopContext'
+// import ShopContextProvider from './Context/ShopContext'
+import CartProvider from './Context/CartProvider'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 root.render(
 	<Provider store={store}>
-		<ShopContextProvider>
+		<CartProvider>
 			<App />
-		</ShopContextProvider>
+		</CartProvider>
 	</Provider>
 )
