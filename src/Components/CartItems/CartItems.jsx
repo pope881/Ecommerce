@@ -4,10 +4,14 @@ import classes from './CartItems.module.css'
 import remove_icon from '../Assets/cart_cross_icon.png'
 import Checkout from '../Checkout/Checkout'
 import CartContext from '../../Context/cart-context'
+import auth from '../store/auth'
+import { useSelector, useDispatch } from 'react-redux'
 
 const CartItems = () => {
 	const cartCtx = useContext(CartContext)
 	const { items, totalAmount, removeItem } = cartCtx
+
+	const isAuth = useSelector(state => state.auth.isAuthenticated)
 
 	// const { getTotalCartAmount, all_product, cartItems, removeFromCart, value } = useContext(ShopContext)
 	const [isCheckout, setIsCheckout] = useState(false)
@@ -50,7 +54,7 @@ const CartItems = () => {
 	}
 
 	let btnCheckout
-	if (items.length !== 0) {
+	if (items.length !== 0 && isAuth) {
 		btnCheckout = (
 			<button onClick={orderHandler}>
 				<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
@@ -58,11 +62,16 @@ const CartItems = () => {
 		)
 	} else {
 		btnCheckout = (
-			<button disabled onClick={orderHandler}>
-				<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
-			</button>
+			<div>
+				<button disabled onClick={orderHandler}>
+					<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
+				</button>
+				<p>You must be logged in and total cant be 0</p>
+			</div>
 		)
 	}
+
+	const cartItemRemoveHandler = id => {}
 
 	return (
 		<div className={classes.cartitems}>
@@ -90,7 +99,14 @@ const CartItems = () => {
 								className={classes['cartitems-remove-icon']}
 								src={remove_icon}
 								onClick={() => {
-									removeItem(e.id)
+									removeItem({
+										id: e.id,
+										name: e.name,
+										amount: 1,
+										price: e.price,
+										image: e.image,
+										size: e.size,
+									})
 								}}
 								alt="cart's remove icon"
 							/>
