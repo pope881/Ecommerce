@@ -16,7 +16,7 @@ const ProductDisplay = props => {
 	const handleSelect = event => {
 		setValue(event.target.value)
 	}
-	console.log(value)
+	// console.log(value)
 
 	return (
 		<div className={classes['productdisplay']}>

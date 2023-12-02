@@ -99,14 +99,7 @@ const CartItems = () => {
 								className={classes['cartitems-remove-icon']}
 								src={remove_icon}
 								onClick={() => {
-									removeItem({
-										id: e.id,
-										name: e.name,
-										amount: 1,
-										price: e.price,
-										image: e.image,
-										size: e.size,
-									})
+									removeItem({ id: e.id, size: e.size })
 								}}
 								alt="cart's remove icon"
 							/>

@@ -50,7 +50,11 @@
 	gap: 45px;
 }
 
-.nav-login-cart button {
+.nav-login-cart a {
+	text-decoration: none;
+}
+
+.nav-login-cart-button {
 	width: 157px;
 	height: 58px;
 	outline: none;
@@ -62,7 +66,7 @@
 	background: white;
 	cursor: pointer;
 }
-.nav-login-cart button:active {
+.nav-login-cart-button:active {
 	background: #f3f3f3;
 }
 

@@ -4,20 +4,13 @@ import cart_icon from '../Assets/cart_icon.png'
 import { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
-// import { ShopContext } from '../../Context/ShopContext'
 import { authActions } from '../store/auth'
 
 import CartContext from '../../Context/cart-context'
+import NavbarButton from './NavbarButton'
 
 const Navbar = () => {
-	// const { getTotalCartItems } = useContext(ShopContext)
-
-	const cartCtx = useContext(CartContext)
-	const numberOfCartItems = cartCtx.items.reduce((curNumber, item) => {
-		return curNumber + item.amount
-	}, 0)
-
-	// console.log(numberOfCartItems);
+	
 
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 	const dispatch = useDispatch()
@@ -25,7 +18,6 @@ const Navbar = () => {
 	const logoutHandler = () => {
 		dispatch(authActions.logout())
 	}
-	// console.log(isAuth)
 
 	return (
 		<div className={classes.navbar}>
@@ -60,18 +52,19 @@ const Navbar = () => {
 			<div className={classes['nav-login-cart']}>
 				{!isAuth && (
 					<Link to="/login">
-						<button>Login</button>
+						<button className={classes['nav-login-cart-button']}>Login</button>
 					</Link>
 				)}
 				{isAuth && (
 					<Link to="/">
-						<button onClick={logoutHandler}>Logout</button>
+						<button className={classes['nav-login-cart-button']} onClick={logoutHandler}>
+							Logout
+						</button>
 					</Link>
 				)}
 				<Link to="/cart">
-					<img src={cart_icon} />
+					<NavbarButton />
 				</Link>
-				<div className={classes['nav-cart-count']}>{numberOfCartItems}</div>
 			</div>
 		</div>
 	)

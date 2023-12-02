@@ -57,11 +57,17 @@ const cartReducer = (state, action) => {
 		}
 	}
 	if (action.type === 'REMOVE') {
-		const existingCartItemIndex = state.items.findIndex(item => item.id === action.id && item.size === action.item.size)
+		const existingCartItemIndex = state.items.findIndex(
+			item => item.id === action.item.id && item.size === action.item.size
+		)
 		const existingItem = state.items[existingCartItemIndex]
 		const updatedTotalAmount = state.totalAmount - existingItem.price
 		let updatedItems
+
+		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
+		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SEIZE
 		if (existingItem.amount === 1) {
+			// updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 		} else {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
@@ -90,7 +96,7 @@ const CartProvider = props => {
 	}
 
 	const removeItemFromCartHandler = item => {
-		dispatchCartAction({ type: 'REMOVE', item: item })
+		dispatchCartAction({ type: 'REMOVE', item })
 	}
 
 	const clearCartHandler = () => {
