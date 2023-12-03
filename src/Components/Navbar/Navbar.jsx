@@ -1,17 +1,12 @@
 import classes from './Navbar.module.css'
 import logo from '../Assets/logo.png'
-import cart_icon from '../Assets/cart_icon.png'
-import { useContext, useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
 
-import CartContext from '../../Context/cart-context'
 import NavbarButton from './NavbarButton'
 
 const Navbar = () => {
-	
-
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 	const dispatch = useDispatch()
 

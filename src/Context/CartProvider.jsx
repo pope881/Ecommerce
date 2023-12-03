@@ -67,7 +67,6 @@ const cartReducer = (state, action) => {
 		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SEIZE
 		if (existingItem.amount === 1) {
-			// updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 		} else {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }

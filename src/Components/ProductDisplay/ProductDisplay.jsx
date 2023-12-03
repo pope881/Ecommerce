@@ -2,7 +2,6 @@ import React, { useContext, useState } from 'react'
 import classes from './ProductDisplay.module.css'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
-// import { ShopContext } from '../../Context/ShopContext'
 import CartContext from '../../Context/cart-context'
 
 const ProductDisplay = props => {
@@ -16,7 +15,6 @@ const ProductDisplay = props => {
 	const handleSelect = event => {
 		setValue(event.target.value)
 	}
-	// console.log(value)
 
 	return (
 		<div className={classes['productdisplay']}>
@@ -60,7 +58,7 @@ const ProductDisplay = props => {
 					</div>
 					<select onChange={handleSelect}>
 						{options.map(option => (
-							<option key={option.id} value={option.value}>
+							<option key={option.value} value={option.value}>
 								{option.label}
 							</option>
 						))}

@@ -1,15 +1,10 @@
-import React, { useContext, useEffect, useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import classes from './Checkout.module.css'
-// import classes from '../Login/Login.module.css'
 import { useNavigate } from 'react-router-dom'
-import { ShopContext } from '../../Context/ShopContext'
 
 import CartContext from '../../Context/cart-context'
 
 const Checkout = props => {
-	// const { getTotalCartAmount } = useContext(ShopContext)
-	// const { clearCart } = useContext(ShopContext)
-
 	const cartCtx = useContext(CartContext)
 	const { totalAmount, clearCart } = cartCtx
 
@@ -35,9 +30,6 @@ const Checkout = props => {
 		showCheckout = false
 	}
 
-	// function handleInputBlur(identifier) {
-	// 	setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: true }))
-	// }
 	const navigate = useNavigate()
 
 	const confirmHandler = event => {
