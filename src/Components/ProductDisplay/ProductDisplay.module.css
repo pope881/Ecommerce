@@ -2,7 +2,7 @@
 	display: flex;
 	margin: 0 170px;
 }
-
+/* 
 .productdisplay-left {
 	display: flex;
 	gap: 17px;
@@ -21,12 +21,7 @@
 .productdisplay-main-img {
 	width: 586px;
 	height: 700px;
-}
-
-.productdisplay-main-img.zoom {
-	cursor: zoom-in;
-	transform: scale(1.2);
-}
+} */
 
 .productdisplay-right {
 	display: flex;

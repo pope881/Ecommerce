@@ -3,8 +3,32 @@ import classes from './ProductDisplay.module.css'
 import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
 import CartContext from '../../Context/cart-context'
+import ImageSlider from './ImageSlider'
 
 const ProductDisplay = props => {
+	const slides = [
+		{
+			url: 'http://localhost:3001/image-1.jpg',
+			title: 'Beach',
+		},
+		{
+			url: 'http://localhost:3001/image-2.jpg',
+			title: 'Boat',
+		},
+		{
+			url: 'http://localhost:3001/image-3.jpg',
+			title: 'Forest',
+		},
+		{
+			url: 'http://localhost:3001/image-4.jpg',
+			title: 'City',
+		},
+		{
+			url: 'http://localhost:3001/image-5.jpg',
+			title: 'Italy',
+		},
+	]
+
 	const [value, setValue] = useState('S')
 
 	const { product } = props
@@ -16,9 +40,18 @@ const ProductDisplay = props => {
 		setValue(event.target.value)
 	}
 
+	const containerStyles = {
+		width: '600px',
+		height: '580px',
+		margin: '0 auto',
+	}
+
 	return (
 		<div className={classes['productdisplay']}>
-			<div className={classes['productdisplay-left']}>
+			<div style={containerStyles}>
+				<ImageSlider slides={slides} />
+			</div>
+			{/* <div className={classes['productdisplay-left']}>
 				<div className={classes['productdisplay-img-list']}>
 					<img src={product.image} alt="" />
 					<img src={product.image} alt="" />
@@ -28,7 +61,7 @@ const ProductDisplay = props => {
 				<div className={classes['productdisplay-img']}>
 					<img src={product.image} alt="" className={classes['productdisplay-main-img']} />
 				</div>
-			</div>
+			</div> */}
 			<div className={classes['productdisplay-right']}>
 				<h1>{product.name}</h1>
 				<div className={classes['productdisplay-right-stars']}>

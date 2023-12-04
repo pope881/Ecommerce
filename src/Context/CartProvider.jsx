@@ -68,6 +68,9 @@ const cartReducer = (state, action) => {
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SEIZE
 		if (existingItem.amount === 1) {
 			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
+			// updatedItems = state.items
+			// const indexOfObject = state.items.findIndexOf(object => object.id === action.object.id && action.object.size)
+			// const updatedItems = [...updatedItems.slice(1, indexOfObject)]
 		} else {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
 			updatedItems = [...state.items]
