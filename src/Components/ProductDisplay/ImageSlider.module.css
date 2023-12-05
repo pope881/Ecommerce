@@ -1,0 +1,42 @@
+.imgslider {
+	height: 100%;
+	position: relative;
+}
+
+.imgsliderArrow {
+	position: absolute;
+	top: 50%;
+	transform: translate(0, -50%);
+	font-size: 45px;
+	color: #fff;
+	z-index: 1;
+	cursor: pointer;
+}
+
+.imgsliderArrowLeft {
+	left: 16px;
+}
+
+.imgsliderArrowRight {
+	right: 16px;
+}
+
+.imgslider-slide {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	background-position: center;
+	background-size: cover;
+	/* background-image: `url(${slides[currentIndex].url})` */
+}
+
+.imgslider-dots {
+	display: flex;
+	justify-content: center;
+}
+
+.imgslider-dots-item {
+	margin: 0 3px;
+	cursor: pointer;
+	font-size: 20px;
+}

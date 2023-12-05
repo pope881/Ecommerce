@@ -16,9 +16,15 @@ const Footer = () => {
 				</Link>
 			</div>
 			<ul className={classes['footer-links']}>
-				<li>About</li>
-				<li>Offices</li>
-				<li>Contact</li>
+				<Link to="/about">
+					<li>About</li>
+				</Link>
+				<Link to="/offices">
+					<li>Offices</li>
+				</Link>
+				<Link to="/contact">
+					<li>Contact</li>
+				</Link>
 			</ul>
 			{/* <div className="footer-social-icon">
 				<div className="footer-icons-container">

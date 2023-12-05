@@ -40,15 +40,10 @@ const ProductDisplay = props => {
 		setValue(event.target.value)
 	}
 
-	const containerStyles = {
-		width: '600px',
-		height: '580px',
-		margin: '0 auto',
-	}
 
 	return (
 		<div className={classes['productdisplay']}>
-			<div style={containerStyles}>
+			<div className={classes['productdisplay-left-added']}>
 				<ImageSlider slides={slides} />
 			</div>
 			{/* <div className={classes['productdisplay-left']}>

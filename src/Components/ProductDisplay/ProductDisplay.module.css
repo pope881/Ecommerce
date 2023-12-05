@@ -2,6 +2,13 @@
 	display: flex;
 	margin: 0 170px;
 }
+
+.productdisplay-left-added {
+	width: 600px;
+	height: 580px;
+	margin: 0 auto;
+}
+
 /* 
 .productdisplay-left {
 	display: flex;
