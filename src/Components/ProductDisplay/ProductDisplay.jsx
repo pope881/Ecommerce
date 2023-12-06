@@ -8,23 +8,23 @@ import ImageSlider from './ImageSlider'
 const ProductDisplay = props => {
 	const slides = [
 		{
-			url: 'http://localhost:3001/image-1.jpg',
+			url: 'http://localhost:3000/image-1.jpg',
 			title: 'Beach',
 		},
 		{
-			url: 'http://localhost:3001/image-2.jpg',
+			url: 'http://localhost:3000/image-2.jpg',
 			title: 'Boat',
 		},
 		{
-			url: 'http://localhost:3001/image-3.jpg',
+			url: 'http://localhost:3000/image-3.jpg',
 			title: 'Forest',
 		},
 		{
-			url: 'http://localhost:3001/image-4.jpg',
+			url: 'http://localhost:3000/image-4.jpg',
 			title: 'City',
 		},
 		{
-			url: 'http://localhost:3001/image-5.jpg',
+			url: 'http://localhost:3000/image-5.jpg',
 			title: 'Italy',
 		},
 	]
@@ -39,7 +39,6 @@ const ProductDisplay = props => {
 	const handleSelect = event => {
 		setValue(event.target.value)
 	}
-
 
 	return (
 		<div className={classes['productdisplay']}>
