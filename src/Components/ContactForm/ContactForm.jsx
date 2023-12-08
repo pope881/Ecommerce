@@ -1,6 +1,68 @@
-import React from 'react'
+import React, { useRef, useState } from 'react'
 import classes from './ContactForm.module.css'
 const ContactForm = () => {
+	const [formInputsValidity, setFormInputsValidity] = useState({
+		name: true,
+		message: true,
+		email: true,
+	})
+
+	const nameInputRef = useRef()
+	const messageInputRef = useRef()
+	const emailInputRef = useRef()
+
+	const hasEmailSign = value => value.includes('@')
+	const isTenChars = value => value.trim().length >= 10
+	const isThreeChars = value => value.trim().length >= 3
+
+	const confirmSubmitHandler = event => {
+		event.preventDefault()
+
+		const enteredName = nameInputRef.current.value
+		const enteredMessage = messageInputRef.current.value
+		const enteredEmail = emailInputRef.current.value
+
+		const enteredNameIsValid = isThreeChars(enteredName)
+		const enteredMessageIsValid = isTenChars(enteredMessage)
+		const enteredEmailIsValid = hasEmailSign(enteredEmail)
+
+		setFormInputsValidity({
+			name: enteredNameIsValid,
+			message: enteredMessageIsValid,
+			email: enteredEmailIsValid,
+		})
+
+		const formIsValid = enteredNameIsValid && enteredMessageIsValid && enteredEmailIsValid
+
+		if (!formIsValid) {
+			return
+		}
+
+		nameInputRef.current.value = ''
+		messageInputRef.current.value = ''
+		emailInputRef.current.value = ''
+
+		setFormInputsValidity({
+			name: true,
+			message: true,
+			email: true,
+		})
+		alert('Your message has been sent!')
+		// navigate('/')
+	}
+
+	const cancelSubmitHandler = () => {
+		nameInputRef.current.value = ''
+		messageInputRef.current.value = ''
+		emailInputRef.current.value = ''
+
+		setFormInputsValidity({
+			name: true,
+			message: true,
+			email: true,
+		})
+	}
+
 	return (
 		<section className={classes.contact}>
 			<div className={classes['contact-content']}>
@@ -49,22 +111,29 @@ const ContactForm = () => {
 				</div>
 
 				<div className={classes['contact-container-contactForm']}>
-					<form action="">
+					<form onSubmit={confirmSubmitHandler}>
 						<h2>Send Message</h2>
 						<div className={classes['contact-container-contactForm-inputBox']}>
-							<input type="text" name="" required="required" />
-							<span>Full name</span>
+							<input type="text" required="required" ref={nameInputRef} />
+							{formInputsValidity.name ? <span>Name</span> : <span>Name must contains min. 3 characters</span>}
 						</div>
 						<div className={classes['contact-container-contactForm-inputBox']}>
-							<input type="text" name="" required="required" />
-							<span>Email</span>
+							<input type="text" required="required" ref={emailInputRef} />
+							{formInputsValidity.email ? <span>Email</span> : <span>Email must contains '@'.</span>}
 						</div>
 						<div className={classes['contact-container-contactForm-inputBox']}>
-							<textarea name="" id="" cols="30" rows="10" required="required"></textarea>
-							<span>Type your Message...</span>
+							<textarea ref={messageInputRef} cols="30" rows="10" required="required"></textarea>
+							{formInputsValidity.message ? (
+								<span>Message</span>
+							) : (
+								<span>Message must contains min. 10 characters</span>
+							)}
 						</div>
-						<div className={classes['contact-container-contactForm-inputBox']}>
-							<input type="submit" name="" value="Send" />
+						<div className={classes['contact-container-contactForm-actions']}>
+							<button type="button" onClick={cancelSubmitHandler}>
+								Cancel
+							</button>
+							<button className={classes.submit}>Confirm</button>
 						</div>
 					</form>
 				</div>
