@@ -10,7 +10,7 @@
 	display: flex;
 	align-items: center;
 	gap: 20px;
-	transform: scale(.6);
+	transform: scale(0.6);
 }
 
 .footer-logo p {
@@ -27,7 +27,6 @@
 	display: flex;
 	list-style: none;
 	gap: 50px;
-	color: 3252525;
 	font-size: 20px;
 }
 

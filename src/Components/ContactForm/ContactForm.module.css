@@ -14,19 +14,36 @@
 
 .contact-content {
 	max-width: 800px;
-	text-align: center;
+	/* text-align: center; */
 }
 
 .contact-content h2 {
 	font-size: 36px;
-	font-weight: 500;
+	font-weight: 700;
 	color: #fff;
-	text-shadow: 0 0 1rem red;
+	text-align: center;
+}
+
+.contact-content h4 {
+	color: #ce1446;
+	font-size: 16px;
+	font-weight: 600;
+	text-transform: uppercase;
+	margin-bottom: 10px;
 }
 
 .contact-content p {
 	font-weight: 300;
 	color: #fff;
+	margin-bottom: 30px;
+}
+
+.contact-content hr {
+	width: 100%;
+	border: none;
+	height: 2px;
+	background-color: #ce1446;
+	margin-bottom: 50px;
 }
 
 .contact-container {
@@ -41,7 +58,7 @@
 .contact-container-map iframe {
 	width: 400px;
 	height: 300px;
-    border-radius: 16px;
+	border-radius: 16px;
 }
 
 .contact-container-contactInfo {
@@ -92,7 +109,7 @@
 	width: 40%;
 	padding: 40px;
 	background: #fff;
-    border-radius: 16px;
+	border-radius: 16px;
 }
 
 .contact-container-contactForm h2 {

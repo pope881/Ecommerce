@@ -66,8 +66,10 @@ const ContactForm = () => {
 	return (
 		<section className={classes.contact}>
 			<div className={classes['contact-content']}>
+				<h4>Contact</h4>
 				<h2>Contact Us</h2>
 				<p>We can't solve your problem if you don't tell us about it !</p>
+				<hr />
 			</div>
 
 			<div className={classes['contact-container']}>
