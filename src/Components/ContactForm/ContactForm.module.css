@@ -96,7 +96,7 @@
 
 .contact-container-contactInfo-box-text h3 {
 	font-weight: 500;
-	color: #00bcd4;
+	color: #ce1446;
 }
 
 .contact-container-contactInfo-box-text a {
@@ -170,6 +170,7 @@
 	border: none;
 	border-radius: 25px;
 	padding: 0.5rem 2rem;
+	transition: 0.4s;
 }
 
 .contact-container-contactForm-actions button:hover,
@@ -179,13 +180,16 @@
 
 .contact-container-contactForm-actions .submit {
 	border: 1px solid #5a1a01;
-	background-color: #5a1a01;
+	/* background-color: #5a1a01; */
+	background-color: #ce1446;
 	color: white;
+	transition: 0.4s;
 }
 
 .contact-container-contactForm-actions .submit:hover,
 .contact-container-contactForm-actions .submit:active {
-	background-color: #7a2706;
+	background-color: white;
+	color: #ce1446;
 }
 
 @media (max-width: 991px) {
