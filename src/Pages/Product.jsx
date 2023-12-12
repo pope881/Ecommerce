@@ -1,5 +1,4 @@
 import React, { useContext } from 'react'
-// import { ShopContext } from '../Context/ShopContext'
 import CartContext from '../Context/cart-context'
 import { useParams } from 'react-router-dom'
 import Breadcrum from '../Components/Breadcrums/Breadcrum'

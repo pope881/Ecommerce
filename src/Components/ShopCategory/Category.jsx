@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import classes from './Category.module.css'
-// import { ShopContext } from '../../Context/ShopContext'
 import CartContext from '../../Context/cart-context'
 import all_product from '../Assets/all_product'
 import dropdown_icon from '../Assets/dropdown_icon.png'

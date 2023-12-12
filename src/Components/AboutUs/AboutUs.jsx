@@ -1,13 +1,22 @@
 import about_img from '../Assets/about-6.png'
 import classes from './AboutUs.module.css'
+import { motion } from 'framer-motion'
 
 const AboutUs = () => {
 	return (
 		<section className={classes.aboutUs}>
-			<div className={classes['aboutUs-mainImg']}>
+			<motion.div
+				className={classes['aboutUs-mainImg']}
+				initial={{ opacity: 1, scale: 0 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 2 }}>
 				<img src={about_img} alt="" />
-			</div>
-			<div className={classes['aboutUs-text']}>
+			</motion.div>
+			<motion.div
+				className={classes['aboutUs-text']}
+				initial={{ opacity: 1, scale: 0 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 2, delay: 2 }}>
 				<h4>About</h4>
 				<h1>
 					We Guarantee Your Business <br /> Success - Love to Help you
@@ -31,7 +40,7 @@ const AboutUs = () => {
 						<h5>Happy Clients</h5>
 					</div>
 				</div>
-			</div>
+			</motion.div>
 		</section>
 	)
 }

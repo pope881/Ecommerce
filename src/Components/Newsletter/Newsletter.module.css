@@ -8,7 +8,8 @@
 	margin: 0 auto;
 	padding: 50px 140px;
 	margin-bottom: 100px;
-	background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+	background: linear-gradient(180deg, #ce1446 0%, #e1ffea22 70%);
+
 	gap: 30px;
 }
 
@@ -53,6 +54,13 @@
 	color: white;
 	font-size: 16px;
 	cursor: pointer;
+	transition: 0.3s;
+}
+
+.newsletter-control button:hover,
+.newsletter-control button:active {
+	background-color: white;
+	color: black;
 }
 
 .invalid p {

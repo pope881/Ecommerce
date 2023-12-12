@@ -66,50 +66,54 @@ const Login = () => {
 	// }
 
 	return (
-		<form className={classes['form-login']} onSubmit={handleSubmit}>
-			<h2>Login</h2>
-			<div className={classes['control-row']}>
-				{/* <div className="control no-margin"> */}
-				<div className={`${classes['control']} ${classes['no-margin']}}`}>
-					<label htmlFor="email">Email</label>
-					<input
-						id="email"
-						type="email"
-						name="email"
-						// onChange={handleEmailChange}
-						onBlur={() => handleInputBlur('email')}
-						onChange={event => handleInputChange('email', event.target.value)}
-						// value={enteredEmail}
-						value={enteredValues.email}
-					/>
+		<div className={classes.login}>
+			<form className={classes['login-form']} onSubmit={handleSubmit}>
+				<h2>Login</h2>
+				<div className={classes['control-row']}>
+					{/* <div className="control no-margin"> */}
+					<div className={`${classes['control']} ${classes['no-margin']}}`}>
+						<label htmlFor="email">Email</label>
+						<input
+							id="email"
+							type="email"
+							name="email"
+							// onChange={handleEmailChange}
+							onBlur={() => handleInputBlur('email')}
+							onChange={event => handleInputChange('email', event.target.value)}
+							// value={enteredEmail}
+							value={enteredValues.email}
+						/>
 
-					<div className={classes['control-error']}>{emailIsInvalid && <p>Please enter a valid email address.</p>}</div>
-				</div>
+						<div className={classes['control-error']}>
+							{emailIsInvalid && <p>Please enter a valid email address.</p>}
+						</div>
+					</div>
 
-				<div className={`${classes['control']} ${classes['no-margin']}}`}>
-					<label htmlFor="password">Password</label>
-					<input
-						id="password"
-						type="password"
-						name="password"
-						// onChange={handlePasswordChange}
-						onBlur={() => handleInputBlur('password')}
-						onChange={event => handleInputChange('password', event.target.value)}
-						// value={enteredPassword}
-						value={enteredValues.password}
-					/>
-					<div className={classes['control-error']}>
-						{passwordIsInvalid && <p>Password must contains min. 10 characters.</p>}
+					<div className={`${classes['control']} ${classes['no-margin']}}`}>
+						<label htmlFor="password">Password</label>
+						<input
+							id="password"
+							type="password"
+							name="password"
+							// onChange={handlePasswordChange}
+							onBlur={() => handleInputBlur('password')}
+							onChange={event => handleInputChange('password', event.target.value)}
+							// value={enteredPassword}
+							value={enteredValues.password}
+						/>
+						<div className={classes['control-error']}>
+							{passwordIsInvalid && <p>Password must contains min. 10 characters.</p>}
+						</div>
 					</div>
 				</div>
-			</div>
-			<p className={classes['form-actions']}>
-				<button className={classes['button']}>Login</button>
-			</p>
-			<div className={`${classes['control-error']} ${classes['form']}`}>
-				{loginIsValid && <p>All fields are required.</p>}
-			</div>
-		</form>
+				<p className={classes['form-actions']}>
+					<button className={classes['button']}>Login</button>
+				</p>
+				<div className={`${classes['control-error']} ${classes['form']}`}>
+					{loginIsValid && <p>All fields are required.</p>}
+				</div>
+			</form>
+		</div>
 	)
 }
 

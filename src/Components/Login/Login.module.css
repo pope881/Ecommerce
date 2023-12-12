@@ -1,5 +1,12 @@
-.form-login {
-	width: 90%;
+.login {
+	padding: 4% 10%;
+	width: 100%;
+	height: 80vh;
+	background-color: #0c0b0b;
+}
+
+.login-form {
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	max-width: 40rem;
@@ -11,7 +18,7 @@
 	box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
 }
 
-.form-login h2 {
+.login-form h2 {
 	font-size: 2rem;
 }
 

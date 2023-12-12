@@ -42,11 +42,13 @@
 
 .nav-menu a {
 	text-decoration: none;
+	color: black;
+	transition: 0.3s;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-	color: yellow;
+	color: #ce1446;
 	text-decoration: underline;
 }
 

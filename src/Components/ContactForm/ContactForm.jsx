@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react'
 import classes from './ContactForm.module.css'
+import {  motion } from 'framer-motion'
 const ContactForm = () => {
 	const [formInputsValidity, setFormInputsValidity] = useState({
 		name: true,
@@ -65,19 +66,26 @@ const ContactForm = () => {
 
 	return (
 		<section className={classes.contact}>
-			<div className={classes['contact-content']}>
+			<motion.div
+				initial={{ opacity: 1, scale: 0 }}
+				animate={{ opacity: 1, scale: 1 }}
+				transition={{ duration: 1.5 }}
+				className={classes['contact-content']}>
 				<h4>Contact</h4>
 				<h2>Contact Us</h2>
 				<p>We can't solve your problem if you don't tell us about it !</p>
 				<hr />
-			</div>
+			</motion.div>
 
 			<div className={classes['contact-container']}>
 				<div className={classes['contact-container-contactInfo']}>
 					<div className={classes['contact-container-contactInfo-box']}>
-						<div className={classes['contact-container-contactInfo-box-icon']}>
+						<motion.div
+							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
+							transition={{ duration: 1, delay: 1.5 }}
+							className={classes['contact-container-contactInfo-box-icon']}>
 							<i class="fa-solid fa-location-dot"></i>
-						</div>
+						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>
 							<h3>Address</h3>
 							<p> Starołęcka Street 33 </p>
@@ -86,18 +94,24 @@ const ContactForm = () => {
 						</div>
 					</div>
 					<div className={classes['contact-container-contactInfo-box']}>
-						<div className={classes['contact-container-contactInfo-box-icon']}>
+						<motion.div
+							className={classes['contact-container-contactInfo-box-icon']}
+							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
+							transition={{ duration: 1, delay: 2.5 }}>
 							<i class="fa-solid fa-phone"></i>
-						</div>
+						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>
 							<h3>Phone</h3>
 							<p>510-510-510</p>
 						</div>
 					</div>
 					<div className={classes['contact-container-contactInfo-box']}>
-						<div className={classes['contact-container-contactInfo-box-icon']}>
+						<motion.div
+							className={classes['contact-container-contactInfo-box-icon']}
+							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
+							transition={{ duration: 1, delay: 3.5 }}>
 							<i class="fa-solid fa-envelope"></i>
-						</div>
+						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>
 							<h3>Email</h3>
 							<a href="mailto:shopper@gmail.com">shopper@gmail.com</a>
