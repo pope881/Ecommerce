@@ -25,22 +25,22 @@ const Navbar = () => {
 			<ul className={classes['nav-menu']}>
 				<li>
 					<NavLink to="/" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)} end>
-						Shop
+						SHOP
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to="/mens" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
-						Men
+						MEN
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to="/womens" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
-						Woman
+						WOMAN
 					</NavLink>
 				</li>
 				<li>
 					<NavLink to="/kids" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
-						Kids
+						KIDS
 					</NavLink>
 				</li>
 			</ul>

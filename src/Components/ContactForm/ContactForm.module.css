@@ -179,8 +179,7 @@
 }
 
 .contact-container-contactForm-actions .submit {
-	border: 1px solid #5a1a01;
-	/* background-color: #5a1a01; */
+	border: 1px solid #ce1446;
 	background-color: #ce1446;
 	color: white;
 	transition: 0.4s;

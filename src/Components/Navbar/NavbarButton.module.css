@@ -1,7 +1,7 @@
 .navbar-button {
 	cursor: pointer;
-	/* border: none; */
-	background-color: #4d1601;
+	border: none;
+	background-color: #2c0d00;
 	color: white;
 	padding: 0.75rem 3rem;
 	display: flex;
@@ -9,11 +9,13 @@
 	align-items: center;
 	border-radius: 25px;
 	font-weight: bold;
+	transition: 0.4s;
 }
 
 .navbar-button:hover,
 .navbar-button:active {
 	background-color: #2c0d00;
+	background-color: #4d1601;
 }
 
 .navbar-icon {
