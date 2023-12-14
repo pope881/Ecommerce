@@ -77,6 +77,7 @@ const Login = () => {
 							id="email"
 							type="email"
 							name="email"
+							placeholder='Email address...'
 							// onChange={handleEmailChange}
 							onBlur={() => handleInputBlur('email')}
 							onChange={event => handleInputChange('email', event.target.value)}
@@ -98,6 +99,7 @@ const Login = () => {
 							// onChange={handlePasswordChange}
 							onBlur={() => handleInputBlur('password')}
 							onChange={event => handleInputChange('password', event.target.value)}
+							placeholder='Password...'
 							// value={enteredPassword}
 							value={enteredValues.password}
 						/>
