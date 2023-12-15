@@ -1,6 +1,6 @@
 import React, { useRef, useState } from 'react'
 import classes from './ContactForm.module.css'
-import {  motion } from 'framer-motion'
+import { motion } from 'framer-motion'
 const ContactForm = () => {
 	const [formInputsValidity, setFormInputsValidity] = useState({
 		name: true,
@@ -82,7 +82,7 @@ const ContactForm = () => {
 					<div className={classes['contact-container-contactInfo-box']}>
 						<motion.div
 							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
-							transition={{ duration: 1, delay: 1.5 }}
+							transition={{ duration: 1, delay: 1.6 }}
 							className={classes['contact-container-contactInfo-box-icon']}>
 							<i class="fa-solid fa-location-dot"></i>
 						</motion.div>
@@ -97,7 +97,7 @@ const ContactForm = () => {
 						<motion.div
 							className={classes['contact-container-contactInfo-box-icon']}
 							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
-							transition={{ duration: 1, delay: 2.5 }}>
+							transition={{ duration: 1, delay: 2.7 }}>
 							<i class="fa-solid fa-phone"></i>
 						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>
@@ -109,7 +109,7 @@ const ContactForm = () => {
 						<motion.div
 							className={classes['contact-container-contactInfo-box-icon']}
 							animate={{ scale: [0.5, 2, 2, 1, 1], rotate: [0, 90, 270, 270, 0] }}
-							transition={{ duration: 1, delay: 3.5 }}>
+							transition={{ duration: 1, delay: 3.8 }}>
 							<i class="fa-solid fa-envelope"></i>
 						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>

@@ -57,6 +57,12 @@ const Login = () => {
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: true }))
 	}
 
+	function cancelLoginHandler() {
+		setEnteredValues({ email: '', password: '' })
+		setDidEdit({ email: false, password: false })
+		setLoginIsValid(false)
+	}
+
 	// function handleEmailChange(event) {
 	// 	setEnteredEmail(event.target.value)
 	// }
@@ -67,8 +73,13 @@ const Login = () => {
 
 	return (
 		<div className={classes.login}>
-			<form className={classes['login-form']} onSubmit={handleSubmit}>
+			<div className={classes['login-text']}>
 				<h2>Login</h2>
+				<p>
+					<i class="fa-solid fa-lock"></i>
+				</p>
+			</div>
+			<form className={classes['login-form']} onSubmit={handleSubmit}>
 				<div className={classes['control-row']}>
 					{/* <div className="control no-margin"> */}
 					<div className={`${classes['control']} ${classes['no-margin']}}`}>
@@ -77,7 +88,7 @@ const Login = () => {
 							id="email"
 							type="email"
 							name="email"
-							placeholder='Email address...'
+							placeholder="Email address..."
 							// onChange={handleEmailChange}
 							onBlur={() => handleInputBlur('email')}
 							onChange={event => handleInputChange('email', event.target.value)}
@@ -99,7 +110,7 @@ const Login = () => {
 							// onChange={handlePasswordChange}
 							onBlur={() => handleInputBlur('password')}
 							onChange={event => handleInputChange('password', event.target.value)}
-							placeholder='Password...'
+							placeholder="Password..."
 							// value={enteredPassword}
 							value={enteredValues.password}
 						/>
@@ -109,7 +120,10 @@ const Login = () => {
 					</div>
 				</div>
 				<p className={classes['form-actions']}>
-					<button className={classes['button']}>Login</button>
+					<button type="button" className={`${classes.button} ${classes.cancel}`} onClick={cancelLoginHandler}>
+						Cancel
+					</button>
+					<button className={`${classes.button} ${classes.submit}`}>Login</button>
 				</p>
 				<div className={`${classes['control-error']} ${classes['form']}`}>
 					{loginIsValid && <p>All fields are required.</p>}
