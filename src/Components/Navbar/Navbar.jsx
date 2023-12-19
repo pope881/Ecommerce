@@ -19,7 +19,7 @@ const Navbar = () => {
 			<div className={classes['nav-logo']}>
 				<img src={logo} alt="" />
 				<Link to="/">
-					<p>SHOP4U</p>
+					<p>shop4u</p>
 				</Link>
 			</div>
 			<ul className={classes['nav-menu']}>

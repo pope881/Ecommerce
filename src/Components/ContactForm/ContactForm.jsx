@@ -102,7 +102,7 @@ const ContactForm = () => {
 						</motion.div>
 						<div className={classes['contact-container-contactInfo-box-text']}>
 							<h3>Phone</h3>
-							<p>510-510-510</p>
+							<p>+48 510 510 510</p>
 						</div>
 					</div>
 					<div className={classes['contact-container-contactInfo-box']}>

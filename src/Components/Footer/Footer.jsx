@@ -1,77 +1,59 @@
 import React from 'react'
 import './Footer.css'
-import footer_logo from '../Assets/logo-no-background.png'
-import instagram_icon from '../Assets/instagram_icon.png'
-import pintester_icon from '../Assets/pintester_icon.png'
-import whatsapp_icon from '../Assets/whatsapp_icon.png'
+import logo from '../Assets/logo-no-background.png'
+
 import { Link } from 'react-router-dom'
 
 const Footer = () => {
+	const scrollToTop = () => {
+		window.scrollTo(0, 0)
+	}
+
+	// useEffect(() => {
+	// 	window.scrollTo(0, 0)
+	//   }, [])
+
 	return (
-		<div className="body">
+		<div>
 			<footer>
 				<div className="container">
 					<div className="sec aboutus">
-						<h2>About Us</h2>
-						<p>
-							Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis aspernatur aut aliquam a et ab! Illo
-							porro
+						<div className="logo">
+							<Link to="/">
+								<img onClick={scrollToTop} src={logo} alt="" />
+							</Link>
+							<h2>shop4u</h2>
+						</div>
+						<p className="textOne">Quality matters. Always.</p>
+						<p className="textTwo">
+							We offers a big range of clothes for all your needs. We have the perfect car to meet your needs.
 						</p>
-						<ul className="sci">
-							<li>
-								<a href="#">
-									<i class="fa-brands fa-facebook"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fa-brands fa-twitter"></i>{' '}
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fa-brands fa-instagram"></i>
-								</a>
-							</li>
-							<li>
-								<a href="#">
-									<i class="fa-brands fa-youtube"></i>
-								</a>
-							</li>
-						</ul>
 					</div>
 					<div className="sec quicklinks">
 						<h2>Support</h2>
 						<ul>
-							<li>
-								<a href="#">FAQ</a>
-							</li>
-							<li>
-								<a href="#">Privacy Policy</a>
-							</li>
-							<li>
-								<a href="#">Help</a>
-							</li>
-							<li>
-								<a href="#">Contact</a>
-							</li>
+							<Link to="/about">
+								<li onClick={scrollToTop}>About us</li>
+							</Link>
+							<Link to="/contact">
+								<li onClick={scrollToTop}>Contact</li>
+							</Link>
+							<li>FAQ</li>
+							<li>Privacy Policy</li>
 						</ul>
 					</div>
 					<div className="sec quicklinks">
 						<h2>Shop</h2>
 						<ul>
-							<li>
-								<a href="#">Men</a>
-							</li>
-							<li>
-								<a href="#">Woman</a>
-							</li>
-							<li>
-								<a href="#">Kids</a>
-							</li>
-							<li>
-								<a href="#">Shoes</a>
-							</li>
+							<Link to="/mens">
+								<li>Men</li>
+							</Link>
+							<Link to="/womens">
+								<li>Woman</li>
+							</Link>
+							<Link to="/kids">
+								<li>Kids</li>
+							</Link>
 						</ul>
 					</div>
 					<div className="sec contact">
@@ -82,7 +64,7 @@ const Footer = () => {
 									<i class="fa-solid fa-phone"></i>
 								</span>
 								<p>
-									<a href="tel:+1 234 456 798 ">+1 234 456 798</a>
+									<a href="tel:+1 234 456 798 ">+48 510 510 510</a>
 								</p>
 							</li>
 							<li>
@@ -96,10 +78,10 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-				<div className="copyrightText">
-					<p>Copyright @{new Date().getFullYear()} - All rights reserved </p>
-				</div>
 			</footer>
+			<div className="copyrightText">
+				<p>Copyright @{new Date().getFullYear()} - All rights reserved </p>
+			</div>
 		</div>
 	)
 }
