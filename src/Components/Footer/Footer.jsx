@@ -1,5 +1,5 @@
 import React from 'react'
-import './Footer.css'
+import classes from './Footer.module.css'
 import logo from '../Assets/logo-no-background.png'
 
 import { Link } from 'react-router-dom'
@@ -16,20 +16,21 @@ const Footer = () => {
 	return (
 		<div>
 			<footer>
-				<div className="container">
-					<div className="sec aboutus">
-						<div className="logo">
+				<div className={classes.container}>
+					<div className={`${classes.sec} ${classes.aboutus}`}>
+						<div className={classes.logo}>
 							<Link to="/">
 								<img onClick={scrollToTop} src={logo} alt="" />
 							</Link>
 							<h2>shop4u</h2>
 						</div>
-						<p className="textOne">Quality matters. Always.</p>
-						<p className="textTwo">
-							We offers a big range of clothes for all your needs. We have the perfect car to meet your needs.
+						<p className={classes.textOne}>Quality matters. Always.</p>
+						<p className={classes.textTwo}>
+							We are, a notable fashion ecommerce site, excels in creating a sense of urgency and offering shipping
+							incentives with their sassy copy.
 						</p>
 					</div>
-					<div className="sec quicklinks">
+					<div className={`${classes.sec} ${classes.quicklinks}`}>
 						<h2>Support</h2>
 						<ul>
 							<Link to="/about">
@@ -38,11 +39,15 @@ const Footer = () => {
 							<Link to="/contact">
 								<li onClick={scrollToTop}>Contact</li>
 							</Link>
-							<li>FAQ</li>
-							<li>Privacy Policy</li>
+							<Link to="/team">
+								<li onClick={scrollToTop}>Our team</li>
+							</Link>
+							<Link>
+								<li>Testimonials</li>
+							</Link>
 						</ul>
 					</div>
-					<div className="sec quicklinks">
+					<div className={`${classes.sec} ${classes.quicklinks}`}>
 						<h2>Shop</h2>
 						<ul>
 							<Link to="/mens">
@@ -56,15 +61,15 @@ const Footer = () => {
 							</Link>
 						</ul>
 					</div>
-					<div className="sec contact">
+					<div className={`${classes.sec} ${classes.contact}`}>
 						<h2>Contact us</h2>
-						<ul className="info">
+						<ul className={classes.info}>
 							<li>
 								<span>
 									<i class="fa-solid fa-phone"></i>
 								</span>
 								<p>
-									<a href="tel:+1 234 456 798 ">+48 510 510 510</a>
+									<a href="tel:+48 510 510 510 ">+48 510 510 510</a>
 								</p>
 							</li>
 							<li>
@@ -72,14 +77,14 @@ const Footer = () => {
 									<i class="fa-solid fa-envelope"></i>
 								</span>
 								<p>
-									<a href="mailto:shop4u@gmail.com">onet@wp.pl</a>
+									<a href="mailto:shop4u@gmail.com">shop4u@gmail.com</a>
 								</p>
 							</li>
 						</ul>
 					</div>
 				</div>
 			</footer>
-			<div className="copyrightText">
+			<div className={classes.copyrightText}>
 				<p>Copyright @{new Date().getFullYear()} - All rights reserved </p>
 			</div>
 		</div>

@@ -1,9 +1,8 @@
 footer {
 	border: 1px solid rgba(0, 0, 0, 0.15);
-	position: relative;
 	width: 100%;
 	height: auto;
-	padding: 50px 100px;
+	padding: 30px 80px;
 	background: #fff;
 }
 
@@ -11,7 +10,7 @@ footer .container {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
-	grid-gap: 20px;
+	grid-gap: 30px;
 }
 
 footer .container .sec.aboutus {
@@ -33,64 +32,37 @@ footer .container .sec.aboutus img {
 }
 
 footer .container .sec h2 {
-	position: relative;
 	color: #333;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
 
-footer .container .sec p {
-	color: #555;
+footer .container .sec .textOne {
+	color: #ce1446;
+	font-style: italic;
+	text-shadow: 0px 0px 2px #ce1446;
 }
 
-footer .container .sci {
-	margin-top: 20px;
-	display: grid;
-	grid-template-columns: repeat(4, 50px);
-	list-style: none;
-}
-
-footer .container .sci li {
-	list-style: none;
-}
-
-footer .container .sci li a {
-	display: inline-block;
-	width: 36px;
-	height: 36px;
-	background: #333;
-	display: grid;
-	align-content: center;
-	justify-content: center;
-	text-decoration: none;
-}
-
-footer .container .sci li a i {
-	color: #fff;
-	font-size: 20px;
-}
-
-footer .container .quicklinks {
-	position: relative;
+footer .container .sec .textTwo {
+	font-style: italic;
 }
 
 footer .container .quicklinks ul li {
 	list-style: none;
 	text-decoration: none;
 	margin-bottom: 10px;
+	transition: 0.3s;
 }
 
-footer .container .quicklinks ul li a {
-	color: #555;
+footer .container .quicklinks ul li:hover {
+	color: #e91e63;
+	transform: scale(1.15);
+}
+
+footer .container .quicklinks ul a {
 	text-decoration: none;
-	margin-bottom: 10px;
-	display: inline-block;
+	color: #555;
 }
-
-footer .container .contact .info {
-	position: relative;
-}
-
 footer .container .contact .info li {
 	display: grid;
 	grid-template-columns: 30px 1fr;
@@ -109,6 +81,7 @@ footer .container .contact .info li a {
 
 .copyrightText {
 	width: 100%;
+	font-size: 14px;
 	background: #fff;
 	padding: 20px 100px 30px;
 	text-align: center;

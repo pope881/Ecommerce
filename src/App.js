@@ -13,6 +13,7 @@ import kid_banner from './Components/Assets/banner_kids.png'
 import About from './Pages/About'
 import Offices from './Pages/Offices'
 import Contact from './Pages/Contact'
+import Team from './Pages/Team'
 
 function App() {
 	return (
@@ -32,6 +33,7 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/offices" element={<Offices />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/team" element={<Team />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>
