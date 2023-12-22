@@ -6,10 +6,6 @@ import dropdown_icon from '../Assets/dropdown_icon.png'
 import Item from '../Item/Item'
 
 const Category = props => {
-	// const cartCtx = useContext(CartContext)
-	// const { all_product } = cartCtx
-
-
 	return (
 		<div className={classes['shop-category']}>
 			<img className={classes['shopcategory-banner']} src={props.banner} alt="" />
