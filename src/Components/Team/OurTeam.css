@@ -5,7 +5,7 @@
 	align-items: center;
 	background-color: #0c0b0b;
 	width: 100%;
-	padding: 4% 10%;
+	padding: 6% 10% 10%;
 }
 
 .team-text {
@@ -54,14 +54,13 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	background-color: #0c0b0b;
-	gap: 3rem;
+	gap: 4rem;
 	align-items: center;
 	text-align: center;
 	width: 100%;
-
 	margin: 0 auto;
 }
-
+/* 
 @media (max-width: 1150px) {
 	.team-container {
 		grid-template-columns: 1fr 1fr;
@@ -76,41 +75,69 @@
 		width: -moz-fit-content;
 		width: fit-content;
 	}
+} */
+
+.team-container__card {
+	position: relative;
+	width: 20rem;
+	height: 30rem;
+	border-radius: 2rem;
+	text-align: center;
+	background-position: center;
+	background-size: cover;
+	color: #fff;
+	box-shadow: 4px 4px 30px 0px white;
+	overflow: hidden;
 }
 
-.team-container__box {
-	width: 25rem;
-	background-color: white;
-	box-shadow: 4px 4px 20px 0px white;
+.team-container__card__button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	padding: 10px;
+	background: none;
+	border: none;
+	color: #ce1446;
+	font-size: 36px;
+	text-shadow: 2px 2px 5px rgb(0, 0, 0);
+	cursor: crosshair;
+	z-index: 10;
 }
 
+.team-container__card__button:hover ~ .team-container__card__text {
+	clip-path: circle(120% at 50% 90%);
+}
+
+/* 
 @media (max-width: 400px) {
-	.team-container__box {
+	.team-container__card {
 		width: 100%;
 	}
+} */
+
+.team-container__card__text {
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	color: #ffffff;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	padding: 50px 30px;
+	background-color: rgba(0, 0, 0, 0.8);
+	clip-path: circle(0 at 50% 90%);
+	transition: 0.8s;
 }
 
-.team-container__box__img-div {
-	width: 100%;
-	height: auto;
-	background-color: #f6f6f6;
+.team-container__card__text h1 {
+	font-size: 2rem;
+	color: #ce1446;
 }
 
-.team-container__box__img-div img {
-	width: 100%;
-}
-
-.team-container__box__descr {
-	color: #010103;
-	padding: 2rem;
-}
-
-.team-container__box__descr h3 {
-	font-size: 2.2rem;
-}
-
-.team-container__box__descr p {
-	font-size: 1.6rem;
-	font-weight: 500;
-	color: #777777;
+.team-container__card__text h2 {
+	font-size: 1.4rem;
+	margin-bottom: 0.8rem;
+	color: #fff;
 }

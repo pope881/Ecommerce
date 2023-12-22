@@ -4,6 +4,7 @@
 	background: linear-gradient(180deg, #ce1446, #e1ffea22 100%);
 	display: flex;
 	/* margin-top: 10vh; */
+	margin-bottom: 10rem;
 }
 
 .hero-left {

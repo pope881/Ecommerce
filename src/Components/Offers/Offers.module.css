@@ -1,11 +1,11 @@
 .offers {
+	/* width: 100%; */
 	width: 75%;
-	/* width: 65%; */
-	height: 60vh;
+	/* height: 60vh; */
 	display: flex;
 	margin: auto;
 	padding: 0px 140px;
-	margin-bottom: 150px;
+	margin-bottom: 10rem;
 	background: linear-gradient(180deg, #ce1446 0%, #e1ffea22 90%);
 }
 
