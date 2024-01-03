@@ -14,6 +14,7 @@ import About from './Pages/About'
 import Offices from './Pages/Offices'
 import Contact from './Pages/Contact'
 import Team from './Pages/Team'
+import Testimonials from './Pages/Testimonials'
 
 function App() {
 	return (
@@ -34,6 +35,7 @@ function App() {
 					<Route path="/offices" element={<Offices />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/team" element={<Team />} />
+					<Route path="/testimonials" element={<Testimonials />} />
 				</Routes>
 				<Footer />
 			</BrowserRouter>

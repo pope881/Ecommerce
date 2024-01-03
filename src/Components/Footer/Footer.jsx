@@ -42,7 +42,7 @@ const Footer = () => {
 							<Link to="/team">
 								<li onClick={scrollToTop}>Our team</li>
 							</Link>
-							<Link>
+							<Link to="testimonials">
 								<li>Testimonials</li>
 							</Link>
 						</ul>
