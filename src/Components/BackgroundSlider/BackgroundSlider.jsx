@@ -33,6 +33,7 @@ const BackgroundSlider = () => {
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
 		height: '100%',
+		width: '100%',
 	}
 
 	const goToNext = currentState => {

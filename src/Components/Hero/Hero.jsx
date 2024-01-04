@@ -1,28 +1,40 @@
 import classes from './Hero.module.css'
-import hand_icon from '../Assets/hand_icon.png'
 import arrow_icon from '../Assets/arrow.png'
-import hero_image from '../Assets/hero_image.png'
+import heroWoman_image from '../Assets/heroWoman_image.png'
+import heroMan_image from '../Assets/heroMan_image.png'
 
 const Hero = () => {
+	const handleClickScroll = () => {
+		const element = document.getElementById('new-collections')
+		if (element) {
+			element.scrollIntoView({ behavior: 'smooth' })
+		}
+	}
+
 	return (
-		<div className={classes.hero}>
-			<div className={classes['hero-left']}>
-				<h2>NEW ARRIVALS ONLY</h2>
-				<div>
-					<div className={classes['hero-hand-icon']}>
-						<p>new</p>
-						<img src={hand_icon} alt=""></img>
-					</div>
-					<p>collections</p>
-					<p>for everyone</p>
-				</div>
-				<div className={classes['hero-latest-btn']}>
-					<div>Latest Collection</div>
-					<img src={arrow_icon} alt="" />
-				</div>
+		<div>
+			<div className={classes['text-top']}>
+				<h1>NEW ARRIVALS ONLY</h1>
+				<hr></hr>
 			</div>
-			<div className={classes['hero-right']}>
-				<img src={hero_image} alt="" />
+			<div className={classes.hero}>
+				<div className={classes['hero-img-woman']}>
+					<img src={heroWoman_image} alt="" />
+				</div>
+				<div className={classes['hero-text']}>
+					<div>
+						<p> new Collections</p>
+						<p>For Everyone </p>
+					</div>
+					<div>
+						<button onClick={handleClickScroll} className={classes.btn}>
+							CHECK OUT
+						</button>
+					</div>
+				</div>
+				<div className={classes['hero-img-man']}>
+					<img src={heroMan_image} alt="" />
+				</div>
 			</div>
 		</div>
 	)

@@ -60,7 +60,7 @@ const CartItems = () => {
 				<button disabled onClick={orderHandler}>
 					<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
 				</button>
-				<p>You must be logged in and total cant be 0</p>
+				<p>You must be logged in to proceed.</p>
 			</div>
 		)
 	}

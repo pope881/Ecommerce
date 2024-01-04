@@ -1,62 +1,90 @@
+.text-top {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 10px;
+	margin-bottom: 2rem;
+}
+
+.text-top h1 {
+	color: #171717;
+	font-size: 50px;
+	font-weight: 600;
+}
+
+.text-top hr {
+	width: 200px;
+	height: 6px;
+	border-radius: 10px;
+	background: #252525;
+}
+
 .hero {
 	height: 100vh;
 	/* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
-	background: linear-gradient(180deg, #ce1446, #e1ffea22 100%);
+	/* background: linear-gradient(180deg, #ce1446, #e1ffea22 100%); */
+	background-image: linear-gradient(to top, rgba(154, 21, 21, 0), rgb(75, 68, 68));
+	/* padding: 4% 10%; */
+
 	display: flex;
+	justify-content: center;
+	align-items: center;
 	/* margin-top: 10vh; */
 	margin-bottom: 10rem;
 }
 
-.hero-left {
+.hero-text {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
 	justify-content: center;
 	gap: 20px;
-	padding-left: 180px;
 	line-height: 1.1;
+	text-align: center;
+	text-transform: uppercase;
 }
 
-.hero-left h2 {
-	color: #090909;
-	font-size: 26px;
-	font-weight: 600;
-}
-
-.hero-left p {
+.hero-text p {
 	color: #171717;
 	font-size: 100px;
 	font-weight: 700;
 }
 
-.hero-hand-icon {
-	display: flex;
-	align-items: center;
-	gap: 20px;
-}
-
-.hero-hand-icon img {
-	width: 105px;
-}
-
-.hero-latest-btn {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	gap: 15px;
-	width: 310px;
-	height: 70px;
-	border-radius: 75px;
-	margin-top: 30px;
-	background: #ff4141;
-	color: white;
-	font-size: 22px;
-	font-weight: 500;
-}
-
-.hero-right {
+.hero-img-woman,
+.hero-img-woman img,
+.hero-img-man,
+.hero-img-man img {
 	display: flex;
 	flex: 1;
 	align-items: center;
 	justify-content: center;
+	overflow: hidden;
+}
+
+.btn {
+	font: inherit;
+	color: #ce1446;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: transparent;
+	border: none;
+	border-radius: 25px;
+	padding: 1rem 4rem;
+	transition: 0.3s;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: #ffe6dc;
+}
+.btn {
+	border: 1px solid #5a1a01;
+	background-color: #ce1446;
+	color: white;
+}
+
+.btn:hover,
+.btn:active {
+	background-color: white;
+	color: #ce1446;
 }
