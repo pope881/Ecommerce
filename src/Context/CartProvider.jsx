@@ -7,28 +7,6 @@ const defaultCartState = {
 	items: [],
 	totalAmount: 0,
 }
-const options = [
-	{
-		label: 'S',
-		value: 'S',
-	},
-	{
-		label: 'M',
-		value: 'M',
-	},
-	{
-		label: 'L',
-		value: 'L',
-	},
-	{
-		label: 'XL',
-		value: 'XL',
-	},
-	{
-		label: 'XXL',
-		value: 'XXL',
-	},
-]
 
 const cartReducer = (state, action) => {
 	if (action.type === 'ADD') {
@@ -112,7 +90,6 @@ const CartProvider = props => {
 		removeItem: removeItemFromCartHandler,
 		clearCart: clearCartHandler,
 		all_product: all_product,
-		options: options,
 	}
 
 	return <CartContext.Provider value={cartContext}>{props.children}</CartContext.Provider>

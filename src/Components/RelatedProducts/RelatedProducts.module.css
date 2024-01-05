@@ -3,7 +3,8 @@
 	flex-direction: column;
 	align-items: center;
 	gap: 10px;
-	height: 90vh;
+	margin-bottom: 10rem;
+	/* height: 90vh; */
 }
 
 .relatedproducts h1 {

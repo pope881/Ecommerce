@@ -72,6 +72,7 @@ const CartItems = () => {
 				<p>Title</p>
 				<p>Price</p>
 				<p>Seize</p>
+				{/* <p>Color</p> */}
 				<p>Quantity</p>
 				<p>Total</p>
 				<p>Remove</p>
@@ -85,6 +86,7 @@ const CartItems = () => {
 							<p>{e.name}</p>
 							<p>${e.price}</p>
 							<p>{e.size}</p>
+							{/* <p>{e.color}</p> */}
 							<button className={classes['cartitems-quantity']}>{e.amount}</button>
 							<p>${e.price * e.amount}</p>
 							<img

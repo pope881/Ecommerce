@@ -4,6 +4,8 @@ import star_icon from '../Assets/star_icon.png'
 import star_dull_icon from '../Assets/star_dull_icon.png'
 import CartContext from '../../Context/cart-context'
 import ImageSlider from './ImageSlider'
+import size_options from '../Assets/size_options'
+import color_options from '../Assets/color_options'
 
 const ProductDisplay = props => {
 	const slides = [
@@ -29,16 +31,21 @@ const ProductDisplay = props => {
 		},
 	]
 
-	const [value, setValue] = useState('S')
+	const [valueSize, setValueSize] = useState('S')
+	// const [valueColor, setValueColor] = useState('BLACK')
 
 	const { product } = props
 
 	const cartCtx = useContext(CartContext)
-	const { addItem, options } = cartCtx
+	const { addItem } = cartCtx
 
-	const handleSelect = event => {
-		setValue(event.target.value)
+	const handleSelectSize = event => {
+		setValueSize(event.target.value)
 	}
+
+	// const handleSelectColor = event => {
+	// 	setValueColor(event.target.value)
+	// }
 
 	return (
 		<div className={classes['productdisplay']}>
@@ -76,20 +83,34 @@ const ProductDisplay = props => {
 				</div>
 				<div className={classes['productdisplay-right-size']}>
 					<h1>Select size</h1>
-					<div className={classes['productdisplay-right-sizes']}>
-						<div>S</div>
-						<div>M</div>
-						<div>L</div>
-						<div>XL</div>
-						<div>XXL</div>
+
+					<div className={classes['select-container']}>
+						<select className={classes['select-box']} onChange={handleSelectSize}>
+							{size_options.map(option => (
+								<option key={option.value} value={option.value}>
+									{option.label}
+								</option>
+							))}
+						</select>
+						<div className={classes['icon-container']}>
+							<i class="fa-solid fa-circle-arrow-down"></i>
+						</div>
 					</div>
-					<select onChange={handleSelect}>
-						{options.map(option => (
-							<option key={option.value} value={option.value}>
-								{option.label}
-							</option>
-						))}
-					</select>
+
+					<h1>Select color</h1>
+					<div className={classes['select-container']}>
+						{/* onChange={handleSelectColor} */}
+						<select className={classes['select-box']}>
+							{color_options.map(option => (
+								<option key={option.value} value={option.value} style={{ color: `${option.color}` }}>
+									{option.label}
+								</option>
+							))}
+						</select>
+						<div className={classes['icon-container']}>
+							<i class="fa-solid fa-circle-arrow-down"></i>
+						</div>
+					</div>
 				</div>
 				<button
 					onClick={() => {
@@ -99,7 +120,8 @@ const ProductDisplay = props => {
 							amount: 1,
 							price: product.new_price,
 							image: product.image,
-							size: value,
+							size: valueSize,
+							// color: valueColor,
 						})
 					}}>
 					ADD TO CART
