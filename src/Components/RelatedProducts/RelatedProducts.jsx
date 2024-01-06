@@ -6,7 +6,7 @@ import dataWoman from '../Assets/dataWoman'
 const RelatedProducts = () => {
 	return (
 		<div className={classes['relatedproducts']}>
-			<h1>Related Products</h1>
+			<h1>Other Products</h1>
 			<hr />
 			<div className={classes['relatedproducts-item']}>
 				{dataWoman.map((item, i) => {
