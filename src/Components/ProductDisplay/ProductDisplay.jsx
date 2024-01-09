@@ -50,7 +50,7 @@ const ProductDisplay = props => {
 	return (
 		<div className={classes['productdisplay']}>
 			<div className={classes['productdisplay-left-added']}>
-				<ImageSlider slides={slides} />
+				<ImageSlider slides={slides} product={product} />
 			</div>
 			{/* <div className={classes['productdisplay-left']}>
 				<div className={classes['productdisplay-img-list']}>

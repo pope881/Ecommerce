@@ -1,21 +1,23 @@
 import { useState } from 'react'
 import classes from './ImageSlider.module.css'
 
-const ImageSlider = ({ slides }) => {
+const ImageSlider = ({ slides, product }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 
+	console.log(product)
+
 	const bgcImg = {
-		backgroundImage: `url(${slides[currentIndex].url})`,
+		backgroundImage: `url(${product.image_slide[currentIndex].url})`,
 	}
 
 	const goToPrevious = () => {
 		const isFirstSlide = currentIndex === 0
-		const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+		const newIndex = isFirstSlide ? product.image_slide.length - 1 : currentIndex - 1
 		setCurrentIndex(newIndex)
 	}
 
 	const goToNext = () => {
-		const isLastSlide = currentIndex === slides.length - 1
+		const isLastSlide = currentIndex === product.image_slide.length - 1
 		const newIndex = isLastSlide ? 0 : currentIndex + 1
 		setCurrentIndex(newIndex)
 	}
@@ -36,7 +38,7 @@ const ImageSlider = ({ slides }) => {
 				ImageSlider
 			</div>
 			<div className={classes['imgslider-dots']}>
-				{slides.map((slide, slideIndex) => (
+				{product.image_slide.map((slide, slideIndex) => (
 					<div key={slideIndex} className={classes['imgslider-dots-item']} onClick={() => goToSlide(slideIndex)}>
 						<i class="fa-solid fa-circle"></i>
 					</div>

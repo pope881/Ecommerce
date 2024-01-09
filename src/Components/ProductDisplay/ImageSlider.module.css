@@ -7,8 +7,8 @@
 	position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
-	font-size: 45px;
-	color: #fff;
+	font-size: 50px;
+	color: #776d6d;
 	z-index: 1;
 	cursor: pointer;
 }
