@@ -1,57 +1,47 @@
-import React from 'react'
+import React, { useState } from 'react'
 import classes from './DescriptionBox.module.css'
+import { useScroll } from 'framer-motion'
+
 const DescriptionBox = props => {
 	const { product } = props
 
 	const data = [
 		{
-			question: 'Question 1',
-			answer: `lkrmlkermlekmrkemrlkemlkrmelkrmlkemr
-				loremloremloreloremlorermekrmlekmrkemrlkemlkrme`,
+			feature: 'Description',
+			answer: product.description,
 		},
 		{
-			question: 'Question 2',
-			answer:
-				'loremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemrloremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemsassssssssssssssssssssssssssssssssasas',
+			feature: 'Material composition',
+			answer: product.madeOf,
 		},
 		{
-			question: 'Question 3',
-			answer:
-				'loremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemrloremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemr',
-		},
-		{
-			question: 'Question 4',
-			answer:
-				'loremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemrloremloremloreloremlorermekrmlekmrkemrlkemlkrmelkrmlkemr',
+			feature: 'Washing and maintenance rules',
+			answer: product.maintenance.map(item => <p>{item.item}</p>),
 		},
 	]
+	const [selected, setSelected] = useState(null)
+
+	const toggle = i => {
+		if (selected === i) {
+			return setSelected(null)
+		}
+		setSelected(i)
+	}
 
 	return (
-		<div>
-			<div className={classes['descriptionbox']}>
-				<div className={classes['descriptionbox-navigator']}>
-					<div className={classes['descriptionbox-nav-box']}>Description</div>
-					<div className={`${classes['descriptionbox-nav-box']} ${classes['fade']}`}>Reviews (122)</div>
-				</div>
-				<div className={classes['descriptionbox-description']}>
-					<p>{product.description}</p>
-				</div>
-			</div>
-			<div className={classes.wrapper}>
-				<div className={classes.accordion}>
-					{data.map((item, i) => (
-						<div className={classes.item}>
-							<div className={classes.title}>
-								<h2>{item.question}</h2>
-								<span>+</span>
-							</div>
-							<div className={classes.content}>
-								<p>{item.answer}</p>
-								{/* <p>{product.description}</p> */}
-							</div>
+		<div className={classes.wrapper}>
+			<div className={classes.accordion}>
+				{data.map((item, i) => (
+					<div className={classes.item}>
+						<div className={classes.title} onClick={() => toggle(i)}>
+							<h2>{item.feature}</h2>
+							<span>{selected === i ? '-' : '+'}</span>
 						</div>
-					))}
-				</div>
+						<div className={selected === i ? `${classes.content} ${classes.show}` : `${classes.content}`}>
+							{item.answer}
+						</div>
+					</div>
+				))}
 			</div>
 		</div>
 	)

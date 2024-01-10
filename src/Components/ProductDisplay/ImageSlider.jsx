@@ -35,7 +35,7 @@ const ImageSlider = ({ slides, product }) => {
 				<i class="fa-solid fa-arrow-right"></i>
 			</div>
 			<div style={bgcImg} className={classes['imgslider-slide']}>
-				ImageSlider
+				
 			</div>
 			<div className={classes['imgslider-dots']}>
 				{product.image_slide.map((slide, slideIndex) => (
