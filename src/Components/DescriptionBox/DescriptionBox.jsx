@@ -8,15 +8,15 @@ const DescriptionBox = props => {
 	const data = [
 		{
 			feature: 'Description',
-			answer: product.description,
+			text: product.description,
 		},
 		{
 			feature: 'Material composition',
-			answer: product.madeOf,
+			text: product.madeOf,
 		},
 		{
 			feature: 'Washing and maintenance rules',
-			answer: product.maintenance.map(item => <p>{item.item}</p>),
+			text: product.maintenance.map(item => <p>{item.item}</p>),
 		},
 	]
 	const [selected, setSelected] = useState(null)
@@ -38,7 +38,7 @@ const DescriptionBox = props => {
 							<span>{selected === i ? '-' : '+'}</span>
 						</div>
 						<div className={selected === i ? `${classes.content} ${classes.show}` : `${classes.content}`}>
-							{item.answer}
+							<p>{item.text}</p>
 						</div>
 					</div>
 				))}

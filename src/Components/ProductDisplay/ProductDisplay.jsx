@@ -8,29 +8,6 @@ import size_options from '../Assets/size_options'
 import color_options from '../Assets/color_options'
 
 const ProductDisplay = props => {
-	const slides = [
-		{
-			url: 'http://localhost:3000/image-1.jpg',
-			title: 'Beach',
-		},
-		{
-			url: 'http://localhost:3000/image-2.jpg',
-			title: 'Boat',
-		},
-		{
-			url: 'http://localhost:3000/image-3.jpg',
-			title: 'Forest',
-		},
-		{
-			url: 'http://localhost:3000/image-4.jpg',
-			title: 'City',
-		},
-		{
-			url: 'http://localhost:3000/image-5.jpg',
-			title: 'Italy',
-		},
-	]
-
 	const [valueSize, setValueSize] = useState('S')
 	// const [valueColor, setValueColor] = useState('BLACK')
 
@@ -49,20 +26,18 @@ const ProductDisplay = props => {
 
 	return (
 		<div className={classes['productdisplay']}>
-			<div className={classes['productdisplay-left-added']}>
-				<ImageSlider slides={slides} product={product} />
-			</div>
-			{/* <div className={classes['productdisplay-left']}>
+			<div className={classes['productdisplay-left']}>
 				<div className={classes['productdisplay-img-list']}>
-					<img src={product.image} alt="" />
-					<img src={product.image} alt="" />
-					<img src={product.image} alt="" />
-					<img src={product.image} alt="" />
+					<img src={product.image_slide[0].url} alt="" />
+					<img src={product.image_slide[1].url} alt="" />
+					<img src={product.image_slide[2].url} alt="" />
+					<img src={product.image_slide[3].url} alt="" />
 				</div>
-				<div className={classes['productdisplay-img']}>
-					<img src={product.image} alt="" className={classes['productdisplay-main-img']} />
-				</div>
-			</div> */}
+			</div>
+			<div className={classes['productdisplay-left-added']}>
+				<ImageSlider product={product} />
+			</div>
+
 			<div className={classes['productdisplay-right']}>
 				<h1>{product.name}</h1>
 				<div className={classes['productdisplay-right-stars']}>
@@ -70,16 +45,15 @@ const ProductDisplay = props => {
 					<img src={star_icon} alt="star icon" />
 					<img src={star_icon} alt="star icon" />
 					<img src={star_icon} alt="star icon" />
-					<img src={star_dull_icon} alt="faded star icon" />
-					<p>(122)</p>
+					<img src={star_icon} alt="star icon" />
+					<p>(+100)</p>
 				</div>
 				<div className={classes['productdisplay-right-prices']}>
 					<div className={classes['productdisplay-right-price-old']}>${product.old_price}</div>
-					<div className={classes['productdisplay-right-price-new']}>${product.new_price}</div>
+					<div className={classes['productdisplay-right-price-new']}>New Price: ${product.new_price}</div>
 				</div>
 				<div className={classes['productdisplay-right-description']}>
-					A lightwigt
-					.............................................................................................................................................................................................................
+					
 				</div>
 				<div className={classes['productdisplay-right-size']}>
 					<h1>Select size</h1>
@@ -127,11 +101,9 @@ const ProductDisplay = props => {
 					ADD TO CART
 				</button>
 				<p className={classes['productdisplay-right-category']}>
-					<span>Category :</span>Woman, T-Shirt, Crop Top
+					<span>Category: </span>Woman, T-Shirt, Crop Top
 				</p>
-				<p className={classes['productdisplay-right-category']}>
-					<span>Category :</span>Modern, Latest
-				</p>
+				
 			</div>
 		</div>
 	)

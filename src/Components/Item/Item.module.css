@@ -3,8 +3,14 @@
 	margin: 0 2px;
 }
 
+.item img {
+	border-radius: 8px;
+	box-shadow: 4px 4px 20px 0px black;
+}
+
 .item p {
 	margin: 6px 0;
+	font-size: 20px;
 }
 
 .item-prices {
@@ -14,6 +20,8 @@
 
 .item-price-new {
 	color: #374151;
+	color: #ce1446;
+
 	font-size: 18px;
 	font-weight: 600;
 }
