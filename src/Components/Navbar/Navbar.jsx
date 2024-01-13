@@ -35,7 +35,7 @@ const Navbar = () => {
 				</li>
 				<li>
 					<NavLink to="/womens" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)}>
-						WOMAN
+						WOMEN
 					</NavLink>
 				</li>
 				<li>

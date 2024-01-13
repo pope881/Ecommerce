@@ -54,7 +54,7 @@ const Footer = () => {
 								<li>Men</li>
 							</Link>
 							<Link to="/womens">
-								<li>Woman</li>
+								<li>Women</li>
 							</Link>
 							<Link to="/kids">
 								<li>Kids</li>
