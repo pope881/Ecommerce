@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react'
 import classes from './CartItems.module.css'
-import remove_icon from '../Assets/cart_cross_icon.png'
+import remove_icon from '../Assets/other_img/cart_cross_icon.png'
 import Checkout from '../Checkout/Checkout'
 import CartContext from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
@@ -8,6 +8,8 @@ import { useSelector } from 'react-redux'
 const CartItems = () => {
 	const cartCtx = useContext(CartContext)
 	const { items, totalAmount, removeItem } = cartCtx
+
+	console.log(items)
 
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 
@@ -82,7 +84,7 @@ const CartItems = () => {
 				return (
 					<div>
 						<div className={`${classes['cartitems-format']} ${classes['cartitems-format-main']} `}>
-							<img src={e.image} alt="" className={classes['carticon-product-icon']} />
+							<img src={e.image} alt="image of product" className={classes['carticon-product-icon']} />
 							<p>{e.name}</p>
 							<p>${e.price}</p>
 							<p>{e.size}</p>

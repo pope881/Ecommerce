@@ -1,4 +1,4 @@
-import about_img from '../Assets/about-6.png'
+import about_img from '../Assets/about/about-6.png'
 import classes from './AboutUs.module.css'
 import { motion } from 'framer-motion'
 

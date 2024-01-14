@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import classes from './BackgroundSlider.module.css'
-
 import MenBackground from '../Assets/backgroundSlider/MenBackground.jpg'
 import WomanBackground from '../Assets/backgroundSlider/WomanBackground.jpg'
 import KidsBackground from '../Assets/backgroundSlider/KidsBackground.jpg'

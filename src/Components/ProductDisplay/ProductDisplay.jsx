@@ -1,7 +1,6 @@
 import React, { useContext, useState } from 'react'
 import classes from './ProductDisplay.module.css'
-import star_icon from '../Assets/star_icon.png'
-import star_dull_icon from '../Assets/star_dull_icon.png'
+import star_icon from '../Assets/other_img/star_icon.png'
 import CartContext from '../../Context/cart-context'
 import ImageSlider from './ImageSlider'
 import size_options from '../Assets/size_options'
@@ -52,9 +51,7 @@ const ProductDisplay = props => {
 					<div className={classes['productdisplay-right-price-old']}>${product.old_price}</div>
 					<div className={classes['productdisplay-right-price-new']}>New Price: ${product.new_price}</div>
 				</div>
-				<div className={classes['productdisplay-right-description']}>
-					
-				</div>
+				<div className={classes['productdisplay-right-description']}></div>
 				<div className={classes['productdisplay-right-size']}>
 					<h1>Select size</h1>
 
@@ -101,9 +98,8 @@ const ProductDisplay = props => {
 					ADD TO CART
 				</button>
 				<p className={classes['productdisplay-right-category']}>
-					<span>Category: </span>Woman, T-Shirt, Crop Top
+					<span>Category:</span> {product.clothes_type}
 				</p>
-				
 			</div>
 		</div>
 	)

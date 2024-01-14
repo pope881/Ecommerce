@@ -1,7 +1,6 @@
 import classes from './Hero.module.css'
-import arrow_icon from '../Assets/arrow.png'
-import heroWoman_image from '../Assets/heroWoman_image.png'
-import heroMan_image from '../Assets/heroMan_image.png'
+import heroWoman_image from '../Assets/other_img/heroWoman_image.png'
+import heroMan_image from '../Assets/other_img/heroMan_image.png'
 
 const Hero = () => {
 	const handleClickScroll = () => {

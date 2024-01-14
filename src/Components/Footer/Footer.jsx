@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Footer.module.css'
-import logo from '../Assets/logo-no-background.png'
+import logo from '../Assets/other_img/logo-no-background.png'
 
 import { Link } from 'react-router-dom'
 

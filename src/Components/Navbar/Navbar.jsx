@@ -1,5 +1,5 @@
 import classes from './Navbar.module.css'
-import logo from '../Assets/logo-no-background.png'
+import logo from '../Assets/other_img/logo-no-background.png'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
