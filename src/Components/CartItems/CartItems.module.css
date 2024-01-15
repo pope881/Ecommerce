@@ -8,7 +8,7 @@
 	border: 0;
 }
 
-.cartitems-format-main {
+.cartitems__layout {
 	display: grid;
 	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
@@ -19,33 +19,36 @@
 	font-weight: 600;
 }
 
-.cartitems-format {
+.cartitems__format {
 	font-size: 17px;
 	font-weight: 500;
 }
 
-.carticon-product-icon {
+.cartitems__img {
 	height: 62px;
 }
 
-.cartitems-remove-icon {
+.cartitems__removeIcon {
 	width: 20px;
-	margin: 0 40px;
+	margin: 0 15px;
 	cursor: pointer;
 }
-.cartitems-quantity {
+.cartitems__quantity {
 	width: 64px;
 	height: 50px;
 	border: 2px solid #ebebeb;
 	background: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.cartitems-down {
+.cartitems__totals {
 	display: flex;
 	margin: 100px 0;
 }
 
-.cartitems-total {
+.cartitems__total {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -53,13 +56,13 @@
 	gap: 40px;
 }
 
-.cartitems-total-item {
+.cartitems__item {
 	display: flex;
 	justify-content: space-between;
 	padding: 15px 0;
 }
 
-.cartitems-total button {
+.cartitems__total button {
 	width: 262px;
 	height: 58px;
 	outline: none;
@@ -73,24 +76,24 @@
 	transition: 0.3s;
 }
 
-.cartitems-total button:hover,
-.cartitems-total button:active {
+.cartitems__total button:hover,
+.cartitems__total button:active {
 	color: #ce1446;
 	background: #fff;
 	border: 1px solid black;
 }
 
-.cartitems-promocode {
+.cartitems__promocode {
 	flex: 1;
 	font-size: 16px;
 	font-weight: 500;
 }
 
-.cartitems-promocode p {
+.cartitems__promocode p {
 	color: #555;
 }
 
-.cartitems-promobox {
+.cartitems__promobox {
 	display: flex;
 	width: 520px;
 	margin-top: 15px;
@@ -99,7 +102,7 @@
 	background: #eaeaea;
 }
 
-.cartitems-promobox input {
+.cartitems__promobox input {
 	border: none;
 	outline: none;
 	background: transparent;
@@ -111,16 +114,16 @@
 	border-radius: 4px;
 }
 
-.cartitems-promobox .invalid p {
+.cartitems__promobox .invalid p {
 	color: #ca3e51;
 }
 
-.cartitems-promobox .invalid input {
+.cartitems__promobox .invalid input {
 	border-color: #aa0b20;
 	background-color: #ffeff1;
 }
 
-.cartitems-promobox button {
+.cartitems__promobox button {
 	width: 170px;
 	height: 58px;
 	font-size: 16px;
@@ -130,7 +133,7 @@
 	transition: 0.3s;
 }
 
-.cartitems-promobox button:hover {
+.cartitems__promobox button:hover {
 	background: white;
 	color: black;
 }

@@ -20,7 +20,7 @@ const Footer = () => {
 					<div className={`${classes.sec} ${classes.aboutus}`}>
 						<div className={classes.logo}>
 							<Link to="/">
-								<img onClick={scrollToTop} src={logo} alt="" />
+								<img onClick={scrollToTop} src={logo} alt="company logo" />
 							</Link>
 							<h2>shop4u</h2>
 						</div>

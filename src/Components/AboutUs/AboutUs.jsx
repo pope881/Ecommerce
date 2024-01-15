@@ -1,19 +1,19 @@
-import about_img from '../Assets/about/about-6.png'
+import about_img from '../Assets/about_img/1.png'
 import classes from './AboutUs.module.css'
 import { motion } from 'framer-motion'
 
 const AboutUs = () => {
 	return (
-		<section className={classes.aboutUs}>
+		<section className={classes.about}>
 			<motion.div
-				className={classes['aboutUs-mainImg']}
+				className={classes['about__mainImg']}
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2 }}>
-				<img src={about_img} alt="" />
+				<img src={about_img} alt="men with black sunglasses" />
 			</motion.div>
 			<motion.div
-				className={classes['aboutUs-text']}
+				className={classes['about__text']}
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2, delay: 2 }}>
@@ -27,16 +27,16 @@ const AboutUs = () => {
 					our customers express their style—not just buy fashion.
 				</p>
 
-				<div className={classes['aboutUs-lastText']}>
-					<div className={classes['aboutUs-lastText-text']}>
+				<div className={classes['about__descriptions']}>
+					<div className={classes['about__description']}>
 						<h3>15y+</h3>
 						<h5>Online Shopping</h5>
 					</div>
-					<div className={classes['aboutUs-lastText-text']}>
+					<div className={classes['about__description']}>
 						<h3>20k+</h3>
 						<h5>Happy Clients</h5>
 					</div>
-					<div className={classes['aboutUs-lastText-text']}>
+					<div className={classes['about__description']}>
 						<h3>80+</h3>
 						<h5>Countries</h5>
 					</div>

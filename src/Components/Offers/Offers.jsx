@@ -17,7 +17,7 @@ const Offers = () => {
 				<button onClick={navigateHandler}>Check now</button>
 			</div>
 			<div className={classes['offers-right']}>
-				<img src={exlusive_image} alt="" />
+				<img src={exlusive_image} alt="woman dressed jeans and blakc t-shirt" />
 			</div>
 		</div>
 	)

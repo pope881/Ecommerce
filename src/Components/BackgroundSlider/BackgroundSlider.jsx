@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import classes from './BackgroundSlider.module.css'
-import MenBackground from '../Assets/backgroundSlider/MenBackground.jpg'
-import WomanBackground from '../Assets/backgroundSlider/WomanBackground.jpg'
-import KidsBackground from '../Assets/backgroundSlider/KidsBackground.jpg'
+import MenBackground from '../Assets/backgroundSlider_img/MenBackground.jpg'
+import WomanBackground from '../Assets/backgroundSlider_img/WomanBackground.jpg'
+import KidsBackground from '../Assets/backgroundSlider_img/KidsBackground.jpg'
 
 const imageSlide = [
 	{ url: MenBackground, title: 'MEN', body: '' },
@@ -41,15 +41,15 @@ const BackgroundSlider = () => {
 
 	return (
 		<div className={classes['container']}>
-			<div className={classes['countiner-style']}>
+			<div className={classes['container__background']}>
 				<div style={bgImageStyle}></div>
-				<div className={classes['transparent-background']}></div>
-				<div className={classes.description}>
+				<div className={classes['container__background--transparent']}></div>
+				<div className={classes['container__description']}>
 					<div>
 						<h1>{imageSlide[currentState].title}</h1>
 						<p>{imageSlide[currentState].body}</p>
 					</div>
-					<div className={classes['carousel-boullt']}>
+					<div className={classes['carousel__carousel']}>
 						{imageSlide.map((imageSlide, currentState) => (
 							<span key={currentState} onClick={() => goToNext(currentState)}></span>
 						))}

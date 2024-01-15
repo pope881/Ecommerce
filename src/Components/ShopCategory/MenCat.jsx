@@ -32,7 +32,7 @@ const MenCat = props => {
 
 	return (
 		<div className={classes['shop-category']}>
-			<img className={classes['shopcategory-banner']} src={props.banner} alt="" />
+			<img className={classes['shopcategory-banner']} src={props.banner} alt="banner" />
 			<div className={classes['shopcategoty-indexSort']}>
 				<p>{numberOfProducts}</p>
 				<div className={classes['form-actions']}>

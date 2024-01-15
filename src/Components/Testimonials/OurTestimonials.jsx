@@ -3,11 +3,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import classes from './OurTestimonials.module.css'
-import Person1 from '../Assets/testimonials/1.jpg'
-import Person2 from '../Assets/testimonials/2.jpg'
-import Person3 from '../Assets/testimonials/3.jpg'
-import Person4 from '../Assets/testimonials/4.jpg'
-import Person5 from '../Assets/testimonials/5.jpg'
+import Person1 from '../Assets/testimonials_img/1.jpg'
+import Person2 from '../Assets/testimonials_img/2.jpg'
+import Person3 from '../Assets/testimonials_img/3.jpg'
+import Person4 from '../Assets/testimonials_img/4.jpg'
+import Person5 from '../Assets/testimonials_img/5.jpg'
 
 const data = [
 	{
@@ -64,7 +64,7 @@ const OurTestimonials = () => {
 						{data.map(d => (
 							<div key={d.name} className={classes.item}>
 								<div className={classes.itemTop}>
-									<img src={d.img} alt="" className={classes.img} />
+									<img src={d.img} alt="person expressing opinions" className={classes.img} />
 								</div>
 
 								<div className={classes.itemDown}>

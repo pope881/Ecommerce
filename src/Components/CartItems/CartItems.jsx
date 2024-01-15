@@ -69,7 +69,7 @@ const CartItems = () => {
 
 	return (
 		<div className={classes.cartitems}>
-			<div className={classes['cartitems-format-main']}>
+			<div className={classes['cartitems__layout']}>
 				<p>Products</p>
 				<p>Title</p>
 				<p>Price</p>
@@ -83,16 +83,16 @@ const CartItems = () => {
 			{items.map(e => {
 				return (
 					<div>
-						<div className={`${classes['cartitems-format']} ${classes['cartitems-format-main']} `}>
-							<img src={e.image} alt="image of product" className={classes['carticon-product-icon']} />
+						<div className={`${classes['cartitems__format']} ${classes['cartitems__layout']} `}>
+							<img src={e.image} alt="display of each product" className={classes['cartitems__img']} />
 							<p>{e.name}</p>
 							<p>${e.price}</p>
 							<p>{e.size}</p>
 							{/* <p>{e.color}</p> */}
-							<button className={classes['cartitems-quantity']}>{e.amount}</button>
+							<div className={classes['cartitems__quantity']}>{e.amount}</div>
 							<p>${e.price * e.amount}</p>
 							<img
-								className={classes['cartitems-remove-icon']}
+								className={classes['cartitems__removeIcon']}
 								src={remove_icon}
 								onClick={() => {
 									removeItem({ id: e.id, size: e.size })
@@ -104,23 +104,23 @@ const CartItems = () => {
 					</div>
 				)
 			})}
-			<div className={classes['cartitems-down']}>
-				<div className={classes['cartitems-total']}>
+			<div className={classes['cartitems__totals']}>
+				<div className={classes['cartitems__total']}>
 					<h1>cart Totals</h1>
 					<div>
-						<div className={classes['cartitems-total-item']}>
+						<div className={classes['cartitems__item']}>
 							<p>Subtotal</p>
 							<p>${totalAmount}</p>
 						</div>
 						<hr />
 						{showShippingFee && (
-							<div className={classes['cartitems-total-item']}>
+							<div className={classes['cartitems__item']}>
 								<p>Shipping Fee</p>
 								<p>Free</p>
 							</div>
 						)}
 						<hr />
-						<div className={classes['cartitems-total-item']}>
+						<div className={classes['cartitems__item']}>
 							<h3>Total</h3>
 							<h3>${totalAmount}</h3>
 						</div>
@@ -133,10 +133,10 @@ const CartItems = () => {
 
 					{isCheckout && <Checkout onSubmitPromoCode={clearPromoCode} onCancel={orderCloseHandler} />}
 				</div>
-				<div className={classes['cartitems-promocode']}>
+				<div className={classes['cartitems__promocode']}>
 					<p>If you have a promo code, enter it here (5 charakters):</p>
-					<div className={classes['cartitems-promobox']}>
-						<form onSubmit={promoCodeHandler} className={classes['form-promo']}>
+					<div className={classes['cartitems__promobox']}>
+						<form onSubmit={promoCodeHandler} className={classes['cartitems__form']}>
 							<div className={` ${promoCodeValidity ? '' : classes.invalid}`}>
 								<input type="text" placeholder="promo code" ref={promoCodeInputRef} />
 								<button>Submit</button>

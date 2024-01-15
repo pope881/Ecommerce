@@ -27,10 +27,10 @@ const ProductDisplay = props => {
 		<div className={classes['productdisplay']}>
 			<div className={classes['productdisplay-left']}>
 				<div className={classes['productdisplay-img-list']}>
-					<img src={product.image_slide[0].url} alt="" />
-					<img src={product.image_slide[1].url} alt="" />
-					<img src={product.image_slide[2].url} alt="" />
-					<img src={product.image_slide[3].url} alt="" />
+					<img src={product.image_slide[0].url} alt="each product photo nr 1" />
+					<img src={product.image_slide[1].url} alt="each product photo nr 2" />
+					<img src={product.image_slide[2].url} alt="each product photo nr 3" />
+					<img src={product.image_slide[3].url} alt="each product photo nr 4" />
 				</div>
 			</div>
 			<div className={classes['productdisplay-left-added']}>

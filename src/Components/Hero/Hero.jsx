@@ -18,7 +18,7 @@ const Hero = () => {
 			</div>
 			<div className={classes.hero}>
 				<div className={classes['hero-img-woman']}>
-					<img src={heroWoman_image} alt="" />
+					<img src={heroWoman_image} alt="young girl dressed in sports clothes" />
 				</div>
 				<div className={classes['hero-text']}>
 					<div>
@@ -32,7 +32,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className={classes['hero-img-man']}>
-					<img src={heroMan_image} alt="" />
+					<img src={heroMan_image} alt="men dressed in sports clothes" />
 				</div>
 			</div>
 		</div>

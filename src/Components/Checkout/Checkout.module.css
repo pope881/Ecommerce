@@ -1,18 +1,18 @@
-.form-checkout {
+.form {
 	margin: 1rem 0;
 }
 
-.control {
+.form__control {
 	margin-bottom: 0.5rem;
 }
 
-.control label {
+.form__control label {
 	font-weight: bold;
 	margin-bottom: 0.25rem;
 	display: block;
 }
 
-.control input {
+.form__control input {
 	font: inherit;
 	border: 1px solid #ccc;
 	border-radius: 4px;
@@ -20,13 +20,13 @@
 	max-width: 100%;
 }
 
-.actions {
+.form__actions {
 	display: flex;
 	justify-content: flex-end;
 	gap: 1rem;
 }
 
-.actions button {
+.form__actions button {
 	font: inherit;
 	color: #ce1446;
 	cursor: pointer;
@@ -36,19 +36,19 @@
 	padding: 0.5rem 2rem;
 }
 
-.actions button:hover,
-.actions button:active {
+.form__actions button:hover,
+.form__actions button:active {
 	background-color: #ffe6dc;
 }
 
-.actions .submit {
+.form__actions .form__submit {
 	border: 1px solid #5a1a01;
 	background-color: #ce1446;
 	color: white;
 }
 
-.actions .submit:hover,
-.actions .submit:active {
+.form__actions .form__submit:hover,
+.form__actions .form__submit:active {
 	background-color: white;
 	color: #ce1446;
 }
