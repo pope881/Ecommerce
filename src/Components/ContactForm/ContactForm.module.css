@@ -1,5 +1,4 @@
 .contact {
-	position: relative;
 	min-height: 100vh;
 	padding: 4% 10%;
 	display: flex;
@@ -7,24 +6,23 @@
 	align-items: center;
 	flex-direction: column;
 	background-position: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(51, 49, 49, 0.6)), url('http://localhost:3000/image-7.jpg');
-	/* background-position: center; */
+	background-color: #0c0b0b;
 	background-size: cover;
 }
 
-.contact-content {
+.contact__heading {
 	max-width: 800px;
 	/* text-align: center; */
 }
 
-.contact-content h2 {
+.contact__heading h2 {
 	font-size: 36px;
 	font-weight: 700;
 	color: #fff;
 	text-align: center;
 }
 
-.contact-content h4 {
+.contact__heading h4 {
 	color: #ce1446;
 	font-size: 16px;
 	font-weight: 600;
@@ -32,13 +30,13 @@
 	margin-bottom: 10px;
 }
 
-.contact-content p {
+.contact__heading p {
 	font-weight: 300;
 	color: #fff;
 	margin-bottom: 30px;
 }
 
-.contact-content hr {
+.contact__heading hr {
 	width: 100%;
 	border: none;
 	height: 2px;
@@ -46,7 +44,7 @@
 	margin-bottom: 50px;
 }
 
-.contact-container {
+.contact__container {
 	width: 100%;
 	display: flex;
 	justify-content: center;
@@ -55,26 +53,26 @@
 	margin-top: 30px;
 }
 
-.contact-container-map iframe {
+.contact__mapContainer iframe {
 	width: 400px;
 	height: 300px;
 	border-radius: 16px;
 }
 
-.contact-container-contactInfo {
+.contact__info {
 	width: 20%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.contact-container-contactInfo-box {
+.contact__infoBox {
 	position: relative;
 	padding: 20px 0;
 	display: flex;
 }
 
-.contact-container-contactInfo-box-icon {
+.contact__icon {
 	min-width: 60px;
 	height: 60px;
 	background: #fff;
@@ -85,7 +83,7 @@
 	font-size: 22px;
 }
 
-.contact-container-contactInfo-box-text {
+.contact__infoText {
 	display: flex;
 	margin-left: 20px;
 	font-size: 16px;
@@ -94,38 +92,38 @@
 	font-weight: 300;
 }
 
-.contact-container-contactInfo-box-text h3 {
+.contact__infoText h3 {
 	font-weight: 500;
 	color: #ce1446;
 }
 
-.contact-container-contactInfo-box-text a {
+.contact__infoText a {
 	text-decoration: none;
 	font-size: 16px;
 	color: #fff;
 }
 
-.contact-container-contactForm {
+.contact__form {
 	width: 40%;
 	padding: 40px;
 	background: #fff;
 	border-radius: 16px;
 }
 
-.contact-container-contactForm h2 {
+.contact__form h2 {
 	font-size: 30px;
 	color: #333;
 	font-weight: 700;
 }
 
-.contact-container-contactForm-inputBox {
+.contact__inputBox {
 	position: relative;
 	width: 100%;
 	margin-top: 10px;
 }
 
-.contact-container-contactForm-inputBox input,
-.contact-container-contactForm-inputBox textarea {
+.contact__inputBox input,
+.contact__inputBox textarea {
 	width: 100%;
 	padding: 5px 0;
 	font-size: 16px;
@@ -142,7 +140,7 @@
 	resize: none;
 }
 
-.contact-container-contactForm-inputBox span {
+.contact__inputBox span {
 	position: absolute;
 	left: 0;
 	padding: 5px 0;
@@ -153,22 +151,22 @@
 	color: #666;
 }
 
-.contact-container-contactForm-inputBox input:focus ~ span,
-.contact-container-contactForm-inputBox input:valid ~ span,
-.contact-container-contactForm-inputBox textarea:focus ~ span,
-.contact-container-contactForm-inputBox textarea:valid ~ span {
+.contact__inputBox input:focus ~ span,
+.contact__inputBox input:valid ~ span,
+.contact__inputBox textarea:focus ~ span,
+.contact__inputBox textarea:valid ~ span {
 	color: #e91e63;
 	font-size: 12px;
 	transform: translateY(-20px);
 }
 
-.contact-container-contactForm-actions {
+.contact__formActions {
 	display: flex;
 	justify-content: flex-start;
 	gap: 1rem;
 }
 
-.contact-container-contactForm-actions button {
+.contact__formActions button {
 	font: inherit;
 	color: #5a1a01;
 	cursor: pointer;
@@ -179,20 +177,20 @@
 	transition: 0.4s;
 }
 
-.contact-container-contactForm-actions button:hover,
-.contact-container-contactForm-actions button:active {
+.contact__formActions button:hover,
+.contact__formActions button:active {
 	background-color: #ffe6dc;
 }
 
-.contact-container-contactForm-actions .submit {
+.contact__formActions .submit {
 	border: 1px solid #ce1446;
 	background-color: #ce1446;
 	color: white;
 	transition: 0.4s;
 }
 
-.contact-container-contactForm-actions .submit:hover,
-.contact-container-contactForm-actions .submit:active {
+.contact__formActions .submit:hover,
+.contact__formActions .submit:active {
 	background-color: white;
 	color: #ce1446;
 }
@@ -201,14 +199,14 @@
 	.contact {
 		padding: 50px;
 	}
-	.contact-container {
+	.contact__container {
 		flex-direction: column;
 	}
-	.contact-container-contactInfo {
+	.contact__info {
 		margin-bottom: 40px;
 	}
-	.contact-container-contactInfo,
-	.contact-container-contactForm {
+	.contact__info,
+	.contact__form {
 		width: 100%;
 	}
 }

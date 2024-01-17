@@ -6,31 +6,31 @@
 	width: 100%;
 	height: 100vh;
 	background-position: center;
-	background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-		url('http://localhost:3000/src/components/assests/login_img/image-8.jpg');
-		
+
+	background-color: #0c0b0b;
+
 	/* background-position: center; */
 	background-size: cover;
 }
 
-.login-text {
+.login__text {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 }
 
-.login-text h2 {
+.login__text h2 {
 	font-size: 3rem;
 	color: #ce1446;
 	margin-right: 2rem;
 }
 
-.login-text p {
+.login__text p {
 	font-size: 58px;
 	color: #ce1446;
 }
 
-.login-form {
+.login__form {
 	position: relative;
 	width: 100%;
 	display: flex;
@@ -46,60 +46,60 @@
 	box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
 }
 
-.login-form::before,
-.login-form::after,
-.login-form {
+.login__form::before,
+.login__form::after,
+.login__form {
 	transition: 0.3s;
 }
 
-.login-form::before,
-.login-form::after {
+.login__form::before,
+.login__form::after {
 	content: '';
 	position: absolute;
 	width: 0px;
 	height: 0px;
 }
 
-.login-form::before {
+.login__form::before {
 	top: -25px;
 	left: -25px;
 	border-top: 0px solid #ce1446;
 	border-left: 0px solid #ce1446;
 }
 
-.login-form::after {
+.login__form::after {
 	bottom: -25px;
 	right: -25px;
 	border-bottom: 0px solid #ce1446;
 	border-right: 0px solid #ce1446;
 }
 
-.login-form:hover::before,
-.login-form:hover::after {
+.login__form:hover::before,
+.login__form:hover::after {
 	width: 25%;
 	height: 20%;
 }
 
-.login-form:hover::before {
+.login__form:hover::before {
 	border-top: 6px solid #ce1446;
 	border-left: 6px solid #ce1446;
 }
 
-.login-form:hover::after {
+.login__form:hover::after {
 	border-bottom: 6px solid #ce1446;
 	border-right: 6px solid #ce1446;
 }
 
-.control,
+.login__control,
 fieldset {
 	margin-bottom: 1rem;
 }
 
-.control.no-margin {
+.login__control.login__noMargin {
 	margin-bottom: 0;
 }
 
-.control label {
+.login__control label {
 	display: block;
 	font-size: 0.8rem;
 	margin-bottom: 0.2rem;
@@ -109,7 +109,7 @@ fieldset {
 	/* font-weight: bold; */
 }
 
-.control input {
+.login__control input {
 	display: block;
 	width: 100%;
 	max-width: 25rem;
@@ -121,40 +121,38 @@ fieldset {
 	color: #142020;
 }
 
-.control-error {
+.login__control--error {
 	color: #ffca99;
 	font-size: 0.8rem;
 	height: 2.5rem;
 	padding: 0.5rem 0;
 }
 
-.control-error p {
+.login__control--error p {
 	margin: 0;
 	color: red;
 }
 
-.control-error.form p {
+.login__control--error.form p {
 	margin-top: 1rem;
 	color: red;
 	text-align: center;
 }
 
-.control-row {
+.login__controls {
 	display: flex;
 	flex-direction: column;
-	/* flex-wrap: wrap; */
-	/* justify-content: flex-start; */
 	gap: 1rem;
 }
 
-.form-actions {
+.login__actions {
 	display: flex;
 	justify-content: center;
 	justify-content: flex-start;
 	gap: 1rem;
 }
 
-.button {
+.login__button {
 	font: inherit;
 	color: #5a1a01;
 	cursor: pointer;
@@ -165,20 +163,20 @@ fieldset {
 	transition: 0.4s;
 }
 
-.button:hover,
-.button:active {
+.login__button:hover,
+.login__button:active {
 	background-color: #ffe6dc;
 }
 
-.submit {
+.login__submit {
 	border: 1px solid #ce1446;
 	background-color: #ce1446;
 	color: white;
 	transition: 0.4s;
 }
 
-.submit:hover,
-.submit:active {
+.login__submit:hover,
+.login__submit:active {
 	background-color: white;
 	color: #ce1446;
 }

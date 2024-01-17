@@ -19,7 +19,6 @@ const WomenCat = props => {
 	})
 	const [items, seItems] = useState(product)
 	// console.log(items)
-	console.log(product)
 
 	const filterItems = catItem => {
 		const updatedItems = product.filter(curItem => {

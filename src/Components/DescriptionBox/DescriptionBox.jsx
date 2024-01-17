@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import classes from './DescriptionBox.module.css'
-import { useScroll } from 'framer-motion'
 
 const DescriptionBox = props => {
 	const { product } = props
@@ -32,12 +31,17 @@ const DescriptionBox = props => {
 		<div className={classes.wrapper}>
 			<div className={classes.accordion}>
 				{data.map((item, i) => (
-					<div className={classes.item}>
-						<div className={classes.title} onClick={() => toggle(i)}>
+					<div key={i} className={classes['accordion__item']}>
+						<div className={classes['accordion__itemTitle']} onClick={() => toggle(i)}>
 							<h2>{item.feature}</h2>
 							<span>{selected === i ? '-' : '+'}</span>
 						</div>
-						<div className={selected === i ? `${classes.content} ${classes.show}` : `${classes.content}`}>
+						<div
+							className={
+								selected === i
+									? `${classes['accordion__itemContent']} ${classes['accordion__itemShow']}`
+									: `${classes['accordion__itemContent']}`
+							}>
 							<p>{item.text}</p>
 						</div>
 					</div>

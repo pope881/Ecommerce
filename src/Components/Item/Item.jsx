@@ -9,9 +9,9 @@ const Item = props => {
 				<img onClick={window.scrollTo(0, 0)} src={props.image} alt="each product" />
 			</Link>
 			<p>{props.name}</p>
-			<div className={classes['item-prices']}>
-				<div className={classes['item-price-new']}>${props.new_price}</div>
-				<div className={classes['item-price-old']}>${props.old_price}</div>
+			<div className={classes['item__prices']}>
+				<div className={classes['item__price--new']}>${props.new_price}</div>
+				<div className={classes['item__price--old']}>${props.old_price}</div>
 			</div>
 		</div>
 	)

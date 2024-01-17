@@ -1,6 +1,6 @@
 .wrapper {
 	display: flex;
-	justify-content: center;
+	justify-accordion__itemcontent: center;
 	align-items: center;
 	width: 100%;
 }
@@ -10,7 +10,7 @@
 	width: 100%;
 }
 
-.item {
+.accordion__item {
 	background-color: #f0ebe1;
 	margin-bottom: 5px;
 	padding: 15px 25px;
@@ -18,24 +18,23 @@
 	transition: background-color 0.4s;
 }
 
-.item:hover {
+.accordion__item:hover {
 	background-color: #e7d6bc;
 }
 
-.title {
+.accordion__itemTitle {
 	color: #5f430e;
-
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	cursor: pointer;
 }
 
-.title span {
+.accordion__itemTitle span {
 	font-size: 32px;
 }
 
-.content {
+.accordion__itemContent {
 	color: #8b7f75;
 
 	max-height: 0;
@@ -43,11 +42,11 @@
 	transition: all 0.4s cubic-bezier(0, 1, 0, 1);
 }
 
-.content p {
+.accordion__itemContent p {
 	color: black;
 }
 
-.content.show {
+.accordion__itemContent.accordion__itemShow {
 	height: auto;
 	max-height: 9999px;
 	transition: all 0.4s cubic-bezier(0, 1, 0, 1);

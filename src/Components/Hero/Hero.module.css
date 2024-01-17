@@ -1,4 +1,4 @@
-.text-top {
+.hero__textTop {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -6,13 +6,13 @@
 	margin-bottom: 2rem;
 }
 
-.text-top h1 {
+.hero__textTop h1 {
 	color: #171717;
 	font-size: 50px;
 	font-weight: 600;
 }
 
-.text-top hr {
+.hero__textTop hr {
 	width: 200px;
 	height: 6px;
 	border-radius: 10px;
@@ -21,11 +21,7 @@
 
 .hero {
 	height: 100vh;
-	/* background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%); */
-	/* background: linear-gradient(180deg, #ce1446, #e1ffea22 100%); */
 	background-image: linear-gradient(to top, rgba(154, 21, 21, 0), rgb(75, 68, 68));
-	/* padding: 4% 10%; */
-
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -33,7 +29,7 @@
 	margin-bottom: 10rem;
 }
 
-.hero-text {
+.hero__text {
 	display: flex;
 	flex: 1;
 	flex-direction: column;
@@ -44,16 +40,16 @@
 	text-transform: uppercase;
 }
 
-.hero-text p {
+.hero__text p {
 	color: #171717;
 	font-size: 100px;
 	font-weight: 700;
 }
 
-.hero-img-woman,
-.hero-img-woman img,
-.hero-img-man,
-.hero-img-man img {
+.hero__img--Woman,
+.hero__img--Woman img,
+.hero__img--Man,
+.hero__img--Man img {
 	display: flex;
 	flex: 1;
 	align-items: center;
@@ -61,7 +57,7 @@
 	overflow: hidden;
 }
 
-.btn {
+.hero__btn {
 	font: inherit;
 	color: #ce1446;
 	font-weight: bold;
@@ -73,18 +69,18 @@
 	transition: 0.3s;
 }
 
-.btn:hover,
-.btn:active {
+.hero__btn:hover,
+.hero__btn:active {
 	background-color: #ffe6dc;
 }
-.btn {
+.hero__btn {
 	border: 1px solid #5a1a01;
 	background-color: #ce1446;
 	color: white;
 }
 
-.btn:hover,
-.btn:active {
+.hero__btn:hover,
+.hero__btn:active {
 	background-color: white;
 	color: #ce1446;
 }

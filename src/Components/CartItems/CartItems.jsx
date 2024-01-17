@@ -10,7 +10,6 @@ const CartItems = () => {
 	const { items, totalAmount, removeItem } = cartCtx
 
 	console.log(items)
-
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 
 	const [isCheckout, setIsCheckout] = useState(false)
@@ -71,9 +70,9 @@ const CartItems = () => {
 		<div className={classes.cartitems}>
 			<div className={classes['cartitems__layout']}>
 				<p>Products</p>
-				<p>Title</p>
+				<p>Name</p>
 				<p>Price</p>
-				<p>Seize</p>
+				<p>Size</p>
 				{/* <p>Color</p> */}
 				<p>Quantity</p>
 				<p>Total</p>
@@ -83,7 +82,7 @@ const CartItems = () => {
 			{items.map(e => {
 				return (
 					<div>
-						<div className={`${classes['cartitems__format']} ${classes['cartitems__layout']} `}>
+						<div key={e.id} className={`${classes['cartitems__format']} ${classes['cartitems__layout']} `}>
 							<img src={e.image} alt="display of each product" className={classes['cartitems__img']} />
 							<p>{e.name}</p>
 							<p>${e.price}</p>
@@ -134,7 +133,7 @@ const CartItems = () => {
 					{isCheckout && <Checkout onSubmitPromoCode={clearPromoCode} onCancel={orderCloseHandler} />}
 				</div>
 				<div className={classes['cartitems__promocode']}>
-					<p>If you have a promo code, enter it here (5 charakters):</p>
+					<p>If you have a promo code, enter it here (5 characters):</p>
 					<div className={classes['cartitems__promobox']}>
 						<form onSubmit={promoCodeHandler} className={classes['cartitems__form']}>
 							<div className={` ${promoCodeValidity ? '' : classes.invalid}`}>

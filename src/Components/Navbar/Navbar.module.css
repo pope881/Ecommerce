@@ -12,24 +12,24 @@
 	/* background-color: blue; */
 }
 
-.nav-logo {
+.navbar__logo {
 	display: flex;
 	align-items: center;
 	gap: 10px;
 }
 
-.nav-logo img {
+.navbar__logo img {
 	width: 90px;
 	height: 90px;
 }
 
-.nav-logo p {
+.navbar__logo p {
 	color: #171717;
 	font-size: 38px;
 	font-weight: 600;
 }
 
-.nav-logo a {
+.navbar__logo a {
 	text-decoration: none;
 }
 

@@ -1,80 +1,79 @@
-footer {
+.footer {
 	border: 1px solid rgba(0, 0, 0, 0.15);
 	width: 100%;
 	height: auto;
 	padding: 30px 80px;
 	background: #fff;
 }
-
-footer .container {
+.footer__container {
 	width: 100%;
 	display: grid;
 	grid-template-columns: 2fr 1fr 1fr 1fr;
 	grid-gap: 30px;
 }
 
-footer .container .sec.aboutus {
+.footer__section.footer__aboutUs {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
 }
 
-footer .container .sec.aboutus .logo {
+.footer__logo {
 	display: flex;
 	justify-content: flex-start;
 	align-items: center;
 	gap: 1rem;
 }
 
-footer .container .sec.aboutus img {
+.footer__section.footer__aboutUs img {
 	width: 100px;
 	height: 100px;
 }
 
-footer .container .sec h2 {
+.footer__section h2 {
 	color: #333;
 	font-weight: 600;
 	margin-bottom: 15px;
 }
 
-footer .container .sec .textOne {
+.footer__section .footer__qualityText {
 	color: #ce1446;
 	font-style: italic;
 	text-shadow: 0px 0px 2px #ce1446;
 }
 
-footer .container .sec .textTwo {
+.footer__section .footer__text {
 	font-style: italic;
 }
 
-footer .container .quicklinks ul li {
+.footer__quicklinks ul li {
 	list-style: none;
 	text-decoration: none;
 	margin-bottom: 10px;
 	transition: 0.3s;
 }
 
-footer .container .quicklinks ul li:hover {
+.footer__quicklinks ul li:hover {
 	color: #e91e63;
 	transform: scale(1.15);
 }
 
-footer .container .quicklinks ul a {
+.footer__quicklinks ul a {
 	text-decoration: none;
 	color: #555;
 }
-footer .container .contact .info li {
+.footer__contactInfo li {
 	display: grid;
 	grid-template-columns: 30px 1fr;
 	margin-bottom: 16px;
 }
 
-footer .container .contact .info li span {
+.footer__contactInfo li span {
 	color: #555;
 	font-size: 20px;
 }
 
-footer .container .contact .info li a {
+.footer__contactInfo li a {
 	color: #555;
 	text-decoration: none;
 }
@@ -90,11 +89,11 @@ footer .container .contact .info li a {
 }
 
 @media (max-width: 991px) {
-	footer {
+	.footer {
 		padding: 40px;
 	}
 
-	footer .container {
+	.footer .footer__container {
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
@@ -107,7 +106,7 @@ footer .container .contact .info li a {
 }
 
 @media (max-width: 768px) {
-	footer .container {
+	.footer .footer__container {
 		width: 100%;
 		display: grid;
 		grid-template-columns: repeat(1, 1fr);

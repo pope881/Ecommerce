@@ -16,10 +16,9 @@ const Navbar = () => {
 
 	return (
 		<div className={classes.navbar}>
-			<div className={classes['nav-logo']}>
-				<img src={logo} alt="company logo" />
+			<div className={classes['navbar__logo']}>
 				<Link to="/">
-					<p>shop4u</p>
+					<img src={logo} alt="company logo" />{' '}
 				</Link>
 			</div>
 			<ul className={classes['nav-menu']}>

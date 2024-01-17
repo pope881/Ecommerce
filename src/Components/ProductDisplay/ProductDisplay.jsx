@@ -64,7 +64,7 @@ const ProductDisplay = props => {
 							))}
 						</select>
 						<div className={classes['icon-container']}>
-							<i class="fa-solid fa-circle-arrow-down"></i>
+							<i className="fa-solid fa-circle-arrow-down"></i>
 						</div>
 					</div>
 
@@ -79,7 +79,7 @@ const ProductDisplay = props => {
 							))}
 						</select>
 						<div className={classes['icon-container']}>
-							<i class="fa-solid fa-circle-arrow-down"></i>
+							<i className="fa-solid fa-circle-arrow-down"></i>
 						</div>
 					</div>
 				</div>

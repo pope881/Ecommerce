@@ -9,28 +9,23 @@ const Footer = () => {
 		window.scrollTo(0, 0)
 	}
 
-	// useEffect(() => {
-	// 	window.scrollTo(0, 0)
-	//   }, [])
-
 	return (
 		<div>
-			<footer>
-				<div className={classes.container}>
-					<div className={`${classes.sec} ${classes.aboutus}`}>
-						<div className={classes.logo}>
+			<div className={classes['footer']}>
+				<div className={classes['footer__container']}>
+					<div className={`${classes['footer__section']} ${classes['footer__aboutUs']}`}>
+						<div className={classes['footer__logo']}>
 							<Link to="/">
 								<img onClick={scrollToTop} src={logo} alt="company logo" />
 							</Link>
-							<h2>shop4u</h2>
 						</div>
-						<p className={classes.textOne}>Quality matters. Always.</p>
-						<p className={classes.textTwo}>
+						<p className={classes['footer__qualityText']}>Quality matters. Always.</p>
+						<p className={classes['footer__text']}>
 							We are, a notable fashion ecommerce site, excels in creating a sense of urgency and offering shipping
 							incentives with their sassy copy.
 						</p>
 					</div>
-					<div className={`${classes.sec} ${classes.quicklinks}`}>
+					<div className={`${classes['footer__section']} ${classes['footer__quicklinks']}`}>
 						<h2>Support</h2>
 						<ul>
 							<Link to="/about">
@@ -47,7 +42,7 @@ const Footer = () => {
 							</Link>
 						</ul>
 					</div>
-					<div className={`${classes.sec} ${classes.quicklinks}`}>
+					<div className={`${classes['footer__section']} ${classes['footer__quicklinks']}`}>
 						<h2>Shop</h2>
 						<ul>
 							<Link to="/mens">
@@ -61,12 +56,12 @@ const Footer = () => {
 							</Link>
 						</ul>
 					</div>
-					<div className={`${classes.sec} ${classes.contact}`}>
+					<div className={`${classes['footer__section']} ${classes['footer__contact']}`}>
 						<h2>Contact us</h2>
-						<ul className={classes.info}>
+						<ul className={classes['footer__contactInfo']}>
 							<li>
 								<span>
-									<i class="fa-solid fa-phone"></i>
+									<i className="fa-solid fa-phone"></i>
 								</span>
 								<p>
 									<a href="tel:+48 510 510 510 ">+48 510 510 510</a>
@@ -74,7 +69,7 @@ const Footer = () => {
 							</li>
 							<li>
 								<span>
-									<i class="fa-solid fa-envelope"></i>
+									<i className="fa-solid fa-envelope"></i>
 								</span>
 								<p>
 									<a href="mailto:shop4u@gmail.com">shop4u@gmail.com</a>
@@ -83,7 +78,7 @@ const Footer = () => {
 						</ul>
 					</div>
 				</div>
-			</footer>
+			</div>
 			<div className={classes.copyrightText}>
 				<p>Copyright @{new Date().getFullYear()} - All rights reserved </p>
 			</div>

@@ -12,26 +12,26 @@ const Hero = () => {
 
 	return (
 		<div>
-			<div className={classes['text-top']}>
+			<div className={classes['hero__textTop']}>
 				<h1>NEW ARRIVALS ONLY</h1>
 				<hr></hr>
 			</div>
 			<div className={classes.hero}>
-				<div className={classes['hero-img-woman']}>
+				<div className={classes['hero__img--Woman']}>
 					<img src={heroWoman_image} alt="young girl dressed in sports clothes" />
 				</div>
-				<div className={classes['hero-text']}>
+				<div className={classes['hero__text']}>
 					<div>
 						<p> new Collections</p>
 						<p>For Everyone </p>
 					</div>
 					<div>
-						<button onClick={handleClickScroll} className={classes.btn}>
+						<button onClick={handleClickScroll} className={classes['hero__btn']}>
 							CHECK OUT
 						</button>
 					</div>
 				</div>
-				<div className={classes['hero-img-man']}>
+				<div className={classes['hero__img--Man']}>
 					<img src={heroMan_image} alt="men dressed in sports clothes" />
 				</div>
 			</div>

@@ -4,7 +4,6 @@ import classes from './ImageSlider.module.css'
 const ImageSlider = ({ slides, product }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 
-	console.log(product)
 
 	const bgcImg = {
 		backgroundImage: `url(${product.image_slide[currentIndex].url})`,
@@ -29,10 +28,10 @@ const ImageSlider = ({ slides, product }) => {
 	return (
 		<div className={classes['imgslider']}>
 			<div className={`${classes.imgsliderArrow} ${classes.imgsliderArrowLeft}`} onClick={goToPrevious}>
-				<i class="fa-solid fa-arrow-left"></i>
+				<i className="fa-solid fa-arrow-left"></i>
 			</div>
 			<div className={`${classes.imgsliderArrow} ${classes.imgsliderArrowRight}`} onClick={goToNext}>
-				<i class="fa-solid fa-arrow-right"></i>
+				<i className="fa-solid fa-arrow-right"></i>
 			</div>
 			<div style={bgcImg} className={classes['imgslider-slide']}>
 				
@@ -40,7 +39,7 @@ const ImageSlider = ({ slides, product }) => {
 			<div className={classes['imgslider-dots']}>
 				{product.image_slide.map((slide, slideIndex) => (
 					<div key={slideIndex} className={classes['imgslider-dots-item']} onClick={() => goToSlide(slideIndex)}>
-						<i class="fa-solid fa-circle"></i>
+						<i className="fa-solid fa-circle"></i>
 					</div>
 				))}
 			</div>
