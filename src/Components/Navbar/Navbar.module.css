@@ -33,7 +33,7 @@
 	text-decoration: none;
 }
 
-.nav-menu {
+.navbar__menu {
 	display: flex;
 	align-items: center;
 	list-style: none;
@@ -42,11 +42,11 @@
 	font-weight: 500;
 }
 
-.nav-menu li {
+.navbar__menu li {
 	cursor: pointer;
 }
 
-.nav-menu a {
+.navbar__menu a {
 	text-decoration: none;
 	color: black;
 	font-weight: 500;
@@ -54,23 +54,23 @@
 	transition: 0.3s;
 }
 
-.nav-menu a:hover,
-.nav-menu a.active {
+.navbar__menu a:hover,
+.navbar__menu a.active {
 	color: #ce1446;
 	text-decoration: underline;
 }
 
-.nav-login-cart {
+.navbar__loginCart {
 	display: flex;
 	align-items: center;
 	gap: 45px;
 }
 
-.nav-login-cart a {
+.navbar__loginCart a {
 	text-decoration: none;
 }
 
-.nav-login-cart-button {
+.navbar__btn {
 	font-size: 16px;
 	cursor: pointer;
 	padding: 0.75rem 3rem;
@@ -84,10 +84,8 @@
 	font-weight: bold;
 	transition: 0.4s;
 }
-.nav-login-cart-button:active,
-.nav-login-cart-button:hover {
-	/* background-color: white;
-	color: #ce1446; */
+.navbar__btn:active,
+.navbar__btn:hover {
 	background-color: white;
 	color: black;
 }

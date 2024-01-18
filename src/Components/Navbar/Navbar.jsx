@@ -21,7 +21,7 @@ const Navbar = () => {
 					<img src={logo} alt="company logo" />{' '}
 				</Link>
 			</div>
-			<ul className={classes['nav-menu']}>
+			<ul className={classes['navbar__menu']}>
 				<li>
 					<NavLink to="/" className={({ isActive }) => (isActive ? `${classes['active']}` : undefined)} end>
 						SHOP
@@ -43,15 +43,15 @@ const Navbar = () => {
 					</NavLink>
 				</li>
 			</ul>
-			<div className={classes['nav-login-cart']}>
+			<div className={classes['navbar__loginCart']}>
 				{!isAuth && (
 					<Link to="/login">
-						<button className={classes['nav-login-cart-button']}>Login</button>
+						<button className={classes['navbar__btn']}>Login</button>
 					</Link>
 				)}
 				{isAuth && (
 					<Link to="/">
-						<button className={classes['nav-login-cart-button']} onClick={logoutHandler}>
+						<button className={classes['navbar__btn']} onClick={logoutHandler}>
 							Logout
 						</button>
 					</Link>
