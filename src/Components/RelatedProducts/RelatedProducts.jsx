@@ -8,7 +8,7 @@ const RelatedProducts = () => {
 		<div className={classes['relatedproducts']}>
 			<h1>Other Products</h1>
 			<hr />
-			<div className={classes['relatedproducts-item']}>
+			<div className={classes['relatedproducts__item']}>
 				{dataWoman.map((item, i) => {
 					return (
 						<Item

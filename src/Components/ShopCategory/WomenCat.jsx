@@ -30,27 +30,27 @@ const WomenCat = props => {
 	let numberOfProducts = <span>Showing {items.length} out of 12 products</span>
 
 	return (
-		<div className={classes['shop-category']}>
-			<img className={classes['shopcategory-banner']} src={props.banner} alt="banner" />
-			<div className={classes['shopcategoty-indexSort']}>
+		<div className={classes['shopCategory']}>
+			<img className={classes['shopCategory__banner']} src={props.banner} alt="banner" />
+			<div className={classes['shopCategory__indexSort']}>
 				<p>{numberOfProducts}</p>
-				<div className={classes['form-actions']}>
-					<button className={classes.button} onClick={() => seItems(product)}>
+				<div className={classes['shopCategory__actions']}>
+					<button className={classes['shopCategory__btn']} onClick={() => seItems(product)}>
 						All Products
 					</button>
-					<button className={classes.button} onClick={() => filterItems('Woman Blouse')}>
+					<button className={classes['shopCategory__btn']} onClick={() => filterItems('Woman Blouse')}>
 						Woman Blouse
 					</button>
-					<button className={classes.button} onClick={() => filterItems('Woman Shirt')}>
+					<button className={classes['shopCategory__btn']} onClick={() => filterItems('Woman Shirt')}>
 						Woman Shirt
 					</button>
-					<button className={classes.button} onClick={() => filterItems('Woman Trousers')}>
+					<button className={classes['shopCategory__btn']} onClick={() => filterItems('Woman Trousers')}>
 						Woman Trousers
 					</button>
 				</div>
 			</div>
-			<div className={classes['shopcategory-products']}>{items}</div>
-			<div className={classes['shopcategory-loadmore']}>Explore more</div>
+			<div className={classes['shopCategory__products']}>{items}</div>
+			<div className={classes['shopCategory__loadMore']}>Explore more</div>
 		</div>
 	)
 }

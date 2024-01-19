@@ -1,42 +1,41 @@
 .productdisplay {
 	display: flex;
-
 	margin: 0 20px;
 }
 
-.productdisplay-left-added {
+.productdisplay__sliderContainer {
 	/* width: 700px;
 	height: 580px; */
 	margin: 0 20px;
 }
 
-.productdisplay-left {
+.productdisplay__left {
 	display: flex;
 	gap: 17px;
 }
 
-.productdisplay-img-list {
+.productdisplay__imgList {
 	display: flex;
 	flex-direction: column;
 	gap: 16px;
 }
 
-.productdisplay-img-list img {
+.productdisplay__imgList img {
 	height: 160px;
 }
 
-.productdisplay-right {
+.productdisplay__right {
 	display: flex;
 	flex-direction: column;
 	margin: 0 30px;
 }
 
-.productdisplay-right h1 {
+.productdisplay__right h1 {
 	color: #3d3d3d;
 	font-size: 40px;
 	font-weight: 700;
 }
-.productdisplay-right-stars {
+.productdisplay__stars {
 	display: flex;
 	align-items: center;
 	margin-top: 13px;
@@ -45,7 +44,7 @@
 	font-size: 16px;
 }
 
-.productdisplay-right-prices {
+.productdisplay__prices {
 	display: flex;
 	margin: 40px 0;
 	gap: 30px;
@@ -53,23 +52,23 @@
 	font-weight: 700;
 }
 
-.productdisplay-right-price-old {
+.productdisplay__priceOld {
 	color: #818181;
 	text-decoration: line-through;
 }
 
-.productdisplay-right-price-new {
+.productdisplay__priceNew {
 	color: #ff4141;
 }
 
-.productdisplay-right-size h1 {
+.productdisplay__selects h1 {
 	margin-top: 5px;
 	color: #656565;
 	font-size: 20px;
 	font-weight: 600;
 }
 
-.productdisplay-right button {
+.productdisplay__right button {
 	margin-top: 36px;
 	padding: 20px 40px;
 	width: 200px;
@@ -84,21 +83,21 @@
 	transition: 0.3s;
 }
 
-.productdisplay-right button:hover,
-.productdisplay-right button:active {
+.productdisplay__right button:hover,
+.productdisplay__right button:active {
 	color: #ce1446;
 	background: white;
 }
 
-.productdisplay-right-category {
+.productdisplay__rightCategory {
 	margin-top: 10px;
 }
 
-.productdisplay-right-category span {
+.productdisplay__rightCategory span {
 	font-weight: 600;
 }
 
-.select-container {
+.productdisplay__selectContainer {
 	display: flex;
 	justify-content: flex-start;
 	position: relative;
@@ -107,7 +106,7 @@
 	height: 50px;
 }
 
-.select-box {
+.productdisplay__selectBox {
 	/* border: none; */
 	appearance: none;
 	padding: 0 30px 0 15px;
@@ -118,7 +117,7 @@
 	font-weight: bold;
 }
 
-.select-container .icon-container {
+.productdisplay__selectContainer .productdisplay__iconContainer {
 	width: 50px;
 	height: 100%;
 	position: absolute;

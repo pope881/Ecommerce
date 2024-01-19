@@ -49,7 +49,7 @@ const OurTestimonials = () => {
 	}
 	return (
 		<div className={classes.testimonials}>
-			<div className={classes['testimonials-text']}>
+			<div className={classes['testimonials_headerText']}>
 				<h4>testimonials</h4>
 				<h1>What Our Customers Say</h1>
 				<hr />
@@ -58,23 +58,21 @@ const OurTestimonials = () => {
 					our fabrics with orders coming from all corners of the globe.
 				</p>
 			</div>
-			<div className={classes.container}>
-				<div className={classes.items}>
-					<Slider {...settings} className={classes.slider}>
-						{data.map(d => (
-							<div key={d.name} className={classes.item}>
-								<div className={classes.itemTop}>
-									<img src={d.img} alt="person expressing opinions" className={classes.img} />
-								</div>
-
-								<div className={classes.itemDown}>
-									<h3 className={classes.name}>{d.name}</h3>
-									<p className={classes.review}>{d.review}</p>
-								</div>
+			<div className={classes['testimonials__items']}>
+				<Slider {...settings}>
+					{data.map(d => (
+						<div key={d.name} className={classes['testimonials__item']}>
+							<div className={classes['testimonials__itemTop']}>
+								<img src={d.img} alt="person expressing opinions" className={classes.img} />
 							</div>
-						))}
-					</Slider>
-				</div>
+
+							<div className={classes['testimonials__itemDown']}>
+								<h3 className={classes['testimonials__name']}>{d.name}</h3>
+								<p>{d.review}</p>
+							</div>
+						</div>
+					))}
+				</Slider>
 			</div>
 		</div>
 	)

@@ -4,7 +4,6 @@ import classes from './ImageSlider.module.css'
 const ImageSlider = ({ slides, product }) => {
 	const [currentIndex, setCurrentIndex] = useState(0)
 
-
 	const bgcImg = {
 		backgroundImage: `url(${product.image_slide[currentIndex].url})`,
 	}
@@ -26,19 +25,17 @@ const ImageSlider = ({ slides, product }) => {
 	}
 
 	return (
-		<div className={classes['imgslider']}>
-			<div className={`${classes.imgsliderArrow} ${classes.imgsliderArrowLeft}`} onClick={goToPrevious}>
+		<div className={classes['imgSlider']}>
+			<div className={`${classes['imgSlider__arrow']} ${classes['imgSlider__arrow--left']}`} onClick={goToPrevious}>
 				<i className="fa-solid fa-arrow-left"></i>
 			</div>
-			<div className={`${classes.imgsliderArrow} ${classes.imgsliderArrowRight}`} onClick={goToNext}>
+			<div className={`${classes['imgSlider__arrow']} ${classes['imgSlider__arrow--right']}`} onClick={goToNext}>
 				<i className="fa-solid fa-arrow-right"></i>
 			</div>
-			<div style={bgcImg} className={classes['imgslider-slide']}>
-				
-			</div>
-			<div className={classes['imgslider-dots']}>
+			<div style={bgcImg} className={classes['imgSlider__slide']}></div>
+			<div className={classes['imgSlider__dots']}>
 				{product.image_slide.map((slide, slideIndex) => (
-					<div key={slideIndex} className={classes['imgslider-dots-item']} onClick={() => goToSlide(slideIndex)}>
+					<div key={slideIndex} className={classes['imgSlider__dot']} onClick={() => goToSlide(slideIndex)}>
 						<i className="fa-solid fa-circle"></i>
 					</div>
 				))}

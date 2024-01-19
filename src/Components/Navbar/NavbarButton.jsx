@@ -11,7 +11,7 @@ const NavbarButton = props => {
 		return curNumber + item.amount
 	}, 0)
 
-	const btnClasses = `${classes['navbar-button']} ${btnIsBump ? classes['navbar-bump'] : ''}`
+	const btnClasses = `${classes['navbar__btnCart']} ${btnIsBump ? classes['navbar__bump'] : ''}`
 
 	useEffect(() => {
 		if (items.length === 0) {
@@ -30,11 +30,11 @@ const NavbarButton = props => {
 
 	return (
 		<button className={btnClasses}>
-			<span className={classes['navbar-icon']}>
+			<span className={classes['navbar__icon']}>
 				<CartIcon />
 			</span>
 			<span>Your Cart</span>
-			<span className={classes['navbar-badge']}>{numberOfCartItems}</span>
+			<span className={classes['navbar__badge']}>{numberOfCartItems}</span>
 		</button>
 	)
 }

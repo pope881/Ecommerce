@@ -25,21 +25,21 @@ const ProductDisplay = props => {
 
 	return (
 		<div className={classes['productdisplay']}>
-			<div className={classes['productdisplay-left']}>
-				<div className={classes['productdisplay-img-list']}>
-					<img src={product.image_slide[0].url} alt="each product photo nr 1" />
-					<img src={product.image_slide[1].url} alt="each product photo nr 2" />
-					<img src={product.image_slide[2].url} alt="each product photo nr 3" />
-					<img src={product.image_slide[3].url} alt="each product photo nr 4" />
+			<div className={classes['productdisplay__left']}>
+				<div className={classes['productdisplay__imgList']}>
+					<img src={product.image_slide[0].url} alt="each product nr 1" />
+					<img src={product.image_slide[1].url} alt="each product nr 2" />
+					<img src={product.image_slide[2].url} alt="each product nr 3" />
+					<img src={product.image_slide[3].url} alt="each product nr 4" />
 				</div>
 			</div>
-			<div className={classes['productdisplay-left-added']}>
+			<div className={classes['productdisplay__sliderContainer']}>
 				<ImageSlider product={product} />
 			</div>
 
-			<div className={classes['productdisplay-right']}>
+			<div className={classes['productdisplay__right']}>
 				<h1>{product.name}</h1>
-				<div className={classes['productdisplay-right-stars']}>
+				<div className={classes['productdisplay__stars']}>
 					<img src={star_icon} alt="star icon" />
 					<img src={star_icon} alt="star icon" />
 					<img src={star_icon} alt="star icon" />
@@ -47,38 +47,35 @@ const ProductDisplay = props => {
 					<img src={star_icon} alt="star icon" />
 					<p>(+100)</p>
 				</div>
-				<div className={classes['productdisplay-right-prices']}>
-					<div className={classes['productdisplay-right-price-old']}>${product.old_price}</div>
-					<div className={classes['productdisplay-right-price-new']}>New Price: ${product.new_price}</div>
+				<div className={classes['productdisplay__prices']}>
+					<div className={classes['productdisplay__priceOld']}>${product.old_price}</div>
+					<div className={classes['productdisplay__priceNew']}>New Price: ${product.new_price}</div>
 				</div>
-				<div className={classes['productdisplay-right-description']}></div>
-				<div className={classes['productdisplay-right-size']}>
+				<div className={classes['productdisplay__selects']}>
 					<h1>Select size</h1>
-
-					<div className={classes['select-container']}>
-						<select className={classes['select-box']} onChange={handleSelectSize}>
+					<div className={classes['productdisplay__selectContainer']}>
+						<select className={classes['productdisplay__selectBox']} onChange={handleSelectSize}>
 							{size_options.map(option => (
 								<option key={option.value} value={option.value}>
 									{option.label}
 								</option>
 							))}
 						</select>
-						<div className={classes['icon-container']}>
+						<div className={classes['productdisplay__iconContainer']}>
 							<i className="fa-solid fa-circle-arrow-down"></i>
 						</div>
 					</div>
-
 					<h1>Select color</h1>
-					<div className={classes['select-container']}>
+					<div className={classes['productdisplay__selectContainer']}>
 						{/* onChange={handleSelectColor} */}
-						<select className={classes['select-box']}>
+						<select className={classes['productdisplay__selectBox']}>
 							{color_options.map(option => (
 								<option key={option.value} value={option.value} style={{ color: `${option.color}` }}>
 									{option.label}
 								</option>
 							))}
 						</select>
-						<div className={classes['icon-container']}>
+						<div className={classes['productdisplay__iconContainer']}>
 							<i className="fa-solid fa-circle-arrow-down"></i>
 						</div>
 					</div>
@@ -97,7 +94,7 @@ const ProductDisplay = props => {
 					}}>
 					ADD TO CART
 				</button>
-				<p className={classes['productdisplay-right-category']}>
+				<p className={classes['productdisplay__rightCategory']}>
 					<span>Category:</span> {product.clothes_type}
 				</p>
 			</div>

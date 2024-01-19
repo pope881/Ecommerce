@@ -7,11 +7,11 @@ import Item from '../Item/Item'
 
 const Popular = () => {
 	return (
-		<>
+		<div>
 			<div className={classes.popular}>
 				<h1>MOST POPULAR IN WOMAN</h1>
 				<hr></hr>
-				<div className={classes['popular-item']}>
+				<div className={classes['popular__item']}>
 					{dataWoman.map((item, i) => {
 						return (
 							<Item
@@ -29,7 +29,7 @@ const Popular = () => {
 			<div className={classes.popular}>
 				<h1>MOST POPULAR IN MAN</h1>
 				<hr></hr>
-				<div className={classes['popular-item']}>
+				<div className={classes['popular__item']}>
 					{dataMen.map((item, i) => {
 						return (
 							<Item
@@ -47,7 +47,7 @@ const Popular = () => {
 			<div className={classes.popular}>
 				<h1>MOST POPULAR IN KIDS</h1>
 				<hr></hr>
-				<div className={classes['popular-item']}>
+				<div className={classes['popular__item']}>
 					{dataKids.map((item, i) => {
 						return (
 							<Item
@@ -62,7 +62,7 @@ const Popular = () => {
 					})}
 				</div>
 			</div>
-		</>
+		</div>
 	)
 }
 

@@ -21,24 +21,24 @@ function OurTeam() {
 	return (
 		<>
 			<div className={classes.team}>
-				<div className={classes['team-text']}>
+				<div className={classes['team__text']}>
 					<h4>Our team</h4>
 					<h1>We're only human. Same like you.</h1>
 					<hr />
 					<p>Meet out team. Diversity is our strength.</p>
 				</div>
-				<div className={classes['team-container']}>
+				<div className={classes['team__container']}>
 					{teamPpl.map((ppl, id) => (
 						<div
 							key={id}
-							className={classes['team-container__card']}
+							className={classes['team__card']}
 							style={{
 								backgroundImage: `url(${ppl.img})`,
 							}}>
-							<button className={classes['team-container__card__button']}>
+							<button className={classes['team__btn']}>
 								<i className="far fa-question-circle"></i>
 							</button>
-							<div className={classes['team-container__card__text']}>
+							<div className={classes['team__cardText']}>
 								<h1>{ppl.name}</h1>
 								<h2>{ppl.job}</h2>
 							</div>

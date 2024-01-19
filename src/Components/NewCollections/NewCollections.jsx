@@ -5,10 +5,10 @@ import Item from '../Item/Item'
 
 const NewCollections = () => {
 	return (
-		<div id='new-collections' className={classes['new-collections']}>
+		<div id="new-collections" className={classes['newCollections']}>
 			<h1>NEW COLLECTIONS</h1>
 			<hr />
-			<div className={classes['collections']}>
+			<div className={classes['newCollections__collection']}>
 				{new_collections.map((item, i) => {
 					return (
 						<Item

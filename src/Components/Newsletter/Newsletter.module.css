@@ -25,7 +25,7 @@
 	font-size: 20px;
 }
 
-.newsletter-control {
+.newsletter__control {
 	width: 730px;
 	height: 70px;
 	display: flex;
@@ -36,7 +36,7 @@
 	border: 1px solid #e3e3e3;
 }
 
-.newsletter-control input {
+.newsletter__control input {
 	width: 500px;
 	margin-left: 30px;
 	border: none;
@@ -46,7 +46,7 @@
 	font-size: 16px;
 }
 
-.newsletter-control button {
+.newsletter__control button {
 	width: 210px;
 	height: 70px;
 	border-radius: 80px;
@@ -57,13 +57,13 @@
 	transition: 0.3s;
 }
 
-.newsletter-control button:hover,
-.newsletter-control button:active {
+.newsletter__control button:hover,
+.newsletter__control button:active {
 	background-color: white;
 	color: black;
 }
 
-.invalid p {
+.newsletter__invalid p {
 	color: #ca3e51;
 	font-size: 16px;
 	text-align: center;

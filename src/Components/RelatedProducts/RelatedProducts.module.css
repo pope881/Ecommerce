@@ -20,7 +20,7 @@
 	background: #252525;
 }
 
-.relatedproducts-item {
+.relatedproducts__item {
 	margin-top: 50px;
 	display: flex;
 	gap: 30px;

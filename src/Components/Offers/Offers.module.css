@@ -9,26 +9,26 @@
 	background: linear-gradient(180deg, #ce1446 0%, #e1ffea22 90%);
 }
 
-.offers-left {
+.offers__left {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
 
-.offers-left h1 {
+.offers__left h1 {
 	color: #171717;
 	font-size: 80px;
 	font-weight: 600;
 }
 
-.offers-left p {
+.offers__left p {
 	color: #171717;
 	font-size: 22px;
 	font-weight: 600;
 }
 
-.offers-left button {
+.offers__left button {
 	width: 282px;
 	height: 70px;
 	border-radius: 35px;
@@ -41,7 +41,7 @@
 	cursor: pointer;
 }
 
-.offers-right {
+.offers__right {
 	flex: 1;
 	display: flex;
 	align-items: center;
