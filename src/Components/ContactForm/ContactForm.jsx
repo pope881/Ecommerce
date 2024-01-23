@@ -72,9 +72,9 @@ const ContactForm = () => {
 				transition={{ duration: 1.5 }}
 				className={classes['contact__heading']}>
 				<h4>Contact</h4>
-				<h2>Contact Us</h2>
-				<p>We can't solve your problem if you don't tell us about it !</p>
+				<h1>Contact Us</h1>
 				<hr />
+				<p>We can't solve your problem if you don't tell us about it !</p>
 			</motion.div>
 
 			<div className={classes['contact__container']}>
@@ -89,8 +89,7 @@ const ContactForm = () => {
 						<div className={classes['contact__infoText']}>
 							<h3>Address</h3>
 							<p> Starołęcka Street 33 </p>
-							<p> Poznań, Greater Poland</p>
-							<p>Poland</p>
+							<p> Poznań, Poland</p>
 						</div>
 					</div>
 					<div className={classes['contact__infoBox']}>

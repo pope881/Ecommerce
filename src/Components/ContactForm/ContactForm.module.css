@@ -15,25 +15,27 @@
 	/* text-align: center; */
 }
 
-.contact__heading h2 {
-	font-size: 36px;
+.contact__heading h1 {
+	font-size: 3.6rem;
 	font-weight: 700;
 	color: #fff;
 	text-align: center;
+	margin-bottom: 3rem;
 }
 
 .contact__heading h4 {
 	color: #ce1446;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 }
 
 .contact__heading p {
+	font-size: 1.6rem;
 	font-weight: 300;
 	color: #fff;
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .contact__heading hr {
@@ -41,7 +43,7 @@
 	border: none;
 	height: 2px;
 	background-color: #ce1446;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .contact__container {
@@ -50,7 +52,7 @@
 	justify-content: center;
 	justify-content: space-around;
 	align-items: center;
-	margin-top: 30px;
+	margin-top: 3rem;
 }
 
 .contact__mapContainer iframe {
@@ -68,8 +70,16 @@
 
 .contact__infoBox {
 	position: relative;
-	padding: 20px 0;
+	padding: 2rem 0;
 	display: flex;
+}
+
+.contact__infoText h3 {
+	font-size: 2rem;
+}
+
+.contact__infoText p {
+	font-size: 1.6rem;
 }
 
 .contact__icon {
@@ -80,13 +90,13 @@
 	justify-content: center;
 	align-items: center;
 	border-radius: 50%;
-	font-size: 22px;
+	font-size: 4rem;
 }
 
 .contact__infoText {
 	display: flex;
-	margin-left: 20px;
-	font-size: 16px;
+	margin-left: 2rem;
+	font-size: 1.6rem;
 	color: #fff;
 	flex-direction: column;
 	font-weight: 300;
@@ -99,19 +109,19 @@
 
 .contact__infoText a {
 	text-decoration: none;
-	font-size: 16px;
+	font-size: 1.6rem;
 	color: #fff;
 }
 
 .contact__form {
 	width: 40%;
-	padding: 40px;
+	padding: 4rem;
 	background: #fff;
 	border-radius: 16px;
 }
 
 .contact__form h2 {
-	font-size: 30px;
+	font-size: 3rem;
 	color: #333;
 	font-weight: 700;
 }
@@ -119,18 +129,18 @@
 .contact__inputBox {
 	position: relative;
 	width: 100%;
-	margin-top: 10px;
+	margin-top: 1rem;
 }
 
 .contact__inputBox input,
 .contact__inputBox textarea {
 	width: 100%;
-	padding: 5px 0;
-	font-size: 16px;
-	margin: 10px 0;
+	padding: 0.5rem 0;
+	font-size: 1.6rem;
+	margin: 1rem 0;
 
 	padding: 0.5rem;
-	font-size: 1rem;
+	font-size: 1.6rem;
 	border-radius: 4px;
 	background-color: #869999;
 	color: #142020;
@@ -143,9 +153,9 @@
 .contact__inputBox span {
 	position: absolute;
 	left: 0;
-	padding: 5px 0;
-	font-size: 16px;
-	margin: 10px 0;
+	padding: 0.5rem 0;
+	font-size: 1.6rem;
+	margin: 1rem 0;
 	pointer-events: none;
 	transition: 0.5s;
 	color: #666;
@@ -156,7 +166,7 @@
 .contact__inputBox textarea:focus ~ span,
 .contact__inputBox textarea:valid ~ span {
 	color: #e91e63;
-	font-size: 12px;
+	font-size: 1.2rem;
 	transform: translateY(-20px);
 }
 
@@ -167,13 +177,13 @@
 }
 
 .contact__formActions button {
-	font: inherit;
+	font-size: 1.6rem;
 	color: #5a1a01;
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
 	border-radius: 25px;
-	padding: 0.5rem 2rem;
+	padding: 1rem 4rem;
 	transition: 0.4s;
 }
 

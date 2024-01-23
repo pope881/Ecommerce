@@ -1,12 +1,12 @@
 .wrapper {
 	display: flex;
-	justify-accordion__itemcontent: center;
+	justify-content: center;
 	align-items: center;
 	width: 100%;
 }
 
 .accordion {
-	margin: 120px 170px;
+	margin: 12rem 17rem;
 	width: 100%;
 }
 
@@ -30,8 +30,12 @@
 	cursor: pointer;
 }
 
+.accordion__itemTitle h2 {
+	font-size: 2rem;
+}
+
 .accordion__itemTitle span {
-	font-size: 32px;
+	font-size: 3.2rem;
 }
 
 .accordion__itemContent {
@@ -43,7 +47,8 @@
 }
 
 .accordion__itemContent p {
-	color: black;
+	color: #414141;
+	font-size: 1.6rem;
 }
 
 .accordion__itemContent.accordion__itemShow {

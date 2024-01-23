@@ -1,6 +1,5 @@
 import React, { useContext, useRef, useState } from 'react'
 import classes from './Checkout.module.css'
-import { useNavigate } from 'react-router-dom'
 
 import CartContext from '../../Context/cart-context'
 
@@ -29,8 +28,6 @@ const Checkout = props => {
 	} else {
 		showCheckout = false
 	}
-
-	const navigate = useNavigate()
 
 	const confirmHandler = event => {
 		event.preventDefault()

@@ -51,17 +51,17 @@ const CartItems = () => {
 	let btnCheckout
 	if (items.length !== 0 && isAuth) {
 		btnCheckout = (
-			<button onClick={orderHandler}>
-				<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
-			</button>
+			<div className={classes['cartitems__action']}>
+				<button onClick={orderHandler}>Proceed to checkout</button>
+			</div>
 		)
 	} else {
 		btnCheckout = (
-			<div>
+			<div className={classes['cartitems__action']}>
 				<button disabled onClick={orderHandler}>
-					<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
+					Proceed to checkout
 				</button>
-				<p>You must be logged in to proceed.</p>
+				<p className={classes['cartitems__logInfo']}>You must be logged in to proceed.</p>
 			</div>
 		)
 	}
@@ -88,7 +88,7 @@ const CartItems = () => {
 							<p>${e.price}</p>
 							<p>{e.size}</p>
 							{/* <p>{e.color}</p> */}
-							<div className={classes['cartitems__quantity']}>{e.amount}</div>
+							<p className={classes['cartitems__quantity']}>{e.amount}</p>
 							<p>${e.price * e.amount}</p>
 							<img
 								className={classes['cartitems__removeIcon']}
@@ -125,10 +125,6 @@ const CartItems = () => {
 						</div>
 					</div>
 					{btnCheckout}
-					{/* 
-					<button onClick={orderHandler}>
-						<i className="fa-solid fa-arrow-down"></i> PROCEED TO CHECKOUT <i className="fa-solid fa-arrow-down"></i>
-					</button> */}
 
 					{isCheckout && <Checkout onSubmitPromoCode={clearPromoCode} onCancel={orderCloseHandler} />}
 				</div>

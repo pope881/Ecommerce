@@ -7,16 +7,17 @@
 }
 
 .form__control label {
+	font-size: 1.6rem;
 	font-weight: bold;
 	margin-bottom: 0.25rem;
 	display: block;
 }
 
 .form__control input {
-	font: inherit;
+	font-size: 1.6rem;
 	border: 1px solid #ccc;
 	border-radius: 4px;
-	width: 20rem;
+	width: 50rem;
 	max-width: 100%;
 }
 
@@ -27,13 +28,14 @@
 }
 
 .form__actions button {
-	font: inherit;
+	font-size: 1.6rem;
 	color: #ce1446;
 	cursor: pointer;
 	background-color: transparent;
 	border: none;
 	border-radius: 25px;
-	padding: 0.5rem 2rem;
+	padding: 1rem 5rem;
+	transition: 0.3s;
 }
 
 .form__actions button:hover,
@@ -45,6 +47,7 @@
 	border: 1px solid #5a1a01;
 	background-color: #ce1446;
 	color: white;
+	font-weight: 600;
 }
 
 .form__actions .form__submit:hover,
@@ -55,6 +58,7 @@
 
 .invalid p {
 	color: #ca3e51;
+	font-size: 1.2rem;
 }
 
 .invalid input {
