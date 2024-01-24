@@ -3,12 +3,12 @@
 	border: none;
 	background-color: #2c0d00;
 	color: white;
-	padding: 0.75rem 3rem;
+	padding: 0.9rem 4rem;
 	display: flex;
 	justify-content: space-around;
 	align-items: center;
 	border-radius: 25px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	transition: 0.4s;
 }
 
@@ -18,9 +18,13 @@
 	background-color: #4d1601;
 }
 
+.navbar__btnCart span {
+	font-size: 1.6rem;
+}
+
 .navbar__icon {
-	width: 1.35rem;
-	height: 1.35rem;
+	width: 2rem;
+	height: 2rem;
 	margin-right: 0.5rem;
 }
 
@@ -29,7 +33,7 @@
 	padding: 0.25rem 1rem;
 	border-radius: 25px;
 	margin-left: 1rem;
-	font-weight: bold;
+	/* font-weight: bold; */
 }
 
 .navbar__btnCart:hover .badge,

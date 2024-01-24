@@ -27,7 +27,7 @@ const Hero = () => {
 					</div>
 					<div>
 						<button onClick={handleClickScroll} className={classes['hero__btn']}>
-							CHECK OUT
+							Check out
 						</button>
 					</div>
 				</div>

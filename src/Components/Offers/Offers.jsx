@@ -11,10 +11,11 @@ const Offers = () => {
 	return (
 		<div className={classes.offers}>
 			<div className={classes['offers__left']}>
-				<h1>Exclusive</h1>
-				<h1>Offers For Woman</h1>
+				<h1>Exclusive Offers For Woman</h1>
 				<p>ONLY ON BEST SELLERS PRODUCTS</p>
-				<button onClick={navigateHandler}>Check now</button>
+				<div>
+					<button onClick={navigateHandler}>Check now</button>
+				</div>
 			</div>
 			<div className={classes['offers__right']}>
 				<img src={exlusive_image} alt="woman dressed jeans and black t-shirt" />

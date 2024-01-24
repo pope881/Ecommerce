@@ -15,18 +15,12 @@
 .navbar__logo {
 	display: flex;
 	align-items: center;
-	gap: 10px;
+	gap: 1rem;
 }
 
 .navbar__logo img {
 	width: 90px;
 	height: 90px;
-}
-
-.navbar__logo p {
-	color: #171717;
-	font-size: 38px;
-	font-weight: 600;
 }
 
 .navbar__logo a {
@@ -37,12 +31,13 @@
 	display: flex;
 	align-items: center;
 	list-style: none;
-	gap: 50px;
+	gap: 5rem;
 	color: #626262;
 	font-weight: 500;
 }
 
 .navbar__menu li {
+	font-size: 2.8rem;
 	cursor: pointer;
 }
 
@@ -50,7 +45,6 @@
 	text-decoration: none;
 	color: black;
 	font-weight: 500;
-
 	transition: 0.3s;
 }
 
@@ -63,7 +57,7 @@
 .navbar__loginCart {
 	display: flex;
 	align-items: center;
-	gap: 45px;
+	gap: 4.5rem;
 }
 
 .navbar__loginCart a {
@@ -71,18 +65,16 @@
 }
 
 .navbar__btn {
-	font-size: 16px;
+	font-size: 1.6rem;
 	cursor: pointer;
-	padding: 0.75rem 3rem;
+	padding: 1rem 4rem;
 	border-radius: 25px;
 	border: none;
-	/* background-color: #ce1446;
-	border: 1px solid #ce1446; */
 	background-color: black;
 	border: 1px solid black;
 	color: white;
-	font-weight: bold;
-	transition: 0.4s;
+	/* font-weight: bold; */
+	transition: 0.3s;
 }
 .navbar__btn:active,
 .navbar__btn:hover {
