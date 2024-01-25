@@ -24,7 +24,7 @@
 .popular__item {
 	margin-top: 5rem;
 	gap: 2rem;
-	margin: 20px 170px;
+	margin: 2rem 17rem;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
 	row-gap: 8rem;
