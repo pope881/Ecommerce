@@ -8,7 +8,7 @@
 	position: absolute;
 	top: 50%;
 	transform: translate(0, -50%);
-	font-size: 50px;
+	font-size: 6rem;
 	color: #776d6d;
 	z-index: 1;
 	cursor: pointer;
@@ -37,7 +37,7 @@
 }
 
 .imgSlider__dot {
-	margin: 0 5px;
+	margin: 0 0.5rem;
 	cursor: pointer;
-	font-size: 25px;
+	font-size: 3rem;
 }

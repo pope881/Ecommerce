@@ -27,10 +27,10 @@ const ImageSlider = ({ slides, product }) => {
 	return (
 		<div className={classes['imgSlider']}>
 			<div className={`${classes['imgSlider__arrow']} ${classes['imgSlider__arrow--left']}`} onClick={goToPrevious}>
-				<i className="fa-solid fa-arrow-left"></i>
+				<i class="fa-solid fa-circle-arrow-left"></i>
 			</div>
 			<div className={`${classes['imgSlider__arrow']} ${classes['imgSlider__arrow--right']}`} onClick={goToNext}>
-				<i className="fa-solid fa-arrow-right"></i>
+				<i class="fa-solid fa-circle-arrow-right"></i>
 			</div>
 			<div style={bgcImg} className={classes['imgSlider__slide']}></div>
 			<div className={classes['imgSlider__dots']}>

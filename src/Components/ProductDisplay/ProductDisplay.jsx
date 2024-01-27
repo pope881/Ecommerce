@@ -95,7 +95,7 @@ const ProductDisplay = props => {
 					ADD TO CART
 				</button>
 				<p className={classes['productdisplay__rightCategory']}>
-					<span>Category:</span> {product.clothes_type}
+					<span>Category: {product.clothes_type}</span>
 				</p>
 			</div>
 		</div>
