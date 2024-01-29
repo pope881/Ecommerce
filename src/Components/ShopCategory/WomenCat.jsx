@@ -50,7 +50,11 @@ const WomenCat = props => {
 				</div>
 			</div>
 			<div className={classes['shopCategory__products']}>{items}</div>
-			<div className={classes['shopCategory__loadMore']}>Explore more</div>
+			<div className={classes['shopCategory__actions']}>
+				<button className={`${classes['shopCategory__btn']} ${classes['shopCategory__btn--disabled']}`}>
+					Explore more
+				</button>
+			</div>
 		</div>
 	)
 }

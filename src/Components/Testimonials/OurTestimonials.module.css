@@ -17,19 +17,19 @@
 
 .testimonials_headerText h4 {
 	color: #ce1446;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 600;
 	text-transform: uppercase;
-	margin-bottom: 10px;
+	margin-bottom: 1rem;
 }
 
 .testimonials_headerText h1 {
 	color: #fff;
-	font-size: 36px;
+	font-size: 3.6rem;
 	text-transform: capitalize;
 	font-weight: 700;
 	line-height: 46px;
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .testimonials_headerText hr {
@@ -37,26 +37,26 @@
 	border: none;
 	height: 2px;
 	background-color: #ce1446;
-	margin-bottom: 50px;
+	margin-bottom: 5rem;
 }
 
 .testimonials_headerText p {
 	min-width: 600px;
 	color: #fff;
-	font-size: 15px;
+	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.7;
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 }
 
 .testimonials__items {
-	margin-top: 20px;
+	margin-top: 2rem;
 	width: 900px;
 	height: auto;
 }
 
 .testimonials__item {
-	padding: 10px 20px 10px;
+	padding: 1rem 2rem 1rem;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -87,10 +87,15 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	margin-top: 18px;
+	margin-top: 1.8rem;
+}
+
+.testimonials__itemDown p {
+	font-size: 1.6rem;
 }
 
 .testimonials__name {
+	font-size: 2rem;
 	color: #ce1446;
 	margin-bottom: 8px;
 }

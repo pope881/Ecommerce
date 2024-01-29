@@ -27,7 +27,7 @@
 }
 
 .about__text h1 {
-	color: #fff;
+	color: #f8f8ff;
 	font-size: 3.6rem;
 	text-transform: capitalize;
 	font-weight: 700;
@@ -45,7 +45,7 @@
 
 .about__text p {
 	min-width: 600px;
-	color: #fff;
+	color: #f8f8ff;
 	font-size: 1.6rem;
 	font-weight: 400;
 	line-height: 1.7;
@@ -67,7 +67,7 @@
 }
 
 .about__description h5 {
-	color: #fff;
+	color: #f8f8ff;
 	font-size: 1.8rem;
 	font-weight: 500;
 	line-height: 1.8rem;

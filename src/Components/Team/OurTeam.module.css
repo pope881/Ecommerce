@@ -17,7 +17,7 @@
 
 .team__text h4 {
 	color: #ce1446;
-	font-size: 16px;
+	font-size: 1.6rem;
 	font-weight: 600;
 	text-transform: uppercase;
 	margin-bottom: 10px;
@@ -25,11 +25,11 @@
 
 .team__text h1 {
 	color: #fff;
-	font-size: 36px;
+	font-size: 3.6rem;
 	text-transform: capitalize;
 	font-weight: 700;
 	line-height: 46px;
-	margin-bottom: 30px;
+	margin-bottom: 3rem;
 }
 
 .team__text hr {
@@ -43,10 +43,10 @@
 .team__text p {
 	min-width: 600px;
 	color: #fff;
-	font-size: 15px;
+	font-size: 1.5rem;
 	font-weight: 400;
 	line-height: 1.7;
-	margin-bottom: 60px;
+	margin-bottom: 6rem;
 }
 
 .team__container {
@@ -54,7 +54,7 @@
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: auto;
 	background-color: #0c0b0b;
-	gap: 4rem;
+	gap: 6rem;
 	align-items: center;
 	text-align: center;
 	width: 100%;
@@ -79,8 +79,8 @@
 
 .team__card {
 	position: relative;
-	width: 20rem;
-	height: 30rem;
+	width: 35rem;
+	height: 45rem;
 	border-radius: 2rem;
 	text-align: center;
 	background-position: center;
@@ -94,11 +94,11 @@
 	position: absolute;
 	top: 10px;
 	right: 10px;
-	padding: 10px;
+	padding: 1rem;
 	background: none;
 	border: none;
 	color: #ce1446;
-	font-size: 36px;
+	font-size: 5rem;
 	text-shadow: 2px 2px 5px rgb(0, 0, 0);
 	cursor: crosshair;
 	z-index: 10;
@@ -125,19 +125,19 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	padding: 50px 30px;
+	padding: 5rem 3rem;
 	background-color: rgba(0, 0, 0, 0.8);
 	clip-path: circle(0 at 50% 90%);
 	transition: 0.8s;
 }
 
 .team__cardText h1 {
-	font-size: 2rem;
+	font-size: 4rem;
 	color: #ce1446;
 }
 
 .team__cardText h2 {
-	font-size: 1.4rem;
+	font-size: 1.6rem;
 	margin-bottom: 0.8rem;
 	color: #fff;
 }

@@ -89,7 +89,7 @@
 	outline: none;
 	border: none;
 	background-color: #d85477;
-	color: #fff;
+	color: #f8f8ff;
 	font-size: 1.6rem;
 	cursor: pointer;
 	transition: 0.3s;
@@ -101,8 +101,8 @@
 .cartitems__action button:hover,
 .cartitems__action button:active {
 	color: #ce1446;
-	background: #fff;
-	border: 1px solid black;
+	background: #f8f8ff;
+	border: 1px solid #ce1446;
 }
 
 .cartitems__promocode {
@@ -136,7 +136,7 @@
 }
 
 .cartitems__promobox .invalid p {
-	color: #ca3e51;
+	color: #aa0b20;
 }
 
 .cartitems__promobox .invalid input {
@@ -149,15 +149,15 @@
 	height: 58px; */
 	padding: 1.4rem 2.8rem;
 	font-size: 1.6rem;
-	background: black;
-	color: white;
+	background-color: #0c0b0b;
+	color: #f8f8ff;
 	cursor: pointer;
 	transition: 0.3s;
 }
 
 .cartitems__promobox button:hover {
-	background: white;
-	color: black;
+	background-color: #f8f8ff;
+	color: #0c0b0b;
 }
 
 .cartitems__logInfo {

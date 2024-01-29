@@ -46,18 +46,18 @@
 .form__actions .form__submit {
 	border: 1px solid #5a1a01;
 	background-color: #ce1446;
-	color: white;
+	color: #f8f8ff;
 	font-weight: 600;
 }
 
 .form__actions .form__submit:hover,
 .form__actions .form__submit:active {
-	background-color: white;
+	background-color: #f8f8ff;
 	color: #ce1446;
 }
 
 .invalid p {
-	color: #ca3e51;
+	color: #aa0b20;
 	font-size: 1.2rem;
 }
 

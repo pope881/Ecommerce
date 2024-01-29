@@ -1,7 +1,7 @@
 .container {
 	text-align: center;
 	height: 120vh;
-	background-color: #333;
+	background-color: #353333;
 	margin-bottom: 10rem;
 }
 
@@ -14,13 +14,13 @@
 	width: 600px;
 	position: absolute;
 	z-index: 999;
-	color: aliceblue;
+	color: #f8f8ff;
 	top: 30%;
 	left: 10%;
 }
 
 .container__description h1 {
-	font-size: 10rem;
+	font-size: 18rem;
 }
 
 .container__description p {
@@ -36,7 +36,7 @@
 .carousel__carousel span {
 	width: 45px;
 	height: 12px;
-	background-color: white;
+	background-color: #f8f8ff;
 	margin-left: 1rem;
 	border-radius: 10px;
 	cursor: pointer;
