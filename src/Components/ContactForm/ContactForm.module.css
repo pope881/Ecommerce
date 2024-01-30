@@ -18,7 +18,7 @@
 .contact__heading h1 {
 	font-size: 3.6rem;
 	font-weight: 700;
-	color: #fff;
+	color: #f8f8ff;
 	text-align: center;
 	margin-bottom: 3rem;
 }
@@ -34,7 +34,7 @@
 .contact__heading p {
 	font-size: 1.6rem;
 	font-weight: 300;
-	color: #fff;
+	color: #f8f8ff;
 	margin-bottom: 3rem;
 }
 
@@ -85,7 +85,7 @@
 .contact__icon {
 	min-width: 60px;
 	height: 60px;
-	background: #fff;
+	background: #f8f8ff;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -97,7 +97,7 @@
 	display: flex;
 	margin-left: 2rem;
 	font-size: 1.6rem;
-	color: #fff;
+	color: #f8f8ff;
 	flex-direction: column;
 	font-weight: 300;
 }
@@ -110,19 +110,18 @@
 .contact__infoText a {
 	text-decoration: none;
 	font-size: 1.6rem;
-	color: #fff;
+	color: #f8f8ff;
 }
 
 .contact__form {
 	width: 40%;
 	padding: 4rem;
-	background: #fff;
+	background: #f8f8ff;
 	border-radius: 16px;
 }
 
 .contact__form h2 {
 	font-size: 3rem;
-	color: #333;
 	font-weight: 700;
 }
 
@@ -138,14 +137,12 @@
 	padding: 0.5rem 0;
 	font-size: 1.6rem;
 	margin: 1rem 0;
-
 	padding: 0.5rem;
 	font-size: 1.6rem;
 	border-radius: 4px;
 	background-color: #869999;
-	color: #142020;
-
-	border: 1px solid #333;
+	color: #0c0b0b;
+	border: 1px solid #0c0b0b;
 	outline: none;
 	resize: none;
 }
@@ -165,7 +162,7 @@
 .contact__inputBox input:valid ~ span,
 .contact__inputBox textarea:focus ~ span,
 .contact__inputBox textarea:valid ~ span {
-	color: #e91e63;
+	color: #aa0b20;
 	font-size: 1.2rem;
 	transform: translateY(-20px);
 }
@@ -195,13 +192,13 @@
 .contact__formActions .submit {
 	border: 1px solid #ce1446;
 	background-color: #ce1446;
-	color: white;
+	color: #f8f8ff;
 	transition: 0.4s;
 }
 
 .contact__formActions .submit:hover,
 .contact__formActions .submit:active {
-	background-color: white;
+	background-color: #f8f8ff;
 	color: #ce1446;
 }
 

@@ -94,8 +94,6 @@
 	cursor: pointer;
 	transition: 0.3s;
 	border-radius: 25px;
-	/* max-width: 50%;
-	min-width: 50%; */
 }
 
 .cartitems__action button:hover,
@@ -131,7 +129,6 @@
 	width: 360px;
 	height: 50px;
 	font-size: 1.6rem;
-	/* border: 1px solid #ccc; */
 	border-radius: 4px;
 }
 

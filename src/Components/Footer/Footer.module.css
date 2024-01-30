@@ -3,7 +3,7 @@
 	width: 100%;
 	height: auto;
 	padding: 3rem 8rem;
-	background: #fff;
+	background: #f8f8ff;
 }
 .footer__container {
 	width: 100%;
@@ -32,7 +32,7 @@
 
 .footer__section h2 {
 	font-size: 2rem;
-	color: #333;
+	color: #0c0b0b;
 	font-weight: 600;
 	margin-bottom: 1.6rem;
 }
@@ -55,16 +55,17 @@
 	text-decoration: none;
 	margin-bottom: 1rem;
 	transition: 0.3s;
+	max-width: 200px;
 }
 
 .footer__quicklinks ul li:hover {
-	color: #e91e63;
-	transform: scale(1.15);
+	color: #ce1446;
+	transform: scale(1.2);
 }
 
 .footer__quicklinks ul a {
 	text-decoration: none;
-	color: #555;
+	color: #0c0b0b;
 }
 .footer__contactInfo li {
 	display: grid;
@@ -73,13 +74,13 @@
 }
 
 .footer__contactInfo li span {
-	color: #555;
+	color: #0c0b0b;
 	/* font-size: 2rem; */
 	font-size: 1.6rem;
 }
 
 .footer__contactInfo li a {
-	color: #555;
+	color: #0c0b0b;
 	text-decoration: none;
 	font-size: 1.6rem;
 }
@@ -87,10 +88,10 @@
 .copyrightText {
 	width: 100%;
 	font-size: 1.6rem;
-	background: #fff;
+	background: #f8f8ff;
 	padding: 2rem 10rem 3rem;
 	text-align: center;
-	color: #555;
+	color: #0c0b0b;
 	border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
 
