@@ -80,20 +80,22 @@ const ProductDisplay = props => {
 						</div>
 					</div>
 				</div>
-				<button
-					onClick={() => {
-						addItem({
-							id: product.id,
-							name: product.name,
-							amount: 1,
-							price: product.new_price,
-							image: product.image,
-							size: valueSize,
-							// color: valueColor,
-						})
-					}}>
-					ADD TO CART
-				</button>
+				<div>
+					<button
+						onClick={() => {
+							addItem({
+								id: product.id,
+								name: product.name,
+								amount: 1,
+								price: product.new_price,
+								image: product.image,
+								size: valueSize,
+								// color: valueColor,
+							})
+						}}>
+						ADD TO CART
+					</button>
+				</div>
 				<p className={classes['productdisplay__rightCategory']}>
 					<span>Category: {product.clothes_type}</span>
 				</p>

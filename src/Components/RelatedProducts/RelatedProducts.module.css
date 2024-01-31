@@ -4,11 +4,10 @@
 	align-items: center;
 	gap: 1rem;
 	margin-bottom: 10rem;
-	/* height: 90vh; */
 }
 
 .relatedproducts h1 {
-	color: #171717;
+	color: #0c0b0b;
 	font-size: 5rem;
 	font-weight: 600;
 }
@@ -17,7 +16,7 @@
 	width: 200px;
 	height: 6px;
 	border-radius: 10px;
-	background: #252525;
+	background-color: #0c0b0b;
 }
 
 .relatedproducts__item {
