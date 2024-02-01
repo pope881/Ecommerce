@@ -74,3 +74,14 @@
 	background-color: #f8f8ff;
 	color: #0c0b0b;
 }
+
+@media (max-width: 1280px) {
+	.navbar {
+		padding: 1.2rem 5rem;
+	}
+
+	.navbar__logo img {
+		width: 40px;
+		height: 40px;
+	}
+}

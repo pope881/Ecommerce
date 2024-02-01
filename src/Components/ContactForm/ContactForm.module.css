@@ -1,13 +1,11 @@
 .contact {
 	min-height: 100vh;
-	padding: 4% 10%;
+	padding: 4% 8%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	background-position: center;
 	background-color: #0c0b0b;
-	background-size: cover;
 }
 
 .contact__heading {
@@ -51,6 +49,7 @@
 	display: flex;
 	justify-content: center;
 	justify-content: space-around;
+	justify-content: space-between;
 	align-items: center;
 	margin-top: 3rem;
 }
