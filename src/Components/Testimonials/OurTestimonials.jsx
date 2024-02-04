@@ -3,11 +3,11 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 
 import classes from './OurTestimonials.module.css'
-import Person1 from '../Assets/testimonials_img/1.jpg'
-import Person2 from '../Assets/testimonials_img/2.jpg'
-import Person3 from '../Assets/testimonials_img/3.jpg'
-import Person4 from '../Assets/testimonials_img/4.jpg'
-import Person5 from '../Assets/testimonials_img/5.jpg'
+import Person1 from '../Assets/testimonialsImg/1.jpg'
+import Person2 from '../Assets/testimonialsImg/2.jpg'
+import Person3 from '../Assets/testimonialsImg/3.jpg'
+import Person4 from '../Assets/testimonialsImg/4.jpg'
+import Person5 from '../Assets/testimonialsImg/5.jpg'
 
 const data = [
 	{

@@ -1,6 +1,6 @@
 //BEFORE DELETING MODE
 import { useReducer } from 'react'
-import all_product from '../Components/Assets/all_product'
+import allProduct from '../Components/Assets/allProduct'
 import CartContext from './cart-context'
 
 const defaultCartState = {
@@ -41,7 +41,6 @@ const cartReducer = (state, action) => {
 		const existingItem = state.items[existingCartItemIndex]
 		const updatedTotalAmount = state.totalAmount - existingItem.price
 		let updatedItems
-
 
 		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SEIZE
@@ -91,7 +90,7 @@ const CartProvider = props => {
 		addItem: addItemToCartHandler,
 		removeItem: removeItemFromCartHandler,
 		clearCart: clearCartHandler,
-		all_product: all_product,
+		allProduct: allProduct,
 	}
 
 	return <CartContext.Provider value={cartContext}>{props.children}</CartContext.Provider>

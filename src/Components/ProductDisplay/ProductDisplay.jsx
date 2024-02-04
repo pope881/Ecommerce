@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import classes from './ProductDisplay.module.css'
-import star_icon from '../Assets/other_img/star_icon.png'
+import starIcon from '../Assets/otherImg/starIcon.png'
 import CartContext from '../../Context/cart-context'
 import ImageSlider from './ImageSlider'
-import size_options from '../Assets/size_options'
-import color_options from '../Assets/color_options'
+import sizeOptions from '../Assets/sizeOptions'
+import colorOptions from '../Assets/colorOptions'
 
 const ProductDisplay = props => {
 	const [valueSize, setValueSize] = useState('S')
@@ -40,11 +40,11 @@ const ProductDisplay = props => {
 			<div className={classes['productdisplay__right']}>
 				<h1>{product.name}</h1>
 				<div className={classes['productdisplay__stars']}>
-					<img src={star_icon} alt="star icon" />
-					<img src={star_icon} alt="star icon" />
-					<img src={star_icon} alt="star icon" />
-					<img src={star_icon} alt="star icon" />
-					<img src={star_icon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
 					<p>(+100)</p>
 				</div>
 				<div className={classes['productdisplay__prices']}>
@@ -55,7 +55,7 @@ const ProductDisplay = props => {
 					<h1>Select size</h1>
 					<div className={classes['productdisplay__selectContainer']}>
 						<select className={classes['productdisplay__selectBox']} onChange={handleSelectSize}>
-							{size_options.map(option => (
+							{sizeOptions.map(option => (
 								<option key={option.value} value={option.value}>
 									{option.label}
 								</option>
@@ -69,7 +69,7 @@ const ProductDisplay = props => {
 					<div className={classes['productdisplay__selectContainer']}>
 						{/* onChange={handleSelectColor} */}
 						<select className={classes['productdisplay__selectBox']}>
-							{color_options.map(option => (
+							{colorOptions.map(option => (
 								<option key={option.value} value={option.value} style={{ color: `${option.color}` }}>
 									{option.label}
 								</option>

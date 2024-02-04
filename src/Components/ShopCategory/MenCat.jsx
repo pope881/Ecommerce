@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import classes from './Category.module.css'
 import Item from '../Item/Item'
-import men_product from '../Assets/men_product'
+import menProduct from '../Assets/menProduct'
 
 const MenCat = props => {
-	let product = men_product.map((item, i) => {
+	let product = menProduct.map((item, i) => {
 		return (
 			<Item
 				key={i}

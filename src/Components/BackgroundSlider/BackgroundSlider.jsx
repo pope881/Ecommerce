@@ -1,17 +1,17 @@
 import React, { useEffect, useState } from 'react'
 import classes from './BackgroundSlider.module.css'
-import MenBackground from '../Assets/backgroundSlider_img/MenBackground.jpg'
-import WomanBackground from '../Assets/backgroundSlider_img/WomanBackground.jpg'
-import KidsBackground from '../Assets/backgroundSlider_img/KidsBackground.jpg'
+import menBackground from '../Assets/backgroundSliderImg/menBackground.jpg'
+import womanBackground from '../Assets/backgroundSliderImg/womanBackground.jpg'
+import kidsBackground from '../Assets/backgroundSliderImg/kidsBackground.jpg'
 
 const imageSlide = [
-	{ url: MenBackground, title: 'MEN', body: '' },
+	{ url: menBackground, title: 'MEN', body: '' },
 	{
-		url: WomanBackground,
+		url: womanBackground,
 		title: 'WOMEN',
 		body: '',
 	},
-	{ url: KidsBackground, title: 'KIDS', body: '' },
+	{ url: kidsBackground, title: 'KIDS', body: '' },
 ]
 
 const BackgroundSlider = () => {

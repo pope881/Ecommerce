@@ -1,5 +1,5 @@
 import classes from './Navbar.module.css'
-import logo from '../Assets/other_img/logo-no-background.png'
+import logoShop from '../Assets/otherImg/logoShop.png'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
@@ -18,7 +18,7 @@ const Navbar = () => {
 		<div className={classes.navbar}>
 			<div className={classes['navbar__logo']}>
 				<Link to="/">
-					<img src={logo} alt="company logo" />{' '}
+					<img src={logoShop} alt="company logo" />{' '}
 				</Link>
 			</div>
 			<ul className={classes['navbar__menu']}>

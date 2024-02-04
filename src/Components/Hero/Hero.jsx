@@ -1,6 +1,6 @@
 import classes from './Hero.module.css'
-import heroWoman_image from '../Assets/other_img/heroWoman_image.png'
-import heroMan_image from '../Assets/other_img/heroMan_image.png'
+import heroWoman_image from '../Assets/otherImg/heroWoman_image.png'
+import heroManImage from '../Assets/otherImg/heroManImage.png'
 
 const Hero = () => {
 	const handleClickScroll = () => {
@@ -32,7 +32,7 @@ const Hero = () => {
 					</div>
 				</div>
 				<div className={classes['hero__img--Man']}>
-					<img src={heroMan_image} alt="men dressed in sports clothes" />
+					<img src={heroManImage} alt="men dressed in sports clothes" />
 				</div>
 			</div>
 		</div>

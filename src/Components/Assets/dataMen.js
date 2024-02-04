@@ -1,7 +1,7 @@
-import product_13a from './all_products_img/product_13a.png'
-import product_14a from './all_products_img/product_14a.png'
-import product_15a from './all_products_img/product_15a.png'
-import product_16a from './all_products_img/product_16a.png'
+import product_13a from './allProductsImg/product_13a.png'
+import product_14a from './allProductsImg/product_14a.png'
+import product_15a from './allProductsImg/product_15a.png'
+import product_16a from './allProductsImg/product_16a.png'
 
 let data_product_men = [
 	{

@@ -8,10 +8,10 @@ import RelatedProducts from '../Components/RelatedProducts/RelatedProducts'
 
 const Product = () => {
 	const cartCtx = useContext(CartContext)
-	const { all_product } = cartCtx
+	const { allProduct } = cartCtx
 
 	const { productId } = useParams()
-	const product = all_product.find(e => e.id === Number(productId))
+	const product = allProduct.find(e => e.id === Number(productId))
 	// console.log(product);
 
 	return (

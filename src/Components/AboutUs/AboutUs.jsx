@@ -1,4 +1,4 @@
-import about_img from '../Assets/about_img/1.png'
+import aboutImg from '../Assets/aboutImg/1.png'
 import classes from './AboutUs.module.css'
 import { motion } from 'framer-motion'
 
@@ -10,7 +10,7 @@ const AboutUs = () => {
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2 }}>
-				<img src={about_img} alt="men with black sunglasses" />
+				<img src={aboutImg} alt="men with black sunglasses" />
 			</motion.div>
 			<motion.div
 				className={classes['about__text']}

@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Footer.module.css'
-import logo from '../Assets/other_img/logo-no-background.png'
+import logoShop from '../Assets/otherImg/logoShop.png'
 
 import { Link } from 'react-router-dom'
 
@@ -16,7 +16,7 @@ const Footer = () => {
 					<div className={`${classes['footer__section']} ${classes['footer__aboutUs']}`}>
 						<div className={classes['footer__logo']}>
 							<Link to="/">
-								<img onClick={scrollToTop} src={logo} alt="company logo" />
+								<img onClick={scrollToTop} src={logoShop} alt="company logo" />
 							</Link>
 						</div>
 						<p className={classes['footer__qualityText']}>Quality matters. Always.</p>

@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './Offers.module.css'
-import exlusive_image from '../Assets/other_img/exclusive_image.png'
+import exlusiveImage from '../Assets/otherImg/exclusiveImage.png'
 import { useNavigate } from 'react-router-dom'
 
 const Offers = () => {
@@ -18,7 +18,7 @@ const Offers = () => {
 				</div>
 			</div>
 			<div className={classes['offers__right']}>
-				<img src={exlusive_image} alt="woman dressed jeans and black t-shirt" />
+				<img src={exlusiveImage} alt="woman dressed jeans and black t-shirt" />
 			</div>
 		</div>
 	)

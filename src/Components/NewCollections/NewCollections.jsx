@@ -1,6 +1,6 @@
 import React from 'react'
 import classes from './NewCollections.module.css'
-import new_collections from '../Assets/new_collections'
+import newCollections from '../Assets/newCollections'
 import Item from '../Item/Item'
 
 const NewCollections = () => {
@@ -9,7 +9,7 @@ const NewCollections = () => {
 			<h1>NEW COLLECTIONS</h1>
 			<hr />
 			<div className={classes['newCollections__collection']}>
-				{new_collections.map((item, i) => {
+				{newCollections.map((item, i) => {
 					return (
 						<Item
 							key={i}

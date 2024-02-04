@@ -1,12 +1,12 @@
 import React from 'react'
 import classes from './OurTeam.module.css'
 
-import Person1 from '../Assets/team_img/1.png'
-import Person2 from '../Assets/team_img/2.png'
-import Person3 from '../Assets/team_img/3.png'
-import Person4 from '../Assets/team_img/4.png'
-import Person5 from '../Assets/team_img/5.png'
-import Person6 from '../Assets/team_img/6.png'
+import Person1 from '../Assets/teamImg/1.png'
+import Person2 from '../Assets/teamImg/2.png'
+import Person3 from '../Assets/teamImg/3.png'
+import Person4 from '../Assets/teamImg/4.png'
+import Person5 from '../Assets/teamImg/5.png'
+import Person6 from '../Assets/teamImg/6.png'
 
 const teamPpl = [
 	{ img: Person1, name: 'Adam Miller', job: 'CHIEF EXECUTIVE OFFICER' },

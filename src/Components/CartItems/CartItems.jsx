@@ -1,6 +1,6 @@
 import React, { useContext, useRef, useState } from 'react'
 import classes from './CartItems.module.css'
-import remove_icon from '../Assets/other_img/cart_cross_icon.png'
+import cartCrossIcon from '../Assets/otherImg/cartCrossIcon.png'
 import Checkout from '../Checkout/Checkout'
 import CartContext from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
@@ -92,7 +92,7 @@ const CartItems = () => {
 							<p>${e.price * e.amount}</p>
 							<img
 								className={classes['cartitems__removeIcon']}
-								src={remove_icon}
+								src={cartCrossIcon}
 								onClick={() => {
 									removeItem({ id: e.id, size: e.size })
 								}}

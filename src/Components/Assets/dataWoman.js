@@ -1,7 +1,7 @@
-import product_1a from './all_products_img/product_1a.png'
-import product_2a from './all_products_img/product_2a.png'
-import product_3a from './all_products_img/product_3a.png'
-import product_4a from './all_products_img/product_4a.png'
+import product_1a from './allProductsImg/product_1a.png'
+import product_2a from './allProductsImg/product_2a.png'
+import product_3a from './allProductsImg/product_3a.png'
+import product_4a from './allProductsImg/product_4a.png'
 
 let data_product_woman = [
 	{
