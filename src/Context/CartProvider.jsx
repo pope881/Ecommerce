@@ -38,12 +38,13 @@ const cartReducer = (state, action) => {
 		const existingCartItemIndex = state.items.findIndex(
 			item => item.id === action.item.id && item.size === action.item.size
 		)
+		console.log(existingCartItemIndex);
 		const existingItem = state.items[existingCartItemIndex]
 		const updatedTotalAmount = state.totalAmount - existingItem.price
 		let updatedItems
 
 		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
-		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SEIZE
+		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SIZE
 		if (existingItem.amount === 1) {
 			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			console.log(updatedItems)

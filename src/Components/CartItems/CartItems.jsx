@@ -9,7 +9,6 @@ const CartItems = () => {
 	const cartCtx = useContext(CartContext)
 	const { items, totalAmount, removeItem } = cartCtx
 
-	console.log(items)
 	const isAuth = useSelector(state => state.auth.isAuthenticated)
 
 	const [isCheckout, setIsCheckout] = useState(false)
