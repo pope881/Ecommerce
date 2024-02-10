@@ -38,13 +38,16 @@ const cartReducer = (state, action) => {
 		const existingCartItemIndex = state.items.findIndex(
 			item => item.id === action.item.id && item.size === action.item.size
 		)
-		console.log(existingCartItemIndex);
+		console.log(existingCartItemIndex)
 		const existingItem = state.items[existingCartItemIndex]
+		console.log(existingItem)
 		const updatedTotalAmount = state.totalAmount - existingItem.price
 		let updatedItems
 
 		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SIZE
+
+		// usuwac najpleiej chyba po index tablicy items = []
 		if (existingItem.amount === 1) {
 			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			console.log(updatedItems)
@@ -55,6 +58,7 @@ const cartReducer = (state, action) => {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
 			updatedItems = [...state.items]
 			updatedItems[existingCartItemIndex] = updatedItem
+			console.log(updatedItems)
 		}
 
 		return {
