@@ -48,16 +48,13 @@ const cartReducer = (state, action) => {
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SIZE
 
 		// usuwac najpleiej chyba po index tablicy items = []
-		if (existingItem.amount === 1) {
-			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
-			console.log(updatedItems)
-			// updatedItems = state.items
-			// const indexOfObject = state.items.findIndexOf(object => object.id === action.object.id && action.object.size)
-			// const updatedItems = [...updatedItems.slice(1, indexOfObject)]
-		} else {
+		if (existingItem.amount !== 1) {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
 			updatedItems = [...state.items]
 			updatedItems[existingCartItemIndex] = updatedItem
+			console.log(updatedItems)
+		} else {
+			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			console.log(updatedItems)
 		}
 
