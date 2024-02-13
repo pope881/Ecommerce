@@ -8,7 +8,7 @@ import colorOptions from '../Assets/colorOptions'
 
 const ProductDisplay = props => {
 	const [valueSize, setValueSize] = useState('S')
-	// const [valueColor, setValueColor] = useState('BLACK')
+	const [valueColor, setValueColor] = useState('BLACK')
 
 	const { product } = props
 
@@ -19,9 +19,9 @@ const ProductDisplay = props => {
 		setValueSize(event.target.value)
 	}
 
-	// const handleSelectColor = event => {
-	// 	setValueColor(event.target.value)
-	// }
+	const handleSelectColor = event => {
+		setValueColor(event.target.value)
+	}
 
 	return (
 		<div className={classes['productdisplay']}>
@@ -67,8 +67,7 @@ const ProductDisplay = props => {
 					</div>
 					<h1>Select color</h1>
 					<div className={classes['productdisplay__selectContainer']}>
-						{/* onChange={handleSelectColor} */}
-						<select className={classes['productdisplay__selectBox']}>
+						<select className={classes['productdisplay__selectBox']} onChange={handleSelectColor}>
 							{colorOptions.map(option => (
 								<option key={option.value} value={option.value} style={{ color: `${option.color}` }}>
 									{option.label}
@@ -90,7 +89,7 @@ const ProductDisplay = props => {
 								price: product.new_price,
 								image: product.image,
 								size: valueSize,
-								// color: valueColor,
+								color: valueColor,
 							})
 						}}>
 						ADD TO CART

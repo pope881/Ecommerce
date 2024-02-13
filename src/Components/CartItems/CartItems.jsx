@@ -72,7 +72,7 @@ const CartItems = () => {
 				<p>Name</p>
 				<p>Price</p>
 				<p>Size</p>
-				{/* <p>Color</p> */}
+				<p>Color</p>
 				<p>Quantity</p>
 				<p>Total</p>
 				<p>Remove</p>
@@ -86,14 +86,14 @@ const CartItems = () => {
 							<p>{e.name}</p>
 							<p>${e.price}</p>
 							<p>{e.size}</p>
-							{/* <p>{e.color}</p> */}
+							<p>{e.color}</p>
 							<p className={classes['cartitems__quantity']}>{e.amount}</p>
 							<p>${e.price * e.amount}</p>
 							<img
 								className={classes['cartitems__removeIcon']}
 								src={cartCrossIcon}
 								onClick={() => {
-									removeItem({ id: e.id, size: e.size })
+									removeItem({ id: e.id, size: e.size, color: e.color })
 								}}
 								alt="cart's remove icon"
 							/>

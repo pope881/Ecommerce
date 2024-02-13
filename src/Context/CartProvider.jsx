@@ -13,7 +13,7 @@ const cartReducer = (state, action) => {
 		const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount
 
 		const existingCartItemIndex = state.items.findIndex(
-			item => item.id === action.item.id && item.size === action.item.size
+			item => item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
 		)
 		const existingCartItem = state.items[existingCartItemIndex]
 		let updatedItems
@@ -36,7 +36,7 @@ const cartReducer = (state, action) => {
 	}
 	if (action.type === 'REMOVE') {
 		const existingCartItemIndex = state.items.findIndex(
-			item => item.id === action.item.id && item.size === action.item.size
+			item => item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
 		)
 		console.log(existingCartItemIndex)
 		const existingItem = state.items[existingCartItemIndex]
@@ -48,13 +48,15 @@ const cartReducer = (state, action) => {
 		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SIZE
 
 		// usuwac najpleiej chyba po index tablicy items = []
-		if (existingItem.amount !== 1) {
+		if (existingItem.amount === 1) {
+			updatedItems = state.items.filter(
+				item => item.id !== action.item.id || item.size !== action.item.size || item.color !== action.item.color
+			)
+			console.log(updatedItems)
+		} else {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
 			updatedItems = [...state.items]
 			updatedItems[existingCartItemIndex] = updatedItem
-			console.log(updatedItems)
-		} else {
-			updatedItems = state.items.filter(item => item.id !== action.id && item.size !== action.item.size)
 			console.log(updatedItems)
 		}
 
