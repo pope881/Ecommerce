@@ -44,10 +44,6 @@ const cartReducer = (state, action) => {
 		const updatedTotalAmount = state.totalAmount - existingItem.price
 		let updatedItems
 
-		// OD TEGO MIEJSCA JEST BŁAD GDY MAMY TEN SAM SIZE NA ROZNYCH ID
-		// W OBREBIE JEDNEGO ID WSZYSTKO DZIALA  NAWET GDY SA ROZNE SIZE
-
-		// usuwac najpleiej chyba po index tablicy items = []
 		if (existingItem.amount === 1) {
 			updatedItems = state.items.filter(
 				item => item.id !== action.item.id || item.size !== action.item.size || item.color !== action.item.color
