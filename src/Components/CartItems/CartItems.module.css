@@ -10,12 +10,11 @@
 
 .cartitems__layout {
 	display: grid;
-	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns: 0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr;
 	align-items: center;
 	gap: 2.5rem;
 	padding: 2rem 0;
 	color: #454545;
-	font-size: 1.8rem;
 	font-weight: 600;
 }
 
@@ -29,7 +28,7 @@
 }
 
 .cartitems__img {
-	height: 100px;
+	height: 90px;
 }
 
 .cartitems__removeIcon {
@@ -55,7 +54,7 @@
 	min-width: 700px;
 	display: flex;
 	flex-direction: column;
-	margin-right: 20rem;
+	margin-right: 10rem;
 	gap: 4rem;
 }
 
@@ -142,8 +141,6 @@
 }
 
 .cartitems__promobox button {
-	/* width: 170px;
-	height: 58px; */
 	padding: 1.4rem 2.8rem;
 	font-size: 1.6rem;
 	background-color: #0c0b0b;
