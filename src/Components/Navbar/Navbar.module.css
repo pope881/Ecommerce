@@ -1,6 +1,7 @@
 .navbar {
 	display: flex;
 	justify-content: space-around;
+	align-items: center;
 	height: 15vh;
 	padding: 1%;
 	box-shadow: 0 1px 3px #0c0b0b;
@@ -74,14 +75,38 @@
 	background-color: #f8f8ff;
 	color: #0c0b0b;
 }
-/* 
-@media (max-width: 1280px) {
-	.navbar {
-		padding: 1.2rem 5rem;
+
+.navbar__dropdown {
+	display: none;
+}
+
+.navbar__dropdown i {
+	font-size: 50px;
+}
+
+@media (max-width: 800px) {
+	.navbar__dropdown {
+		display: block;
+		rotate: -90deg;
+		transition: 0.5s;
 	}
 
-	.navbar__logo img {
-		width: 40px;
-		height: 40px;
+	.navbar__menu {
+		height: 80px;
+		display: none;
+		width: 100%;
+		position: absolute;
+		background-color: #f8f8ff;
+		justify-content: center;
+		top: 15vh;
 	}
-} */
+
+	.navbar__menu__visible {
+		display: flex;
+	}
+
+	.navbar__menu__open {
+		transform: rotate(90deg);
+		color: red;
+	}
+}

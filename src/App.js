@@ -22,7 +22,7 @@ function App() {
 		<div>
 			<BrowserRouter>
 				<Navbar />
-				<Routes>
+				{/* <Routes>
 					<Route path="/" element={<Shop />} />
 					<Route path="/mens" element={<MenCategory banner={menBanner} category="men" />} />
 					<Route path="/kids" element={<KidsCategory banner={kidBanner} category="kid" />} />
@@ -37,7 +37,7 @@ function App() {
 					<Route path="/team" element={<Team />} />
 					<Route path="/testimonials" element={<Testimonials />} />
 				</Routes>
-				<Footer />
+				<Footer /> */}
 			</BrowserRouter>
 		</div>
 	)
