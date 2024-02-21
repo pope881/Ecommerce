@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from 'react'
 import CartIcon from '../Assets/CartIcon'
 import classes from './NavbarButton.module.css'
 import CartContext from '../../Context/cart-context'
+import basketIcon from '../Assets/otherImg/basketIcon.png'
 
 const NavbarButton = props => {
 	const [btnIsBump, setBtnIsBump] = useState(false)
@@ -29,13 +30,16 @@ const NavbarButton = props => {
 	}, [items])
 
 	return (
-		<button className={btnClasses}>
-			<span className={classes['navbar__icon']}>
-				<CartIcon />
-			</span>
-			<span>Your Cart</span>
-			<span className={classes['navbar__badge']}>{numberOfCartItems}</span>
-		</button>
+		<>
+			<button className={btnClasses}>
+				<span className={classes['navbar__icon']}>
+					<CartIcon />
+				</span>
+				<span>Your Cart</span>
+				<span className={classes['navbar__badge']}>{numberOfCartItems}</span>
+			</button>
+			<img className={classes['navbar__btnBasket']} src={basketIcon} alt="" />
+		</>
 	)
 }
 
