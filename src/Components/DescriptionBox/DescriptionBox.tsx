@@ -17,6 +17,7 @@ type Props = {
 	}
 }
 
+
 const DescriptionBox = (props: Props): JSX.Element => {
 	const { product } = props
 

@@ -1,19 +1,52 @@
 //BEFORE DELETING MODE
-import { useReducer } from 'react'
-import allProduct from '../Components/Assets/allProduct'
+import { ReactNode, useReducer } from 'react'
+import { allProduct } from '../Components/Assets/allProduct'
 import CartContext from './cart-context'
+import React from 'react'
+
+export type CartItem = {
+	id: number
+	name: string
+	amount: number
+	price: number
+	image: string
+	size: string
+	color: string
+}
+
+type AddAction = {
+	item: CartItem
+	type: 'ADD'
+}
+
+type RemoveAction = {
+	item: CartItem
+	type: 'REMOVE'
+}
+
+type ClearAction = {
+	type: 'CLEAR'
+}
+
+type CartAction = AddAction | RemoveAction | ClearAction
+
+type State = {
+	items: CartItem[]
+	totalAmount: number
+}
 
 const defaultCartState = {
 	items: [],
 	totalAmount: 0,
 }
-
-const cartReducer = (state, action) => {
+const cartReducer = (state: State, action: CartAction) => {
+	console.log({ state })
 	if (action.type === 'ADD') {
 		const updatedTotalAmount = state.totalAmount + action.item.price * action.item.amount
 
 		const existingCartItemIndex = state.items.findIndex(
-			item => item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
+			(item: CartItem) =>
+				item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
 		)
 		const existingCartItem = state.items[existingCartItemIndex]
 		let updatedItems
@@ -36,7 +69,8 @@ const cartReducer = (state, action) => {
 	}
 	if (action.type === 'REMOVE') {
 		const existingCartItemIndex = state.items.findIndex(
-			item => item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
+			(item: CartItem) =>
+				item.id === action.item.id && item.size === action.item.size && item.color === action.item.color
 		)
 		console.log(existingCartItemIndex)
 		const existingItem = state.items[existingCartItemIndex]
@@ -46,7 +80,8 @@ const cartReducer = (state, action) => {
 
 		if (existingItem.amount === 1) {
 			updatedItems = state.items.filter(
-				item => item.id !== action.item.id || item.size !== action.item.size || item.color !== action.item.color
+				(item: CartItem) =>
+					item.id !== action.item.id || item.size !== action.item.size || item.color !== action.item.color
 			)
 			console.log(updatedItems)
 		} else {
@@ -69,14 +104,14 @@ const cartReducer = (state, action) => {
 	return defaultCartState
 }
 
-const CartProvider = props => {
+export const CartProvider = (props: { children: React.ReactNode }) => {
 	const [cartState, dispatchCartAction] = useReducer(cartReducer, defaultCartState)
 
-	const addItemToCartHandler = item => {
+	const addItemToCartHandler = (item: CartItem) => {
 		dispatchCartAction({ type: 'ADD', item: item })
 	}
 
-	const removeItemFromCartHandler = item => {
+	const removeItemFromCartHandler = (item: CartItem) => {
 		dispatchCartAction({ type: 'REMOVE', item: item })
 	}
 
@@ -95,5 +130,3 @@ const CartProvider = props => {
 
 	return <CartContext.Provider value={cartContext}>{props.children}</CartContext.Provider>
 }
-
-export default CartProvider
