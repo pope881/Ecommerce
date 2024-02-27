@@ -34,7 +34,7 @@ const DescriptionBox = (props: Props): JSX.Element => {
 		{
 			feature: 'Washing and maintenance rules',
 			text: product.maintenance.map((item: any) => {
-				return <p>{item.item}</p>
+				return <p className={styles.accordionItemContentP}>{item.item}</p>
 			}),
 		},
 	]
