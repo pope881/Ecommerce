@@ -83,12 +83,10 @@ const cartReducer = (state: State, action: CartAction) => {
 				(item: CartItem) =>
 					item.id !== action.item.id || item.size !== action.item.size || item.color !== action.item.color
 			)
-			console.log(updatedItems)
 		} else {
 			const updatedItem = { ...existingItem, amount: existingItem.amount - 1 }
 			updatedItems = [...state.items]
 			updatedItems[existingCartItemIndex] = updatedItem
-			console.log(updatedItems)
 		}
 
 		return {
