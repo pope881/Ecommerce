@@ -1,26 +1,38 @@
-import React, { useContext, useRef, useState } from 'react'
+import React, { FormEvent, useContext, useRef, useState } from 'react'
 import classes from './Checkout.module.css'
 
 import CartContext from '../../Context/cart-context'
 
-const Checkout = props => {
-	const cartCtx = useContext(CartContext)
+type Props = {
+	onSubmitPromoCode: () => void
+	onCancel: () => void
+}
+
+type FormInputValidity = {
+	name: boolean
+	street: boolean
+	city: boolean
+	postalCode: boolean
+}
+
+export const Checkout = (props: Props): JSX.Element => {
+	const cartCtx: any = useContext(CartContext)
 	const { totalAmount, clearCart } = cartCtx
 
-	const [formInputsValidity, setFormInputsValidity] = useState({
+	const [formInputsValidity, setFormInputsValidity] = useState<FormInputValidity>({
 		name: true,
 		street: true,
 		city: true,
 		postalCode: true,
 	})
 
-	const nameInputRef = useRef()
-	const streetInputRef = useRef()
-	const postalCodeInputRef = useRef()
-	const cityInputRef = useRef()
+	const nameInputRef = useRef<HTMLInputElement | null>(null)
+	const streetInputRef = useRef<HTMLInputElement | null>(null)
+	const postalCodeInputRef = useRef<HTMLInputElement | null>(null)
+	const cityInputRef = useRef<HTMLInputElement | null>(null)
 
-	const isEmpty = value => value.trim() === ''
-	const isFiveChars = value => value.trim().length === 5
+	const isEmpty = (value: string) => value.trim() === ''
+	const isFiveChars = (value: string) => value.trim().length === 5
 
 	let showCheckout
 	if (totalAmount !== 0) {
@@ -29,18 +41,18 @@ const Checkout = props => {
 		showCheckout = false
 	}
 
-	const confirmHandler = event => {
+	const confirmHandler = (event: FormEvent) => {
 		event.preventDefault()
 
-		const enteredName = nameInputRef.current.value
-		const enteredStreet = streetInputRef.current.value
-		const enteredPostalCode = postalCodeInputRef.current.value
-		const enteredCity = cityInputRef.current.value
+		const enteredName = nameInputRef.current?.value
+		const enteredStreet = streetInputRef.current?.value
+		const enteredPostalCode = postalCodeInputRef.current?.value
+		const enteredCity = cityInputRef.current?.value
 
-		const enteredNameIsValid = !isEmpty(enteredName)
-		const enteredStreetIsValid = !isEmpty(enteredStreet)
-		const enteredCityIsValid = !isEmpty(enteredCity)
-		const enteredPostalCodeIsValid = isFiveChars(enteredPostalCode)
+		const enteredNameIsValid = !isEmpty(enteredName ?? '')
+		const enteredStreetIsValid = !isEmpty(enteredStreet ?? '')
+		const enteredCityIsValid = !isEmpty(enteredCity ?? '')
+		const enteredPostalCodeIsValid = isFiveChars(enteredPostalCode ?? '')
 
 		setFormInputsValidity({
 			name: enteredNameIsValid,
@@ -55,10 +67,17 @@ const Checkout = props => {
 			return
 		}
 
-		nameInputRef.current.value = ''
-		streetInputRef.current.value = ''
-		cityInputRef.current.value = ''
-		postalCodeInputRef.current.value = ''
+		if (
+			nameInputRef.current?.value &&
+			streetInputRef.current?.value &&
+			cityInputRef.current?.value &&
+			postalCodeInputRef.current?.value
+		) {
+			nameInputRef.current.value = ''
+			streetInputRef.current.value = ''
+			cityInputRef.current.value = ''
+			postalCodeInputRef.current.value = ''
+		}
 
 		setFormInputsValidity({
 			name: true,
@@ -108,5 +127,3 @@ const Checkout = props => {
 		</div>
 	)
 }
-
-export default Checkout

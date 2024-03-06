@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
 
@@ -6,11 +6,19 @@ import classes from './Login.module.css'
 
 import { useNavigate } from 'react-router-dom'
 
-const Login = () => {
-	// const [enteredEmail, setEnteredEmail] = useState('')
-	// const [enteredPassword, setEnteredPassword] = useState('')
-	const [enteredValues, setEnteredValues] = useState({ email: '', password: '' })
-	const [didEdit, setDidEdit] = useState({ email: false, password: false })
+type Credentials = {
+	email: string
+	password: string
+}
+
+type HasBeenEdited = {
+	email: boolean
+	password: boolean
+}
+
+export const Login = () => {
+	const [enteredValues, setEnteredValues] = useState<Credentials>({ email: '', password: '' })
+	const [didEdit, setDidEdit] = useState<HasBeenEdited>({ email: false, password: false })
 	const [loginIsValid, setLoginIsValid] = useState(false)
 
 	const emailIsInvalid = didEdit.email && !enteredValues.email.includes('@')
@@ -27,7 +35,7 @@ const Login = () => {
 		navigate('/')
 	}
 
-	const handleSubmit = event => {
+	const handleSubmit = (event: FormEvent) => {
 		event.preventDefault()
 
 		if (!formIsValid) {
@@ -36,24 +44,20 @@ const Login = () => {
 		}
 
 		dispatch(authActions.login())
-		// console.log(enteredEmail, enteredPassword)
-		console.log(enteredValues)
 		setEnteredValues({ email: '', password: '' })
 		setDidEdit({ email: false, password: false })
 		setLoginIsValid(false)
-
-		// event.target.reset()
-		// setEnteredEmail('')
-		// setEnteredPassword('')
 		navigateHandler()
 	}
 
-	function handleInputChange(identifier, value) {
+	function handleInputChange(identifier: any, value: any) {
+		console.log({ identifier })
+		console.log({ value })
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}
 
-	function handleInputBlur(identifier) {
+	function handleInputBlur(identifier: any) {
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: true }))
 	}
 
@@ -63,20 +67,12 @@ const Login = () => {
 		setLoginIsValid(false)
 	}
 
-	// function handleEmailChange(event) {
-	// 	setEnteredEmail(event.target.value)
-	// }
-
-	// function handlePasswordChange(event) {
-	// 	setEnteredPassword(event.target.value)
-	// }
-
 	return (
 		<div className={classes.login}>
 			<div className={classes['login__text']}>
 				<h2>Login</h2>
 				<p>
-					<i class="fa-solid fa-lock"></i>
+					<i className="fa-solid fa-lock"></i>
 				</p>
 			</div>
 			<form className={classes['login__form']} onSubmit={handleSubmit}>
@@ -89,10 +85,8 @@ const Login = () => {
 							type="email"
 							name="email"
 							placeholder="Email address..."
-							// onChange={handleEmailChange}
 							onBlur={() => handleInputBlur('email')}
 							onChange={event => handleInputChange('email', event.target.value)}
-							// value={enteredEmail}
 							value={enteredValues.email}
 						/>
 
@@ -107,11 +101,9 @@ const Login = () => {
 							id="password"
 							type="password"
 							name="password"
-							// onChange={handlePasswordChange}
 							onBlur={() => handleInputBlur('password')}
 							onChange={event => handleInputChange('password', event.target.value)}
 							placeholder="Password..."
-							// value={enteredPassword}
 							value={enteredValues.password}
 						/>
 						<div className={classes['login__control--error']}>
@@ -132,5 +124,3 @@ const Login = () => {
 		</div>
 	)
 }
-
-export default Login
