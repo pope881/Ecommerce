@@ -1,5 +1,6 @@
 import React, { FormEvent, useContext, useRef, useState } from 'react'
-import classes from './Checkout.module.css'
+// import classes from './Checkout.module.css'
+import { styles } from './Checkout.styles'
 
 import CartContext from '../../Context/cart-context'
 
@@ -88,39 +89,76 @@ export const Checkout = (props: Props): JSX.Element => {
 		props.onSubmitPromoCode()
 		alert('Your order is confirmed!')
 		clearCart()
-		// navigate('/')
 	}
 
 	return (
 		<div>
 			{showCheckout && (
-				<form className={classes['form']} onSubmit={confirmHandler}>
-					<div className={`${classes['form__control']} ${formInputsValidity.name ? '' : classes.invalid}`}>
-						<label htmlFor="name">Your Name</label>
-						<input type="text" id="name" ref={nameInputRef} />
-						{!formInputsValidity.name && <p>Please enter a valid name.</p>}
+				<form className={styles.form} onSubmit={confirmHandler}>
+					<div className={styles.formControl}>
+						<label className={styles.formControlLabel} htmlFor="name">
+							Your Name
+						</label>
+						<input
+							className={`${styles.formControlInput} ${formInputsValidity.name ? '' : styles.invalidInput}`}
+							type="text"
+							id="name"
+							ref={nameInputRef}
+						/>
+						{!formInputsValidity.name && (
+							<p className={`${formInputsValidity.name ? '' : styles.invalidP}`}>Please enter a valid name.</p>
+						)}
 					</div>
-					<div className={`${classes['form__control']} ${formInputsValidity.street ? '' : classes.invalid}`}>
-						<label htmlFor="street">Street</label>
-						<input type="text" id="street" ref={streetInputRef} />
-						{!formInputsValidity.street && <p>Please enter a valid street.</p>}
+					<div className={styles.formControl}>
+						<label className={styles.formControlLabel} htmlFor="street">
+							Street
+						</label>
+						<input
+							className={`${styles.formControlInput} ${formInputsValidity.street ? '' : styles.invalidInput}`}
+							type="text"
+							id="street"
+							ref={streetInputRef}
+						/>
+						{!formInputsValidity.street && (
+							<p className={`${formInputsValidity.street ? '' : styles.invalidP}`}>Please enter a valid street.</p>
+						)}
 					</div>
-					<div className={`${classes['form__control']} ${formInputsValidity.postalCode ? '' : classes.invalid}`}>
-						<label htmlFor="postal">Postal Code</label>
-						<input type="text" id="postal" ref={postalCodeInputRef} />
-						{!formInputsValidity.postalCode && <p>Please enter a valid postal code.</p>}
+					<div className={styles.formControl}>
+						<label className={styles.formControlLabel} htmlFor="postal">
+							Postal Code
+						</label>
+						<input
+							className={`${styles.formControlInput} ${formInputsValidity.postalCode ? '' : styles.invalidInput}`}
+							type="text"
+							id="postal"
+							ref={postalCodeInputRef}
+						/>
+						{!formInputsValidity.postalCode && (
+							<p className={`${formInputsValidity.postalCode ? '' : styles.invalidP}`}>
+								Please enter a valid postal code.
+							</p>
+						)}
 					</div>
-					<div className={`${classes['form__control']} ${formInputsValidity.city ? '' : classes.invalid}`}>
-						<label htmlFor="city">City</label>
-						<input type="text" id="city" ref={cityInputRef} />
-						{!formInputsValidity.city && <p>Please enter a valid city.</p>}
+					<div className={styles.formControl}>
+						<label className={styles.formControlLabel} htmlFor="city">
+							City
+						</label>
+						<input
+							className={`${styles.formControlInput} ${formInputsValidity.city ? '' : styles.invalidInput}`}
+							type="text"
+							id="city"
+							ref={cityInputRef}
+						/>
+						{!formInputsValidity.city && (
+							<p className={`${formInputsValidity.city ? '' : styles.invalidP}`}>Please enter a valid city.</p>
+						)}
 					</div>
 
-					<div className={classes['form__actions']}>
-						<button type="button" onClick={props.onCancel}>
+					<div className={styles.formActions}>
+						<button className={styles.formActionsButton} type="button" onClick={props.onCancel}>
 							Cancel
 						</button>
-						<button className={classes['form__submit']}>Confirm</button>
+						<button className={`${styles.formActionsButton}  ${styles.formSubmit}`}>Confirm</button>
 					</div>
 				</form>
 			)}
