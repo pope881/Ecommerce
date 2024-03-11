@@ -1,177 +1,154 @@
-.login {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	padding: 4% 10%;
-	height: 100vh;
-	background-color: #0c0b0b;
+import { css } from '@emotion/css'
+
+export const styles = {
+	login: css({
+		display: 'flex',
+		flexDirection: 'column',
+		alignItems: 'center',
+		padding: '4% 10%',
+		height: '100vh',
+		backgroundColor: '#0c0b0b',
+	}),
+
+	loginText: css({
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+	}),
+
+	loginTextH2: css({
+		fontSize: '8rem',
+		color: '#ce1446',
+		marginRight: '2rem',
+	}),
+
+	loginTextP: css({
+		fontSize: '9rem',
+		color: '#ce1446',
+	}),
+
+	loginForm: css({
+		position: 'relative',
+		width: '100%',
+		display: 'flex',
+		flexDirection: 'column',
+		justifyContent: 'center',
+		maxWidth: '56rem',
+		margin: 'auto',
+		padding: '5rem',
+		background: ' #f8f8ff',
+		borderRadius: '8px',
+		boxShadow: '0 0 16px 1px rgba(0, 0, 0, 0.5)',
+		transition: '0.3s',
+		'&::before': {
+			transition: '0.3s',
+			content: '""',
+			position: 'absolute',
+			width: '0px',
+			height: '0px',
+			top: '-25px',
+			left: '-25px',
+			borderTop: '0px solid #ce1446',
+			borderLeft: '0px solid #ce1446',
+		},
+		'&::after': {
+			transition: '0.3s',
+			content: '""',
+			position: 'absolute',
+			width: '0px',
+			height: '0px',
+			bottom: '-25px',
+			right: '-25px',
+			borderBottom: '0px solid #ce1446',
+			borderRight: '0px solid #ce1446',
+		},
+		'&:hover::before': { width: '25%', height: '20%', borderTop: '6px solid #ce1446', borderLeft: '6px solid #ce1446' },
+		'&:hover::after': {
+			width: '25%',
+			height: '20%',
+			borderBottom: '6px solid #ce1446',
+			borderRight: '6px solid #ce1446',
+		},
+	}),
+
+	loginControl: css({
+		marginBottom: '1rem',
+	}),
+
+	loginControlLoginNoMargin: css({
+		marginBottom: '0',
+	}),
+
+	loginControlLabel: css({
+		display: 'block',
+		fontSize: '1.6rem',
+		marginBottom: '0.5rem',
+		color: '#0c0b0b',
+		textTransform: 'uppercase',
+	}),
+
+	loginControlInput: css({
+		display: 'block',
+		width: '100%',
+		maxWidth: '40rem',
+		padding: '0.5rem',
+		fontSize: '1.6rem',
+		borderRadius: '4px',
+		border: '1px solid',
+		backgroundColor: '#869999',
+		color: '#0c0b0b',
+	}),
+
+	loginControlError: css({
+		color: ' #ffca99',
+		height: '3.5rem',
+		padding: '0.5rem 0',
+	}),
+
+	loginControlErrorP: css({
+		fontSize: '1.1rem',
+		margin: '0',
+		color: '#aa0b20',
+	}),
+
+	loginControlErrorFormP: css({
+		fontSize: '1.1rem',
+		marginTop: '1rem',
+		color: '#aa0b20',
+		textAlign: 'center',
+	}),
+
+	loginControls: css({
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '1rem',
+	}),
+
+	loginActions: css({
+		display: 'flex',
+		justifyContent: 'flex-start',
+		gap: '1rem',
+	}),
+
+	loginButton: css({
+		fontSize: '1.6rem',
+		color: '#5a1a01',
+		cursor: 'pointer',
+		backgroundColor: 'transparent',
+		border: 'none',
+		borderRadius: '25px',
+		padding: '1rem 4rem',
+		transition: '0.4s',
+		'&:hover': { backgroundColor: '#ffe6dc' },
+		'&:active': { backgroundColor: '#ffe6dc' },
+	}),
+
+	loginSubmit: css({
+		border: '1px solid #ce1446',
+		backgroundColor: '#ce1446',
+		color: '#f8f8ff',
+		transition: '0.4s',
+		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+	}),
 }
-
-.login__text {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-}
-
-.login__text h2 {
-	font-size: 8rem;
-	color: #ce1446;
-	margin-right: 2rem;
-}
-
-.login__text p {
-	font-size: 9rem;
-	color: #ce1446;
-}
-
-.login__form {
-	position: relative;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	max-width: 56rem;
-	margin: auto;
-	padding: 5rem;
-	background: #f8f8ff;
-	border-radius: 8px;
-	box-shadow: 0 0 16px 1px rgba(0, 0, 0, 0.5);
-}
-
-.login__form::before,
-.login__form::after,
-.login__form {
-	transition: 0.3s;
-}
-
-.login__form::before,
-.login__form::after {
-	content: '';
-	position: absolute;
-	width: 0px;
-	height: 0px;
-}
-
-.login__form::before {
-	top: -25px;
-	left: -25px;
-	border-top: 0px solid #ce1446;
-	border-left: 0px solid #ce1446;
-}
-
-.login__form::after {
-	bottom: -25px;
-	right: -25px;
-	border-bottom: 0px solid #ce1446;
-	border-right: 0px solid #ce1446;
-}
-
-.login__form:hover::before,
-.login__form:hover::after {
-	width: 25%;
-	height: 20%;
-}
-
-.login__form:hover::before {
-	border-top: 6px solid #ce1446;
-	border-left: 6px solid #ce1446;
-}
-
-.login__form:hover::after {
-	border-bottom: 6px solid #ce1446;
-	border-right: 6px solid #ce1446;
-}
-
-.login__control,
-fieldset {
-	margin-bottom: 1rem;
-}
-
-.login__control.login__noMargin {
-	margin-bottom: 0;
-}
-
-.login__control label {
-	display: block;
-	font-size: 1.6rem;
-	margin-bottom: 0.5rem;
-	color: #0c0b0b;
-	text-transform: uppercase;
-}
-
-.login__control input {
-	display: block;
-	width: 100%;
-	max-width: 40rem;
-	padding: 0.5rem;
-	font-size: 1.6rem;
-	border-radius: 4px;
-	border: 1px solid;
-	background-color: #869999;
-	color: #0c0b0b;
-}
-
-.login__control--error {
-	color: #ffca99;
-	height: 3.5rem;
-	padding: 0.5rem 0;
-}
-
-.login__control--error p {
-	font-size: 1.1rem;
-	margin: 0;
-	color: #aa0b20;
-}
-
-.login__control--error.form p {
-	margin-top: 1rem;
-	color: #aa0b20;
-	text-align: center;
-}
-
-.login__controls {
-	display: flex;
-	flex-direction: column;
-	gap: 1rem;
-}
-
-.login__actions {
-	display: flex;
-	justify-content: center;
-	justify-content: flex-start;
-	gap: 1rem;
-}
-
-.login__button {
-	font-size: 1.6rem;
-	color: #5a1a01;
-	cursor: pointer;
-	background-color: transparent;
-	border: none;
-	border-radius: 25px;
-	padding: 1rem 4rem;
-	transition: 0.4s;
-}
-
-.login__button:hover,
-.login__button:active {
-	background-color: #ffe6dc;
-}
-
-.login__submit {
-	border: 1px solid #ce1446;
-	background-color: #ce1446;
-	color: #f8f8ff;
-	transition: 0.4s;
-}
-
-.login__submit:hover,
-.login__submit:active {
-	background-color: #f8f8ff;
-	color: #ce1446;
-}
-
-
-'&::before': {
-    '&:before, &:after': {
-    '&:after': {
