@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import CartIcon from '../Assets/CartIcon'
 import classes from './NavbarButton.module.css'
-import CartContext from '../../Context/cart-context'
+import {CartContext} from '../../Context/cart-context'
 import basketIcon from '../Assets/otherImg/basketIcon.png'
 
 const NavbarButton = props => {

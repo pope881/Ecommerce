@@ -2,7 +2,7 @@ import React, { FormEvent, useContext, useRef, useState } from 'react'
 // import classes from './Checkout.module.css'
 import { styles } from './Checkout.styles'
 
-import CartContext from '../../Context/cart-context'
+import { CartContext } from '../../Context/cart-context'
 
 type Props = {
 	onSubmitPromoCode: () => void
@@ -17,7 +17,7 @@ type FormInputValidity = {
 }
 
 export const Checkout = (props: Props): JSX.Element => {
-	const cartCtx: any = useContext(CartContext)
+	const cartCtx = useContext(CartContext)
 	const { totalAmount, clearCart } = cartCtx
 
 	const [formInputsValidity, setFormInputsValidity] = useState<FormInputValidity>({

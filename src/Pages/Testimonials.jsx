@@ -1,5 +1,4 @@
-import OurTestimonials from '../Components/Testimonials/OurTestimonials'
-
+import { OurTestimonials } from '../Components/Testimonials/OurTestimonials'
 
 const Testimonials = params => {
 	return <OurTestimonials />

@@ -1,7 +1,7 @@
 //BEFORE DELETING MODE
-import { ReactNode, useReducer } from 'react'
+import { useReducer } from 'react'
 import { allProduct } from '../Components/Assets/allProduct'
-import CartContext from './cart-context'
+import { CartContext } from './cart-context'
 import React from 'react'
 
 export type CartItem = {

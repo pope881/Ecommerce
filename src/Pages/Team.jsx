@@ -1,4 +1,4 @@
-import OurTeam from '../Components/Team/OurTeam'
+import {OurTeam} from '../Components/Team/OurTeam'
 
 const Team = () => {
 	return <OurTeam />
