@@ -105,7 +105,7 @@ export const styles = {
 		textShadow: '2px 2px 5px rgb(0, 0, 0)',
 		cursor: 'crosshair',
 		zIndex: '10',
-		// '&:hover': {}
+		'&:hover ~ teamCardText': { clipPath: 'circle(120% at 50% 90%)' },
 	}),
 
 	// team__btn:hover ~ team__cardText {

@@ -1,9 +1,11 @@
-import product_13a from './allProductsImg/product_13a.png'
-import product_14a from './allProductsImg/product_14a.png'
-import product_15a from './allProductsImg/product_15a.png'
-import product_16a from './allProductsImg/product_16a.png'
+import { type DataProduct } from './dataWomen'
 
-let data_product_men = [
+const product_13a = require('./allProductsImg/product_13a.png')
+const product_14a = require('./allProductsImg/product_14a.png')
+const product_15a = require('./allProductsImg/product_15a.png')
+const product_16a = require('./allProductsImg/product_16a.png')
+
+export const dataProductMen: DataProduct[] = [
 	{
 		id: 13,
 		name: 'Smooth Basic T-Shirt With A Round Neck, Mahogany',
@@ -45,5 +47,3 @@ let data_product_men = [
 		madeOf: `Material I: 100% COTTON`,
 	},
 ]
-
-export default data_product_men

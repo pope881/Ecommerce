@@ -2,7 +2,7 @@ import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import React from 'react'
-import classes from './OurTestimonials.module.css'
+import { styles } from './OurTestimonials.styles'
 import { testimonialData } from '../Assets/mockData/mockData'
 
 type Settings = {
@@ -25,27 +25,26 @@ const SETTINGS: Settings = {
 
 export const OurTestimonials = (): JSX.Element => {
 	return (
-		<div className={classes.testimonials}>
-			<div className={classes['testimonials_headerText']}>
-				<h4>testimonials</h4>
-				<h1>What Our Customers Say</h1>
-				<hr />
-				<p>
+		<div className={styles.testimonials}>
+			<div className={styles.testimonialsHeaderText}>
+				<h4 className={styles.testimonialsHeaderTextH4}>testimonials</h4>
+				<h1 className={styles.testimonialsHeaderTextH1}>What Our Customers Say</h1>
+				<hr className={styles.testimonialsHeaderTextHr} />
+				<p className={styles.testimonialsHeaderTextP}>
 					We are always super happy when we receive positive feedback, and we are constantly amazed by the demand for
 					our fabrics with orders coming from all corners of the globe.
 				</p>
 			</div>
-			<div className={classes['testimonials__items']}>
+			<div className={styles.testimonialsItems}>
 				<Slider {...SETTINGS}>
 					{testimonialData.map(d => (
-						<div key={d.name} className={classes['testimonials__item']}>
-							<div className={classes['testimonials__itemTop']}>
-								<img src={d.img} alt="person expressing opinions" className={classes.img} />
+						<div key={d.name} className={styles.testimonialsItem}>
+							<div className={styles.testimonialsItemTop}>
+								<img src={d.img} alt="person expressing opinions" className={styles.testimonialsItemImg} />
 							</div>
-
-							<div className={classes['testimonials__itemDown']}>
-								<h3 className={classes['testimonials__name']}>{d.name}</h3>
-								<p>{d.review}</p>
+							<div className={styles.testimonialsItemDown}>
+								<h3 className={styles.testimonialsName}>{d.name}</h3>
+								<p className={styles.testimonialsItemDownP}>{d.review}</p>
 							</div>
 						</div>
 					))}

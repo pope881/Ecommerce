@@ -1,9 +1,11 @@
-import product_25a from './allProductsImg/product_25a.png'
-import product_26a from './allProductsImg/product_26a.png'
-import product_27a from './allProductsImg/product_27a.png'
-import product_28a from './allProductsImg/product_28a.png'
+import { type DataProduct } from './dataWomen'
 
-let data_product_kids = [
+const product_25a = require('./allProductsImg/product_25a.png')
+const product_26a = require('./allProductsImg/product_26a.png')
+const product_27a = require('./allProductsImg/product_27a.png')
+const product_28a = require('./allProductsImg/product_28a.png')
+
+export const dataProductKids: DataProduct[] = [
 	{
 		id: 25,
 		name: `Long Sleeve T-Shirt Blue With A Print Of A Dog On A Skateboard`,
@@ -46,5 +48,3 @@ let data_product_kids = [
 		madeOf: `Material I: 100% polyester`,
 	},
 ]
-
-export default data_product_kids

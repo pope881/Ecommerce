@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import classes from './Category.module.css'
-import Item from '../Item/Item'
+import {Item} from '../Item/Item'
 import menProduct from '../Assets/menProduct'
 
 const MenCat = props => {

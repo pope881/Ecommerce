@@ -3,7 +3,7 @@ import classes from './Offers.module.css'
 import exlusiveImage from '../Assets/otherImg/exclusiveImage.png'
 import { useNavigate } from 'react-router-dom'
 
-const Offers = () => {
+export const Offers = () => {
 	const navigate = useNavigate()
 	const navigateHandler = params => {
 		navigate('/womens')
@@ -24,4 +24,3 @@ const Offers = () => {
 	)
 }
 
-export default Offers
