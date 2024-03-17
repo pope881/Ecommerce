@@ -4,6 +4,7 @@ import { dataProductWomen } from '../Assets/dataWomen'
 import { dataProductMen } from '../Assets/dataMen'
 import { dataProductKids } from '../Assets/dataKids'
 import { Item } from '../Item/Item'
+import { DataProduct } from '../Assets/dataWomen'
 
 export const Popular = () => {
 	return (
@@ -12,7 +13,7 @@ export const Popular = () => {
 				<h1 className={styles.popularH1}>MOST POPULAR IN WOMAN</h1>
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
-					{dataProductWomen.map((item: any, i: any) => {
+					{dataProductWomen.map((item: DataProduct, i: any) => {
 						return (
 							<Item
 								key={i}
