@@ -1,53 +1,55 @@
-import product_25a from './allProductsImg/product_25a.png'
-import product_25b from './allProductsImg/product_25b.png'
-import product_25c from './allProductsImg/product_25c.png'
-import product_25d from './allProductsImg/product_25d.png'
-import product_26a from './allProductsImg/product_26a.png'
-import product_26b from './allProductsImg/product_26b.png'
-import product_26c from './allProductsImg/product_26c.png'
-import product_26d from './allProductsImg/product_26d.png'
-import product_27a from './allProductsImg/product_27a.png'
-import product_27b from './allProductsImg/product_27b.png'
-import product_27c from './allProductsImg/product_27c.png'
-import product_27d from './allProductsImg/product_27d.png'
-import product_28a from './allProductsImg/product_28a.png'
-import product_28b from './allProductsImg/product_28b.png'
-import product_28c from './allProductsImg/product_28c.png'
-import product_28d from './allProductsImg/product_28d.png'
-import product_29a from './allProductsImg/product_29a.png'
-import product_29b from './allProductsImg/product_29b.png'
-import product_29c from './allProductsImg/product_29c.png'
-import product_29d from './allProductsImg/product_29d.png'
-import product_30a from './allProductsImg/product_30a.png'
-import product_30b from './allProductsImg/product_30b.png'
-import product_30c from './allProductsImg/product_30c.png'
-import product_30d from './allProductsImg/product_30d.png'
-import product_31a from './allProductsImg/product_31a.png'
-import product_31b from './allProductsImg/product_31b.png'
-import product_31c from './allProductsImg/product_31c.png'
-import product_31d from './allProductsImg/product_31d.png'
-import product_32a from './allProductsImg/product_32a.png'
-import product_32b from './allProductsImg/product_32b.png'
-import product_32c from './allProductsImg/product_32c.png'
-import product_32d from './allProductsImg/product_32d.png'
-import product_33a from './allProductsImg/product_33a.png'
-import product_33b from './allProductsImg/product_33b.png'
-import product_33c from './allProductsImg/product_33c.png'
-import product_33d from './allProductsImg/product_33d.png'
-import product_34a from './allProductsImg/product_34a.png'
-import product_34b from './allProductsImg/product_34b.png'
-import product_34c from './allProductsImg/product_34c.png'
-import product_34d from './allProductsImg/product_34d.png'
-import product_35a from './allProductsImg/product_35a.png'
-import product_35b from './allProductsImg/product_35b.png'
-import product_35c from './allProductsImg/product_35c.png'
-import product_35d from './allProductsImg/product_35d.png'
-import product_36a from './allProductsImg/product_36a.png'
-import product_36b from './allProductsImg/product_36b.png'
-import product_36c from './allProductsImg/product_36c.png'
-import product_36d from './allProductsImg/product_36d.png'
+import { type AllProduct } from './allProduct'
 
-let kids_product = [
+const product_25a = require('./allProductsImg/product_25a.png')
+const product_25b = require('./allProductsImg/product_25b.png')
+const product_25c = require('./allProductsImg/product_25c.png')
+const product_25d = require('./allProductsImg/product_25d.png')
+const product_26a = require('./allProductsImg/product_26a.png')
+const product_26b = require('./allProductsImg/product_26b.png')
+const product_26c = require('./allProductsImg/product_26c.png')
+const product_26d = require('./allProductsImg/product_26d.png')
+const product_27a = require('./allProductsImg/product_27a.png')
+const product_27b = require('./allProductsImg/product_27b.png')
+const product_27c = require('./allProductsImg/product_27c.png')
+const product_27d = require('./allProductsImg/product_27d.png')
+const product_28a = require('./allProductsImg/product_28a.png')
+const product_28b = require('./allProductsImg/product_28b.png')
+const product_28c = require('./allProductsImg/product_28c.png')
+const product_28d = require('./allProductsImg/product_28d.png')
+const product_29a = require('./allProductsImg/product_29a.png')
+const product_29b = require('./allProductsImg/product_29b.png')
+const product_29c = require('./allProductsImg/product_29c.png')
+const product_29d = require('./allProductsImg/product_29d.png')
+const product_30a = require('./allProductsImg/product_30a.png')
+const product_30b = require('./allProductsImg/product_30b.png')
+const product_30c = require('./allProductsImg/product_30c.png')
+const product_30d = require('./allProductsImg/product_30d.png')
+const product_31a = require('./allProductsImg/product_31a.png')
+const product_31b = require('./allProductsImg/product_31b.png')
+const product_31c = require('./allProductsImg/product_31c.png')
+const product_31d = require('./allProductsImg/product_31d.png')
+const product_32a = require('./allProductsImg/product_32a.png')
+const product_32b = require('./allProductsImg/product_32b.png')
+const product_32c = require('./allProductsImg/product_32c.png')
+const product_32d = require('./allProductsImg/product_32d.png')
+const product_33a = require('./allProductsImg/product_33a.png')
+const product_33b = require('./allProductsImg/product_33b.png')
+const product_33c = require('./allProductsImg/product_33c.png')
+const product_33d = require('./allProductsImg/product_33d.png')
+const product_34a = require('./allProductsImg/product_34a.png')
+const product_34b = require('./allProductsImg/product_34b.png')
+const product_34c = require('./allProductsImg/product_34c.png')
+const product_34d = require('./allProductsImg/product_34d.png')
+const product_35a = require('./allProductsImg/product_35a.png')
+const product_35b = require('./allProductsImg/product_35b.png')
+const product_35c = require('./allProductsImg/product_35c.png')
+const product_35d = require('./allProductsImg/product_35d.png')
+const product_36a = require('./allProductsImg/product_36a.png')
+const product_36b = require('./allProductsImg/product_36b.png')
+const product_36c = require('./allProductsImg/product_36c.png')
+const product_36d = require('./allProductsImg/product_36d.png')
+
+export const kidsProduct: AllProduct[] = [
 	{
 		id: 25,
 		name: `Long Sleeve T-Shirt Blue With A Print Of A Dog On A Skateboard`,
@@ -280,5 +282,3 @@ let kids_product = [
 		],
 	},
 ]
-
-export default kids_product

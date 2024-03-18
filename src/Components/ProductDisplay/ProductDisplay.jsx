@@ -1,10 +1,10 @@
 import React, { useContext, useState } from 'react'
 import classes from './ProductDisplay.module.css'
 import starIcon from '../Assets/otherImg/starIcon.png'
-import {CartContext} from '../../Context/cart-context'
+import { CartContext } from '../../Context/cart-context'
 import ImageSlider from './ImageSlider'
-import sizeOptions from '../Assets/sizeOptions'
-import colorOptions from '../Assets/colorOptions'
+import { colorOptions } from '../Assets/mockData/mockData'
+import { sizeOptions } from '../Assets/mockData/mockData'
 
 const ProductDisplay = props => {
 	const [valueSize, setValueSize] = useState('S')

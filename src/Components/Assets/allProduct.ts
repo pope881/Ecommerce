@@ -143,27 +143,21 @@ const product_36b = require('./allProductsImg/product_36b.png')
 const product_36c = require('./allProductsImg/product_36c.png')
 const product_36d = require('./allProductsImg/product_36d.png')
 
-// type allProduct = {
-// 	id: number
-// 	name: string
-// 	category: string
-// 	clothes_type: string
-// 	image: string
-// 	image_slide: [{ url: product_1a }, { url: product_1b }, { url: product_1c }, { url: product_1d }]
-// 	new_price: number
-// 	old_price: number
-// 	description: string
-// 	madeOf: string
-// 	maintenance: [
-// 		{ item: 'Maximum washing temperature 30°C. A gentle process' },
-// 		{ item: 'Do not use bleach' },
-// 		{ item: 'Iron at the maximum temperature of the lower plate: 110°C' },
-// 		{ item: 'Do not dry clean' },
-// 		{ item: 'Do not tumble dry' }
-// 	]
-// }
+export type AllProduct = {
+	id: number
+	name: string
+	category: string
+	clothes_type: string
+	image: string
+	image_slide: { url: string }[]
+	new_price: number
+	old_price: number
+	description: string
+	madeOf: string
+	maintenance: { item: string }[]
+}
 
-export const allProduct = [
+export const allProduct: AllProduct[] = [
 	{
 		id: 1,
 		name: 'Black Hoodie With Mind Less Print',

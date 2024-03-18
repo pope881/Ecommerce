@@ -1,13 +1,15 @@
-import product_12a from './allProductsImg/product_12a.png'
-import product_35a from './allProductsImg/product_35a.png'
-import product_14a from './allProductsImg/product_14a.png'
-import product_8a from './allProductsImg/product_8a.png'
-import product_15a from './allProductsImg/product_15a.png'
-import product_2a from './allProductsImg/product_2a.png'
-import product_17a from './allProductsImg/product_17a.png'
-import product_28a from './allProductsImg/product_28a.png'
+import { type DataProduct } from './dataWomen'
 
-let newCollections = [
+const product_12a = require('./allProductsImg/product_12a.png')
+const product_35a = require('./allProductsImg/product_35a.png')
+const product_14a = require('./allProductsImg/product_14a.png')
+const product_8a = require('./allProductsImg/product_8a.png')
+const product_15a = require('./allProductsImg/product_15a.png')
+const product_2a = require('./allProductsImg/product_2a.png')
+const product_17a = require('./allProductsImg/product_17a.png')
+const product_28a = require('./allProductsImg/product_28a.png')
+
+export const newCollections: DataProduct[] = [
 	{
 		id: 12,
 		name: 'Graphite Leggings With Acid Wash Effect',
@@ -95,5 +97,3 @@ let newCollections = [
 		madeOf: `Material I: 100% polyester`,
 	},
 ]
-
-export default newCollections

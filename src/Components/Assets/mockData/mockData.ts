@@ -23,6 +23,17 @@ type TeamMember = {
 	job: string
 }
 
+type ColorOptions = {
+	label: string
+	value: string
+	color: string
+}
+
+type SizeOptions = {
+	label: string
+	value: string
+}
+
 export const testimonialData: Testimonial[] = [
 	{
 		name: 'John Morgan, USA',
@@ -58,4 +69,55 @@ export const teamPeople: TeamMember[] = [
 	{ img: teamPerson4, name: 'Monica Smith', job: 'DESIGN DIRECTOR' },
 	{ img: teamPerson5, name: 'Jake Palace', job: 'IT SPECIALIST' },
 	{ img: teamPerson6, name: 'Caroline Blunt', job: 'LEAD PRODUCT DESIGNER' },
+]
+
+export const colorOptions: ColorOptions[] = [
+	{
+		label: 'BLACK',
+		value: 'BLACK',
+		color: 'black',
+	},
+	{
+		label: 'WHEAT',
+		value: 'WHEAT',
+		color: 'wheat',
+	},
+	{
+		label: 'RED',
+		value: 'RED',
+		color: 'red',
+	},
+	{
+		label: 'BLUE',
+		value: 'BLUE',
+		color: 'blue',
+	},
+	{
+		label: 'YELLOW',
+		value: 'YELLOW',
+		color: 'yellow',
+	},
+]
+
+export const sizeOptions: SizeOptions[] = [
+	{
+		label: 'S',
+		value: 'S',
+	},
+	{
+		label: 'M',
+		value: 'M',
+	},
+	{
+		label: 'L',
+		value: 'L',
+	},
+	{
+		label: 'XL',
+		value: 'XL',
+	},
+	{
+		label: 'XXL',
+		value: 'XXL',
+	},
 ]
