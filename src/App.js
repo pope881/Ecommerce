@@ -13,9 +13,10 @@ import About from './Pages/About'
 import Contact from './Pages/Contact'
 import Team from './Pages/Team'
 import Testimonials from './Pages/Testimonials'
-import WomenCategory from './Pages/WomenCategory'
-import MenCategory from './Pages/MenCategory'
-import KidsCategory from './Pages/KidsCategory'
+import { ShopCategory } from './Pages/ShopCategory'
+import { kidsProduct } from '../src/Components/Assets/kidsProduct'
+import { menProduct } from '../src/Components/Assets/menProduct'
+import { womenProduct } from '../src/Components/Assets/womenProduct'
 
 function App() {
 	return (
@@ -24,9 +25,15 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route path="/" element={<Shop />} />
-					<Route path="/mens" element={<MenCategory banner={menBanner} category="men" />} />
-					<Route path="/kids" element={<KidsCategory banner={kidBanner} category="kid" />} />
-					<Route path="/womens" element={<WomenCategory banner={womanBanner} category="women" />} />
+					<Route path="/mens" element={<ShopCategory banner={menBanner} category="man" groupProducts={menProduct} />} />
+					<Route
+						path="/kids"
+						element={<ShopCategory banner={kidBanner} category="kid" groupProducts={kidsProduct} />}
+					/>
+					<Route
+						path="/womens"
+						element={<ShopCategory banner={womanBanner} category="woman" groupProducts={womenProduct} />}
+					/>
 					<Route path="/product" element={<Product />}>
 						<Route path=":productId" element={<Product />} />
 					</Route>

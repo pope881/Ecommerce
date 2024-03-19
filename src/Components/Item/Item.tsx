@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { styles } from './Item.styles'
 
 type Props = {
-	key: string
+	key: number
 	id: number
 	name: string
 	image: string

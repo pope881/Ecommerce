@@ -57,12 +57,6 @@ export const styles = {
 		'&:actice': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
 	}),
 
-	// newsletter__control button:hover,
-	// newsletter__control button:active {
-	// 	backgroundColor:' #f8f8ff',
-	// 	color: '#0c0b0b',
-	// }
-
 	newsletterInvalidP: css({
 		color: '#aa0b20',
 		fontSize: '1.2rem',

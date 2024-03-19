@@ -1,8 +1,6 @@
 import React from 'react'
-import Category from '../Components/ShopCategory/Category'
+import { Category } from '../Components/ShopCategory/Category'
 
-const ShopCategory = props => {
-	return <Category banner={props.banner} category={props.category} />
+export const ShopCategory = props => {
+	return <Category banner={props.banner} category={props.category} groupProducts={props.groupProducts} />
 }
-
-export default ShopCategory

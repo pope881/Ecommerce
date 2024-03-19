@@ -10,7 +10,7 @@ export const NewCollections = () => {
 			<h1 className={styles.newCollectionsH1}>NEW COLLECTIONS</h1>
 			<hr className={styles.newCollectionsHr} />
 			<div className={styles.newCollectionsCollection}>
-				{newCollections.map((item: DataProduct, i: any) => {
+				{newCollections.map((item: DataProduct, i: number) => {
 					return (
 						<Item
 							key={i}

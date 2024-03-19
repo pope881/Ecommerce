@@ -13,7 +13,7 @@ export const Popular = () => {
 				<h1 className={styles.popularH1}>MOST POPULAR IN WOMAN</h1>
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
-					{dataProductWomen.map((item: DataProduct, i: any) => {
+					{dataProductWomen.map((item: DataProduct, i: number) => {
 						return (
 							<Item
 								key={i}
@@ -31,7 +31,7 @@ export const Popular = () => {
 				<h1 className={styles.popularH1}>MOST POPULAR IN MAN</h1>
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
-					{dataProductMen.map((item: any, i: any) => {
+					{dataProductMen.map((item: DataProduct, i: number) => {
 						return (
 							<Item
 								key={i}
@@ -49,7 +49,7 @@ export const Popular = () => {
 				<h1 className={styles.popularH1}>MOST POPULAR IN KIDS</h1>
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
-					{dataProductKids.map((item: any, i: any) => {
+					{dataProductKids.map((item: DataProduct, i: number) => {
 						return (
 							<Item
 								key={i}
