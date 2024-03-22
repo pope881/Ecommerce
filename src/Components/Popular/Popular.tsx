@@ -4,7 +4,7 @@ import { dataProductWomen } from '../Assets/dataWomen'
 import { dataProductMen } from '../Assets/dataMen'
 import { dataProductKids } from '../Assets/dataKids'
 import { Item } from '../Item/Item'
-import { DataProduct } from '../Assets/dataWomen'
+import { type DataProduct } from '../Assets/dataWomen'
 
 export const Popular = () => {
 	return (

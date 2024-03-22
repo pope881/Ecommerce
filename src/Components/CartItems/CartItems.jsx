@@ -1,8 +1,8 @@
 import React, { useContext, useRef, useState } from 'react'
 import classes from './CartItems.module.css'
 import cartCrossIcon from '../Assets/otherImg/cartCrossIcon.png'
-import {Checkout} from '../Checkout/Checkout'
-import {CartContext} from '../../Context/cart-context'
+import { Checkout } from '../Checkout/Checkout'
+import { CartContext } from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
 
 const CartItems = () => {

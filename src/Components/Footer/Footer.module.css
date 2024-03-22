@@ -12,7 +12,7 @@
 	grid-gap: 3rem;
 }
 
-.footer__section.footer__aboutUs {
+.footer__aboutUs {
 	display: flex;
 	flex-direction: column;
 	gap: 1rem;
@@ -75,7 +75,6 @@
 
 .footer__contactInfo li span {
 	color: #0c0b0b;
-	/* font-size: 2rem; */
 	font-size: 1.6rem;
 }
 
