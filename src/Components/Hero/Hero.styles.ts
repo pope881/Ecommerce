@@ -39,7 +39,7 @@ export const styles = {
 		gap: '2rem',
 		lineHeight: '1.1',
 		textAlign: 'center',
-		texttransform: 'uppercase',
+		textTransform: 'uppercase',
 	}),
 
 	heroTextP: css({
@@ -48,16 +48,34 @@ export const styles = {
 		fontWeight: '700',
 	}),
 
-	// hero__img--Woman,
-	// hero__img--Woman img,
-	// hero__img--Man,
-	// hero__img--Man img {
-	// 	display: flex,
-	// 	flex: 1,
-	// 	alignItems: center,
-	// 	justifyContent: center,
-	// 	overflow: hidden,
-	// }
+	heroImgWoman: css({
+		display: 'flex',
+		flex: '1',
+		alignItems: 'center',
+		justifyContent: 'center',
+		overflow: 'hidden',
+	}),
+	heroImgWomanImg: css({
+		display: 'flex',
+		flex: '1',
+		alignItems: 'center',
+		justifyContent: 'center',
+		overflow: 'hidden',
+	}),
+	heroImgMan: css({
+		display: 'flex',
+		flex: '1',
+		alignItems: 'center',
+		justifyContent: 'center',
+		overflow: 'hidden',
+	}),
+	heroImgManImg: css({
+		display: 'flex',
+		flex: '1',
+		alignItems: 'center',
+		justifyContent: 'center',
+		overflow: 'hidden',
+	}),
 
 	heroBtn: css({
 		fontSize: '1.6rem',

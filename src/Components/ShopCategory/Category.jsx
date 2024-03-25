@@ -40,9 +40,6 @@ export const Category = props => {
 
 	const destinationPerson = capitalizeFirstLetter(props.category)
 
-	// console.log(capitalizeFirstLetter(props.category))
-	console.log({ props })
-
 	return (
 		<div className={classes['shopCategory']}>
 			<img className={classes['shopCategory__banner']} src={props.banner} alt="banner" />

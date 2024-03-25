@@ -10,7 +10,7 @@ export const OurTeam = (): JSX.Element => {
 					<h4 className={styles.teamTextH4}>Our team</h4>
 					<h1 className={styles.teamTextH1}>We're only human. Same like you.</h1>
 					<hr className={styles.teamTextHr} />
-					<p className={styles.teamTextP}>Meet out team. Diversity is our strength.</p>
+					<p className={styles.teamTextP}>Meet our team. Diversity is our strength.</p>
 				</div>
 				<div className={styles.teamContainer}>
 					{teamPeople.map((person, id) => (

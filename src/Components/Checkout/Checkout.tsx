@@ -1,5 +1,4 @@
 import React, { FormEvent, useContext, useRef, useState } from 'react'
-// import classes from './Checkout.module.css'
 import { styles } from './Checkout.styles'
 
 import { CartContext } from '../../Context/cart-context'

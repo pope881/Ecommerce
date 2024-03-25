@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { Item } from '../Item/Item'
 import { dataProductWomen } from '../Assets/dataWomen'
 import { styles } from './RelatedProducts.styles'

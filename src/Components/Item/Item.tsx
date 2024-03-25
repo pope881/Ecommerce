@@ -11,12 +11,15 @@ type Props = {
 	old_price: number
 }
 
+const scrollTop = () => {
+	window.scrollTo(0, 0)
+}
+
 export const Item = (props: Props): JSX.Element => {
 	return (
 		<div className={styles.item}>
 			<Link to={`/product/${props.id}`}>
-				{/* <img className={styles.itemImg} onClick={window.scrollTo(0, 0)} src={props.image} alt="each product" /> */}
-				<img className={styles.itemImg} src={props.image} alt="each product" />
+				<img className={styles.itemImg} onClick={scrollTop} src={props.image} alt="each product" />
 			</Link>
 			<p className={styles.itemP}>{props.name}</p>
 			<div className={styles.itemPrices}>

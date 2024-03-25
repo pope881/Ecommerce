@@ -21,6 +21,16 @@ export const styles = {
 		flexDirection: 'column',
 		gap: '1rem',
 	}),
+	footerQuicklinks: css({
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '1rem',
+	}),
+	footerContactInfo: css({
+		display: 'flex',
+		flexDirection: 'column',
+		gap: '1rem',
+	}),
 
 	footerLogo: css({
 		display: 'flex',
@@ -38,7 +48,7 @@ export const styles = {
 		fontSize: '2rem',
 		color: '#0c0b0b',
 		fontWeight: '600',
-		marginBottom: '1.6rem',
+		marginBottom: '0.5rem',
 	}),
 
 	footerQualityText: css({

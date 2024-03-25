@@ -37,14 +37,14 @@ export const OurTestimonials = (): JSX.Element => {
 			</div>
 			<div className={styles.testimonialsItems}>
 				<Slider {...SETTINGS}>
-					{testimonialData.map(d => (
-						<div key={d.name} className={styles.testimonialsItem}>
+					{testimonialData.map(data => (
+						<div key={data.name} className={styles.testimonialsItem}>
 							<div className={styles.testimonialsItemTop}>
-								<img src={d.img} alt="person expressing opinions" className={styles.testimonialsItemImg} />
+								<img src={data.img} alt="person expressing opinions" className={styles.testimonialsItemImg} />
 							</div>
 							<div className={styles.testimonialsItemDown}>
-								<h3 className={styles.testimonialsName}>{d.name}</h3>
-								<p className={styles.testimonialsItemDownP}>{d.review}</p>
+								<h3 className={styles.testimonialsName}>{data.name}</h3>
+								<p className={styles.testimonialsItemDownP}>{data.review}</p>
 							</div>
 						</div>
 					))}

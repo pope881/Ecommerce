@@ -7,6 +7,7 @@ export const Offers = () => {
 	const navigate = useNavigate()
 	const navigateHandler = () => {
 		navigate('/womens')
+		window.scrollTo(0, 0)
 	}
 	return (
 		<div className={styles.offers}>
