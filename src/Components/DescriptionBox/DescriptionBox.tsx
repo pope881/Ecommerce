@@ -10,7 +10,7 @@ type Props = {
 		image: string
 		image_slide: { url: string }[]
 		new_price: number
-		old_price: string
+		old_price: number
 		description: string
 		madeOf: string
 		maintenance: { item: string }[]

@@ -9,6 +9,7 @@ type Props = {
 	image: string
 	new_price: number
 	old_price: number
+	clothes_type: string
 }
 
 const scrollTop = () => {
