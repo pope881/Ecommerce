@@ -1,7 +1,7 @@
 import React from 'react'
 import type { CartItem } from './CartProvider'
 
-type CartContext = {
+export type CartContextType = {
 	items: CartItem[]
 	totalAmount: number
 	addItem: (item: CartItem) => void
@@ -9,7 +9,7 @@ type CartContext = {
 	clearCart: () => void
 }
 
-const defaultCartContext: CartContext = {
+const defaultCartContext: CartContextType = {
 	items: [],
 	totalAmount: 0,
 	addItem: () => {},
@@ -17,4 +17,4 @@ const defaultCartContext: CartContext = {
 	clearCart: () => {},
 }
 
-export const CartContext = React.createContext<CartContext>(defaultCartContext)
+export const CartContext = React.createContext<CartContextType>(defaultCartContext)

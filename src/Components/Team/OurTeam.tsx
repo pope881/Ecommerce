@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { teamPeople } from '../Assets/mockData/mockData'
 import { styles } from './OurTeam.styles'
 
 export const OurTeam = (): JSX.Element => {
+	const [hoverIndex, setHoverIndex] = useState<number | null>(null)
 	return (
 		<>
 			<div className={styles.team}>
@@ -20,10 +21,13 @@ export const OurTeam = (): JSX.Element => {
 							style={{
 								backgroundImage: `url(${person.img})`,
 							}}>
-							<button className={styles.teamBtn}>
+							<button
+								className={styles.teamBtn}
+								onMouseEnter={() => setHoverIndex(id)}
+								onMouseLeave={() => setHoverIndex(null)}>
 								<i className="far fa-question-circle"></i>
 							</button>
-							<div className={styles.teamCardText}>
+							<div className={styles.teamCardText(hoverIndex === id)}>
 								<h1 className={styles.teamCardTextH1}>{person.name}</h1>
 								<h2 className={styles.teamCardTextH2}>{person.job}</h2>
 							</div>

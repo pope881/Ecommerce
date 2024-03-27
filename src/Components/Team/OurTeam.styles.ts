@@ -105,35 +105,24 @@ export const styles = {
 		textShadow: '2px 2px 5px rgb(0, 0, 0)',
 		cursor: 'crosshair',
 		zIndex: '10',
-		'&:hover ~ teamCardText.css': { clipPath: 'circle(120% at 50% 90%)' },
 	}),
 
-	// team__btn:hover ~ team__cardText {
-	// 	clip-path: circle(120% at 50% 90%),
-	// }
-
-	/* 
-@media (max-width: 400px) {
-	team__card {
-		width: 100%,
-	}
-} */
-
-	teamCardText: css({
-		position: 'absolute',
-		display: 'flex',
-		flexDirection: 'column',
-		justifyContent: 'flex-end',
-		color: '#f8f8ff',
-		top: '0',
-		left: '0',
-		right: '0',
-		bottom: '0',
-		padding: '5rem 3rem',
-		backgroundColor: 'rgba(0, 0, 0, 0.8)',
-		clipPath: 'circle(0 at 50% 90%)',
-		transition: '0.8s',
-	}),
+	teamCardText: (isHovered: boolean) =>
+		css({
+			position: 'absolute',
+			display: 'flex',
+			flexDirection: 'column',
+			justifyContent: 'flex-end',
+			color: '#f8f8ff',
+			top: '0',
+			left: '0',
+			right: '0',
+			bottom: '0',
+			padding: '5rem 3rem',
+			backgroundColor: 'rgba(0, 0, 0, 0.8)',
+			clipPath: isHovered ? 'circle(120% at 50% 90%)' : 'circle(0 at 50% 90%)',
+			transition: '0.8s',
+		}),
 
 	teamCardTextH1: css({
 		fontSize: '4rem',

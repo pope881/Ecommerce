@@ -2,20 +2,22 @@ import React, { useEffect, useState } from 'react'
 import { styles } from './Category.styles'
 import { Item } from '../Item/Item'
 
+type GroupProduct = {
+	id: number
+	name: string
+	category: string
+	clothes_type: string
+	image: string
+	image_slide: { url: string }[]
+	new_price: number
+	old_price: number
+	description: string
+	madeOf: string
+	maintenance: { item: string }[]
+}
+
 type Props = {
-	groupProducts: {
-		id: number
-		name: string
-		category: string
-		clothes_type: string
-		image: string
-		image_slide: { url: string }[]
-		new_price: number
-		old_price: number
-		description: string
-		madeOf: string
-		maintenance: { item: string }[]
-	}[]
+	groupProducts: GroupProduct[]
 	banner: string
 	category: string
 }
@@ -43,7 +45,8 @@ export const Category = (props: Props): JSX.Element => {
 		setItems(product)
 	}, [props.category])
 
-	const filterItems = (catItem: any) => {
+	const filterItems = (catItem: string) => {
+		console.log({ catItem })
 		const updatedItems = product.filter(curItem => {
 			console.log({ curItem })
 			return curItem.props.clothes_type === catItem

@@ -73,10 +73,6 @@ export const styles = {
 		display: 'flex',
 	}),
 
-	// contactInfoTextH3: css({
-	// 	fontSize: '2rem',
-	// }),
-
 	contactInfoTextP: css({
 		fontSize: '1.6rem',
 	}),
@@ -101,10 +97,11 @@ export const styles = {
 		fontWeight: '300',
 	}),
 
-	// contactInfoTextH3: css({
-	// 	fontWeight: '500',
-	// 	color: '#ce1446',
-	// }),
+	contactInfoTextH3: css({
+		fontSize: '2rem',
+		fontWeight: '500',
+		color: '#ce1446',
+	}),
 
 	contactInfoTextA: css({
 		textDecoration: 'none',
@@ -156,16 +153,18 @@ export const styles = {
 		resize: 'none',
 	}),
 
-	contactInputBoxSpan: css({
-		position: 'absolute',
-		left: '0',
-		padding: '0.5rem 0',
-		fontSize: '1.6rem',
-		margin: '1rem 0',
-		pointerEvents: 'none',
-		transition: '0.5s',
-		color: '#666',
-	}),
+	contactInputBoxSpan: (isClicked: boolean) =>
+		css({
+			position: 'absolute',
+			left: '0',
+			padding: '0.5rem 0',
+			margin: '1rem 0',
+			pointerEvents: 'none',
+			transition: '0.5s',
+			color: isClicked ? '#aa0b20' : '#666',
+			fontSize: isClicked ? '1.2rem' : '1.6rem',
+			transform: isClicked ? 'translateY(-20px)' : 'translateY(0px)',
+		}),
 
 	// contact__inputBox input:focus ~ span,
 	// contact__inputBox input:valid ~ span,

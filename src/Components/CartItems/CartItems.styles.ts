@@ -46,6 +46,7 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
+		fontSize: '1.6rem',
 	}),
 
 	cartitemsTotals: css({
