@@ -17,19 +17,22 @@ type Props = {
 	}
 }
 
-const DescriptionBox = (props: Props): JSX.Element => {
+export const DescriptionBox = (props: Props): JSX.Element => {
 	const { product } = props
 
-	const data = [
+	const dataDescription = [
 		{
+			id: 0,
 			feature: 'Description',
 			text: product.description,
 		},
 		{
+			id: 1,
 			feature: 'Material composition',
 			text: product.madeOf,
 		},
 		{
+			id: 2,
 			feature: 'Washing and maintenance rules',
 			text: product.maintenance.map((item: any) => {
 				return <p className={styles.accordionItemContentP}>{item.item}</p>
@@ -39,6 +42,8 @@ const DescriptionBox = (props: Props): JSX.Element => {
 	const [selected, setSelected] = useState(null)
 
 	const toggle = (i: any) => {
+		console.log(i)
+		console.log(selected)
 		if (selected === i) {
 			return setSelected(null)
 		}
@@ -48,8 +53,8 @@ const DescriptionBox = (props: Props): JSX.Element => {
 	return (
 		<div className={styles.wrapper}>
 			<div className={styles.accordion}>
-				{data.map((item, i) => (
-					<div key={i} className={styles.accordionItem}>
+				{dataDescription.map((item, i) => (
+					<div key={item.id} className={styles.accordionItem}>
 						<div className={styles.accordionItemTitle} onClick={() => toggle(i)}>
 							<h2 className={styles.accordionItemTitleH2}>{item.feature}</h2>
 							<span className={styles.accordionItemTitleSpan}>{selected === i ? '-' : '+'}</span>
@@ -68,5 +73,3 @@ const DescriptionBox = (props: Props): JSX.Element => {
 		</div>
 	)
 }
-
-export default DescriptionBox

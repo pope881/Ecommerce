@@ -11,6 +11,10 @@ const teamPerson4 = require('../teamImg/4.png')
 const teamPerson5 = require('../teamImg/5.png')
 const teamPerson6 = require('../teamImg/6.png')
 
+const menBackground = require('../backgroundSliderImg/menBackground.jpg')
+const womanBackground = require('../backgroundSliderImg/womanBackground.jpg')
+const kidsBackground = require('../backgroundSliderImg/kidsBackground.jpg')
+
 type Testimonial = {
 	name: string
 	img: string
@@ -32,6 +36,12 @@ type ColorOptions = {
 type SizeOptions = {
 	label: string
 	value: string
+}
+
+type ImageSlide = {
+	url: string
+	title: string
+	body: string
 }
 
 export const testimonialData: Testimonial[] = [
@@ -120,4 +130,14 @@ export const sizeOptions: SizeOptions[] = [
 		label: 'XXL',
 		value: 'XXL',
 	},
+]
+
+export const imageSlide: ImageSlide[] = [
+	{ url: menBackground, title: 'MEN', body: '' },
+	{
+		url: womanBackground,
+		title: 'WOMEN',
+		body: '',
+	},
+	{ url: kidsBackground, title: 'KIDS', body: '' },
 ]

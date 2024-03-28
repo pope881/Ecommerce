@@ -49,18 +49,18 @@ export const Login = () => {
 		navigateHandler()
 	}
 
-	function handleInputChange(identifier: any, value: any) {
+	const handleInputChange = (identifier: any, value: any) => {
 		console.log({ identifier })
 		console.log({ value })
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}
 
-	function handleInputBlur(identifier: any) {
+	const handleInputBlur = (identifier: any) => {
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: true }))
 	}
 
-	function cancelLoginHandler() {
+	const cancelLoginHandler = () => {
 		setEnteredValues({ email: '', password: '' })
 		setDidEdit({ email: false, password: false })
 		setLoginIsValid(false)
@@ -76,7 +76,6 @@ export const Login = () => {
 			</div>
 			<form className={styles.loginForm} onSubmit={handleSubmit}>
 				<div className={styles.loginControls}>
-					{/* <div className="login__control login__noMargin"> */}
 					<div className={`${styles.loginControl} ${styles.loginControlLoginNoMargin}}`}>
 						<label className={styles.loginControlLabel} htmlFor="email">
 							Email

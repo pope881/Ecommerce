@@ -166,15 +166,6 @@ export const styles = {
 			transform: isClicked ? 'translateY(-20px)' : 'translateY(0px)',
 		}),
 
-	// contact__inputBox input:focus ~ span,
-	// contact__inputBox input:valid ~ span,
-	// contact__inputBox textarea:focus ~ span,
-	// contact__inputBox textarea:valid ~ span {
-	//     color: '#aa0b20',
-	//     fontSize: '1.2rem',
-	//     transform: 'translateY(-20px)',
-	// }
-
 	contactFormActions: css({
 		display: 'flex',
 		justifyContent: 'flex-start',

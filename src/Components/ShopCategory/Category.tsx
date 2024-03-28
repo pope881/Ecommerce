@@ -23,8 +23,8 @@ type Props = {
 }
 
 export const Category = (props: Props): JSX.Element => {
-	console.log(props)
-	console.log(props.groupProducts)
+	// console.log(props)
+	// console.log(props.groupProducts)
 
 	const product = props.groupProducts.map((item, i) => {
 		return (

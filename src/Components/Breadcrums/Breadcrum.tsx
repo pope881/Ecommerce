@@ -10,7 +10,7 @@ type Props = {
 	}
 }
 
-const Breadcrum = (props: Props): JSX.Element => {
+export const Breadcrum = (props: Props): JSX.Element => {
 	const { product } = props
 
 	return (
@@ -28,4 +28,3 @@ const Breadcrum = (props: Props): JSX.Element => {
 	)
 }
 
-export default Breadcrum

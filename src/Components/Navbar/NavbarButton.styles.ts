@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { keyframes } from '@emotion/react'
 
 export const styles = {
 	navbarBtnCart: css({
@@ -37,6 +38,24 @@ export const styles = {
 	// navbar__btnCart:active .badge {
 	// 	backgroundColor: '#92320c',
 	// }
+
+	bump: keyframes({
+		'0%': {
+			transform: 'scale(1)',
+		},
+		'10%': {
+			transform: 'scale(0.9)',
+		},
+		'30%': {
+			transform: 'scale(1.1)',
+		},
+		'50%': {
+			transform: 'scale(1.15)',
+		},
+		'100%': {
+			transform: 'scale(1)',
+		},
+	}),
 
 	navbarBump: css({
 		animation: 'bump 300ms ease-out',
