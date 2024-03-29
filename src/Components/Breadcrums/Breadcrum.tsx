@@ -20,11 +20,10 @@ export const Breadcrum = (props: Props): JSX.Element => {
 				SHOP
 			</Link>
 			<img src={breadcrumArrow} alt="link arrow icon" />
-			<Link className={styles.breadcrumA} to={`/${product.category}s`}>
+			<Link className={styles.breadcrumA} to={`/${product.category}`}>
 				{product.category}
 			</Link>
 			<img src={breadcrumArrow} alt="arrow icon" /> {product.name}
 		</div>
 	)
 }
-

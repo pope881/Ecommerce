@@ -1,7 +1,7 @@
+import React from 'react'
 import Slider from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
-import React from 'react'
 import { styles } from './OurTestimonials.styles'
 import { testimonialData } from '../Assets/mockData/mockData'
 

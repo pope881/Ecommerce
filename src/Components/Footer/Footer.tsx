@@ -52,12 +52,12 @@ export const Footer = () => {
 					<div className={styles.footerQuicklinks}>
 						<h2 className={styles.footerSectionH2}>Shop</h2>
 						<ul>
-							<Link className={styles.footerQuicklinksUlA} to="/mens">
+							<Link className={styles.footerQuicklinksUlA} to="/men">
 								<li className={styles.footerQuicklinksUlLi} onClick={scrollToTop}>
 									Men
 								</li>
 							</Link>
-							<Link className={styles.footerQuicklinksUlA} to="/womens">
+							<Link className={styles.footerQuicklinksUlA} to="/women">
 								<li className={styles.footerQuicklinksUlLi} onClick={scrollToTop}>
 									Women
 								</li>

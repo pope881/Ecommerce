@@ -4,7 +4,7 @@ import { dataProductWomen } from '../Assets/dataWomen'
 import { styles } from './RelatedProducts.styles'
 import { AllProduct } from '../Assets/allProduct'
 
-export const RelatedProducts = () => {
+export const RelatedProducts = (): JSX.Element => {
 	return (
 		<div className={styles.relatedproducts}>
 			<h1 className={styles.relatedproductsH1}>Other Products</h1>

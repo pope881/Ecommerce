@@ -18,6 +18,7 @@ type Props = {
 }
 
 export const DescriptionBox = (props: Props): JSX.Element => {
+	const [selected, setSelected] = useState(null)
 	const { product } = props
 
 	const dataDescription = [
@@ -39,7 +40,6 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 			}),
 		},
 	]
-	const [selected, setSelected] = useState(null)
 
 	const toggle = (i: any) => {
 		console.log(i)

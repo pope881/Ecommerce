@@ -6,7 +6,7 @@ import { ProductDisplay } from '../Components/ProductDisplay/ProductDisplay'
 import { DescriptionBox } from '../Components/DescriptionBox/DescriptionBox'
 import { RelatedProducts } from '../Components/RelatedProducts/RelatedProducts'
 
-const Product = () => {
+export const Product = () => {
 	const cartCtx = useContext(CartContext)
 	const { allProduct } = cartCtx
 	const { productId } = useParams()
@@ -23,4 +23,3 @@ const Product = () => {
 	)
 }
 
-export default Product

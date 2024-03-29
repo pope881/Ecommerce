@@ -6,7 +6,7 @@ import { NewCollections } from '../Components/NewCollections/NewCollections'
 import { Newsletter } from '../Components/Newsletter/Newsletter'
 import { BackgroundSlider } from '../Components/BackgroundSlider/BackgroundSlider'
 
-const Shop = () => {
+export const Shop = () => {
 	return (
 		<div>
 			<BackgroundSlider />
@@ -19,4 +19,3 @@ const Shop = () => {
 	)
 }
 
-export default Shop

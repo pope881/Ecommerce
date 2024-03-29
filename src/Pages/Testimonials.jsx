@@ -1,7 +1,6 @@
 import { OurTestimonials } from '../Components/Testimonials/OurTestimonials'
 
-const Testimonials = params => {
+export const Testimonials = () => {
 	return <OurTestimonials />
 }
 
-export default Testimonials

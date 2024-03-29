@@ -3,10 +3,10 @@ import { styles } from './Offers.styles'
 import { useNavigate } from 'react-router-dom'
 const exlusiveImage = require('../Assets/otherImg/exclusiveImage.png')
 
-export const Offers = () => {
+export const Offers = (): JSX.Element => {
 	const navigate = useNavigate()
 	const navigateHandler = () => {
-		navigate('/womens')
+		navigate('/women')
 		window.scrollTo(0, 0)
 	}
 	return (

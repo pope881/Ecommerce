@@ -1,7 +1,6 @@
 import React, { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
-
 import { styles } from './Login.styles'
 import { useNavigate } from 'react-router-dom'
 

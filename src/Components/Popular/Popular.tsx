@@ -6,7 +6,7 @@ import { dataProductKids } from '../Assets/dataKids'
 import { Item } from '../Item/Item'
 import { AllProduct } from '../Assets/allProduct'
 
-export const Popular = () => {
+export const Popular = (): JSX.Element => {
 	return (
 		<div>
 			<div className={styles.popular}>

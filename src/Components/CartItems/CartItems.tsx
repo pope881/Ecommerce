@@ -14,7 +14,6 @@ type AuthState = {
 
 export const CartItems = () => {
 	const cartCtx = useContext<CartContextType>(CartContext)
-
 	const { items, totalAmount, removeItem } = cartCtx
 
 	const isAuth = useSelector((state: AuthState) => state.auth.isAuthenticated)
@@ -29,7 +28,6 @@ export const CartItems = () => {
 	const promoCodeHandler = (event: FormEvent) => {
 		event.preventDefault()
 		const enteredPromoCode = promoCodeInputRef.current?.value
-
 		const enteredPromoCodeIsValid = enteredPromoCode ? isFiveChars(enteredPromoCode) : false
 
 		setPromoCodeValidity(enteredPromoCodeIsValid)
@@ -37,7 +35,6 @@ export const CartItems = () => {
 		if (!enteredPromoCodeIsValid) {
 			return
 		}
-
 		alert('Your promo code is valid. Your shipping will be free!')
 		setShowShippingFee(true)
 
@@ -77,7 +74,6 @@ export const CartItems = () => {
 			</div>
 		)
 	}
-
 	return (
 		<div className={styles.cartitems}>
 			<div className={styles.cartitemsLayout}>

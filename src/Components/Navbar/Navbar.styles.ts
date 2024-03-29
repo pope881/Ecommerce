@@ -44,9 +44,16 @@ export const styles = {
 		textDecoration: 'none',
 		color: '#0c0b0b',
 		fontWeight: '500',
-		transition: '0.3s',
-		'&:hover': { color: '#ce1446', textDecoration: 'underline' },
-		'&:active': { color: '#ce1446', textDecoration: 'underline' },
+		transition: '0.2s',
+		'&:hover': { color: '#ce1446' },
+		'&:active': { color: '#ce1446' },
+	}),
+
+	navbarMenuAActive: css({
+		borderBottom: '3px solid #ce1446',
+		textDecoration: 'none',
+		color: '#ce1446',
+		fontWeight: '500',
 	}),
 
 	navbarLoginCart: css({

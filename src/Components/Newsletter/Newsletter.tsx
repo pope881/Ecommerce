@@ -1,7 +1,7 @@
 import React, { useRef, useState, FormEvent } from 'react'
 import { styles } from './Newsletter.styles'
 
-export const Newsletter = () => {
+export const Newsletter = (): JSX.Element => {
 	const [formInputsValidity, setFormInputsValidity] = useState<boolean>(true)
 
 	const emailInputRef = useRef<HTMLInputElement | null>(null)

@@ -1,6 +1,24 @@
 import { css } from '@emotion/css'
 import { keyframes } from '@emotion/react'
 
+const bump = keyframes({
+	'0%': {
+		transform: 'scale(1)',
+	},
+	'10%': {
+		transform: 'scale(0.9)',
+	},
+	'30%': {
+		transform: 'scale(1.1)',
+	},
+	'50%': {
+		transform: 'scale(1.15)',
+	},
+	'100%': {
+		transform: 'scale(1)',
+	},
+})
+
 export const styles = {
 	navbarBtnCart: css({
 		cursor: 'pointer',
@@ -25,9 +43,11 @@ export const styles = {
 		width: '2rem',
 		height: '2rem',
 		marginRight: '0.5rem',
+		color: 'blue',
 	}),
 
 	navbarBadge: css({
+		fontSize: '1.6rem',
 		backgroundColor: '#b94517',
 		padding: '0.25rem 1rem',
 		borderRadius: '25px',
@@ -39,49 +59,15 @@ export const styles = {
 	// 	backgroundColor: '#92320c',
 	// }
 
-	bump: keyframes({
-		'0%': {
-			transform: 'scale(1)',
-		},
-		'10%': {
-			transform: 'scale(0.9)',
-		},
-		'30%': {
-			transform: 'scale(1.1)',
-		},
-		'50%': {
-			transform: 'scale(1.15)',
-		},
-		'100%': {
-			transform: 'scale(1)',
-		},
-	}),
-
 	navbarBump: css({
-		animation: 'bump 300ms ease-out',
+		animationName: bump,
+		animationDuration: '0.3s',
+		animationTimingFunction: 'ease-out',
 	}),
 
 	navbarBtnBasket: css({
 		display: 'none',
 	}),
-
-	// @keyframes bump {
-	// 	0% {
-	// 		transform: scale(1),
-	// 	}
-	// 	10% {
-	// 		transform: scale(0.9),
-	// 	}
-	// 	30% {
-	// 		transform: scale(1.1),
-	// 	}
-	// 	50% {
-	// 		transform: scale(1.15),
-	// 	}
-	// 	100% {
-	// 		transform: scale(1),
-	// 	}
-	// }
 
 	// @media (max-width: 568px) {
 	// 	navbar__btnBasket {

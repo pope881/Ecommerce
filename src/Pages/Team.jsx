@@ -1,7 +1,6 @@
 import {OurTeam} from '../Components/Team/OurTeam'
 
-const Team = () => {
+export const Team = () => {
 	return <OurTeam />
 }
 
-export default Team
