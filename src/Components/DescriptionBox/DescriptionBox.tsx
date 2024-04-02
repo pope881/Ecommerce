@@ -13,12 +13,12 @@ type Props = {
 		old_price: number
 		description: string
 		madeOf: string
-		maintenance: { item: string }[]
+		maintenance: { feature: string }[]
 	}
 }
 
 export const DescriptionBox = (props: Props): JSX.Element => {
-	const [selected, setSelected] = useState(null)
+	const [selected, setSelected] = useState<number | null>(null)
 	const { product } = props
 
 	const dataDescription = [
@@ -35,15 +35,17 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 		{
 			id: 2,
 			feature: 'Washing and maintenance rules',
-			text: product.maintenance.map((item: any) => {
-				return <p className={styles.accordionItemContentP}>{item.item}</p>
+			text: product.maintenance.map((item: { feature: string }, i) => {
+				return (
+					<div key={i} className={styles.accordionItemContentDiv}>
+						{item.feature}
+					</div>
+				)
 			}),
 		},
 	]
 
-	const toggle = (i: any) => {
-		console.log(i)
-		console.log(selected)
+	const toggle = (i: number) => {
 		if (selected === i) {
 			return setSelected(null)
 		}
@@ -65,7 +67,7 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 									? `${styles.accordionItemContent} ${styles.accordionItemShow}`
 									: `${styles.accordionItemContent}`
 							}>
-							<p className={styles.accordionItemContentP}>{item.text}</p>
+							<div className={styles.accordionItemContentDiv}>{item.text}</div>
 						</div>
 					</div>
 				))}

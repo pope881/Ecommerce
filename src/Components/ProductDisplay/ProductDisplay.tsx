@@ -27,8 +27,6 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 	const [valueColor, setValueColor] = useState('BLACK')
 
 	const { product } = props
-	// console.log(props)
-	// console.log(product)
 
 	const cartCtx = useContext(CartContext)
 	const { addItem } = cartCtx
@@ -107,6 +105,7 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 						onClick={() => {
 							addItem({
 								id: product.id,
+								// id: Math.random(),
 								name: product.name,
 								amount: 1,
 								price: product.new_price,

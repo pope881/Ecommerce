@@ -11,7 +11,6 @@ export const Product = () => {
 	const { allProduct } = cartCtx
 	const { productId } = useParams()
 	const product = allProduct.find(product => product.id === Number(productId))
-	// console.log(product);
 
 	return (
 		<div>
@@ -22,4 +21,3 @@ export const Product = () => {
 		</div>
 	)
 }
-

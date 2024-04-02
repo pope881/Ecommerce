@@ -43,9 +43,7 @@ export const Category = (props: Props): JSX.Element => {
 	}, [props.category])
 
 	const filterItems = (catItem: string) => {
-		console.log({ catItem })
 		const updatedItems = product.filter(curItem => {
-			console.log({ curItem })
 			return curItem.props.clothes_type === catItem
 		})
 

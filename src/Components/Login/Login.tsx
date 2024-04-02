@@ -49,8 +49,7 @@ export const Login = () => {
 	}
 
 	const handleInputChange = (identifier: any, value: any) => {
-		console.log({ identifier })
-		console.log({ value })
+		
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}

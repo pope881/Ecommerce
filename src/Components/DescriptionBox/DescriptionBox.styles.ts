@@ -38,7 +38,7 @@ export const styles = {
 		overflow: 'hidden',
 		transition: 'all 0.4s cubic-bezier(0, 1, 0, 1)',
 	}),
-	accordionItemContentP: css({
+	accordionItemContentDiv: css({
 		color: '#414141',
 		fontSize: '1.6rem',
 	}),

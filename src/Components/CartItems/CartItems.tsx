@@ -89,8 +89,8 @@ export const CartItems = () => {
 			<hr />
 			{items.map(product => {
 				return (
-					<div>
-						<div key={product.id} className={`${styles.cartitemsFormat} ${styles.cartitemsLayout} `}>
+					<div key={product.id}>
+						<div className={`${styles.cartitemsFormat} ${styles.cartitemsLayout} `}>
 							<img src={product.image} alt="display of each product" className={styles.cartitemsImg} />
 							<p className={styles.cartitemsLayoutP}>{product.name}</p>
 							<p className={styles.cartitemsLayoutP}>${product.price}</p>
