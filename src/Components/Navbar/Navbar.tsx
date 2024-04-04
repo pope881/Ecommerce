@@ -37,7 +37,7 @@ export const Navbar = () => {
 					<img className={styles.navbarLogoImg} src={logoShop} alt="company logo" />
 				</Link>
 			</div>
-			{/* <img className={classes['navbar__dropdown']} onClick={dropdownToggle} src={burgerIcon} alt="" /> */}
+			{/* <img className={classes['navbar__dropdown']} onClick={dropdownToggle} src={burgerIcon} alt="burger icon" /> */}
 			<ul ref={menuRef} className={styles.navbarMenu}>
 				<li className={styles.navbarMenuLi}>
 					<NavLink
@@ -73,7 +73,7 @@ export const Navbar = () => {
 				{!isAuth && (
 					<Link className={styles.navbarLoginCartA} to="/login">
 						<button className={styles.navbarBtn}>Login</button>
-						<img className={styles.navbarBtnMobile} src={loginIcon} alt="" />
+						<img className={styles.navbarBtnMobile} src={loginIcon} alt="login icon" />
 					</Link>
 				)}
 				{isAuth && (
@@ -81,7 +81,7 @@ export const Navbar = () => {
 						<button className={styles.navbarBtn} onClick={logoutHandler}>
 							Logout
 						</button>
-						<img onClick={logoutHandler} className={styles.navbarBtnMobile} src={logoutIcon} alt="" />
+						<img onClick={logoutHandler} className={styles.navbarBtnMobile} src={logoutIcon} alt="logout icon" />
 					</Link>
 				)}
 				<Link className={styles.navbarLogoA} to="/cart">
