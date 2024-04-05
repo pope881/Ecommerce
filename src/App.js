@@ -1,5 +1,4 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import './App.css'
 import { About } from './Pages/About'
 import { Cart } from './Pages/Cart'
 import { Contact } from './Pages/Contact'
