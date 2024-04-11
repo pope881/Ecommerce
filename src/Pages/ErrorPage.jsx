@@ -14,8 +14,8 @@ export function ErrorPage() {
 					justifyContent: 'center',
 					alignItems: 'center',
 				}}>
-				<h1 style={{ color: 'red', fontSize: '4rem' }}>An error occured !</h1>
-				<p style={{ color: 'red', fontSize: '4rem' }}>Could not find this page!</p>
+				<h1 style={{ color: '#656565', fontSize: '4rem' }}>An error occured !</h1>
+				<p style={{ color: '#656565', fontSize: '3rem' }}>Could not find this page!</p>
 			</main>
 			<Footer />
 		</>
