@@ -85,8 +85,7 @@ export const styles = {
 		border: '1px solid #0c0b0b',
 		color: '#f8f8ff',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
+		'&:hover, &:active': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
 	}),
 
 	navbarDropdown: css({
