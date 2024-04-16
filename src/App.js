@@ -8,14 +8,14 @@ import { Shop } from './Pages/Shop'
 import { ShopCategory } from './Pages/ShopCategory'
 import { Team } from './Pages/Team'
 import { Testimonials } from './Pages/Testimonials'
-import menBanner from './Components/Assets/bannerImg/bannerMens.png'
-import womanBanner from './Components/Assets/bannerImg/bannerWomen.png'
-import kidBanner from './Components/Assets/bannerImg/bannerKids.png'
 import { kidsProduct } from './Components/Assets/kidsProduct'
 import { menProduct } from './Components/Assets/menProduct'
 import { womenProduct } from './Components/Assets/womenProduct'
 import { Root } from './Pages/Root'
 import { ErrorPage } from './Pages/ErrorPage'
+import menBanner from './Components/Assets/bannerImg/bannerMens.png'
+import womanBanner from './Components/Assets/bannerImg/bannerWomen.png'
+import kidBanner from './Components/Assets/bannerImg/bannerKids.png'
 
 const router = createBrowserRouter([
 	{
