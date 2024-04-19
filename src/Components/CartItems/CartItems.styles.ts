@@ -63,7 +63,7 @@ export const styles = {
 	}),
 
 	cartitemsTotalH1: css({
-		fontSize: '2.5rem',
+		fontSize: '2.4rem',
 	}),
 
 	cartitemsItem: css({

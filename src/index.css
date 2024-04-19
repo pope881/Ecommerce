@@ -6,3 +6,52 @@
 	font-size: 62.5%;
 	font-family: 'Poppins', sans-serif;
 }
+
+.main-colors {
+	/* black */
+	background-color: #0c0b0b;
+
+	/* main red */
+	color: #ce1446;
+	background-color: #ce1446;
+
+	/* dark red invalid elements  */
+	color: #aa0b20;
+
+	/* light red */
+	background-color: #d85477;
+
+	/* light black  */
+	background-color: #353333;
+
+	/* main white  */
+	color: #f8f8ff;
+	background-color: #f8f8ff;
+
+	/* second white  */
+	background: #e2e2e2;
+
+	/* third white  */
+	background: #eaeaea;
+
+	/* fourth white  */
+	background-color: #ffeff1;
+
+	/* grey  */
+	color: #5e5e5e;
+
+	/* second grey  */
+	color: #454545;
+
+	/* third grey  */
+	color: #555;
+
+	/* border while hover  */
+	border: 1px solid #ce1446;
+
+	/* font size main  */
+	font-size: 1.6rem;
+
+	/* font size bigger  */
+	font-size: 2.4rem;
+}
