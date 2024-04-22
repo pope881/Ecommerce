@@ -11,6 +11,21 @@
 	/* black */
 	background-color: #0c0b0b;
 
+	/* second black  */
+	color: #414141;
+
+	/* light black  */
+	background-color: #353333;
+
+	/* fourth black  */
+	background-color: #2c0d00;
+
+	/* fifth black  */
+	color: #171717;
+
+	/* sixth black  */
+	background: #252525;
+
 	/* main red */
 	color: #ce1446;
 	background-color: #ce1446;
@@ -18,11 +33,20 @@
 	/* dark red invalid elements  */
 	color: #aa0b20;
 
+	/* fourth red  */
+	color: #5a1a01;
+
+	/* fifth red  */
+	background-color: #672e17;
+
+	/* sixth red  */
+	background-color: #b94517;
+
 	/* light red */
 	background-color: #d85477;
 
-	/* light black  */
-	background-color: #353333;
+	/* light yellow  */
+	color: #ffca99;
 
 	/* main white  */
 	color: #f8f8ff;
@@ -37,6 +61,21 @@
 	/* fourth white  */
 	background-color: #ffeff1;
 
+	/* fitth white  */
+	background-color: #ffe6dc;
+
+	/* sixth white  */
+	background-color: #f0ebe1;
+
+	/* seventh white  */
+	background-color: #e7d6bc;
+
+	/* eight white  */
+	border: 1px solid #e3e3e3;
+
+	/* braun  */
+	color: #5f430e;
+
 	/* grey  */
 	color: #5e5e5e;
 
@@ -45,6 +84,30 @@
 
 	/* third grey  */
 	color: #555;
+
+	/* fourth-grey  */
+	background-color: #869999;
+
+	/* fifth grey  */
+	border: 1px solid #ccc;
+
+	/* sixth grey */
+	color: #666;
+
+	/* seventh grey  */
+	color: #8b7f75;
+
+	/* eight grey  */
+	color: #8c8c8c;
+
+	/* ninth grey  */
+	color: #776d6d;
+
+	/* tenth grey  */
+	color: #818181;
+
+	/* eleventh grey  */
+	color: #656565;
 
 	/* border while hover  */
 	border: 1px solid #ce1446;
