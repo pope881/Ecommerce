@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { styles } from './BackgroundSlider.styles'
-import { imageSlide } from '../Assets/mockData/mockData'
+import { imageSlide } from '../../../public/mockData/mockData'
 
 export const BackgroundSlider = () => {
 	const [currentState, setCurrentState] = useState<number>(0)

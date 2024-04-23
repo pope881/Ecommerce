@@ -1,4 +1,4 @@
-import React, { FormEvent, useState } from 'react'
+import { FormEvent, useState } from 'react'
 import { useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
 import { styles } from './Login.styles'
@@ -49,7 +49,6 @@ export const Login = () => {
 	}
 
 	const handleInputChange = (identifier: any, value: any) => {
-		
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}

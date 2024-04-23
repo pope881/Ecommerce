@@ -1,4 +1,4 @@
-import React, { FormEvent, useContext, useRef, useState } from 'react'
+import { FormEvent, useContext, useRef, useState } from 'react'
 import { styles } from './Checkout.styles'
 import { CartContext } from '../../Context/cart-context'
 

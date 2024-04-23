@@ -1,8 +1,7 @@
-import React from 'react'
 import { Item } from '../Item/Item'
-import { dataProductWomen } from '../Assets/dataWomen'
+import { dataProductWomen } from '../../../public/dataWomen'
 import { styles } from './RelatedProducts.styles'
-import { AllProduct } from '../Assets/allProduct'
+import { AllProduct } from '../../../public/allProduct'
 
 export const RelatedProducts = (): JSX.Element => {
 	return (

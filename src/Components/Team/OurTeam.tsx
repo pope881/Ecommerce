@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { teamPeople } from '../Assets/mockData/mockData'
+import { useState } from 'react'
+import { teamPeople } from '../../../public/mockData/mockData'
 import { styles } from './OurTeam.styles'
 
 export const OurTeam = (): JSX.Element => {

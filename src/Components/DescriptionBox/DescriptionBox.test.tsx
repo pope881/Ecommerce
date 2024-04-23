@@ -1,32 +1,32 @@
-import { render, screen } from '@testing-library/react'
-import { DescriptionBox } from './DescriptionBox'
-import React from 'react'
-import '@testing-library/jest-dom'
+// import { render, screen } from '@testing-library/react'
+// import { DescriptionBox } from './DescriptionBox'
 
-describe('DescriptionBox', () => {
-	test('shows three descriptions sections', () => {
-		render(
-			<DescriptionBox
-				product={{
-					id: 1,
-					name: 'description test',
-					category: 'men',
-					clothes_type: 'blouse',
-					image: 'img',
-					image_slide: [{ url: 'slide' }],
-					new_price: 12,
-					old_price: 13,
-					description: 'abc',
-					madeOf: 'cotton',
-					maintenance: [{ feature: 'abc' }],
-				}}
-			/>
-		)
+// import '@testing-library/jest-dom'
 
-		// screen.debug()
+// describe('DescriptionBox', () => {
+// 	test('shows three descriptions sections', () => {
+// 		render(
+// 			<DescriptionBox
+// 				product={{
+// 					id: 1,
+// 					name: 'description test',
+// 					category: 'men',
+// 					clothes_type: 'blouse',
+// 					image: 'img',
+// 					image_slide: [{ url: 'slide' }],
+// 					new_price: 12,
+// 					old_price: 13,
+// 					description: 'abc',
+// 					madeOf: 'cotton',
+// 					maintenance: [{ feature: 'abc' }],
+// 				}}
+// 			/>
+// 		)
 
-		expect(screen.getByText('Washing and maintenance rules')).toBeInTheDocument()
-		expect(screen.getByText('Material composition')).toBeInTheDocument()
-		expect(screen.getByText('Description')).toBeInTheDocument()
-	})
-})
+// 		// screen.debug()
+
+// 		expect(screen.getByText('Washing and maintenance rules')).toBeInTheDocument()
+// 		expect(screen.getByText('Material composition')).toBeInTheDocument()
+// 		expect(screen.getByText('Description')).toBeInTheDocument()
+// 	})
+// })

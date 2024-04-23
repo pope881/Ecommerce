@@ -1,10 +1,9 @@
-import React, { FormEvent, useContext, useState } from 'react'
+import React, { useContext, useState } from 'react'
 import { styles } from './ProductDisplay.styles'
 import { CartContext } from '../../Context/cart-context'
 import { ImageSlider } from './ImageSlider'
-import { colorOptions } from '../Assets/mockData/mockData'
-import { sizeOptions } from '../Assets/mockData/mockData'
-const starIcon = require('../Assets/otherImg/starIcon.png')
+import { colorOptions } from '../../../public/mockData/mockData'
+import { sizeOptions } from '../../../public/mockData/mockData'
 
 type Props = {
 	product: {
@@ -18,7 +17,7 @@ type Props = {
 		old_price: number
 		description: string
 		madeOf: string
-		maintenance: { item: string }[]
+		maintenance: { feature: string }[]
 	}
 }
 
@@ -56,11 +55,11 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 			<div className={styles.productdisplayRight}>
 				<h1 className={styles.productdisplayRightH1}>{product.name}</h1>
 				<div className={styles.productdisplayStars}>
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
+					<img src="/otherImg/starIcon.png" alt="star icon" />
+					<img src="/otherImg/starIcon.png" alt="star icon" />
+					<img src="/otherImg/starIcon.png" alt="star icon" />
+					<img src="/otherImg/starIcon.png" alt="star icon" />
+					<img src="/otherImg/starIcon.png" alt="star icon" />
 					<p>(+100)</p>
 				</div>
 				<div className={styles.productdisplayPrices}>
@@ -105,7 +104,6 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 						onClick={() => {
 							addItem({
 								id: product.id,
-								// id: Math.random(),
 								name: product.name,
 								amount: 1,
 								price: product.new_price,

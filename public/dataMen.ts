@@ -1,9 +1,9 @@
 import { AllProduct } from './allProduct'
 
-const product_13a = require('./allProductsImg/product_13a.png')
-const product_14a = require('./allProductsImg/product_14a.png')
-const product_15a = require('./allProductsImg/product_15a.png')
-const product_16a = require('./allProductsImg/product_16a.png')
+import product_13a from './allProductsImg/product_13a.png'
+import product_14a from './allProductsImg/product_14a.png'
+import product_15a from './allProductsImg/product_15a.png'
+import product_16a from './allProductsImg/product_16a.png'
 
 export const dataProductMen: AllProduct[] = [
 	{
@@ -12,7 +12,7 @@ export const dataProductMen: AllProduct[] = [
 		category: 'men',
 		clothes_type: 'Men Shirt',
 		image: product_13a,
-		image_slide: [{ url: product_13a }],
+		image_slide: [{ url: './allProductsImg/product_13a.png' }],
 		new_price: 80.0,
 		old_price: 170.5,
 		description: `Men's cotton T-shirt with a regular cut. Mahogany T-shirt with a round neckline. It's the perfect base for outfits in any style. It is made of a pleasant to the touch, stretchy fabric. Material weight: 160 gsm`,

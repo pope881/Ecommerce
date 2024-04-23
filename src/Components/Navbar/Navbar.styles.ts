@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	navbar: css({
@@ -33,21 +34,15 @@ export const styles = {
 		gap: '5rem',
 		color: '#626262',
 		fontWeight: '500',
-		'@media (max-width: 768px)': {
-			display: 'none',
-			height: '100px',
-			width: '100%',
-			position: 'absolute',
-			backgroundColor: '#f8f8ff',
-			justifyContent: 'center',
-			top: '40%',
-			fontSize: '3rem',
-		},
 	}),
 
 	navbarMenuLi: css({
 		fontSize: '3rem',
 		cursor: 'pointer',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '4rem',
+		},
 	}),
 
 	navbarMenuA: css({

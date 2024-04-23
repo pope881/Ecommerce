@@ -1,19 +1,19 @@
-const Person1 = require('../testimonialsImg/1.jpg')
-const Person2 = require('../testimonialsImg/2.jpg')
-const Person3 = require('../testimonialsImg/3.jpg')
-const Person4 = require('../testimonialsImg/4.jpg')
-const Person5 = require('../testimonialsImg/5.jpg')
+import Person1 from '../testimonialsImg/1.jpg'
+import Person2 from '../testimonialsImg/2.jpg'
+import Person3 from '../testimonialsImg/3.jpg'
+import Person4 from '../testimonialsImg/4.jpg'
+import Person5 from '../testimonialsImg/5.jpg' 
 
-const teamPerson1 = require('../teamImg/1.png')
-const teamPerson2 = require('../teamImg/2.png')
-const teamPerson3 = require('../teamImg/3.png')
-const teamPerson4 = require('../teamImg/4.png')
-const teamPerson5 = require('../teamImg/5.png')
-const teamPerson6 = require('../teamImg/6.png')
+import teamPerson1 from '../teamImg/1.png'
+import teamPerson2 from '../teamImg/2.png'
+import teamPerson3 from '../teamImg/3.png'
+import teamPerson4 from '../teamImg/4.png'
+import teamPerson5 from '../teamImg/5.png'
+import teamPerson6 from '../teamImg/6.png'
 
-const menBackground = require('../backgroundSliderImg/menBackground.jpg')
-const womanBackground = require('../backgroundSliderImg/womanBackground.jpg')
-const kidsBackground = require('../backgroundSliderImg/kidsBackground.jpg')
+import menBackground from '../backgroundSliderImg/menBackground.jpg'
+import womanBackground from '../backgroundSliderImg/womanBackground.jpg'
+import kidsBackground from '../backgroundSliderImg/kidsBackground.jpg'
 
 type Testimonial = {
 	name: string

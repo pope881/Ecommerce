@@ -1,8 +1,7 @@
-import React from 'react'
 import { styles } from './NewCollections.styles'
-import { newCollections } from '../Assets/newCollections'
+import { newCollections } from '../../../public/newCollections'
 import { Item } from '../Item/Item'
-import { AllProduct } from '../Assets/allProduct'
+import { AllProduct } from '../../../public/allProduct'
 
 export const NewCollections = () => {
 	return (

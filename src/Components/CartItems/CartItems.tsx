@@ -1,10 +1,9 @@
-import React, { FormEvent, useContext, useRef, useState } from 'react'
+import { FormEvent, useContext, useRef, useState } from 'react'
 import { styles } from './CartItems.styles'
 import { Checkout } from '../Checkout/Checkout'
 import { CartContext } from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
 import { CartContextType } from '../../Context/cart-context'
-const cartCrossIcon = require('../Assets/otherImg/cartCrossIcon.png')
 
 type AuthState = {
 	auth: {
@@ -100,7 +99,7 @@ export const CartItems = () => {
 							<p className={styles.cartitemsLayoutP}>${product.price * product.amount}</p>
 							<img
 								className={styles.cartitemsRemoveIcon}
-								src={cartCrossIcon}
+								src="/otherImg/cartCrossIcon.png"
 								onClick={() => {
 									removeItem({
 										...product,

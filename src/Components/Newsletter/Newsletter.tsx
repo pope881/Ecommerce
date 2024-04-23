@@ -1,4 +1,4 @@
-import React, { useRef, useState, FormEvent } from 'react'
+import { useRef, useState, FormEvent } from 'react'
 import { styles } from './Newsletter.styles'
 
 export const Newsletter = (): JSX.Element => {

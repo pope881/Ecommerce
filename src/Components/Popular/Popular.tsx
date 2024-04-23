@@ -1,10 +1,9 @@
-import React from 'react'
 import { styles } from './Popular.styles'
-import { dataProductWomen } from '../Assets/dataWomen'
-import { dataProductMen } from '../Assets/dataMen'
-import { dataProductKids } from '../Assets/dataKids'
+import { dataProductWomen } from '../../../public/dataWomen'
+import { dataProductMen } from '../../../public/dataMen'
+import { dataProductKids } from '../../../public/dataKids'
 import { Item } from '../Item/Item'
-import { AllProduct } from '../Assets/allProduct'
+import { AllProduct } from '../../../public/allProduct'
 
 export const Popular = (): JSX.Element => {
 	return (

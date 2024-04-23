@@ -1,7 +1,6 @@
-import React from 'react'
 import { styles } from './Offers.styles'
 import { useNavigate } from 'react-router-dom'
-const exlusiveImage = require('../Assets/otherImg/exclusiveImage.png')
+import exlusiveImage from '../../../public/otherImg/exclusiveImage.png'
 
 export const Offers = (): JSX.Element => {
 	const navigate = useNavigate()

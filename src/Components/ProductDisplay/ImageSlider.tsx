@@ -1,4 +1,3 @@
-import React from 'react'
 import { useState } from 'react'
 import { styles } from './ImageSlider.styles'
 
@@ -14,7 +13,7 @@ type Props = {
 		old_price: number
 		description: string
 		madeOf: string
-		maintenance: { item: string }[]
+		maintenance: { feature: string }[]
 	}
 }
 

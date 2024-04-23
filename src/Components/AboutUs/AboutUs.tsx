@@ -1,7 +1,6 @@
-import React from 'react'
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
-const aboutImg = require('../Assets/aboutImg/1.png')
+//const aboutImg = require('../Assets/aboutImg/1.png')
 
 export const AboutUs = () => {
 	return (
@@ -11,7 +10,7 @@ export const AboutUs = () => {
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2 }}>
-				<img className={styles.aboutMainImgImg} src={aboutImg} alt="men with black sunglasses" />
+				<img className={styles.aboutMainImgImg} src="/aboutImg/1.png" alt="men with black sunglasses" />
 			</motion.div>
 			<motion.div
 				className={styles.aboutText}

@@ -1,8 +1,8 @@
-import React, { useContext, useEffect, useState } from 'react'
+import { useContext, useEffect, useState } from 'react'
 import { styles } from './NavbarButton.styles'
 import { CartContext } from '../../Context/cart-context'
-const basketIcon = require('../Assets/otherImg/basketIcon.png')
-const cartIcon = require('../Assets/otherImg/cartIcon.png')
+import basketIcon from '../../../public/otherImg/basketIcon.png'
+import cartIcon from '../../../public/otherImg/cartIcon.png'
 
 export const NavbarButton = () => {
 	const [btnIsBump, setBtnIsBump] = useState<boolean>(false)

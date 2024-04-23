@@ -1,14 +1,12 @@
-import React from 'react'
 import { styles } from './Navbar.styles'
 import { NavLink, Link } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
 import { NavbarButton } from './NavbarButton'
 import { useRef } from 'react'
-const loginIcon = require('../Assets/otherImg/loginIcon.png')
-const logoutIcon = require('../Assets/otherImg/logoutIcon.png')
-const burgerIcon = require('../Assets/otherImg/burgerIcon.png')
-const logoShop = require('../Assets/otherImg/logoShop.png')
+import loginIcon from '../../../public/otherImg/loginIcon.png'
+import logoutIcon from '../../../public/otherImg/logoutIcon.png'
+import logoShop from '../../../public/otherImg/logoShop.png'
 
 type AuthState = {
 	auth: {

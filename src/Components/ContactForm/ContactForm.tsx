@@ -1,4 +1,4 @@
-import React, { FormEvent, useRef, useState } from 'react'
+import { FormEvent, useRef, useState } from 'react'
 import { styles } from './ContactForm.styles'
 import { motion } from 'framer-motion'
 
