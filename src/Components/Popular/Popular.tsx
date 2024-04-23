@@ -4,10 +4,11 @@ import { dataProductMen } from '../../../public/dataMen'
 import { dataProductKids } from '../../../public/dataKids'
 import { Item } from '../Item/Item'
 import { AllProduct } from '../../../public/allProduct'
+import { WideContent } from '../Layouts/WideContent'
 
 export const Popular = (): JSX.Element => {
 	return (
-		<div>
+		<WideContent>
 			<div className={styles.popular}>
 				<h1 className={styles.popularH1}>MOST POPULAR IN WOMAN</h1>
 				<hr className={styles.popularHr}></hr>
@@ -65,6 +66,6 @@ export const Popular = (): JSX.Element => {
 					})}
 				</div>
 			</div>
-		</div>
+		</WideContent>
 	)
 }

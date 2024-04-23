@@ -7,13 +7,13 @@ import { BackgroundSlider } from '../Components/BackgroundSlider/BackgroundSlide
 
 export const Shop = () => {
 	return (
-		<div>
+		<>
 			<BackgroundSlider />
 			<Hero />
 			<Popular />
 			<Offers />
 			<NewCollections />
 			<Newsletter />
-		</div>
+		</>
 	)
 }

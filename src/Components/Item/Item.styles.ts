@@ -2,7 +2,8 @@ import { css } from '@emotion/css'
 
 export const styles = {
 	item: css({
-		width: '350px',
+		width: '100%',
+		maxWidth: '350px',
 		transition: '0.4s ease-in-out',
 		'&:hover': { transform: 'scale(1.1)' },
 	}),
@@ -10,6 +11,7 @@ export const styles = {
 	itemImg: css({
 		borderRadius: '8px',
 		boxShadow: '4px 4px 20px 0px rgb(188, 166, 166)',
+		width: '100%'
 	}),
 
 	itemP: css({

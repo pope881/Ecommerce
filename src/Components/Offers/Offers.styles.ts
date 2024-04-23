@@ -2,10 +2,7 @@ import { css } from '@emotion/css'
 
 export const styles = {
 	offers: css({
-		width: '75%',
 		display: 'flex',
-		margin: 'auto',
-		padding: '0rem 14rem',
 		marginBottom: '10rem',
 		background: 'linear-gradient(180deg, #ce1446 0%, #e1ffea22 90%)',
 		borderRadius: '25px',

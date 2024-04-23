@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	popular: css({
@@ -25,9 +26,17 @@ export const styles = {
 	popularItem: css({
 		marginTop: '5rem',
 		gap: '2rem',
-		margin: '2rem 17rem',
+		margin: '2rem 0',
 		display: 'grid',
 		gridTemplateColumns: '1fr 1fr 1fr 1fr',
 		rowGap: '8rem',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr 1fr',
+		},
+
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			gridTemplateColumns: '1fr',
+		},
 	}),
 }

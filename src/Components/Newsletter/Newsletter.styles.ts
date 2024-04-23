@@ -3,13 +3,12 @@ import { css } from '@emotion/css'
 export const styles = {
 	newsletter: css({
 		borderRadius: '25px',
-		width: '65%',
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
 		margin: '0 auto',
-		padding: '5rem 14rem',
+		padding: '5rem 0',
 		marginBottom: '10rem',
 		background: 'linear-gradient(180deg, #ce1446 0%, #e1ffea22 70%)',
 		gap: '3rem',
@@ -34,15 +33,20 @@ export const styles = {
 		background: '#f8f8ff',
 		borderRadius: '25px',
 		border: '1px solid #e3e3e3',
+		width: '100%',
+		maxWidth: '500px',
 	}),
 
 	newsletterControlInput: css({
-		width: '500px',
+		width: '100%',
+		maxWidth: '500px',
 		marginLeft: '3rem',
 		border: 'none',
 		outline: 'none',
 		color: '#616161',
 		fontSize: '1.6rem',
+		paddingRight: '1rem',
+		background: "none"
 	}),
 
 	newsletterControlButton: css({
@@ -63,4 +67,11 @@ export const styles = {
 		textAlign: 'center',
 		marginTop: '1rem',
 	}),
+
+	newsletterForm: css({
+		display: 'flex',
+		alignItems: 'center',
+		justifyContent: 'center',
+		width: '100%',
+	})
 }

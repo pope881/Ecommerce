@@ -96,6 +96,12 @@ export const styles = {
 		display: 'none',
 	}),
 
+	navbarLinks: css({
+		display: 'flex',
+		alignItems: 'center',
+		gap: '5rem'
+	})
+
 	// @media (max-width: 768px) {
 	//     navbarDropdown {
 	//         display: 'block',

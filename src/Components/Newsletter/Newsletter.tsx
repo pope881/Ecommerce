@@ -1,5 +1,6 @@
 import { useRef, useState, FormEvent } from 'react'
 import { styles } from './Newsletter.styles'
+import { WideContent } from '../Layouts/WideContent'
 
 export const Newsletter = (): JSX.Element => {
 	const [formInputsValidity, setFormInputsValidity] = useState<boolean>(true)
@@ -30,24 +31,26 @@ export const Newsletter = (): JSX.Element => {
 	}
 
 	return (
-		<div className={styles.newsletter}>
-			<h1 className={styles.newsletterH1}>Get Exlusive Offers On Your Email</h1>
-			<p className={styles.newsletterP}>Subscribe to our newsletter and stay updated</p>
-			<form onSubmit={subscribeHandler}>
-				<div className={styles.newsletterControl}>
-					<input
-						className={styles.newsletterControlInput}
-						type="text"
-						placeholder="Your email id"
-						ref={emailInputRef}></input>
-					<button className={styles.newsletterControlButton}>Subscribe</button>
-				</div>
-				<div>
-					{!formInputsValidity && (
-						<p className={`${formInputsValidity ? '' : styles.newsletterInvalidP}`}>Please enter a valid email.</p>
-					)}
-				</div>
-			</form>
-		</div>
+		<WideContent>
+			<div className={styles.newsletter}>
+				<h1 className={styles.newsletterH1}>Get Exlusive Offers On Your Email</h1>
+				<p className={styles.newsletterP}>Subscribe to our newsletter and stay updated</p>
+				<form onSubmit={subscribeHandler} className={styles.newsletterForm}>
+					<div className={styles.newsletterControl}>
+						<input
+							className={styles.newsletterControlInput}
+							type="text"
+							placeholder="Your email id"
+							ref={emailInputRef}></input>
+						<button className={styles.newsletterControlButton}>Subscribe</button>
+					</div>
+					<div>
+						{!formInputsValidity && (
+							<p className={`${formInputsValidity ? '' : styles.newsletterInvalidP}`}>Please enter a valid email.</p>
+						)}
+					</div>
+				</form>
+			</div>
+		</WideContent>
 	)
 }

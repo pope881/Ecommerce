@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	newCollections: css({
@@ -27,5 +28,13 @@ export const styles = {
 		gridTemplateColumns: '1fr 1fr 1fr 1fr',
 		marginTop: '5rem',
 		gap: '2rem',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr 1fr',
+		},
+
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			gridTemplateColumns: '1fr',
+		},
 	}),
 }
