@@ -65,10 +65,10 @@ export const ContactForm = () => {
 	}
 
 	const cancelSubmitHandler = () => {
-		if (nameInputRef.current?.value && messageInputRef.current?.value && emailInputRef.current?.value) {
-			nameInputRef.current.value = ''
-			messageInputRef.current.value = ''
-			emailInputRef.current.value = ''
+		if (nameInputRef.current?.value || messageInputRef.current?.value || emailInputRef.current?.value) {
+			nameInputRef.current!.value = ''
+			messageInputRef.current!.value = ''
+			emailInputRef.current!.value = ''
 		}
 
 		setFormInputsValidity({
@@ -149,7 +149,6 @@ export const ContactForm = () => {
 							<input
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxInput}
-								//  required="required"
 								type="text"
 								ref={nameInputRef}
 							/>

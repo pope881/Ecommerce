@@ -1,6 +1,5 @@
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
-//const aboutImg = require('../Assets/aboutImg/1.png')
 
 export const AboutUs = () => {
 	return (

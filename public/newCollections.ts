@@ -1,13 +1,13 @@
 import { AllProduct } from './allProduct'
 
-import product_12a from './allProductsImg/product_12a.png'
-import product_35a from './allProductsImg/product_35a.png'
-import product_14a from './allProductsImg/product_14a.png'
-import product_8a from './allProductsImg/product_8a.png'
-import product_15a from './allProductsImg/product_15a.png'
-import product_2a from './allProductsImg/product_2a.png'
-import product_17a from './allProductsImg/product_17a.png'
-import product_28a from './allProductsImg/product_28a.png'
+const product_12a = '/allProductsImg/product_12a.png'
+const product_35a = '/allProductsImg/product_35a.png'
+const product_14a = '/allProductsImg/product_14a.png'
+const product_8a = '/allProductsImg/product_8a.png'
+const product_15a = '/allProductsImg/product_15a.png'
+const product_2a = '/allProductsImg/product_2a.png'
+const product_17a = '/allProductsImg/product_17a.png'
+const product_28a = '/allProductsImg/product_28a.png'
 
 export const newCollections: AllProduct[] = [
 	{

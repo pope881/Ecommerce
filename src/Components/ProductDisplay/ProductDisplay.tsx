@@ -69,7 +69,7 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 				<div>
 					<h1 className={styles.productdisplaySelectsH1}>Select size</h1>
 					<div className={styles.productdisplaySelectContainer}>
-						<select className={styles.productdisplaySelectBox} onChange={handleSelectSize}>
+						<select name="select size" className={styles.productdisplaySelectBox} onChange={handleSelectSize}>
 							{sizeOptions.map(option => (
 								<option className={styles.productdisplaySelectBoxOption} key={option.value} value={option.value}>
 									{option.label}
@@ -82,7 +82,7 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 					</div>
 					<h1 className={styles.productdisplaySelectsH1}>Select color</h1>
 					<div className={styles.productdisplaySelectContainer}>
-						<select className={styles.productdisplaySelectBox} onChange={handleSelectColor}>
+						<select name="select color" className={styles.productdisplaySelectBox} onChange={handleSelectColor}>
 							{colorOptions.map(option => (
 								<option
 									className={styles.productdisplaySelectBoxOption}

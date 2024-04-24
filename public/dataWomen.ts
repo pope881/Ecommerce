@@ -1,8 +1,8 @@
 import { type AllProduct } from './allProduct'
-import product_1a from './allProductsImg/product_1a.png'
-import product_2a from './allProductsImg/product_2a.png'
-import product_3a from './allProductsImg/product_3a.png'
-import product_4a from './allProductsImg/product_4a.png'
+const product_1a = '/allProductsImg/product_1a.png'
+const product_2a = '/allProductsImg/product_2a.png'
+const product_3a = '/allProductsImg/product_3a.png'
+const product_4a = '/allProductsImg/product_4a.png'
 
 export const dataProductWomen: AllProduct[] = [
 	{

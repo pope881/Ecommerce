@@ -1,9 +1,9 @@
 import { AllProduct } from './allProduct'
 
-import product_25a from './allProductsImg/product_25a.png'
-import product_26a from './allProductsImg/product_26a.png'
-import product_27a from './allProductsImg/product_27a.png'
-import product_28a from './allProductsImg/product_28a.png'
+const product_25a = '/allProductsImg/product_25a.png'
+const product_26a = '/allProductsImg/product_26a.png'
+const product_27a = '/allProductsImg/product_27a.png'
+const product_28a = '/allProductsImg/product_28a.png'
 
 export const dataProductKids: AllProduct[] = [
 	{

@@ -148,6 +148,7 @@ export const CartItems = () => {
 									type="text"
 									placeholder="promo code"
 									ref={promoCodeInputRef}
+									name="promo code input"
 								/>
 								<button className={styles.cartitemsPromoboxButton}>Submit</button>
 								{!promoCodeValidity && (

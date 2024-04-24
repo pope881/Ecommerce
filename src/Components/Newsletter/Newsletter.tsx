@@ -38,6 +38,7 @@ export const Newsletter = (): JSX.Element => {
 				<form onSubmit={subscribeHandler} className={styles.newsletterForm}>
 					<div className={styles.newsletterControl}>
 						<input
+							name="subscribe input"
 							className={styles.newsletterControlInput}
 							type="text"
 							placeholder="Your email id"
