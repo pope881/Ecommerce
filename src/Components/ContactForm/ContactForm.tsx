@@ -141,12 +141,12 @@ export const ContactForm = () => {
 						allowFullScreen
 						loading="eager"></iframe>
 				</div>
-
 				<div className={styles.contactForm}>
 					<form onSubmit={confirmSubmitHandler}>
 						<h2 className={styles.contactFormH2}>Send Message</h2>
 						<div className={styles.contactInputBox}>
 							<input
+								name="input name"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxInput}
 								type="text"
@@ -162,10 +162,10 @@ export const ContactForm = () => {
 						</div>
 						<div className={styles.contactInputBox}>
 							<input
+								name="input email"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxInput}
 								type="text"
-								// required="required"
 								ref={emailInputRef}
 							/>
 							{formInputsValidity.email ? (
@@ -176,9 +176,9 @@ export const ContactForm = () => {
 						</div>
 						<div className={styles.contactInfoBox}>
 							<textarea
+								name="textarea message"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxTextarea}
-								// required="required"
 								ref={messageInputRef}
 								cols={30}
 								rows={8}></textarea>
