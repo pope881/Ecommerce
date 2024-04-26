@@ -100,7 +100,6 @@ export const styles = {
 	}),
 
 	loginControlError: css({
-		color: '#ffca99',
 		height: '3.5rem',
 		padding: '0.5rem 0',
 	}),

@@ -23,7 +23,7 @@ export const styles = {
 	navbarBtnCart: css({
 		cursor: 'pointer',
 		border: 'none',
-		backgroundColor: '#2c0d00',
+		backgroundColor: '#0c0b0b',
 		color: '#f8f8ff',
 		padding: '0.9rem 4rem',
 		display: 'flex',
@@ -31,8 +31,8 @@ export const styles = {
 		alignItems: 'center',
 		borderRadius: '25px',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: '#672e17' },
-		'&:active': { backgroundColor: '#672e17' },
+		'&:hover': { backgroundColor: '#ce1446' },
+		'&:active': { backgroundColor: '#ce1446' },
 	}),
 
 	navbarBtnCartSpan: css({
@@ -46,18 +46,16 @@ export const styles = {
 		color: 'blue',
 	}),
 
-	navbarBadge: css({
-		fontSize: '1.6rem',
-		backgroundColor: '#b94517',
-		padding: '0.25rem 1rem',
-		borderRadius: '25px',
-		marginLeft: '1rem',
-	}),
-
-	// navbar__btnCart:hover .badge,
-	// navbar__btnCart:active .badge {
-	// 	backgroundColor: '#92320c',
-	// }
+	navbarBadge: (hoverButton: boolean) =>
+		css({
+			fontSize: '1.6rem',
+			backgroundColor: hoverButton ? '#0c0b0b' : '#ce1446',
+			padding: '0.25rem 1rem',
+			borderRadius: '25px',
+			marginLeft: '1rem',
+			fontWeight: 'bold',
+			transition: '0.4s',
+		}),
 
 	navbarBump: css({
 		animationName: bump,
@@ -68,14 +66,4 @@ export const styles = {
 	navbarBtnBasket: css({
 		display: 'none',
 	}),
-
-	// @media (max-width: 568px) {
-	// 	navbar__btnBasket {
-	// 		display: block,
-	// 		width: 40px,
-	// 	}
-	// 	navbar__btnCart {
-	// 		display: none,
-	// 	}
-	// }
 }

@@ -8,85 +8,44 @@
 }
 
 .main-colors {
-	/* black */
+	/* main black */
 	background-color: #0c0b0b;
-
-	/* second black  */
-	color: #414141;
-
-	/* light black  */
-	background-color: #353333;
-
-	/* fourth black  */
-	background-color: #2c0d00;
-
-	/* fifth black  */
-	color: #171717;
-
-	/* sixth black  */
-	background: #252525;
 
 	/* main red */
 	color: #ce1446;
-	background-color: #ce1446;
 
 	/* dark red invalid elements  */
 	color: #aa0b20;
 
-	/* fourth red  */
-	color: #5a1a01;
-
-	/* fifth red  */
-	background-color: #672e17;
-
-	/* sixth red  */
-	background-color: #b94517;
-
-	/* light red */
+	/* light red in buttons */
 	background-color: #d85477;
 
-	/* light yellow  */
-	color: #ffca99;
+	/* cancel font in buttons   */
+	color: #5a1a01;
 
 	/* main white  */
 	color: #f8f8ff;
-	background-color: #f8f8ff;
 
 	/* second white  */
-	background: #e2e2e2;
-
-	/* third white  */
-	background: #eaeaea;
-
-	/* fourth white  */
-	background-color: #ffeff1;
-
-	/* fitth white  */
 	background-color: #ffe6dc;
 
-	/* sixth white  */
-	background-color: #f0ebe1;
+	/* background input color  */
+	background: #e2e2e2;
 
-	/* seventh white  */
-	background-color: #e7d6bc;
-
-	/* eight white  */
-	border: 1px solid #e3e3e3;
-
-	/* braun  */
-	color: #5f430e;
-
-	/* grey  */
-	color: #5e5e5e;
-
-	/* second grey  */
-	color: #454545;
+	/* description box background color hover  */
+	background-color: #c3b6b6;
 
 	/* third grey  */
 	color: #555;
 
-	/* fourth-grey  */
+	/* inputs background  */
 	background-color: #869999;
+
+	/* ok ALL ABOVE  */
+	/* ok ALL ABOVE  */
+	/* ok ALL ABOVE  */
+	/* ok ALL ABOVE  */
+	/* ok ALL ABOVE  */
 
 	/* fifth grey  */
 	border: 1px solid #ccc;

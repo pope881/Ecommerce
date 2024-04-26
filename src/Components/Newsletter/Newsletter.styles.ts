@@ -32,7 +32,7 @@ export const styles = {
 		justifyContent: 'space-between',
 		background: '#f8f8ff',
 		borderRadius: '25px',
-		border: '1px solid #e3e3e3',
+		border: '1px solid #e2e2e2',
 		width: '100%',
 		maxWidth: '500px',
 	}),
@@ -46,7 +46,7 @@ export const styles = {
 		color: '#616161',
 		fontSize: '1.6rem',
 		paddingRight: '1rem',
-		background: "none"
+		background: 'none',
 	}),
 
 	newsletterControlButton: css({
@@ -73,5 +73,5 @@ export const styles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: '100%',
-	})
+	}),
 }

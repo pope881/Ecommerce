@@ -63,22 +63,6 @@ export const styles = {
 		width: '100%',
 		margin: '0 auto',
 	}),
-	/* 
-@media (max-width: 1150px) {
-	team__container {
-		gridTemplateColumns: 1fr 1fr,
-		width: -moz-fit-content,
-		width: fit-content,
-	}
-}
-
-@media (max-width: 800px) {
-	team__container {
-		gridTemplateColumns: 1fr,
-		width: -moz-fit-content,
-		width: fit-content,
-	}
-} */
 
 	teamCard: css({
 		position: 'relative',

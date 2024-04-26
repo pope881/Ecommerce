@@ -12,15 +12,15 @@ export const styles = {
 		width: '100%',
 	}),
 	accordionItem: css({
-		backgroundColor: '#f0ebe1',
+		backgroundColor: '#e2e2e2',
 		marginBottom: '0.5rem',
 		padding: '1.5rem 2.5rem',
 		borderRadius: '5px',
 		transition: 'background-color 0.4s',
-		'&:hover': { backgroundColor: '#e7d6bc' },
+		'&:hover': { backgroundColor: '#c3b6b6' },
 	}),
 	accordionItemTitle: css({
-		color: '#5f430e',
+		color: '#d85477',
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
@@ -39,7 +39,7 @@ export const styles = {
 		transition: 'all 0.4s cubic-bezier(0, 1, 0, 1)',
 	}),
 	accordionItemContentDiv: css({
-		color: '#414141',
+		color: '#0c0b0b',
 		fontSize: '1.6rem',
 	}),
 	accordionItemShow: css({

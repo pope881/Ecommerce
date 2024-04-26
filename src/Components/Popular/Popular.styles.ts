@@ -11,7 +11,7 @@ export const styles = {
 	}),
 
 	popularH1: css({
-		color: '#171717',
+		color: '#0c0b0b',
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -20,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		background: '#252525',
+		background: '#0c0b0b',
 	}),
 
 	popularItem: css({

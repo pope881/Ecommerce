@@ -4,7 +4,7 @@ export const styles = {
 	container: css({
 		textAlign: 'center',
 		height: '120vh',
-		backgroundColor: '#353333',
+		backgroundColor: '#0c0b0b',
 		marginBottom: '10rem',
 	}),
 

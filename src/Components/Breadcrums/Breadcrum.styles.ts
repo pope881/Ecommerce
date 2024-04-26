@@ -5,7 +5,7 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		gap: '1rem',
-		color: '#5e5e5e',
+		color: '#0c0b0b',
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		margin: '6rem 17rem',

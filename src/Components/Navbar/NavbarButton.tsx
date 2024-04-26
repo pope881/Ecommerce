@@ -6,6 +6,8 @@ import cartIcon from '../../../public/otherImg/cartIcon.png'
 
 export const NavbarButton = () => {
 	const [btnIsBump, setBtnIsBump] = useState<boolean>(false)
+	const [hoverButton, setHoverButton] = useState<boolean | null>(false)
+
 	const cartCtx = useContext(CartContext)
 	const { items } = cartCtx
 	const numberOfCartItems = items.reduce((curNumber: number, item) => {
@@ -29,12 +31,20 @@ export const NavbarButton = () => {
 		}
 	}, [items])
 
+	const cartColorOver = () => {
+		setHoverButton(true)
+	}
+
+	const cartColorLeave = () => {
+		setHoverButton(false)
+	}
+
 	return (
 		<>
-			<button className={btnClasses}>
+			<button onMouseOver={cartColorOver} onMouseLeave={cartColorLeave} className={btnClasses}>
 				<img className={styles.navbarIcon} src={cartIcon} alt="basket icon for desktop"></img>
 				<span className={styles.navbarBtnCartSpan}>Your Cart</span>
-				<span className={styles.navbarBadge}>{numberOfCartItems}</span>
+				<span className={styles.navbarBadge(hoverButton === true)}>{numberOfCartItems}</span>
 			</button>
 			<img className={styles.navbarBtnBasket} src={basketIcon} alt="basket icon for mobiles" />
 		</>

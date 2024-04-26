@@ -6,7 +6,7 @@ export const styles = {
 	}),
 
 	cartitemsHr: css({
-		height: '3px',
+		height: '2px',
 		background: '#e2e2e2',
 		border: '0',
 	}),
@@ -17,7 +17,7 @@ export const styles = {
 		alignItems: 'center',
 		gap: '2.5rem',
 		padding: '2rem 0',
-		color: '#454545',
+		color: '#555',
 		fontWeight: '600',
 	}),
 
@@ -117,7 +117,7 @@ export const styles = {
 		marginTop: '1.6rem',
 		paddingLeft: '2rem',
 		height: '58px',
-		background: '#eaeaea',
+		background: '#e2e2e2',
 	}),
 
 	cartitemsPromoboxInput: css({
@@ -136,7 +136,6 @@ export const styles = {
 
 	cartitemsPromoboxInvalidInput: css({
 		borderColor: '#aa0b20',
-		backgroundColor: '#ffeff1',
 	}),
 
 	cartitemsPromoboxButton: css({
