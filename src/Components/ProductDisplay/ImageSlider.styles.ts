@@ -11,8 +11,8 @@ export const styles = {
 		position: 'absolute',
 		top: '50%',
 		transform: 'translate(0, -50%)',
-		fontSize: '6rem',
-		color: '#776d6d',
+		fontSize: '7rem',
+		color: '#555',
 		zIndex: '1',
 		cursor: 'pointer',
 	}),
@@ -36,7 +36,7 @@ export const styles = {
 	imgSliderDots: css({
 		display: 'flex',
 		justifyContent: 'center',
-		color: '#776d6d',
+		color: '#555',
 	}),
 
 	imgSliderDot: css({

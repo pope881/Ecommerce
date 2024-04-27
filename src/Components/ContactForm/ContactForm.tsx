@@ -156,7 +156,7 @@ export const ContactForm = () => {
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>Name</span>
 							) : (
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>
-									Name must contains min. 3 characters
+									Name must contains min. 3 characters.
 								</span>
 							)}
 						</div>
@@ -186,7 +186,7 @@ export const ContactForm = () => {
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>Message</span>
 							) : (
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>
-									Message must contains min. 10 characters
+									Message must contains min. 10 characters.
 								</span>
 							)}
 						</div>

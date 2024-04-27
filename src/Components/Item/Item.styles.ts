@@ -11,7 +11,7 @@ export const styles = {
 	itemImg: css({
 		borderRadius: '8px',
 		boxShadow: '4px 4px 20px 0px rgb(188, 166, 166)',
-		width: '100%'
+		width: '100%',
 	}),
 
 	itemP: css({
@@ -31,7 +31,7 @@ export const styles = {
 	}),
 
 	itemPriceOld: css({
-		color: '#8c8c8c',
+		color: '#555',
 		fontSize: '1.9rem',
 		fontWeight: '500',
 		textDecoration: 'line-through',

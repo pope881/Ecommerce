@@ -18,7 +18,7 @@ export const styles = {
 
 	formControlInput: css({
 		fontSize: '1.6rem',
-		border: '1px solid #ccc',
+		border: '1px solid #869999',
 		borderRadius: '4px',
 		width: '50rem',
 		maxWidth: '100% ',

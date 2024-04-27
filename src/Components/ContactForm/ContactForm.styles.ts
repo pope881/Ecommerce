@@ -99,7 +99,6 @@ export const styles = {
 
 	contactInfoTextH3: css({
 		fontSize: '2rem',
-		fontWeight: '500',
 		color: '#ce1446',
 	}),
 
@@ -161,9 +160,9 @@ export const styles = {
 			margin: '1rem 0',
 			pointerEvents: 'none',
 			transition: '0.5s',
-			color: isClicked ? '#aa0b20' : '#666',
-			fontSize: isClicked ? '1.2rem' : '1.6rem',
-			transform: isClicked ? 'translateY(-20px)' : 'translateY(0px)',
+			color: isClicked ? '#aa0b20' : '#555',
+			fontSize: isClicked ? '1.3rem' : '1.6rem',
+			transform: isClicked ? 'translateY(-24px)' : 'translateY(0px)',
 		}),
 
 	contactFormActions: css({
@@ -193,20 +192,4 @@ export const styles = {
 		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
 		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
 	}),
-
-	// @media (max-width: 991px) {
-	//     contact {
-	//         padding: '50px',
-	//     }
-	//     contactContainer {
-	//         flexDirection: 'column',
-	//     }
-	//     contactInfo {
-	//         marginBottom: '40px',
-	//     }
-	//     contactInfo,
-	//     contactForm {
-	//         width: '100%',
-	//     }
-	// }
 }

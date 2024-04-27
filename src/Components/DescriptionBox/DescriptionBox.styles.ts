@@ -20,7 +20,7 @@ export const styles = {
 		'&:hover': { backgroundColor: '#c3b6b6' },
 	}),
 	accordionItemTitle: css({
-		color: '#d85477',
+		color: '#5a1a01',
 		display: 'flex',
 		justifyContent: 'space-between',
 		alignItems: 'center',
@@ -33,7 +33,6 @@ export const styles = {
 		fontSize: '3.2rem',
 	}),
 	accordionItemContent: css({
-		color: '#8b7f75',
 		maxHeight: 0,
 		overflow: 'hidden',
 		transition: 'all 0.4s cubic-bezier(0, 1, 0, 1)',

@@ -55,7 +55,7 @@ export const styles = {
 	}),
 
 	productdisplayPriceOld: css({
-		color: '#818181',
+		color: '#555',
 		textDecoration: 'line-through',
 	}),
 
@@ -65,7 +65,7 @@ export const styles = {
 
 	productdisplaySelectsH1: css({
 		marginTop: '0.5rem',
-		color: '#656565',
+		color: '#555',
 		fontSize: '2rem',
 		fontWeight: '600',
 	}),
