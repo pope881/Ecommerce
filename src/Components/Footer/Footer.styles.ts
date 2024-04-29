@@ -56,7 +56,7 @@ export const styles = {
 		fontSize: '1.6rem',
 		color: theme.colors.mainRed,
 		fontStyle: 'italic',
-		textShadow: '0px 0px 2px #ce1446',
+		textShadow: `0px 0px 2px ${theme.colors.mainRed}`,
 	}),
 
 	footerText: css({
