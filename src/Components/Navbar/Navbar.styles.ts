@@ -7,8 +7,8 @@ export const styles = {
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		padding: '1%',
-		borderBottom: '1px solid #0c0b0b',
-		backgroundColor: '#f8f8ff',
+		borderBottom: `1px solid ${theme.colors.mainBlack}`,
+		backgroundColor: `${theme.colors.mainWhite}`,
 		minHeight: '15vh',
 	}),
 
@@ -47,17 +47,17 @@ export const styles = {
 
 	navbarMenuA: css({
 		textDecoration: 'none',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontWeight: '500',
 		transition: '0.2s',
-		'&:hover': { color: '#ce1446' },
-		'&:active': { color: '#ce1446' },
+		'&:hover': { color: `${theme.colors.mainRed}` },
+		'&:active': { color: `${theme.colors.mainRed}` },
 	}),
 
 	navbarMenuAActive: css({
 		borderBottom: '3px solid #ce1446',
 		textDecoration: 'none',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		fontWeight: '500',
 	}),
 
@@ -76,11 +76,11 @@ export const styles = {
 		cursor: 'pointer',
 		padding: '1rem 4rem',
 		borderRadius: '25px',
-		backgroundColor: '#0c0b0b',
-		border: '1px solid #0c0b0b',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainBlack}`,
+		border: `1px solid ${theme.colors.mainBlack}`,
+		color: `${theme.colors.mainWhite}`,
 		transition: '0.3s',
-		'&:hover, &:active': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
+		'&:hover, &:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
 	}),
 
 	navbarDropdown: css({
@@ -99,8 +99,8 @@ export const styles = {
 	navbarLinks: css({
 		display: 'flex',
 		alignItems: 'center',
-		gap: '5rem'
-	})
+		gap: '5rem',
+	}),
 
 	// @media (max-width: 768px) {
 	//     navbarDropdown {
@@ -114,7 +114,7 @@ export const styles = {
 	//         height: '100px',
 	//         width: '100%',
 	//         position: 'absolute',
-	//         backgroundColor: '#f8f8ff',
+	//         backgroundColor: `${theme.colors.mainWhite}`,
 	//         /* background-color: blue, */
 	//         justifyContent: 'center',
 	//         top: '40%',

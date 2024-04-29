@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	heroTextTop: css({
@@ -10,7 +11,7 @@ export const styles = {
 	}),
 
 	heroTextTopH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -19,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 	}),
 
 	hero: css({
@@ -43,7 +44,7 @@ export const styles = {
 	}),
 
 	heroTextP: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '10rem',
 		fontWeight: '700',
 	}),
@@ -84,9 +85,9 @@ export const styles = {
 		padding: '1rem 4rem',
 		transition: '0.3s',
 		border: '1px solid #ce1446',
-		backgroundColor: '#ce1446',
-		color: '#f8f8ff',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		backgroundColor: `${theme.colors.mainRed}`,
+		color: `${theme.colors.mainWhite}`,
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
 	}),
 }

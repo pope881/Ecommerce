@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	footer: css({
@@ -6,7 +7,7 @@ export const styles = {
 		width: '100%',
 		height: 'auto',
 		padding: '3rem 8rem',
-		background: '#f8f8ff',
+		background: `${theme.colors.mainWhite}`,
 	}),
 
 	footerContainer: css({
@@ -46,14 +47,14 @@ export const styles = {
 
 	footerSectionH2: css({
 		fontSize: '2rem',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontWeight: '600',
 		marginBottom: '0.5rem',
 	}),
 
 	footerQualityText: css({
 		fontSize: '1.6rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		fontStyle: 'italic',
 		textShadow: '0px 0px 2px #ce1446',
 	}),
@@ -70,12 +71,12 @@ export const styles = {
 		marginBottom: '1rem',
 		transition: '0.3s',
 		maxWidth: '200px',
-		'&:hover': { color: '#ce1446', transform: 'scale(1.2)' },
+		'&:hover': { color: `${theme.colors.mainRed}`, transform: 'scale(1.2)' },
 	}),
 
 	footerQuicklinksUlA: css({
 		textDecoration: 'none',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 	}),
 
 	footerContactInfoLi: css({
@@ -85,12 +86,12 @@ export const styles = {
 	}),
 
 	footerContactInfoLiSpan: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '1.6rem',
 	}),
 
 	footerContactInfoLiA: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		textDecoration: 'none',
 		fontSize: '1.6rem',
 	}),
@@ -98,10 +99,10 @@ export const styles = {
 	copyrightText: css({
 		width: '100%',
 		fontSize: '1.6rem',
-		background: '#f8f8ff',
+		background: `${theme.colors.mainWhite}`,
 		padding: '2rem 10rem 3rem',
 		textAlign: 'center',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		borderBottom: '1px solid rgba(0, 0, 0, 0.15)',
 	}),
 

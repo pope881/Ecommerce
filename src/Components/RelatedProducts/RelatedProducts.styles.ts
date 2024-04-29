@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	relatedproducts: css({
@@ -10,7 +11,7 @@ export const styles = {
 	}),
 
 	relatedproductsH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -19,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 	}),
 
 	relatedproductsItem: css({

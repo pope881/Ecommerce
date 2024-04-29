@@ -5,9 +5,6 @@ export const theme = {
 		md: '1024px',
 		lg: '1280px',
 	},
-} as const
-
-export const mainStyles = {
 	colors: {
 		mainBlack: '#0c0b0b',
 		mainRed: '#ce1446',
@@ -19,6 +16,6 @@ export const mainStyles = {
 		mainGrey: '#555',
 		lightGrey: '#e2e2e2',
 		darkGrey: '#c3b6b6',
+		strongGrey: '#869999',
 	},
-	fontSizes: {},
-}
+} as const

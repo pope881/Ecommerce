@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	form: css({
@@ -22,6 +23,7 @@ export const styles = {
 		borderRadius: '4px',
 		width: '50rem',
 		maxWidth: '100% ',
+		background: `${theme.colors.strongGrey}`,
 	}),
 
 	formActions: css({
@@ -32,33 +34,33 @@ export const styles = {
 
 	formActionsButton: css({
 		fontSize: '1.6rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		cursor: 'pointer',
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: '#ffe6dc' },
-		'&:active': { backgroundColor: '#ffe6dc' },
+		'&:hover': { backgroundColor: `${theme.colors.lightWhite}` },
+		'&:active': { backgroundColor: `${theme.colors.lightWhite}` },
 	}),
 
 	formSubmit: css({
-		backgroundColor: '#ce1446',
+		backgroundColor: `${theme.colors.mainRed}`,
 		border: '1px solid #ce1446',
-		color: ' #f8f8ff ',
+		color: `${theme.colors.mainWhite}`,
 		fontWeight: '600',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
 	}),
 
 	invalidP: css({
-		color: '#aa0b20',
+		color: `${theme.colors.darkRed}`,
 		fontSize: '1.2rem',
 	}),
 
 	invalidInput: css({
-		borderColor: '#aa0b20',
-		backgroundColor: ' #ffeff1',
+		borderColor: `${theme.colors.darkRed}`,
+		backgroundColor: '#ffeff1',
 	}),
 }

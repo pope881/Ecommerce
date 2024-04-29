@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	productdisplay: css({
@@ -32,7 +33,7 @@ export const styles = {
 	}),
 
 	productdisplayRightH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '4rem',
 		fontWeight: '700',
 	}),
@@ -42,7 +43,7 @@ export const styles = {
 		alignItems: 'center',
 		marginTop: '1.3rem',
 		gap: '0.6rem',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '1.6rem',
 	}),
 
@@ -55,17 +56,17 @@ export const styles = {
 	}),
 
 	productdisplayPriceOld: css({
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		textDecoration: 'line-through',
 	}),
 
 	productdisplayPriceNew: css({
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 	}),
 
 	productdisplaySelectsH1: css({
 		marginTop: '0.5rem',
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		fontSize: '2rem',
 		fontWeight: '600',
 	}),
@@ -75,16 +76,16 @@ export const styles = {
 		padding: '1rem 4rem',
 		fontSize: '1.6rem',
 		fontWeight: '600',
-		color: '#f8f8ff',
-		backgroundColor: '#ce1446',
+		color: `${theme.colors.mainWhite}`,
+		backgroundColor: `${theme.colors.mainRed}`,
 		marginBottom: '4rem',
 		border: '1px solid #ce1446',
 		outline: 'none',
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
-		'&:hover': { color: '#ce1446', background: '#f8f8ff' },
-		'&:active': { color: '#ce1446', background: '#f8f8ff' },
+		'&:hover': { color: `${theme.colors.mainRed}`, background: `${theme.colors.mainWhite}` },
+		'&:active': { color: `${theme.colors.mainRed}`, background: `${theme.colors.mainWhite}` },
 	}),
 
 	productdisplayRightCategory: css({
@@ -110,8 +111,8 @@ export const styles = {
 		appearance: 'none',
 		padding: '0 3rem 0 1.5rem',
 		width: '100%',
-		color: '#0c0b0b',
-		backgroundColor: '#f8f8ff',
+		color: `${theme.colors.mainBlack}`,
+		backgroundColor: `${theme.colors.mainWhite}`,
 		fontSize: '1.5rem',
 		fontWeight: 'bold',
 		borderRadius: '8px',
@@ -130,9 +131,9 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: '#ce1446',
+		backgroundColor: `${theme.colors.mainRed}`,
 		fontSize: '3rem',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		borderBottomRightRadius: '8px',
 		borderTopRightRadius: '8px',
 	}),

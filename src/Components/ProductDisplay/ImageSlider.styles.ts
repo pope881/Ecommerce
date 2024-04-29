@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	imgSlider: css({
@@ -12,7 +13,7 @@ export const styles = {
 		top: '50%',
 		transform: 'translate(0, -50%)',
 		fontSize: '7rem',
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		zIndex: '1',
 		cursor: 'pointer',
 	}),
@@ -36,7 +37,7 @@ export const styles = {
 	imgSliderDots: css({
 		display: 'flex',
 		justifyContent: 'center',
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 	}),
 
 	imgSliderDot: css({

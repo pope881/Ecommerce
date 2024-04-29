@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	offers: css({
@@ -17,14 +18,14 @@ export const styles = {
 	}),
 
 	offersLeftH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '8rem',
 		fontWeight: '600',
 		textAlign: 'center',
 	}),
 
 	offersLeftP: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '2.2rem',
 		fontWeight: '600',
 	}),
@@ -32,15 +33,15 @@ export const styles = {
 	offersLeftButton: css({
 		fontSize: '1.6rem',
 		border: '1px solid #ce1446',
-		backgroundColor: '#ce1446',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainRed}`,
+		color: `${theme.colors.mainWhite}`,
 		cursor: 'pointer',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.3s',
 		marginTop: '2rem',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
 	}),
 
 	offersRight: css({

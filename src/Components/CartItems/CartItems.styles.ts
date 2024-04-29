@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	cartitems: css({
@@ -7,7 +8,7 @@ export const styles = {
 
 	cartitemsHr: css({
 		height: '2px',
-		background: '#e2e2e2',
+		background: `${theme.colors.lightGrey}`,
 		border: '0',
 	}),
 
@@ -17,7 +18,7 @@ export const styles = {
 		alignItems: 'center',
 		gap: '2.5rem',
 		padding: '2rem 0',
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		fontWeight: '600',
 	}),
 
@@ -91,14 +92,22 @@ export const styles = {
 		padding: '1.5rem 3rem',
 		outline: 'none',
 		border: 'none',
-		backgroundColor: '#d85477',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.lightRed}`,
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '1.6rem',
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
-		'&:hover': { color: '#ce1446', background: '#f8f8ff', border: '1px solid #ce1446' },
-		'&:active': { color: '#ce1446', background: '#f8f8ff', border: '1px solid #ce1446' },
+		'&:hover': {
+			color: `${theme.colors.mainRed}`,
+			background: `${theme.colors.mainWhite}`,
+			border: '1px solid #ce1446',
+		},
+		'&:active': {
+			color: `${theme.colors.mainRed}`,
+			background: `${theme.colors.mainWhite}`,
+			border: '1px solid #ce1446',
+		},
 	}),
 
 	cartitemsPromocode: css({
@@ -107,7 +116,7 @@ export const styles = {
 	}),
 
 	cartitemsPromocodeP: css({
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		fontSize: '1.1rem',
 	}),
 
@@ -117,7 +126,7 @@ export const styles = {
 		marginTop: '1.6rem',
 		paddingLeft: '2rem',
 		height: '58px',
-		background: '#e2e2e2',
+		background: `${theme.colors.lightGrey}`,
 	}),
 
 	cartitemsPromoboxInput: css({
@@ -131,21 +140,21 @@ export const styles = {
 	}),
 
 	cartitemsPromoboxInvalidP: css({
-		color: '#aa0b20',
+		color: `${theme.colors.darkRed}`,
 	}),
 
 	cartitemsPromoboxInvalidInput: css({
-		borderColor: '#aa0b20',
+		borderColor: `${theme.colors.darkRed}`,
 	}),
 
 	cartitemsPromoboxButton: css({
 		padding: '1.4rem 2.8rem',
 		fontSize: '1.6rem',
-		backgroundColor: '#0c0b0b',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainBlack}`,
+		color: `${theme.colors.mainWhite}`,
 		cursor: 'pointer',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
 	}),
 
 	cartitemsLogInfo: css({

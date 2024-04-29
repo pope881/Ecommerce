@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	newsletter: css({
@@ -15,14 +16,14 @@ export const styles = {
 	}),
 
 	newsletterH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '6rem',
 		fontWeight: '600',
 		textAlign: 'center',
 	}),
 
 	newsletterP: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '2rem',
 	}),
 
@@ -30,7 +31,7 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		background: '#f8f8ff',
+		background: `${theme.colors.mainWhite}`,
 		borderRadius: '25px',
 		border: '1px solid #e2e2e2',
 		width: '100%',
@@ -52,17 +53,17 @@ export const styles = {
 	newsletterControlButton: css({
 		padding: '1rem 4rem',
 		borderRadius: '25px',
-		backgroundColor: '#0c0b0b',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainBlack}`,
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '1.6rem',
 		cursor: 'pointer',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
-		'&:actice': { backgroundColor: '#f8f8ff', color: '#0c0b0b' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
+		'&:actice': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
 	}),
 
 	newsletterInvalidP: css({
-		color: '#aa0b20',
+		color: `${theme.colors.darkRed}`,
 		fontSize: '1.2rem',
 		textAlign: 'center',
 		marginTop: '1rem',

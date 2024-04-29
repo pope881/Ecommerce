@@ -11,7 +11,7 @@ export const styles = {
 	}),
 
 	newCollectionsH1: css({
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -20,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		background: '#0c0b0b',
+		background: `${theme.colors.mainBlack}`,
 	}),
 
 	newCollectionsCollection: css({

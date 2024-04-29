@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	login: css({
@@ -7,7 +8,7 @@ export const styles = {
 		alignItems: 'center',
 		padding: '4% 10%',
 		height: '100vh',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 	}),
 
 	loginText: css({
@@ -18,13 +19,13 @@ export const styles = {
 
 	loginTextH2: css({
 		fontSize: '8rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		marginRight: '2rem',
 	}),
 
 	loginTextP: css({
 		fontSize: '9rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 	}),
 
 	loginForm: css({
@@ -36,7 +37,7 @@ export const styles = {
 		maxWidth: '56rem',
 		margin: 'auto',
 		padding: '5rem',
-		background: ' #f8f8ff',
+		background: `${theme.colors.mainWhite}`,
 		borderRadius: '8px',
 		boxShadow: '0 0 16px 1px rgba(0, 0, 0, 0.5)',
 		transition: '0.3s',
@@ -83,7 +84,7 @@ export const styles = {
 		display: 'block',
 		fontSize: '1.6rem',
 		marginBottom: '0.5rem',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		textTransform: 'uppercase',
 	}),
 
@@ -95,8 +96,8 @@ export const styles = {
 		fontSize: '1.6rem',
 		borderRadius: '4px',
 		border: '1px solid',
-		backgroundColor: '#869999',
-		color: '#0c0b0b',
+		backgroundColor: `${theme.colors.strongGrey}`,
+		color: `${theme.colors.mainBlack}`,
 	}),
 
 	loginControlError: css({
@@ -107,13 +108,13 @@ export const styles = {
 	loginControlErrorP: css({
 		fontSize: '1.1rem',
 		margin: '0',
-		color: '#aa0b20',
+		color: `${theme.colors.darkRed}`,
 	}),
 
 	loginControlErrorFormP: css({
 		fontSize: '1.1rem',
 		marginTop: '1rem',
-		color: '#aa0b20',
+		color: `${theme.colors.darkRed}`,
 		textAlign: 'center',
 	}),
 
@@ -131,23 +132,23 @@ export const styles = {
 
 	loginButton: css({
 		fontSize: '1.6rem',
-		color: '#5a1a01',
+		color: `${theme.colors.strongRed}`,
 		cursor: 'pointer',
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: '#ffe6dc' },
-		'&:active': { backgroundColor: '#ffe6dc' },
+		'&:hover': { backgroundColor: `${theme.colors.lightWhite}` },
+		'&:active': { backgroundColor: `${theme.colors.lightWhite}` },
 	}),
 
 	loginSubmit: css({
 		border: '1px solid #ce1446',
-		backgroundColor: '#ce1446',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainRed}`,
+		color: `${theme.colors.mainWhite}`,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
 	}),
 }

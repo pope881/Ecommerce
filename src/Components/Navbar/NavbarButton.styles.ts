@@ -1,5 +1,6 @@
 import { css } from '@emotion/css'
 import { keyframes } from '@emotion/react'
+import { theme } from '../../theme'
 
 const bump = keyframes({
 	'0%': {
@@ -23,16 +24,16 @@ export const styles = {
 	navbarBtnCart: css({
 		cursor: 'pointer',
 		border: 'none',
-		backgroundColor: '#0c0b0b',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainBlack}`,
+		color: `${theme.colors.mainWhite}`,
 		padding: '0.9rem 4rem',
 		display: 'flex',
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		borderRadius: '25px',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: '#ce1446' },
-		'&:active': { backgroundColor: '#ce1446' },
+		'&:hover': { backgroundColor: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainRed}` },
 	}),
 
 	navbarBtnCartSpan: css({
@@ -49,7 +50,7 @@ export const styles = {
 	navbarBadge: (hoverButton: boolean) =>
 		css({
 			fontSize: '1.6rem',
-			backgroundColor: hoverButton ? '#0c0b0b' : '#ce1446',
+			backgroundColor: hoverButton ? `${theme.colors.mainBlack}` : `${theme.colors.mainRed}`,
 			padding: '0.25rem 1rem',
 			borderRadius: '25px',
 			marginLeft: '1rem',

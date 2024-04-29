@@ -1,10 +1,11 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	container: css({
 		textAlign: 'center',
 		height: '120vh',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 		marginBottom: '10rem',
 	}),
 
@@ -17,7 +18,7 @@ export const styles = {
 		width: '600px',
 		position: 'absolute',
 		zIndex: '999',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		top: '30%',
 		left: '10%',
 	}),
@@ -39,7 +40,7 @@ export const styles = {
 	carouselCarouselSpan: css({
 		width: '45px',
 		height: '12px',
-		backgroundColor: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainWhite}`,
 		marginLeft: '1rem',
 		borderRadius: '10px',
 		cursor: 'pointer',

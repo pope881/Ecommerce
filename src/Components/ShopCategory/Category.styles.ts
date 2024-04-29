@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	shopCategory: css({
@@ -40,16 +41,16 @@ export const styles = {
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		border: '1px solid #d85477',
-		backgroundColor: '#d85477',
-		color: '#f8f8ff',
+		backgroundColor: `${theme.colors.lightRed}`,
+		color: `${theme.colors.mainWhite}`,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: '#f8f8ff', color: '#ce1446' },
-		'&:active': { backgroundColor: '#f8f8ff', color: '#ce1446' },
+		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
 	}),
 
 	shopCategoryBtnDisabled: css({
 		backgroundColor: 'gray',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		cursor: 'not-allowed',
 		padding: '1rem 4rem',
 		borderRadius: '25px',

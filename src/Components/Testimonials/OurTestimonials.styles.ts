@@ -1,10 +1,11 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	testimonials: css({
 		padding: '6% 10% 10%',
 		width: '100%',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -19,7 +20,7 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextH4: css({
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
@@ -27,7 +28,7 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextH1: css({
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '3.6rem',
 		textTransform: 'capitalize',
 		fontWeight: '700',
@@ -39,13 +40,13 @@ export const styles = {
 		width: '30%',
 		border: 'none',
 		height: '2px',
-		backgroundColor: '#ce1446',
+		backgroundColor: `${theme.colors.mainRed}`,
 		marginBottom: '5rem',
 	}),
 
 	testimonialsHeaderTextP: css({
 		minWidth: '600px',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '1.6rem',
 		fontWeight: '400',
 		lineHeight: '1.7',
@@ -64,11 +65,11 @@ export const styles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'column',
-		backgroundColor: '#f8f8ff',
+		backgroundColor: `${theme.colors.mainWhite}`,
 		backgroundImage: 'linear-gradient(to top, rgba(182, 173, 173, 0), rgb(79, 75, 75))',
-		color: '#0c0b0b',
+		color: `${theme.colors.mainBlack}`,
 		borderRadius: '50px',
-		border: '3px solid #0c0b0b',
+		border: `3px solid ${theme.colors.mainBlack}`,
 		height: '590px',
 	}),
 
@@ -99,7 +100,7 @@ export const styles = {
 
 	testimonialsName: css({
 		fontSize: '2rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		marginBottom: '1rem',
 	}),
 }

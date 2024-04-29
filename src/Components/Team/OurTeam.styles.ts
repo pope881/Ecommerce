@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	team: css({
@@ -6,7 +7,7 @@ export const styles = {
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 		width: '100%',
 		padding: '6% 10% 10%',
 	}),
@@ -19,7 +20,7 @@ export const styles = {
 	}),
 
 	teamTextH4: css({
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
@@ -27,7 +28,7 @@ export const styles = {
 	}),
 
 	teamTextH1: css({
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '3.6rem',
 		textTransform: 'capitalize',
 		fontWeight: '700',
@@ -39,13 +40,13 @@ export const styles = {
 		width: '30%',
 		border: 'none',
 		height: '2px',
-		backgroundColor: '#ce1446',
+		backgroundColor: `${theme.colors.mainRed}`,
 		marginBottom: '50px',
 	}),
 
 	teamTextP: css({
 		minWidth: '600px',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 		fontSize: '1.5rem',
 		fontWeight: '400',
 		lineHeight: '1.7',
@@ -56,7 +57,7 @@ export const styles = {
 		display: 'grid',
 		gridTemplateColumns: '1fr 1fr 1fr',
 		gridTemplateRows: 'auto',
-		backgroundColor: '#0c0b0b',
+		backgroundColor: `${theme.colors.mainBlack}`,
 		gap: '6rem',
 		alignItems: 'center',
 		textAlign: 'center',
@@ -72,8 +73,8 @@ export const styles = {
 		textAlign: 'center',
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
-		color: '#f8f8ff',
-		boxShadow: '4px 4px 30px 0px #f8f8ff',
+		color: `${theme.colors.mainWhite}`,
+		boxShadow: `4px 4px 30px 0px ${theme.colors.mainWhite}`,
 		overflow: 'hidden',
 	}),
 
@@ -84,7 +85,7 @@ export const styles = {
 		padding: '1rem',
 		background: 'none',
 		border: 'none',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 		fontSize: '5rem',
 		textShadow: '2px 2px 5px rgb(0, 0, 0)',
 		cursor: 'crosshair',
@@ -97,7 +98,7 @@ export const styles = {
 			display: 'flex',
 			flexDirection: 'column',
 			justifyContent: 'flex-end',
-			color: '#f8f8ff',
+			color: `${theme.colors.mainWhite}`,
 			top: '0',
 			left: '0',
 			right: '0',
@@ -110,12 +111,12 @@ export const styles = {
 
 	teamCardTextH1: css({
 		fontSize: '4rem',
-		color: '#ce1446',
+		color: `${theme.colors.mainRed}`,
 	}),
 
 	teamCardTextH2: css({
 		fontSize: '1.6rem',
 		marginBottom: '0.8rem',
-		color: '#f8f8ff',
+		color: `${theme.colors.mainWhite}`,
 	}),
 }

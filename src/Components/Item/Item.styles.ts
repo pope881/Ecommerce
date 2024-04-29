@@ -1,4 +1,5 @@
 import { css } from '@emotion/css'
+import { theme } from '../../theme'
 
 export const styles = {
 	item: css({
@@ -31,7 +32,7 @@ export const styles = {
 	}),
 
 	itemPriceOld: css({
-		color: '#555',
+		color: `${theme.colors.mainGrey}`,
 		fontSize: '1.9rem',
 		fontWeight: '500',
 		textDecoration: 'line-through',
