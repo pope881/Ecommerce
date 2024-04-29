@@ -5,7 +5,7 @@ export const styles = {
 	container: css({
 		textAlign: 'center',
 		height: '120vh',
-		backgroundColor: `${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.mainBlack,
 		marginBottom: '10rem',
 	}),
 
@@ -18,7 +18,7 @@ export const styles = {
 		width: '600px',
 		position: 'absolute',
 		zIndex: '999',
-		color: `${theme.colors.mainWhite}`,
+		color: theme.colors.mainWhite,
 		top: '30%',
 		left: '10%',
 	}),
@@ -40,7 +40,7 @@ export const styles = {
 	carouselCarouselSpan: css({
 		width: '45px',
 		height: '12px',
-		backgroundColor: `${theme.colors.mainWhite}`,
+		backgroundColor: theme.colors.mainWhite,
 		marginLeft: '1rem',
 		borderRadius: '10px',
 		cursor: 'pointer',

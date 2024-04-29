@@ -26,14 +26,14 @@ export const styles = {
 	}),
 
 	itemPriceNew: css({
-		color: ' #ce1446',
+		color: theme.colors.mainRed,
 		fontSize: '2rem',
 		fontWeight: '600',
 	}),
 
 	itemPriceOld: css({
-		color: `${theme.colors.mainGrey}`,
-		fontSize: '1.9rem',
+		color: theme.colors.mainGrey,
+		fontSize: '2rem',
 		fontWeight: '500',
 		textDecoration: 'line-through',
 	}),

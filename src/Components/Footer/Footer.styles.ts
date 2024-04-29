@@ -7,7 +7,7 @@ export const styles = {
 		width: '100%',
 		height: 'auto',
 		padding: '3rem 8rem',
-		background: `${theme.colors.mainWhite}`,
+		background: theme.colors.mainWhite,
 	}),
 
 	footerContainer: css({
@@ -47,14 +47,14 @@ export const styles = {
 
 	footerSectionH2: css({
 		fontSize: '2rem',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		fontWeight: '600',
 		marginBottom: '0.5rem',
 	}),
 
 	footerQualityText: css({
 		fontSize: '1.6rem',
-		color: `${theme.colors.mainRed}`,
+		color: theme.colors.mainRed,
 		fontStyle: 'italic',
 		textShadow: '0px 0px 2px #ce1446',
 	}),
@@ -71,12 +71,12 @@ export const styles = {
 		marginBottom: '1rem',
 		transition: '0.3s',
 		maxWidth: '200px',
-		'&:hover': { color: `${theme.colors.mainRed}`, transform: 'scale(1.2)' },
+		'&:hover': { color: theme.colors.mainRed, transform: 'scale(1.2)' },
 	}),
 
 	footerQuicklinksUlA: css({
 		textDecoration: 'none',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 	}),
 
 	footerContactInfoLi: css({
@@ -86,12 +86,12 @@ export const styles = {
 	}),
 
 	footerContactInfoLiSpan: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		fontSize: '1.6rem',
 	}),
 
 	footerContactInfoLiA: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		textDecoration: 'none',
 		fontSize: '1.6rem',
 	}),
@@ -99,36 +99,10 @@ export const styles = {
 	copyrightText: css({
 		width: '100%',
 		fontSize: '1.6rem',
-		background: `${theme.colors.mainWhite}`,
+		background: theme.colors.mainWhite,
 		padding: '2rem 10rem 3rem',
 		textAlign: 'center',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		borderBottom: '1px solid rgba(0, 0, 0, 0.15)',
 	}),
-
-	// @media (max-width: 991px) {
-	//     footer {
-	//         padding: '4rem',
-	//     }
-
-	//     footerContainer {
-	//         width: '100%',
-	//         display: 'grid',
-	//         gridTemplateColumns: 'repeat(2, 1fr)',
-	//         gridGap: '2rem',
-	//     }
-
-	//     copyrightText {
-	//         padding: '2rem 4rem 3rem',
-	//     }
-	// }
-
-	// @media (max-width: 768px) {
-	//     footerContainer {
-	//         width: '100%',
-	//         display: 'grid',
-	//         gridTemplateColumns: 'repeat(1, 1fr)',
-	//         gridGap: '2rem',
-	//     }
-	// }
 }

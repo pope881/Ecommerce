@@ -7,6 +7,10 @@
 	font-family: 'Poppins', sans-serif;
 }
 
+html {
+	overflow-x: hidden;
+}
+
 .main-colors {
 	/* main black */
 	background-color: #0c0b0b;
@@ -46,7 +50,7 @@
 	/* ok ALL ABOVE  */
 	/* ok ALL ABOVE  */
 
-	
+	color: #626262;
 
 	/* font size main  */
 	font-size: 1.6rem;

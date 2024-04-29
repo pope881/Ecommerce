@@ -8,7 +8,7 @@ export const styles = {
 		alignItems: 'center',
 		padding: '1%',
 		borderBottom: `1px solid ${theme.colors.mainBlack}`,
-		backgroundColor: `${theme.colors.mainWhite}`,
+		backgroundColor: theme.colors.mainWhite,
 		minHeight: '15vh',
 	}),
 
@@ -21,6 +21,12 @@ export const styles = {
 	navbarLogoImg: css({
 		width: '90px',
 		height: '90px',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '60px',
+			height: '60px',
+			marginRight: 'auto',
+		},
 	}),
 
 	navbarLogoA: css({
@@ -32,7 +38,6 @@ export const styles = {
 		alignItems: 'center',
 		listStyle: 'none',
 		gap: '5rem',
-		color: '#626262',
 		fontWeight: '500',
 	}),
 
@@ -47,17 +52,17 @@ export const styles = {
 
 	navbarMenuA: css({
 		textDecoration: 'none',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		fontWeight: '500',
 		transition: '0.2s',
-		'&:hover': { color: `${theme.colors.mainRed}` },
-		'&:active': { color: `${theme.colors.mainRed}` },
+		'&:hover': { color: theme.colors.mainRed },
+		'&:active': { color: theme.colors.mainRed },
 	}),
 
 	navbarMenuAActive: css({
-		borderBottom: '3px solid #ce1446',
+		borderBottom: `3px solid ${theme.colors.mainRed}`,
 		textDecoration: 'none',
-		color: `${theme.colors.mainRed}`,
+		color: theme.colors.mainRed,
 		fontWeight: '500',
 	}),
 
@@ -65,6 +70,9 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		gap: '4.5rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gap: '2rem',
+		},
 	}),
 
 	navbarLoginCartA: css({
@@ -72,15 +80,36 @@ export const styles = {
 	}),
 
 	navbarBtn: css({
-		fontSize: '1.6rem',
 		cursor: 'pointer',
-		padding: '1rem 4rem',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		gap: '1rem',
+		padding: '0 4rem',
+		height: '5rem',
 		borderRadius: '25px',
-		backgroundColor: `${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.mainBlack,
 		border: `1px solid ${theme.colors.mainBlack}`,
-		color: `${theme.colors.mainWhite}`,
+		color: theme.colors.mainWhite,
 		transition: '0.3s',
-		'&:hover, &:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
+		'> img': {
+			filter: 'brightness(0%) invert(1)',
+		},
+		'&:hover, &:active': {
+			backgroundColor: theme.colors.mainWhite,
+			color: theme.colors.mainBlack,
+			img: {
+				filter: 'brightness(100%)',
+			},
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			background: 'transparent',
+			borderColor: 'transparent',
+			padding: '0 2rem',
+			'> img': {
+				filter: 'brightness(0%)',
+			},
+		},
 	}),
 
 	navbarDropdown: css({
@@ -97,62 +126,80 @@ export const styles = {
 	}),
 
 	navbarLinks: css({
-		display: 'flex',
 		alignItems: 'center',
 		gap: '5rem',
+		display: 'none',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'flex',
+			ul: {
+				flexDirection: 'column',
+				alignItems: 'flex-start',
+			},
+		},
 	}),
 
-	// @media (max-width: 768px) {
-	//     navbarDropdown {
-	//         display: 'block',
-	//         width: '65px',
-	//         transition: '0.4s',
-	//     }
+	navbarLinksDesktop: css({
+		display: 'flex',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'none',
+		},
+	}),
 
-	//     navbarMenu {
-	//         display: 'none',
-	//         height: '100px',
-	//         width: '100%',
-	//         position: 'absolute',
-	//         backgroundColor: `${theme.colors.mainWhite}`,
-	//         /* background-color: blue, */
-	//         justifyContent: 'center',
-	//         top: '40%',
-	//         fontSize: '3rem',
-	//     }
+	navbarAuthBtn: css({
+		fontSize: '1.6rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'none',
+		},
+	}),
 
-	//     navbarMenuLi {
-	//         fontSize: '4rem',
-	//     }
+	navbarAuthIcon: css({
+		height: '2rem',
+		filter: 'brightness(100%)',
+	}),
+	brugerWrapper: css({
+		height: '5rem',
+		display: 'flex',
+		justifyContent: 'center',
+		alignItems: 'center',
+		marginRight: '2rem',
+	}),
 
-	//     navbarMenuVisible {
-	//         display: 'flex',
-	//         flexDirection: 'column',
-	//     }
+	burgerBars: css({
+		height: '3rem',
+		width: '3rem',
+		border: 'none',
+		background: 'transparent',
+		display: 'none',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'block',
+		},
 
-	//     navbarDropdownOpen {
-	//         transform: 'rotate(90deg)',
-	//     }
-	// }
-
-	// @media (max-width: 568px) {
-	//     navbar {
-	//         padding: '0.5%',
-	//         justifyContent: 'space-around',
-	//         backgroundImage: 'radial-gradient(circle, rgba(252, 89, 168, 1) 20%, rgba(86, 41, 42, 0) 100%)',
-	//     }
-
-	//     navbarLogoImg {
-	//         transform: 'scale(0.6)',
-	//     }
-
-	//     navbarBtn {
-	//         display: 'none',
-	//     }
-
-	//     navbarBtnMobile {
-	//         display: 'block',
-	//         width: '40px',
-	//     }
-	// }
+		img: {
+			height: '3rem',
+		},
+	}),
+	menuWrapper: css({
+		display: 'flex',
+		padding: '2rem',
+		flexDirection: 'column',
+		position: 'fixed',
+		top: 0,
+		left: 0,
+		width: '100vw',
+		height: '100vh',
+		background: theme.colors.mainWhite,
+		zIndex: 1000,
+	}),
+	menuCloseBtn: css({
+		position: 'absolute',
+		top: '3rem',
+		right: '3rem',
+		fontSize: '2rem',
+		background: 'transparent',
+		border: 'none',
+	}),
+	mobileDivider: css({
+		display: 'flex',
+		flexGrow: 1,
+	}),
 }

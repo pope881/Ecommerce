@@ -6,7 +6,7 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		gap: '1rem',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.mainBlack,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		margin: '6rem 17rem',
