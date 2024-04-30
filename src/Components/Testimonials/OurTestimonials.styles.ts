@@ -5,7 +5,7 @@ export const styles = {
 	testimonials: css({
 		padding: '6% 10% 10%',
 		width: '100%',
-		backgroundColor: `${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.black.main,
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -20,7 +20,7 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextH4: css({
-		color: `${theme.colors.mainRed}`,
+		color: theme.colors.red.main,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
@@ -28,7 +28,7 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextH1: css({
-		color: `${theme.colors.mainWhite}`,
+		color: theme.colors.white.main,
 		fontSize: '3.6rem',
 		textTransform: 'capitalize',
 		fontWeight: '700',
@@ -40,13 +40,13 @@ export const styles = {
 		width: '30%',
 		border: 'none',
 		height: '2px',
-		backgroundColor: `${theme.colors.mainRed}`,
+		backgroundColor: theme.colors.red.main,
 		marginBottom: '5rem',
 	}),
 
 	testimonialsHeaderTextP: css({
 		minWidth: '600px',
-		color: `${theme.colors.mainWhite}`,
+		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		fontWeight: '400',
 		lineHeight: '1.7',
@@ -65,11 +65,11 @@ export const styles = {
 		alignItems: 'center',
 		justifyContent: 'center',
 		flexDirection: 'column',
-		backgroundColor: `${theme.colors.mainWhite}`,
+		backgroundColor: theme.colors.white.main,
 		backgroundImage: 'linear-gradient(to top, rgba(182, 173, 173, 0), rgb(79, 75, 75))',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		borderRadius: '50px',
-		border: `3px solid ${theme.colors.mainBlack}`,
+		border: `3px solid ${theme.colors.black.main}`,
 		height: '590px',
 	}),
 
@@ -100,7 +100,7 @@ export const styles = {
 
 	testimonialsName: css({
 		fontSize: '2rem',
-		color: `${theme.colors.mainRed}`,
+		color: theme.colors.red.main,
 		marginBottom: '1rem',
 	}),
 }

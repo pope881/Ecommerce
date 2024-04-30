@@ -19,11 +19,11 @@ export const styles = {
 
 	formControlInput: css({
 		fontSize: '1.6rem',
-		border: `1px solid ${theme.colors.strongGrey}`,
+		border: `1px solid ${theme.colors.grey.strong}`,
 		borderRadius: '4px',
 		width: '50rem',
 		maxWidth: '100% ',
-		background: theme.colors.strongGrey,
+		background: theme.colors.grey.strong,
 	}),
 
 	formActions: css({
@@ -34,30 +34,30 @@ export const styles = {
 
 	formActionsButton: css({
 		fontSize: '1.6rem',
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		cursor: 'pointer',
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.3s',
-		'&:hover, &:active': { backgroundColor: theme.colors.lightWhite },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.light },
 	}),
 
 	formSubmit: css({
-		backgroundColor: theme.colors.mainRed,
-		border: '1px solid #ce1446',
-		color: theme.colors.mainWhite,
+		backgroundColor: theme.colors.red.main,
+		border: `1px solid ${theme.colors.red.main}`,
+		color: theme.colors.white.main,
 		fontWeight: '600',
-		'&:hover, &:active': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 
 	invalidP: css({
-		color: theme.colors.darkRed,
+		color: theme.colors.red.dark,
 		fontSize: '1.2rem',
 	}),
 
 	invalidInput: css({
-		borderColor: theme.colors.darkRed,
+		borderColor: theme.colors.red.dark,
 	}),
 }

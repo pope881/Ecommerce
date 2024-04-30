@@ -24,8 +24,8 @@ export const styles = {
 	navbarBtnCart: css({
 		cursor: 'pointer',
 		border: 'none',
-		backgroundColor: theme.colors.mainBlack,
-		color: theme.colors.mainWhite,
+		backgroundColor: theme.colors.black.main,
+		color: theme.colors.white.main,
 		padding: '0 4rem',
 		height: '5rem',
 		display: 'flex',
@@ -33,12 +33,12 @@ export const styles = {
 		alignItems: 'center',
 		borderRadius: '25px',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.mainRed },
-		'&:active': { backgroundColor: theme.colors.mainRed },
+		'&:hover': { backgroundColor: theme.colors.red.main },
+		'&:active': { backgroundColor: theme.colors.red.main },
 
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			background: 'transparent',
-			color: theme.colors.mainBlack,
+			color: theme.colors.black.main,
 			padding: '0 2rem',
 		},
 	}),
@@ -64,14 +64,14 @@ export const styles = {
 	navbarBadge: (hoverButton: boolean) =>
 		css({
 			fontSize: '1.6rem',
-			backgroundColor: hoverButton ? theme.colors.mainBlack : theme.colors.mainRed,
+			backgroundColor: hoverButton ? theme.colors.black.main : theme.colors.red.main,
 			padding: '0.25rem 1rem',
 			borderRadius: '25px',
 			marginLeft: '1rem',
 			fontWeight: 'bold',
 			transition: '0.4s',
 			[`@media (max-width: ${theme.breakpoints.md})`]: {
-				color: hoverButton ? theme.colors.mainWhite : theme.colors.mainBlack,
+				color: hoverButton ? theme.colors.white.main : theme.colors.black.main,
 			},
 		}),
 

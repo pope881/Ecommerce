@@ -33,7 +33,7 @@ export const styles = {
 	}),
 
 	productdisplayRightH1: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '4rem',
 		fontWeight: '700',
 	}),
@@ -43,7 +43,7 @@ export const styles = {
 		alignItems: 'center',
 		marginTop: '1.3rem',
 		gap: '0.6rem',
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '1.6rem',
 	}),
 
@@ -56,17 +56,17 @@ export const styles = {
 	}),
 
 	productdisplayPriceOld: css({
-		color: `${theme.colors.mainGrey}`,
+		color: theme.colors.grey.main,
 		textDecoration: 'line-through',
 	}),
 
 	productdisplayPriceNew: css({
-		color: `${theme.colors.mainRed}`,
+		color: theme.colors.red.main,
 	}),
 
 	productdisplaySelectsH1: css({
 		marginTop: '0.5rem',
-		color: `${theme.colors.mainGrey}`,
+		color: theme.colors.grey.main,
 		fontSize: '2rem',
 		fontWeight: '600',
 	}),
@@ -76,16 +76,16 @@ export const styles = {
 		padding: '1rem 4rem',
 		fontSize: '1.6rem',
 		fontWeight: '600',
-		color: `${theme.colors.mainWhite}`,
-		backgroundColor: `${theme.colors.mainRed}`,
+		color: theme.colors.white.main,
+		backgroundColor: theme.colors.red.main,
 		marginBottom: '4rem',
-		border: '1px solid #ce1446',
+		border: `1px solid ${theme.colors.red.main}`,
 		outline: 'none',
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
-		'&:hover': { color: `${theme.colors.mainRed}`, background: `${theme.colors.mainWhite}` },
-		'&:active': { color: `${theme.colors.mainRed}`, background: `${theme.colors.mainWhite}` },
+		'&:hover': { color: theme.colors.red.main, background: theme.colors.white.main },
+		'&:active': { color: theme.colors.red.main, background: theme.colors.white.main },
 	}),
 
 	productdisplayRightCategory: css({
@@ -111,8 +111,8 @@ export const styles = {
 		appearance: 'none',
 		padding: '0 3rem 0 1.5rem',
 		width: '100%',
-		color: `${theme.colors.mainBlack}`,
-		backgroundColor: `${theme.colors.mainWhite}`,
+		color: theme.colors.black.main,
+		backgroundColor: theme.colors.white.main,
 		fontSize: '1.5rem',
 		fontWeight: 'bold',
 		borderRadius: '8px',
@@ -131,9 +131,9 @@ export const styles = {
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'center',
-		backgroundColor: `${theme.colors.mainRed}`,
+		backgroundColor: theme.colors.red.main,
 		fontSize: '3rem',
-		color: `${theme.colors.mainWhite}`,
+		color: theme.colors.white.main,
 		borderBottomRightRadius: '8px',
 		borderTopRightRadius: '8px',
 	}),

@@ -11,6 +11,22 @@ html {
 	overflow-x: hidden;
 }
 
+/* 
+UNDER THIS TEXT ALL FEATURES ARE DEMO
+UNDER THIS TEXT ALL FEATURES ARE DEMO
+UNDER THIS TEXT ALL FEATURES ARE DEMO
+UNDER THIS TEXT ALL FEATURES ARE DEMO
+UNDER THIS TEXT ALL FEATURES ARE DEMO
+UNDER THIS TEXT ALL FEATURES ARE DEMO */
+
+.abc {
+	/* font size main  */
+	font-size: 1.6rem;
+
+	/* font size bigger  */
+	font-size: 2.4rem;
+}
+
 .main-colors {
 	/* main black */
 	background-color: #0c0b0b;
@@ -41,20 +57,4 @@ html {
 
 	/* description box background color hover  */
 	background-color: #c3b6b6;
-
-	
-
-	/* ok ALL ABOVE  */
-	/* ok ALL ABOVE  */
-	/* ok ALL ABOVE  */
-	/* ok ALL ABOVE  */
-	/* ok ALL ABOVE  */
-
-	color: #626262;
-
-	/* font size main  */
-	font-size: 1.6rem;
-
-	/* font size bigger  */
-	font-size: 2.4rem;
 }

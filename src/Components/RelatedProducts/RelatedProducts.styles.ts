@@ -11,7 +11,7 @@ export const styles = {
 	}),
 
 	relatedproductsH1: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -20,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		backgroundColor: `${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.black.main,
 	}),
 
 	relatedproductsItem: css({

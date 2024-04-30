@@ -11,16 +11,38 @@ export const styles = {
 	}),
 
 	popularH1: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '5rem',
 		fontWeight: '600',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '4rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '3rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '2.5rem',
+		},
 	}),
 
 	popularHr: css({
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		background: `${theme.colors.mainBlack}`,
+		background: theme.colors.black.main,
+		textAlign: 'center',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '160px',
+			height: '5px',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			width: '120px',
+			height: '4px',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '100px',
+			height: '4px',
+		},
 	}),
 
 	popularItem: css({

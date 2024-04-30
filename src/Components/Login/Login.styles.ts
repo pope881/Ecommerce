@@ -8,7 +8,7 @@ export const styles = {
 		alignItems: 'center',
 		padding: '4% 10%',
 		height: '100vh',
-		backgroundColor: theme.colors.mainBlack,
+		backgroundColor: theme.colors.black.main,
 	}),
 
 	loginText: css({
@@ -19,13 +19,13 @@ export const styles = {
 
 	loginTextH2: css({
 		fontSize: '8rem',
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		marginRight: '2rem',
 	}),
 
 	loginTextP: css({
 		fontSize: '9rem',
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 	}),
 
 	loginForm: css({
@@ -37,7 +37,7 @@ export const styles = {
 		maxWidth: '56rem',
 		margin: 'auto',
 		padding: '5rem',
-		background: theme.colors.mainWhite,
+		background: theme.colors.white.main,
 		borderRadius: '8px',
 		boxShadow: '0 0 16px 1px rgba(0, 0, 0, 0.5)',
 		transition: '0.3s',
@@ -49,8 +49,8 @@ export const styles = {
 			height: '0px',
 			top: '-25px',
 			left: '-25px',
-			borderTop: `0px solid ${theme.colors.mainRed}`,
-			borderLeft: `0px solid ${theme.colors.mainRed}`,
+			borderTop: `0px solid ${theme.colors.red.main}`,
+			borderLeft: `0px solid ${theme.colors.red.main}`,
 		},
 		'&::after': {
 			transition: '0.3s',
@@ -60,20 +60,20 @@ export const styles = {
 			height: '0px',
 			bottom: '-25px',
 			right: '-25px',
-			borderBottom: `0px solid ${theme.colors.mainRed}`,
-			borderRight: `0px solid ${theme.colors.mainRed}`,
+			borderBottom: `0px solid ${theme.colors.red.main}`,
+			borderRight: `0px solid ${theme.colors.red.main}`,
 		},
 		'&:hover::before': {
 			width: '25%',
 			height: '20%',
-			borderTop: `6px solid ${theme.colors.mainRed}`,
-			borderLeft: `6px solid ${theme.colors.mainRed}`,
+			borderTop: `6px solid ${theme.colors.red.main}`,
+			borderLeft: `6px solid ${theme.colors.red.main}`,
 		},
 		'&:hover::after': {
 			width: '25%',
 			height: '20%',
-			borderBottom: `6px solid ${theme.colors.mainRed}`,
-			borderRight: `6px solid ${theme.colors.mainRed}`,
+			borderBottom: `6px solid ${theme.colors.red.main}`,
+			borderRight: `6px solid ${theme.colors.red.main}`,
 		},
 	}),
 
@@ -89,7 +89,7 @@ export const styles = {
 		display: 'block',
 		fontSize: '1.6rem',
 		marginBottom: '0.5rem',
-		color: theme.colors.mainBlack,
+		color: theme.colors.black.main,
 		textTransform: 'uppercase',
 	}),
 
@@ -101,8 +101,8 @@ export const styles = {
 		fontSize: '1.6rem',
 		borderRadius: '4px',
 		border: '1px solid',
-		backgroundColor: theme.colors.strongGrey,
-		color: theme.colors.mainBlack,
+		backgroundColor: theme.colors.grey.strong,
+		color: theme.colors.black.main,
 	}),
 
 	loginControlError: css({
@@ -113,13 +113,13 @@ export const styles = {
 	loginControlErrorP: css({
 		fontSize: '1.1rem',
 		margin: '0',
-		color: theme.colors.darkRed,
+		color: theme.colors.red.dark,
 	}),
 
 	loginControlErrorFormP: css({
 		fontSize: '1.1rem',
 		marginTop: '1rem',
-		color: theme.colors.darkRed,
+		color: theme.colors.red.dark,
 		textAlign: 'center',
 	}),
 
@@ -137,23 +137,23 @@ export const styles = {
 
 	loginButton: css({
 		fontSize: '1.6rem',
-		color: theme.colors.strongRed,
+		color: theme.colors.red.strong,
 		cursor: 'pointer',
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.lightWhite },
-		'&:active': { backgroundColor: theme.colors.lightWhite },
+		'&:hover': { backgroundColor: theme.colors.white.light },
+		'&:active': { backgroundColor: theme.colors.white.light },
 	}),
 
 	loginSubmit: css({
-		border: `1px solid ${theme.colors.mainRed}`,
-		backgroundColor: theme.colors.mainRed,
-		color: theme.colors.mainWhite,
+		border: `1px solid ${theme.colors.red.main}`,
+		backgroundColor: theme.colors.red.main,
+		color: theme.colors.white.main,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
-		'&:active': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 }

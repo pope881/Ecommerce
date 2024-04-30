@@ -7,8 +7,8 @@ export const styles = {
 		justifyContent: 'space-around',
 		alignItems: 'center',
 		padding: '1%',
-		borderBottom: `1px solid ${theme.colors.mainBlack}`,
-		backgroundColor: theme.colors.mainWhite,
+		borderBottom: `1px solid ${theme.colors.black.main}`,
+		backgroundColor: theme.colors.white.main,
 		minHeight: '15vh',
 	}),
 
@@ -52,17 +52,17 @@ export const styles = {
 
 	navbarMenuA: css({
 		textDecoration: 'none',
-		color: theme.colors.mainBlack,
+		color: theme.colors.black.main,
 		fontWeight: '500',
 		transition: '0.2s',
-		'&:hover': { color: theme.colors.mainRed },
-		'&:active': { color: theme.colors.mainRed },
+		'&:hover': { color: theme.colors.red.main },
+		'&:active': { color: theme.colors.red.main },
 	}),
 
 	navbarMenuAActive: css({
-		borderBottom: `3px solid ${theme.colors.mainRed}`,
+		borderBottom: `3px solid ${theme.colors.red.main}`,
 		textDecoration: 'none',
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		fontWeight: '500',
 	}),
 
@@ -88,16 +88,16 @@ export const styles = {
 		padding: '0 4rem',
 		height: '5rem',
 		borderRadius: '25px',
-		backgroundColor: theme.colors.mainBlack,
-		border: `1px solid ${theme.colors.mainBlack}`,
-		color: theme.colors.mainWhite,
+		backgroundColor: theme.colors.black.main,
+		border: `1px solid ${theme.colors.black.main}`,
+		color: theme.colors.white.main,
 		transition: '0.3s',
 		'> img': {
 			filter: 'brightness(0%) invert(1)',
 		},
 		'&:hover, &:active': {
-			backgroundColor: theme.colors.mainWhite,
-			color: theme.colors.mainBlack,
+			backgroundColor: theme.colors.white.main,
+			color: theme.colors.black.main,
 			img: {
 				filter: 'brightness(100%)',
 			},
@@ -187,7 +187,7 @@ export const styles = {
 		left: 0,
 		width: '100vw',
 		height: '100vh',
-		background: theme.colors.mainWhite,
+		background: theme.colors.white.main,
 		zIndex: 1000,
 	}),
 	menuCloseBtn: css({

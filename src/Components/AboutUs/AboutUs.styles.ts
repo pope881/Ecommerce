@@ -6,7 +6,7 @@ export const styles = {
 		padding: '4% 10%',
 		width: '100%',
 		height: '100vh',
-		backgroundColor: theme.colors.mainBlack,
+		backgroundColor: theme.colors.black.main,
 		display: 'grid',
 		gridTemplateColumns: 'repeat(2, 1fr)',
 		gap: '4rem',
@@ -23,7 +23,7 @@ export const styles = {
 	}),
 
 	aboutTextH4: css({
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
@@ -31,7 +31,7 @@ export const styles = {
 	}),
 
 	aboutTextH1: css({
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		fontSize: '3.6rem',
 		textTransform: 'capitalize',
 		fontWeight: '700',
@@ -43,13 +43,13 @@ export const styles = {
 		width: '30%',
 		border: 'none',
 		height: '2px',
-		backgroundColor: theme.colors.mainRed,
+		backgroundColor: theme.colors.red.main,
 		marginBottom: '5rem',
 	}),
 
 	aboutTextP: css({
 		minWidth: '600px',
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		fontWeight: '400',
 		lineHeight: '1.7',
@@ -65,13 +65,13 @@ export const styles = {
 	}),
 
 	aboutDescriptionH3: css({
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		fontSize: '6rem',
 		fontWeight: '700',
 	}),
 
 	aboutDescriptionH5: css({
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		fontSize: '1.8rem',
 		fontWeight: '500',
 		lineHeight: '1.8rem',

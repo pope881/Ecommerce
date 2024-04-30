@@ -1,13 +1,6 @@
 import { css } from '@emotion/css'
 import { theme } from '../../theme'
 
-type PropsWideContent = {
-	children: React.ReactNode
-}
-export const WideContent = ({ children }: PropsWideContent) => {
-	return <section className={styles.wideContent}>{children}</section>
-}
-
 const styles = {
 	wideContent: css({
 		margin: '0 auto',
@@ -23,4 +16,11 @@ const styles = {
 			padding: '0 2rem',
 		},
 	}),
+}
+
+type PropsWideContent = {
+	children: React.ReactNode
+}
+export const WideContent = ({ children }: PropsWideContent) => {
+	return <section className={styles.wideContent}>{children}</section>
 }

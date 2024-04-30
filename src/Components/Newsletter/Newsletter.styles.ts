@@ -11,29 +11,47 @@ export const styles = {
 		margin: '0 auto',
 		padding: '5rem 0',
 		marginBottom: '10rem',
-		background: 'linear-gradient(180deg, #ce1446 0%, #e1ffea22 70%)',
+		background: `linear-gradient(180deg, ${theme.colors.red.main} 0%, ${theme.colors.white.main} 90%)`,
 		gap: '3rem',
 	}),
 
 	newsletterH1: css({
-		color: `${theme.colors.mainBlack}`,
-		fontSize: '6rem',
+		color: theme.colors.black.main,
+		fontSize: '5.5rem',
 		fontWeight: '600',
 		textAlign: 'center',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '5rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '4rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '3rem',
+		},
 	}),
 
 	newsletterP: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '2rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '1.8rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '1.6rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '1.4rem',
+		},
 	}),
 
 	newsletterControl: css({
 		display: 'flex',
 		alignItems: 'center',
 		justifyContent: 'space-between',
-		background: `${theme.colors.mainWhite}`,
+		background: theme.colors.white.main,
 		borderRadius: '25px',
-		border: '1px solid #e2e2e2',
+		border: `1px solid ${theme.colors.grey.light}`,
 		width: '100%',
 		maxWidth: '500px',
 	}),
@@ -44,7 +62,6 @@ export const styles = {
 		marginLeft: '3rem',
 		border: 'none',
 		outline: 'none',
-		color: '#616161',
 		fontSize: '1.6rem',
 		paddingRight: '1rem',
 		background: 'none',
@@ -53,17 +70,17 @@ export const styles = {
 	newsletterControlButton: css({
 		padding: '1rem 4rem',
 		borderRadius: '25px',
-		backgroundColor: `${theme.colors.mainBlack}`,
-		color: `${theme.colors.mainWhite}`,
+		backgroundColor: theme.colors.black.main,
+		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		cursor: 'pointer',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
-		'&:actice': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainBlack}` },
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
+		'&:actice': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
 	}),
 
 	newsletterInvalidP: css({
-		color: `${theme.colors.darkRed}`,
+		color: theme.colors.red.dark,
 		fontSize: '1.2rem',
 		textAlign: 'center',
 		marginTop: '1rem',

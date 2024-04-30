@@ -5,7 +5,7 @@ export const styles = {
 	offers: css({
 		display: 'flex',
 		marginBottom: '10rem',
-		background: 'linear-gradient(180deg, #ce1446 0%, #e1ffea22 90%)',
+		background: `linear-gradient(180deg, ${theme.colors.red.main} 0%, ${theme.colors.white.main} 90%)`,
 		borderRadius: '25px',
 	}),
 
@@ -18,30 +18,30 @@ export const styles = {
 	}),
 
 	offersLeftH1: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '8rem',
 		fontWeight: '600',
 		textAlign: 'center',
 	}),
 
 	offersLeftP: css({
-		color: `${theme.colors.mainBlack}`,
+		color: theme.colors.black.main,
 		fontSize: '2.2rem',
 		fontWeight: '600',
 	}),
 
 	offersLeftButton: css({
 		fontSize: '1.6rem',
-		border: '1px solid #ce1446',
-		backgroundColor: `${theme.colors.mainRed}`,
-		color: `${theme.colors.mainWhite}`,
+		border: `1px solid ${theme.colors.red.main}`,
+		backgroundColor: theme.colors.red.main,
+		color: theme.colors.white.main,
 		cursor: 'pointer',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.3s',
 		marginTop: '2rem',
-		'&:hover': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
-		'&:active': { backgroundColor: `${theme.colors.mainWhite}`, color: `${theme.colors.mainRed}` },
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 
 	offersRight: css({

@@ -13,8 +13,8 @@ export function ErrorPage() {
 					justifyContent: 'center',
 					alignItems: 'center',
 				}}>
-				<h1 style={{ color: `${theme.colors.mainGrey}`, fontSize: '4rem' }}>An error occured!</h1>
-				<p style={{ color: `${theme.colors.mainGrey}`, fontSize: '3rem' }}>Could not find this page!</p>
+				<h1 style={{ color: `${theme.colors.grey.main}`, fontSize: '4rem' }}>An error occured!</h1>
+				<p style={{ color: `${theme.colors.grey.main}`, fontSize: '3rem' }}>Could not find this page!</p>
 			</main>
 			<Footer />
 		</>

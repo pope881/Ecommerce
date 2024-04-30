@@ -9,7 +9,7 @@ export const styles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		flexDirection: 'column',
-		backgroundColor: theme.colors.mainBlack,
+		backgroundColor: theme.colors.black.main,
 	}),
 
 	contactHeading: css({
@@ -19,13 +19,13 @@ export const styles = {
 	contactHeadingH1: css({
 		fontSize: '3.6rem',
 		fontWeight: '700',
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		textAlign: 'center',
 		marginBottom: '3rem',
 	}),
 
 	contactHeadingH4: css({
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
@@ -35,7 +35,7 @@ export const styles = {
 	contactHeadingP: css({
 		fontSize: '1.6rem',
 		fontWeight: '300',
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		marginBottom: '3rem',
 	}),
 
@@ -43,7 +43,7 @@ export const styles = {
 		width: '100%',
 		border: 'none',
 		height: '2px',
-		backgroundColor: theme.colors.mainRed,
+		backgroundColor: theme.colors.red.main,
 		marginBottom: '5rem',
 	}),
 
@@ -81,7 +81,7 @@ export const styles = {
 	contactIcon: css({
 		minWidth: '60px',
 		height: '60px',
-		background: theme.colors.mainWhite,
+		background: theme.colors.white.main,
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -93,26 +93,26 @@ export const styles = {
 		display: 'flex',
 		marginLeft: '2rem',
 		fontSize: '1.6rem',
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 		flexDirection: 'column',
 		fontWeight: '300',
 	}),
 
 	contactInfoTextH3: css({
 		fontSize: '2rem',
-		color: theme.colors.mainRed,
+		color: theme.colors.red.main,
 	}),
 
 	contactInfoTextA: css({
 		textDecoration: 'none',
 		fontSize: '1.6rem',
-		color: theme.colors.mainWhite,
+		color: theme.colors.white.main,
 	}),
 
 	contactForm: css({
 		width: '40%',
 		padding: '4rem',
-		background: theme.colors.mainWhite,
+		background: theme.colors.white.main,
 		borderRadius: '16px',
 	}),
 
@@ -133,9 +133,9 @@ export const styles = {
 		padding: '0.5rem',
 		fontSize: '1.6rem',
 		borderRadius: '4px',
-		backgroundColor: theme.colors.strongGrey,
-		color: theme.colors.mainBlack,
-		border: `1px solid ${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.grey.strong,
+		color: theme.colors.black.main,
+		border: `1px solid ${theme.colors.black.main}`,
 		outline: 'none',
 		resize: 'none',
 	}),
@@ -146,9 +146,9 @@ export const styles = {
 		margin: '1rem 0',
 		padding: '0.5rem',
 		borderRadius: '4px',
-		backgroundColor: theme.colors.strongGrey,
-		color: theme.colors.mainBlack,
-		border: `1px solid ${theme.colors.mainBlack}`,
+		backgroundColor: theme.colors.grey.strong,
+		color: theme.colors.black.main,
+		border: `1px solid ${theme.colors.black.main}`,
 		outline: 'none',
 		resize: 'none',
 	}),
@@ -161,7 +161,7 @@ export const styles = {
 			margin: '1rem 0',
 			pointerEvents: 'none',
 			transition: '0.5s',
-			color: isClicked ? theme.colors.darkRed : theme.colors.mainGrey,
+			color: isClicked ? theme.colors.red.dark : theme.colors.grey.main,
 			fontSize: isClicked ? '1.3rem' : '1.6rem',
 			transform: isClicked ? 'translateY(-24px)' : 'translateY(0px)',
 		}),
@@ -174,23 +174,23 @@ export const styles = {
 
 	contactFormActionsButton: css({
 		fontSize: '1.6rem',
-		color: theme.colors.strongRed,
+		color: theme.colors.red.strong,
 		cursor: 'pointer',
 		backgroundColor: 'transparent',
 		border: 'none',
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.lightWhite },
-		'&:active': { backgroundColor: theme.colors.lightWhite },
+		'&:hover': { backgroundColor: theme.colors.white.light },
+		'&:active': { backgroundColor: theme.colors.white.light },
 	}),
 
 	contactFormActionsSubmit: css({
-		border: `1px solid ${theme.colors.mainRed}`,
-		backgroundColor: theme.colors.mainRed,
-		color: theme.colors.mainWhite,
+		border: `1px solid ${theme.colors.red.main}`,
+		backgroundColor: theme.colors.red.main,
+		color: theme.colors.white.main,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
-		'&:active': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 }

@@ -13,7 +13,7 @@ export const styles = {
 		top: '50%',
 		transform: 'translate(0, -50%)',
 		fontSize: '7rem',
-		color: `${theme.colors.mainGrey}`,
+		color: theme.colors.grey.main,
 		zIndex: '1',
 		cursor: 'pointer',
 	}),
@@ -37,7 +37,7 @@ export const styles = {
 	imgSliderDots: css({
 		display: 'flex',
 		justifyContent: 'center',
-		color: `${theme.colors.mainGrey}`,
+		color: theme.colors.grey.main,
 	}),
 
 	imgSliderDot: css({

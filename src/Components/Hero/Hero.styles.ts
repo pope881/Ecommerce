@@ -11,7 +11,7 @@ export const styles = {
 	}),
 
 	heroTextTopH1: css({
-		color: theme.colors.mainBlack,
+		color: theme.colors.black.main,
 		fontSize: '5rem',
 		fontWeight: '600',
 	}),
@@ -20,7 +20,7 @@ export const styles = {
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
-		backgroundColor: theme.colors.mainBlack,
+		backgroundColor: theme.colors.black.main,
 	}),
 
 	hero: css({
@@ -44,7 +44,7 @@ export const styles = {
 	}),
 
 	heroTextP: css({
-		color: theme.colors.mainBlack,
+		color: theme.colors.black.main,
 		fontSize: '10rem',
 		fontWeight: '700',
 	}),
@@ -84,10 +84,10 @@ export const styles = {
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.3s',
-		border: `1px solid ${theme.colors.mainRed}`,
-		backgroundColor: theme.colors.mainRed,
-		color: theme.colors.mainWhite,
-		'&:hover': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
-		'&:active': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainRed },
+		border: `1px solid ${theme.colors.red.main}`,
+		backgroundColor: theme.colors.red.main,
+		color: theme.colors.white.main,
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 }

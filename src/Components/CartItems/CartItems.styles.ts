@@ -8,7 +8,7 @@ export const styles = {
 
 	cartitemsHr: css({
 		height: '2px',
-		background: theme.colors.lightGrey,
+		background: theme.colors.grey.light,
 		border: '0',
 	}),
 
@@ -18,7 +18,7 @@ export const styles = {
 		alignItems: 'center',
 		gap: '2.5rem',
 		padding: '2rem 0',
-		color: theme.colors.mainGrey,
+		color: theme.colors.grey.main,
 		fontWeight: '600',
 	}),
 
@@ -92,16 +92,16 @@ export const styles = {
 		padding: '1.5rem 3rem',
 		outline: 'none',
 		border: 'none',
-		backgroundColor: theme.colors.lightRed,
-		color: theme.colors.mainWhite,
+		backgroundColor: theme.colors.red.light,
+		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
 		'&:hover, &:active': {
-			color: theme.colors.mainRed,
-			background: theme.colors.mainWhite,
-			border: `1px solid ${theme.colors.mainRed}`,
+			color: theme.colors.red.main,
+			background: theme.colors.white.main,
+			border: `1px solid ${theme.colors.red.main}`,
 		},
 	}),
 
@@ -111,7 +111,7 @@ export const styles = {
 	}),
 
 	cartitemsPromocodeP: css({
-		color: theme.colors.mainGrey,
+		color: theme.colors.grey.main,
 		fontSize: '1.1rem',
 	}),
 
@@ -121,7 +121,7 @@ export const styles = {
 		marginTop: '1.6rem',
 		paddingLeft: '2rem',
 		height: '58px',
-		background: theme.colors.lightGrey,
+		background: theme.colors.grey.light,
 	}),
 
 	cartitemsPromoboxInput: css({
@@ -135,21 +135,21 @@ export const styles = {
 	}),
 
 	cartitemsPromoboxInvalidP: css({
-		color: theme.colors.darkRed,
+		color: theme.colors.red.dark,
 	}),
 
 	cartitemsPromoboxInvalidInput: css({
-		borderColor: theme.colors.darkRed,
+		borderColor: theme.colors.red.dark,
 	}),
 
 	cartitemsPromoboxButton: css({
 		padding: '1.4rem 2.8rem',
 		fontSize: '1.6rem',
-		backgroundColor: theme.colors.mainBlack,
-		color: theme.colors.mainWhite,
+		backgroundColor: theme.colors.black.main,
+		color: theme.colors.white.main,
 		cursor: 'pointer',
 		transition: '0.3s',
-		'&:hover': { backgroundColor: theme.colors.mainWhite, color: theme.colors.mainBlack },
+		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
 	}),
 
 	cartitemsLogInfo: css({
