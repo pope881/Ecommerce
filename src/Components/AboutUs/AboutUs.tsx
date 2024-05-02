@@ -1,3 +1,4 @@
+import { WideContent } from '../Layouts/WideContent'
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
 
@@ -27,15 +28,15 @@ export const AboutUs = () => {
 				</p>
 
 				<div className={styles.aboutDescriptions}>
-					<div className={styles.aboutDescription}>
+					<div>
 						<h3 className={styles.aboutDescriptionH3}>15y+</h3>
 						<h5 className={styles.aboutDescriptionH5}>Online Shopping</h5>
 					</div>
-					<div className={styles.aboutDescription}>
+					<div>
 						<h3 className={styles.aboutDescriptionH3}>20k+</h3>
 						<h5 className={styles.aboutDescriptionH5}>Happy Clients</h5>
 					</div>
-					<div className={styles.aboutDescription}>
+					<div>
 						<h3 className={styles.aboutDescriptionH3}>80+</h3>
 						<h5 className={styles.aboutDescriptionH5}>Countries</h5>
 					</div>

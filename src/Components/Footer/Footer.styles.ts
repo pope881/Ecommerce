@@ -8,6 +8,9 @@ export const styles = {
 		height: 'auto',
 		padding: '3rem 8rem',
 		background: theme.colors.white.main,
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			padding: '3rem 2rem',		
+		}
 	}),
 
 	footerContainer: css({
@@ -15,6 +18,10 @@ export const styles = {
 		display: 'grid',
 		gridTemplateColumns: '2fr 1fr 1fr 1fr',
 		gridGap: '3rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr',
+			padding: '3rem 1rem',
+		}
 	}),
 
 	footerAboutUs: css({

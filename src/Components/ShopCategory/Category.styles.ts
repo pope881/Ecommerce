@@ -15,24 +15,38 @@ export const styles = {
 
 	shopCategoryIndexSort: css({
 		display: 'flex',
-		margin: '3rem 4rem',
+		margin: '3rem 0',
 		justifyContent: 'flex-start',
 		alignItems: 'center',
+		gap: '5rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			flexDirection: 'column',
+			alignItems: 'flex-start',
+			gap: '2rem',
+			//width: '100%'
+		}
 	}),
 
 	shopCategoryIndexSortPSpan: css({
 		fontWeight: '600',
-	}),
-
-	shopCategoryIndexSortSpan: css({
-		margin: '5rem',
 		fontSize: '1.4rem',
+		whiteSpace: 'nowrap',
 	}),
 
 	shopCategoryActions: css({
 		display: 'flex',
 		justifyContent: 'center',
 		gap: '1.5rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			flexDirection: 'column',
+			width: '100%',
+			maxWidth: '30rem',
+			alignItems: 'center',
+			alignSelf: 'center',
+			'button': {
+				width: '100%'
+			}
+		}
 	}),
 
 	shopCategoryBtn: css({
@@ -59,9 +73,17 @@ export const styles = {
 	}),
 
 	shopCategoryProducts: css({
-		margin: '4rem',
+		margin: '4rem 0',
 		display: 'grid',
 		gridTemplateColumns: '1fr 1fr 1fr 1fr',
-		rowGap: '5rem',
+		gap: '2rem',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr 1fr',
+		},
+
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			gridTemplateColumns: '1fr',
+		},
 	}),
 }

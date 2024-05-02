@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import { styles } from './Category.styles'
 import { Item } from '../Item/Item'
 import { type AllProduct } from '../../../public/allProduct'
+import { WideContent } from '../Layouts/WideContent'
 
 // export type GroupProduct = {
 // 	id: number
@@ -51,10 +52,6 @@ export const Category = (props: Props): JSX.Element => {
 		setItems(updatedItems)
 	}
 
-	const numberOfProducts = (
-		<span className={styles.shopCategoryIndexSortSpan}>Showing {items.length} out of 12 products</span>
-	)
-
 	const capitalizeFirstLetter = (text: string) => {
 		return text.charAt(0).toUpperCase() + text.slice(1)
 	}
@@ -62,29 +59,33 @@ export const Category = (props: Props): JSX.Element => {
 	const destinationPerson = capitalizeFirstLetter(props.category)
 
 	return (
-		<div className={styles.shopCategory}>
-			<img className={styles.shopCategoryBanner} src={props.banner} alt="banner" />
-			<div className={styles.shopCategoryIndexSort}>
-				<p className={styles.shopCategoryIndexSortPSpan}>{numberOfProducts}</p>
+		<WideContent>
+			<div className={styles.shopCategory}>
+				<img className={styles.shopCategoryBanner} src={props.banner} alt="banner" />
+				<div className={styles.shopCategoryIndexSort}>
+					<div className={styles.shopCategoryActions}>
+						<button className={styles.shopCategoryBtn} onClick={() => setItems(product)}>
+							All Products
+						</button>
+						<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Blouse`)}>
+							{`${destinationPerson} Blouse`}
+						</button>
+						<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Shirt`)}>
+							{`${destinationPerson} Shirt`}
+						</button>
+						<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Trousers`)}>
+							{`${destinationPerson} Trousers`}
+						</button>
+					</div>
+					<p className={styles.shopCategoryIndexSortPSpan}>
+						{`Showing ${items.length} out of 12 products`}
+					</p>
+				</div>
+				<div className={styles.shopCategoryProducts}>{items}</div>
 				<div className={styles.shopCategoryActions}>
-					<button className={styles.shopCategoryBtn} onClick={() => setItems(product)}>
-						All Products
-					</button>
-					<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Blouse`)}>
-						{`${destinationPerson} Blouse`}
-					</button>
-					<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Shirt`)}>
-						{`${destinationPerson} Shirt`}
-					</button>
-					<button className={styles.shopCategoryBtn} onClick={() => filterItems(`${destinationPerson} Trousers`)}>
-						{`${destinationPerson} Trousers`}
-					</button>
+					<button className={`${styles.shopCategoryBtn} ${styles.shopCategoryBtnDisabled}`}>Explore more</button>
 				</div>
 			</div>
-			<div className={styles.shopCategoryProducts}>{items}</div>
-			<div className={styles.shopCategoryActions}>
-				<button className={`${styles.shopCategoryBtn} ${styles.shopCategoryBtnDisabled}`}>Explore more</button>
-			</div>
-		</div>
+		</WideContent>
 	)
 }

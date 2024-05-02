@@ -11,7 +11,7 @@ export const BackgroundSlider = () => {
 			} else {
 				setCurrentState(prevState => prevState + 1)
 			}
-		}, 4000)
+		}, 6000)
 		return () => clearTimeout(timer)
 	}, [currentState])
 
@@ -38,7 +38,7 @@ export const BackgroundSlider = () => {
 						<p className={styles.containerDescriptionP}>{imageSlide[currentState].body}</p>
 					</div>
 					<div className={styles.carouselCarousel}>
-						{imageSlide.map((imageSlide, currentState) => (
+						{imageSlide.map((_, currentState) => (
 							<span
 								className={styles.carouselCarouselSpan}
 								key={currentState}

@@ -4,18 +4,31 @@ import { theme } from '../../theme'
 export const styles = {
 	about: css({
 		padding: '4% 10%',
-		width: '100%',
+		width: '100vw',
 		height: '100vh',
 		backgroundColor: theme.colors.black.main,
 		display: 'grid',
 		gridTemplateColumns: 'repeat(2, 1fr)',
 		gap: '4rem',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			gridTemplateColumns: '500px 1fr'
+		},
+		[`@media (max-width: ${theme.breakpoints.lg})`]: {
+			gridTemplateColumns: '350px 1fr'
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr',
+			height: 'auto',
+		}
 	}),
 
 	aboutMainImgImg: css({
-		maxWidth: '100%',
-		width: '560px',
+		width: '100%',
+		maxWidth: '560px',
 		height: 'auto',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			maxWidth: '200px',
+		}
 	}),
 
 	aboutText: css({
@@ -48,20 +61,26 @@ export const styles = {
 	}),
 
 	aboutTextP: css({
-		minWidth: '600px',
+		minWidth: 600,
 		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		fontWeight: '400',
 		lineHeight: '1.7',
 		marginBottom: '6rem',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			minWidth: 400,
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			minWidth: 'initial'
+		}
 	}),
 
 	aboutDescriptions: css({
 		display: 'flex',
-	}),
-
-	aboutDescription: css({
-		marginRight: '6rem',
+		gap: '6rem',
+		[`@media (max-width: ${theme.breakpoints.lg})`]: {
+			flexWrap: 'wrap'
+		}
 	}),
 
 	aboutDescriptionH3: css({

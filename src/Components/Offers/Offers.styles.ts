@@ -7,6 +7,9 @@ export const styles = {
 		marginBottom: '10rem',
 		background: `linear-gradient(180deg, ${theme.colors.red.main} 0%, ${theme.colors.white.main} 90%)`,
 		borderRadius: '25px',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			paddingBottom: '2rem'
+		}
 	}),
 
 	offersLeft: css({
@@ -28,6 +31,9 @@ export const styles = {
 		color: theme.colors.black.main,
 		fontSize: '2.2rem',
 		fontWeight: '600',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			textAlign: 'center'
+		}
 	}),
 
 	offersLeftButton: css({
@@ -51,4 +57,10 @@ export const styles = {
 		justifyContent: 'flex-end',
 		paddingTop: '5rem',
 	}),
+
+	womanImg: css({
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'none',
+		}
+	})
 }

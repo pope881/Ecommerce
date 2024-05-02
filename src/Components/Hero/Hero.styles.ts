@@ -47,6 +47,9 @@ export const styles = {
 		color: theme.colors.black.main,
 		fontSize: '10rem',
 		fontWeight: '700',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '4rem',
+		}
 	}),
 
 	heroImgWoman: css({

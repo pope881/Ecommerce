@@ -63,11 +63,18 @@ export const styles = {
 		textAlign: 'center',
 		width: '100%',
 		margin: '0 auto',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr 1fr',
+		},
+
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			gridTemplateColumns: '1fr',
+		},
 	}),
 
 	teamCard: css({
 		position: 'relative',
-		width: '35rem',
 		height: '45rem',
 		borderRadius: '2rem',
 		textAlign: 'center',

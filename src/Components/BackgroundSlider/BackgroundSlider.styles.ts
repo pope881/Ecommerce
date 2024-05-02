@@ -7,6 +7,9 @@ export const styles = {
 		height: '120vh',
 		backgroundColor: theme.colors.black.main,
 		marginBottom: '10rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: '60vh',
+		}
 	}),
 
 	containerBackground: css({
@@ -15,16 +18,23 @@ export const styles = {
 	}),
 
 	containerDescription: css({
-		width: '600px',
 		position: 'absolute',
 		zIndex: '999',
 		color: theme.colors.white.main,
 		top: '30%',
 		left: '10%',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			top: '50%',
+			left: '50%',
+			transform: 'translate(-50%, -50%)',
+		}
 	}),
 
 	containerDescriptionH1: css({
 		fontSize: '18rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '9rem'
+		}
 	}),
 
 	containerDescriptionP: css({

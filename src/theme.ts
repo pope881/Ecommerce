@@ -4,6 +4,7 @@ export const theme = {
 		sm: '768px',
 		md: '1024px',
 		lg: '1280px',
+		xl: '1440px'
 	},
 	colors: {
 		red: { main: '#ce1446', light: '#d85477', dark: '#aa0b20', strong: '#5a1a01' },

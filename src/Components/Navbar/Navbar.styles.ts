@@ -158,10 +158,13 @@ export const styles = {
 	}),
 	brugerWrapper: css({
 		height: '5rem',
-		display: 'flex',
+		display: 'none',
 		justifyContent: 'center',
 		alignItems: 'center',
 		marginRight: '2rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'flex',
+		},
 	}),
 
 	burgerBars: css({
@@ -198,8 +201,12 @@ export const styles = {
 		background: 'transparent',
 		border: 'none',
 	}),
+
 	mobileDivider: css({
-		display: 'flex',
+		display: 'none',
 		flexGrow: 1,
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'flex'
+		}
 	}),
 }

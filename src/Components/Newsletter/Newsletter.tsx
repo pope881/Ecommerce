@@ -33,7 +33,7 @@ export const Newsletter = (): JSX.Element => {
 	return (
 		<WideContent>
 			<div className={styles.newsletter}>
-				<h1 className={styles.newsletterH1}>Get Exlusive Offers On Your Email</h1>
+				<h1 className={styles.newsletterH1}>Get Exclusive Offers On Your Email</h1>
 				<p className={styles.newsletterP}>Subscribe to our newsletter and stay updated</p>
 				<form onSubmit={subscribeHandler} className={styles.newsletterForm}>
 					<div className={styles.newsletterControl}>

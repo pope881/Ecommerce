@@ -24,8 +24,9 @@ export const Hero = () => {
 				</div>
 				<div className={styles.heroText}>
 					<div>
-						<p className={styles.heroTextP}> new Collections</p>
-						<p className={styles.heroTextP}>For Everyone </p>
+						<p className={styles.heroTextP}>
+							new Collections<br />For Everyone
+						</p>
 					</div>
 					<div>
 						<button onClick={handleClickScroll} className={styles.heroBtn}>
