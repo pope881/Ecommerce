@@ -77,9 +77,7 @@ export const Category = (props: Props): JSX.Element => {
 							{`${destinationPerson} Trousers`}
 						</button>
 					</div>
-					<p className={styles.shopCategoryIndexSortPSpan}>
-						{`Showing ${items.length} out of 12 products`}
-					</p>
+					<p className={styles.shopCategoryIndexSortPSpan}>{`Showing ${items.length} out of 12 products`}</p>
 				</div>
 				<div className={styles.shopCategoryProducts}>{items}</div>
 				<div className={styles.shopCategoryActions}>

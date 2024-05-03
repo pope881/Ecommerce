@@ -6,8 +6,8 @@ export const styles = {
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
-		gap: '2rem',
-		marginBottom: '10rem',
+		gap: '1rem',
+		marginBottom: '8rem',
 	}),
 
 	newCollectionsH1: css({
@@ -46,17 +46,21 @@ export const styles = {
 	}),
 
 	newCollectionsCollection: css({
-		display: 'grid',
-		gridTemplateColumns: '1fr 1fr 1fr 1fr',
 		marginTop: '5rem',
 		gap: '2rem',
+		margin: '2rem 0',
+		display: 'grid',
+		gridTemplateColumns: '1fr 1fr 1fr 1fr',
+		rowGap: '8rem',
 
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
+			rowGap: '5rem',
 		},
 
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			gridTemplateColumns: '1fr',
+			rowGap: '3rem',
 		},
 	}),
 }

@@ -10,7 +10,7 @@ export const styles = {
 		justifyContent: 'center',
 		margin: '0 auto',
 		padding: '5rem 0',
-		marginBottom: '10rem',
+		marginBottom: '8rem',
 		background: `linear-gradient(180deg, ${theme.colors.red.main} 0%, ${theme.colors.white.main} 90%)`,
 		gap: '3rem',
 	}),

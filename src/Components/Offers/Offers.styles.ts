@@ -4,12 +4,14 @@ import { theme } from '../../theme'
 export const styles = {
 	offers: css({
 		display: 'flex',
-		marginBottom: '10rem',
+		marginBottom: '8rem',
 		background: `linear-gradient(180deg, ${theme.colors.red.main} 0%, ${theme.colors.white.main} 90%)`,
 		borderRadius: '25px',
+		padding: '1rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			paddingBottom: '2rem'
-		}
+			paddingBottom: '4rem',
+			flexDirection: 'column',
+		},
 	}),
 
 	offersLeft: css({
@@ -22,18 +24,36 @@ export const styles = {
 
 	offersLeftH1: css({
 		color: theme.colors.black.main,
-		fontSize: '8rem',
+		fontSize: '6rem',
 		fontWeight: '600',
 		textAlign: 'center',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '5rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '4rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '3rem',
+		},
 	}),
 
 	offersLeftP: css({
 		color: theme.colors.black.main,
-		fontSize: '2.2rem',
+		fontSize: '2rem',
 		fontWeight: '600',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			textAlign: 'center'
-		}
+			textAlign: 'center',
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '1.8rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '1.6rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '1.4rem',
+		},
 	}),
 
 	offersLeftButton: css({
@@ -58,9 +78,9 @@ export const styles = {
 		paddingTop: '5rem',
 	}),
 
-	womanImg: css({
+	offersWomanImg: css({
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'none',
-		}
-	})
+		},
+	}),
 }

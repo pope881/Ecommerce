@@ -4,12 +4,12 @@ import { theme } from '../../theme'
 export const styles = {
 	container: css({
 		textAlign: 'center',
-		height: '120vh',
+		height: '100vh',
 		backgroundColor: theme.colors.black.main,
-		marginBottom: '10rem',
+		marginBottom: '6rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			height: '60vh',
-		}
+		},
 	}),
 
 	containerBackground: css({
@@ -27,14 +27,14 @@ export const styles = {
 			top: '50%',
 			left: '50%',
 			transform: 'translate(-50%, -50%)',
-		}
+		},
 	}),
 
 	containerDescriptionH1: css({
-		fontSize: '18rem',
+		fontSize: '16rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			fontSize: '9rem'
-		}
+			fontSize: '9rem',
+		},
 	}),
 
 	containerDescriptionP: css({
@@ -65,5 +65,8 @@ export const styles = {
 		top: '0',
 		left: '0',
 		backgroundImage: 'linear-gradient(to top, rgba(154, 21, 21, 0), rgb(75, 68, 68))',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: '60vh',
+		},
 	}),
 }

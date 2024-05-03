@@ -14,6 +14,15 @@ export const styles = {
 		color: theme.colors.black.main,
 		fontSize: '5rem',
 		fontWeight: '600',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '4rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '3rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '2.5rem',
+		},
 	}),
 
 	heroTextTopHr: css({
@@ -21,6 +30,18 @@ export const styles = {
 		height: '6px',
 		borderRadius: '10px',
 		backgroundColor: theme.colors.black.main,
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '160px',
+			height: '5px',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			width: '120px',
+			height: '4px',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '100px',
+			height: '4px',
+		},
 	}),
 
 	hero: css({
@@ -29,7 +50,15 @@ export const styles = {
 		display: 'flex',
 		justifyContent: 'center',
 		alignItems: 'center',
-		marginBottom: '10rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: '80vh',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			height: '70vh',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			height: '60vh',
+		},
 	}),
 
 	heroText: css({
@@ -45,11 +74,17 @@ export const styles = {
 
 	heroTextP: css({
 		color: theme.colors.black.main,
-		fontSize: '10rem',
+		fontSize: '9rem',
 		fontWeight: '700',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			fontSize: '4rem',
-		}
+			fontSize: '8rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '5rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '3rem',
+		},
 	}),
 
 	heroImgWoman: css({

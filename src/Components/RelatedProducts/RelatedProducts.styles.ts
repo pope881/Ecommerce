@@ -7,7 +7,7 @@ export const styles = {
 		flexDirection: 'column',
 		alignItems: 'center',
 		gap: '1rem',
-		marginBottom: '10rem',
+		marginBottom: '8rem',
 	}),
 
 	relatedproductsH1: css({

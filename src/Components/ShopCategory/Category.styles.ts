@@ -3,7 +3,7 @@ import { theme } from '../../theme'
 
 export const styles = {
 	shopCategory: css({
-		marginBottom: '10rem',
+		marginBottom: '8rem',
 	}),
 
 	shopCategoryBanner: css({
@@ -24,7 +24,7 @@ export const styles = {
 			alignItems: 'flex-start',
 			gap: '2rem',
 			//width: '100%'
-		}
+		},
 	}),
 
 	shopCategoryIndexSortPSpan: css({
@@ -36,17 +36,18 @@ export const styles = {
 	shopCategoryActions: css({
 		display: 'flex',
 		justifyContent: 'center',
-		gap: '1.5rem',
+		gap: '1.6rem',
+		margin: '0 auto',
+
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			flexDirection: 'column',
 			width: '100%',
 			maxWidth: '30rem',
-			alignItems: 'center',
 			alignSelf: 'center',
-			'button': {
-				width: '100%'
-			}
-		}
+			button: {
+				width: '100%',
+			},
+		},
 	}),
 
 	shopCategoryBtn: css({
@@ -77,7 +78,6 @@ export const styles = {
 		display: 'grid',
 		gridTemplateColumns: '1fr 1fr 1fr 1fr',
 		gap: '2rem',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
 		},

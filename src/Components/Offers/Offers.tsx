@@ -22,7 +22,7 @@ export const Offers = (): JSX.Element => {
 					</div>
 				</div>
 				<div className={styles.offersRight}>
-					<img src={exlusiveImage} alt="woman dressed jeans and black t-shirt" className={styles.womanImg} />
+					<img src={exlusiveImage} alt="woman dressed jeans and black t-shirt" className={styles.offersWomanImg} />
 				</div>
 			</div>
 		</WideContent>

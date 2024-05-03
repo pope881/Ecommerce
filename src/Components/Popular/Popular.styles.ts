@@ -7,7 +7,7 @@ export const styles = {
 		flexDirection: 'column',
 		alignItems: 'center',
 		gap: '1rem',
-		marginBottom: '10rem',
+		marginBottom: '8rem',
 	}),
 
 	popularH1: css({
@@ -55,10 +55,12 @@ export const styles = {
 
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
+			rowGap: '5rem',
 		},
 
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			gridTemplateColumns: '1fr',
+			rowGap: '3rem',
 		},
 	}),
 }
