@@ -23,8 +23,8 @@ export const styles = {
 		height: '90px',
 
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			width: '60px',
-			height: '60px',
+			width: '65px',
+			height: '65px',
 			marginRight: 'auto',
 		},
 	}),
@@ -116,7 +116,7 @@ export const styles = {
 		display: 'none',
 		'@media (max-width: 768px)': {
 			display: 'block',
-			width: '65px',
+			width: '70px',
 			transition: '0.4s',
 		},
 	}),
@@ -153,7 +153,7 @@ export const styles = {
 	}),
 
 	navbarAuthIcon: css({
-		height: '2rem',
+		height: '3rem',
 		filter: 'brightness(100%)',
 	}),
 	brugerWrapper: css({
@@ -168,7 +168,7 @@ export const styles = {
 	}),
 
 	burgerBars: css({
-		height: '3rem',
+		height: '4rem',
 		width: '3rem',
 		border: 'none',
 		background: 'transparent',
@@ -178,7 +178,7 @@ export const styles = {
 		},
 
 		img: {
-			height: '3rem',
+			height: '4rem',
 		},
 	}),
 	menuWrapper: css({
@@ -206,7 +206,7 @@ export const styles = {
 		display: 'none',
 		flexGrow: 1,
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			display: 'flex'
-		}
+			display: 'flex',
+		},
 	}),
 }
