@@ -35,7 +35,6 @@ export const styles = {
 		transition: '0.4s',
 		'&:hover': { backgroundColor: theme.colors.red.main },
 		'&:active': { backgroundColor: theme.colors.red.main },
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			background: 'transparent',
 			color: theme.colors.black.main,
@@ -45,23 +44,23 @@ export const styles = {
 
 	navbarBtnCartSpan: css({
 		fontSize: '1.6rem',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'none',
 		},
 	}),
 
-	navbarIcon: css({
+	navbarCartIcon: css({
 		width: '2rem',
 		height: '2rem',
 		marginRight: '0.5rem',
-		color: 'blue',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			filter: 'brightness(0%)',
+			width: '2.5rem',
+			height: '2.5rem',
 		},
 	}),
 
-	navbarBadge: (hoverButton: boolean) =>
+	navbarBadgeSpan: (hoverButton: boolean) =>
 		css({
 			fontSize: '1.6rem',
 			backgroundColor: hoverButton ? theme.colors.black.main : theme.colors.red.main,
@@ -72,6 +71,7 @@ export const styles = {
 			transition: '0.4s',
 			[`@media (max-width: ${theme.breakpoints.md})`]: {
 				color: hoverButton ? theme.colors.white.main : theme.colors.black.main,
+				marginLeft: '0rem',
 			},
 		}),
 
@@ -79,9 +79,5 @@ export const styles = {
 		animationName: bump,
 		animationDuration: '0.3s',
 		animationTimingFunction: 'ease-out',
-	}),
-
-	navbarBtnBasket: css({
-		display: 'none',
 	}),
 }

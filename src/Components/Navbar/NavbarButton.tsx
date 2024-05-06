@@ -1,8 +1,7 @@
 import { useContext, useEffect, useState } from 'react'
 import { styles } from './NavbarButton.styles'
 import { CartContext } from '../../Context/cart-context'
-import basketIcon from '../../../public/otherImg/basketIcon.png'
-import cartIcon from '../../../public/otherImg/cartIcon.png'
+const cartIcon = '/otherImg/cartIcon.png'
 
 export const NavbarButton = () => {
 	const [btnIsBump, setBtnIsBump] = useState<boolean>(false)
@@ -42,11 +41,10 @@ export const NavbarButton = () => {
 	return (
 		<>
 			<button onMouseOver={cartColorOver} onMouseLeave={cartColorLeave} className={btnClasses}>
-				<img className={styles.navbarIcon} src={cartIcon} alt="basket icon for desktop"></img>
+				<img className={styles.navbarCartIcon} src={cartIcon} alt="basket icon for desktop"></img>
 				<span className={styles.navbarBtnCartSpan}>Your Cart</span>
-				<span className={styles.navbarBadge(hoverButton === true)}>{numberOfCartItems}</span>
+				<span className={styles.navbarBadgeSpan(hoverButton === true)}>{numberOfCartItems}</span>
 			</button>
-			<img className={styles.navbarBtnBasket} src={basketIcon} alt="basket icon for mobiles" />
 		</>
 	)
 }

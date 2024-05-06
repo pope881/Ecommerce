@@ -19,12 +19,11 @@ export const styles = {
 	}),
 
 	navbarLogoImg: css({
-		width: '90px',
-		height: '90px',
-
+		width: '80px',
+		height: '80px',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			width: '65px',
-			height: '65px',
+			width: '60px',
+			height: '60px',
 			marginRight: 'auto',
 		},
 	}),
@@ -44,9 +43,8 @@ export const styles = {
 	navbarMenuLi: css({
 		fontSize: '3rem',
 		cursor: 'pointer',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			fontSize: '4rem',
+			fontSize: '6rem',
 		},
 	}),
 
@@ -59,7 +57,7 @@ export const styles = {
 		'&:active': { color: theme.colors.red.main },
 	}),
 
-	navbarMenuAActive: css({
+	navbarMenuActive: css({
 		borderBottom: `3px solid ${theme.colors.red.main}`,
 		textDecoration: 'none',
 		color: theme.colors.red.main,
@@ -71,7 +69,7 @@ export const styles = {
 		alignItems: 'center',
 		gap: '4.5rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			gap: '2rem',
+			gap: '1rem',
 		},
 	}),
 
@@ -112,19 +110,6 @@ export const styles = {
 		},
 	}),
 
-	navbarDropdown: css({
-		display: 'none',
-		'@media (max-width: 768px)': {
-			display: 'block',
-			width: '70px',
-			transition: '0.4s',
-		},
-	}),
-
-	navbarBtnMobile: css({
-		display: 'none',
-	}),
-
 	navbarLinks: css({
 		alignItems: 'center',
 		gap: '5rem',
@@ -153,8 +138,11 @@ export const styles = {
 	}),
 
 	navbarAuthIcon: css({
-		height: '3rem',
+		height: '2rem',
 		filter: 'brightness(100%)',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: '3.5rem',
+		},
 	}),
 	brugerWrapper: css({
 		height: '5rem',
@@ -169,19 +157,19 @@ export const styles = {
 
 	burgerBars: css({
 		height: '4rem',
-		width: '3rem',
+		width: '4rem',
 		border: 'none',
 		background: 'transparent',
 		display: 'none',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'block',
 		},
-
 		img: {
 			height: '4rem',
 		},
+		cursor: 'pointer',
 	}),
-	menuWrapper: css({
+	burgerMenuWrapper: css({
 		display: 'flex',
 		padding: '2rem',
 		flexDirection: 'column',
@@ -193,7 +181,7 @@ export const styles = {
 		background: theme.colors.white.main,
 		zIndex: 1000,
 	}),
-	menuCloseBtn: css({
+	burgerMenuCloseBtn: css({
 		position: 'absolute',
 		top: '3rem',
 		right: '3rem',
@@ -202,11 +190,17 @@ export const styles = {
 		border: 'none',
 	}),
 
-	mobileDivider: css({
+	navbarMobileDivider: css({
 		display: 'none',
 		flexGrow: 1,
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'flex',
 		},
+	}),
+
+	burgerMenuCrossIcon: css({
+		width: '50px',
+		height: '50px',
+		cursor: 'pointer',
 	}),
 }
