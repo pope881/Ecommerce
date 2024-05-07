@@ -10,6 +10,7 @@ export const styles = {
 		backgroundColor: theme.colors.black.main,
 		width: '100%',
 		padding: '6% 10% 10%',
+		overflowX: 'hidden'
 	}),
 
 	teamText: css({
@@ -24,7 +25,7 @@ export const styles = {
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		textTransform: 'uppercase',
-		marginBottom: '10px',
+		marginBottom: '1rem',
 	}),
 
 	teamTextH1: css({
@@ -37,7 +38,7 @@ export const styles = {
 	}),
 
 	teamTextHr: css({
-		width: '30%',
+		width: '40%',
 		border: 'none',
 		height: '2px',
 		backgroundColor: theme.colors.red.main,
@@ -63,11 +64,9 @@ export const styles = {
 		textAlign: 'center',
 		width: '100%',
 		margin: '0 auto',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
 		},
-
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			gridTemplateColumns: '1fr',
 		},

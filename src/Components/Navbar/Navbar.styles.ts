@@ -10,6 +10,9 @@ export const styles = {
 		borderBottom: `1px solid ${theme.colors.black.main}`,
 		backgroundColor: theme.colors.white.main,
 		minHeight: '15vh',
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			minHeight: '10vh',
+		},
 	}),
 
 	navbarLogo: css({
@@ -19,11 +22,11 @@ export const styles = {
 	}),
 
 	navbarLogoImg: css({
-		width: '80px',
-		height: '80px',
+		width: '70px',
+		height: '70px',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			width: '60px',
-			height: '60px',
+			width: '50px',
+			height: '50px',
 			marginRight: 'auto',
 		},
 	}),
@@ -45,6 +48,7 @@ export const styles = {
 		cursor: 'pointer',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			fontSize: '6rem',
+			marginLeft: '2rem',
 		},
 	}),
 
@@ -103,7 +107,7 @@ export const styles = {
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			background: 'transparent',
 			borderColor: 'transparent',
-			padding: '0 2rem',
+			padding: '0 0.5rem',
 			'> img': {
 				filter: 'brightness(0%)',
 			},
@@ -111,11 +115,11 @@ export const styles = {
 	}),
 
 	navbarLinks: css({
-		alignItems: 'center',
-		gap: '5rem',
 		display: 'none',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'flex',
+			alignItems: 'center',
+			gap: '5rem',
 			ul: {
 				flexDirection: 'column',
 				alignItems: 'flex-start',
@@ -145,35 +149,35 @@ export const styles = {
 		},
 	}),
 	brugerWrapper: css({
-		height: '5rem',
 		display: 'none',
-		justifyContent: 'center',
-		alignItems: 'center',
-		marginRight: '2rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
+			marginRight: '2rem',
+			height: '5rem',
 		},
 	}),
 
-	burgerBars: css({
-		height: '4rem',
-		width: '4rem',
-		border: 'none',
-		background: 'transparent',
+	burgerBarsBtn: css({
 		display: 'none',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'block',
+			height: '4rem',
+			width: '4rem',
+			border: 'none',
+			background: 'transparent',
+			cursor: 'pointer',
 		},
 		img: {
 			height: '4rem',
 		},
-		cursor: 'pointer',
 	}),
 	burgerMenuWrapper: css({
-		display: 'flex',
-		padding: '2rem',
-		flexDirection: 'column',
 		position: 'fixed',
+		display: 'flex',
+		flexDirection: 'column',
+		padding: '2rem',
 		top: 0,
 		left: 0,
 		width: '100vw',
@@ -183,18 +187,17 @@ export const styles = {
 	}),
 	burgerMenuCloseBtn: css({
 		position: 'absolute',
-		top: '3rem',
-		right: '3rem',
-		fontSize: '2rem',
+		top: '4rem',
+		right: '5rem',
 		background: 'transparent',
 		border: 'none',
 	}),
 
 	navbarMobileDivider: css({
 		display: 'none',
-		flexGrow: 1,
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			display: 'flex',
+			flexGrow: 1,
 		},
 	}),
 

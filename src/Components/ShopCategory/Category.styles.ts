@@ -9,7 +9,7 @@ export const styles = {
 	shopCategoryBanner: css({
 		display: 'block',
 		margin: '3rem auto',
-		width: '80%',
+		width: '90%',
 		borderRadius: '16px',
 	}),
 
@@ -38,7 +38,6 @@ export const styles = {
 		justifyContent: 'center',
 		gap: '1.6rem',
 		margin: '0 auto',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			flexDirection: 'column',
 			width: '100%',
@@ -81,7 +80,6 @@ export const styles = {
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
 		},
-
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			gridTemplateColumns: '1fr',
 		},

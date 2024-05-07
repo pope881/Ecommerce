@@ -11,15 +11,17 @@ export const styles = {
 		gridTemplateColumns: 'repeat(2, 1fr)',
 		gap: '4rem',
 		[`@media (max-width: ${theme.breakpoints.xl})`]: {
-			gridTemplateColumns: '500px 1fr'
+			gridTemplateColumns: '500px 1fr',
+			height: 'auto',
 		},
 		[`@media (max-width: ${theme.breakpoints.lg})`]: {
-			gridTemplateColumns: '350px 1fr'
+			gridTemplateColumns: '350px 1fr',
+			height: 'auto',
 		},
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr',
 			height: 'auto',
-		}
+		},
 	}),
 
 	aboutMainImgImg: css({
@@ -28,7 +30,7 @@ export const styles = {
 		height: 'auto',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			maxWidth: '200px',
-		}
+		},
 	}),
 
 	aboutText: css({
@@ -53,7 +55,7 @@ export const styles = {
 	}),
 
 	aboutTextHr: css({
-		width: '30%',
+		width: '40%',
 		border: 'none',
 		height: '2px',
 		backgroundColor: theme.colors.red.main,
@@ -71,57 +73,38 @@ export const styles = {
 			minWidth: 400,
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
-			minWidth: 'initial'
-		}
+			minWidth: 'initial',
+		},
 	}),
 
 	aboutDescriptions: css({
 		display: 'flex',
 		gap: '6rem',
 		[`@media (max-width: ${theme.breakpoints.lg})`]: {
-			flexWrap: 'wrap'
-		}
+			flexWrap: 'wrap',
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gap: '4rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			gap: '3rem',
+		},
 	}),
 
 	aboutDescriptionH3: css({
 		color: theme.colors.red.main,
 		fontSize: '6rem',
-		fontWeight: '700',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '4.5rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '3.5rem',
+		},
 	}),
 
 	aboutDescriptionH5: css({
 		color: theme.colors.white.main,
 		fontSize: '1.8rem',
-		fontWeight: '500',
 		lineHeight: '1.8rem',
 	}),
-
-	// @media (max-width: 1385px) {
-	//     aboutUs {
-	//         padding: '4% 4%',
-	//         transition: '0.3s',
-	//     }
-	//     about__mainImg img {
-	//         width: '500px',
-	//         height: 'auto',
-	//         transition: '0.3s',
-	//     }
-	// }
-
-	// @media (max-width: 1240px) {
-	//     about__text h1 {
-	//         fontSize: '3rem',
-	//         transition: '0.3s',
-	//     }
-	// }
-
-	// @media (max-width: 1040px) {
-	//     aboutUs {
-	//         gridTemplateColumns: '1fr',
-	//         height: '100%',
-	//     }
-	//     about__mainImg img {
-	//         paddingTop: '4rem',
-	//     }
-	// }
 }

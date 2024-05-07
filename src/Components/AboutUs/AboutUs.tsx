@@ -1,10 +1,9 @@
-import { WideContent } from '../Layouts/WideContent'
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
 
 export const AboutUs = () => {
 	return (
-		<section className={styles.about}>
+		<div className={styles.about}>
 			<motion.div
 				className={styles.aboutMainImgImg}
 				initial={{ opacity: 1, scale: 0 }}
@@ -26,7 +25,6 @@ export const AboutUs = () => {
 					expectations. For more than 15 years, we've worked to deliver the best possible shopping experience, helping
 					our customers express their style—not just buy fashion.
 				</p>
-
 				<div className={styles.aboutDescriptions}>
 					<div>
 						<h3 className={styles.aboutDescriptionH3}>15y+</h3>
@@ -42,6 +40,6 @@ export const AboutUs = () => {
 					</div>
 				</div>
 			</motion.div>
-		</section>
+		</div>
 	)
 }

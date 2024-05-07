@@ -37,7 +37,7 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextHr: css({
-		width: '30%',
+		width: '40%',
 		border: 'none',
 		height: '2px',
 		backgroundColor: theme.colors.red.main,

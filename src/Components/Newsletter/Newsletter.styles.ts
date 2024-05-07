@@ -77,6 +77,9 @@ export const styles = {
 		transition: '0.3s',
 		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
 		'&:actice': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			padding: '0.75rem 3rem',
+		},
 	}),
 
 	newsletterInvalidP: css({
@@ -88,6 +91,7 @@ export const styles = {
 
 	newsletterForm: css({
 		display: 'flex',
+		flexDirection: 'column',
 		alignItems: 'center',
 		justifyContent: 'center',
 		width: '100%',

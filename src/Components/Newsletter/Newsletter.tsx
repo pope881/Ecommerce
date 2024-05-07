@@ -6,7 +6,6 @@ export const Newsletter = (): JSX.Element => {
 	const [formInputsValidity, setFormInputsValidity] = useState<boolean>(true)
 
 	const emailInputRef = useRef<HTMLInputElement | null>(null)
-
 	const hasEmailSign = (value: string) => value.includes('@')
 
 	const subscribeHandler = (event: FormEvent) => {

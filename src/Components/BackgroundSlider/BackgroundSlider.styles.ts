@@ -7,8 +7,8 @@ export const styles = {
 		height: '100vh',
 		backgroundColor: theme.colors.black.main,
 		marginBottom: '6rem',
-		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			height: '60vh',
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			height: '65vh',
 		},
 	}),
 

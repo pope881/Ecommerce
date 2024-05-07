@@ -81,18 +81,22 @@ const NavbarButtons = () => {
 				<NavbarButton />
 			</Link>
 		</div>
-	)
+	) 
 }
 
 const BurgerMenu = () => {
 	const [isOpen, setIsOpen] = useState(false)
 	const burgerMenuHandler = () => {
 		setIsOpen(prevIsOpen => !prevIsOpen)
+		const scrollToTop = () => {
+			window.scrollTo(0, 0)
+		}
+		scrollToTop()
 	}
 
 	return (
 		<div className={styles.brugerWrapper}>
-			<button className={styles.burgerBars} onClick={burgerMenuHandler}>
+			<button className={styles.burgerBarsBtn} onClick={burgerMenuHandler}>
 				<img src="/otherImg/burgerIcon.png" alt="burger menu icon" />
 			</button>
 			{isOpen && (

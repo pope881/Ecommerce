@@ -7,11 +7,9 @@ const styles = {
 		padding: '0 4rem',
 		maxWidth: '1536px',
 		width: '100%',
-
 		[`@media (max-width: ${theme.breakpoints.lg})`]: {
 			padding: '0 3rem',
 		},
-
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			padding: '0 2rem',
 		},
