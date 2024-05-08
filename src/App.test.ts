@@ -16,6 +16,7 @@
 // })
 
 import { describe, it, expect } from 'vitest'
+import { render, screen } from '@testing-library/react'
 
 describe('Test', () => {
 	it('testing the vitest', () => {
