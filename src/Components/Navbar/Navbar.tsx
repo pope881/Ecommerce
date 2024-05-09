@@ -8,6 +8,7 @@ const loginIcon = '/otherImg/loginIcon.png'
 const logoutIcon = '/otherImg/logoutIcon.png'
 const logoShop = '/otherImg/logoShop.png'
 const crossIcon = '/otherImg/crossIcon.png'
+const burgerIcon = '/otherImg/burgerIcon.png'
 
 type AuthState = {
 	auth: {
@@ -81,7 +82,7 @@ const NavbarButtons = () => {
 				<NavbarButton />
 			</Link>
 		</div>
-	) 
+	)
 }
 
 const BurgerMenu = () => {
@@ -97,7 +98,7 @@ const BurgerMenu = () => {
 	return (
 		<div className={styles.brugerWrapper}>
 			<button className={styles.burgerBarsBtn} onClick={burgerMenuHandler}>
-				<img src="/otherImg/burgerIcon.png" alt="burger menu icon" />
+				<img src={burgerIcon} alt="burger menu icon" />
 			</button>
 			{isOpen && (
 				<div className={styles.burgerMenuWrapper}>
@@ -111,18 +112,16 @@ const BurgerMenu = () => {
 	)
 }
 
-export const Navbar = () => {
-	return (
-		<div className={styles.navbar}>
-			<div className={styles.navbarLogo}>
-				<Link className={styles.navbarLogoA} to="/">
-					<img className={styles.navbarLogoImg} src={logoShop} alt="company logo" />
-				</Link>
-			</div>
-			<div className={styles.navbarMobileDivider} />
-			<NavbarLinks isDesktop />
-			<BurgerMenu />
-			<NavbarButtons />
+export const Navbar = () => (
+	<div className={styles.navbar}>
+		<div className={styles.navbarLogo}>
+			<Link className={styles.navbarLogoA} to="/">
+				<img className={styles.navbarLogoImg} src={logoShop} alt="company logo" />
+			</Link>
 		</div>
-	)
-}
+		<div className={styles.navbarMobileDivider} />
+		<NavbarLinks isDesktop />
+		<BurgerMenu />
+		<NavbarButtons />
+	</div>
+)

@@ -1,4 +1,6 @@
 import { styles } from './Hero.styles'
+const heroWomanImage = '/otherImg/heroWomanImage.png'
+const heroManImage = '/otherImg/heroManImage.png'
 
 export const Hero = () => {
 	const handleClickScroll = () => {
@@ -16,16 +18,14 @@ export const Hero = () => {
 			</div>
 			<div className={styles.hero}>
 				<div className={styles.heroImgWoman}>
-					<img
-						className={styles.heroImgWomanImg}
-						src="../../../public/otherImg/heroWomanImage.png"
-						alt="young girl dressed in sports clothes"
-					/>
+					<img className={styles.heroImgWomanImg} src={heroWomanImage} alt="young girl dressed in sports clothes" />
 				</div>
 				<div className={styles.heroText}>
 					<div>
 						<p className={styles.heroTextP}>
-							new Collections<br />For Everyone
+							new Collections
+							<br />
+							For Everyone
 						</p>
 					</div>
 					<div>
@@ -35,11 +35,7 @@ export const Hero = () => {
 					</div>
 				</div>
 				<div className={styles.heroImgMan}>
-					<img
-						className={styles.heroImgManImg}
-						src="../../../public/otherImg/heroManImage.png"
-						alt="men dressed in sports clothes"
-					/>
+					<img className={styles.heroImgManImg} src={heroManImage} alt="men dressed in sports clothes" />
 				</div>
 			</div>
 		</div>

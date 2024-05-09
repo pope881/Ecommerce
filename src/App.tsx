@@ -13,14 +13,15 @@ import { menProduct } from '../public/menProduct'
 import { womenProduct } from '../public/womenProduct'
 import { Root } from './Pages/Root.tsx'
 import { ErrorPage } from './Pages/ErrorPage.tsx'
-import menBanner from '../public/bannerImg/bannerMens.png'
-import womanBanner from '../public/bannerImg/bannerWomen.png'
-import kidBanner from '../public/bannerImg/bannerKids.png'
 import { Provider } from 'react-redux'
 import { CartProvider } from './Context/CartProvider'
 import { store } from './Components/store'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme'
+const menBanner = '/bannerImg/bannerMens.png'
+const womanBanner = '/bannerImg/bannerWomen.png'
+const kidBanner = '/bannerImg/bannerKids.png'
+
 const router = createBrowserRouter([
 	{
 		path: '/',

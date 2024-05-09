@@ -1,17 +1,8 @@
-import Slider from 'react-slick'
+import Slider, { Settings } from 'react-slick'
 import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { styles } from './OurTestimonials.styles'
 import { testimonialData } from '../../../public/mockData/mockData'
-
-type Settings = {
-	autoplay: boolean
-	autoplaySpeed: number
-	infinite: boolean
-	speed: number
-	slidesToShow: number
-	slidesToScroll: number
-}
 
 const SETTINGS: Settings = {
 	autoplay: true,
@@ -20,6 +11,26 @@ const SETTINGS: Settings = {
 	speed: 500,
 	slidesToShow: 3,
 	slidesToScroll: 1,
+	responsive: [
+		{
+			breakpoint: 1024,
+			settings: {
+				slidesToShow: 2,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+			},
+		},
+		{
+			breakpoint: 768,
+			settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				infinite: true,
+				dots: false,
+			},
+		},
+	],
 }
 
 export const OurTestimonials = (): JSX.Element => {

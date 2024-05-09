@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 import { styles } from './Breadcrum.styles'
-
+const breadcrumArrow = '/otherImg/breadcrumArrow.png'
 type Props = {
 	product: {
 		category: string
@@ -13,15 +13,15 @@ export const Breadcrum = (props: Props): JSX.Element => {
 
 	return (
 		<div className={styles.breadcrum}>
-			<img src="/otherImg/breadcrumArrow.png" alt="link arrow icon" />
+			<img src={breadcrumArrow} alt="link arrow icon" />
 			<Link className={styles.breadcrumA} to="/">
 				SHOP
 			</Link>
-			<img src="/otherImg/breadcrumArrow.png" alt="link arrow icon" />
+			<img src={breadcrumArrow} alt="link arrow icon" />
 			<Link className={styles.breadcrumA} to={`/${product.category}`}>
 				{product.category}
 			</Link>
-			<img src="/otherImg/breadcrumArrow.png" alt="arrow icon" /> {product.name}
+			<img src={breadcrumArrow} alt="arrow icon" /> {product.name}
 		</div>
 	)
 }

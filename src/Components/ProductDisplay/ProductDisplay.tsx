@@ -4,6 +4,7 @@ import { CartContext } from '../../Context/cart-context'
 import { ImageSlider } from './ImageSlider'
 import { colorOptions } from '../../../public/mockData/mockData'
 import { sizeOptions } from '../../../public/mockData/mockData'
+const starIcon = '/otherImg/starIcon.png'
 
 type Props = {
 	product: {
@@ -55,11 +56,11 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 			<div className={styles.productdisplayRight}>
 				<h1 className={styles.productdisplayRightH1}>{product.name}</h1>
 				<div className={styles.productdisplayStars}>
-					<img src="/otherImg/starIcon.png" alt="star icon" />
-					<img src="/otherImg/starIcon.png" alt="star icon" />
-					<img src="/otherImg/starIcon.png" alt="star icon" />
-					<img src="/otherImg/starIcon.png" alt="star icon" />
-					<img src="/otherImg/starIcon.png" alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
+					<img src={starIcon} alt="star icon" />
 					<p>(+100)</p>
 				</div>
 				<div className={styles.productdisplayPrices}>

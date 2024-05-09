@@ -21,11 +21,17 @@ export const styles = {
 		fontSize: '8rem',
 		color: theme.colors.red.main,
 		marginRight: '2rem',
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '6rem',
+		},
 	}),
 
 	loginTextP: css({
 		fontSize: '9rem',
 		color: theme.colors.red.main,
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '6rem',
+		},
 	}),
 
 	loginForm: css({
@@ -74,6 +80,9 @@ export const styles = {
 			height: '20%',
 			borderBottom: `6px solid ${theme.colors.red.main}`,
 			borderRight: `6px solid ${theme.colors.red.main}`,
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			margin: '3rem auto',
 		},
 	}),
 
@@ -133,6 +142,9 @@ export const styles = {
 		display: 'flex',
 		justifyContent: 'flex-start',
 		gap: '1rem',
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			flexDirection: 'column',
+		},
 	}),
 
 	loginButton: css({

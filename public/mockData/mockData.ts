@@ -1,19 +1,19 @@
-import Person1 from '../testimonialsImg/1.jpg'
-import Person2 from '../testimonialsImg/2.jpg'
-import Person3 from '../testimonialsImg/3.jpg'
-import Person4 from '../testimonialsImg/4.jpg'
-import Person5 from '../testimonialsImg/5.jpg' 
+const Person1 = '/testimonialsImg/1.jpg'
+const Person2 = '/testimonialsImg/2.jpg'
+const Person3 = '/testimonialsImg/3.jpg'
+const Person4 = '/testimonialsImg/4.jpg'
+const Person5 = '/testimonialsImg/5.jpg'
 
-import teamPerson1 from '../teamImg/1.png'
-import teamPerson2 from '../teamImg/2.png'
-import teamPerson3 from '../teamImg/3.png'
-import teamPerson4 from '../teamImg/4.png'
-import teamPerson5 from '../teamImg/5.png'
-import teamPerson6 from '../teamImg/6.png'
+const teamPerson1 = '/teamImg/1.png'
+const teamPerson2 = '/teamImg/2.png'
+const teamPerson3 = '/teamImg/3.png'
+const teamPerson4 = '/teamImg/4.png'
+const teamPerson5 = '/teamImg/5.png'
+const teamPerson6 = '/teamImg/6.png'
 
-import menBackground from '../backgroundSliderImg/menBackground.jpg'
-import womanBackground from '../backgroundSliderImg/womanBackground.jpg'
-import kidsBackground from '../backgroundSliderImg/kidsBackground.jpg'
+const menBackground = '/backgroundSliderImg/menBackground.jpg'
+const womanBackground = '/backgroundSliderImg/womanBackground.jpg'
+const kidsBackground = '/backgroundSliderImg/kidsBackground.jpg'
 
 type Testimonial = {
 	name: string

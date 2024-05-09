@@ -1,4 +1,4 @@
-import { Category } from '../Components/ShopCategory/Category'
+import { Category } from '../Components/Category/Category'
 
 import { AllProduct } from '../../public/allProduct'
 

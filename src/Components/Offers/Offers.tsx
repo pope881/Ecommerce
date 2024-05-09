@@ -1,6 +1,6 @@
 import { styles } from './Offers.styles'
 import { useNavigate } from 'react-router-dom'
-import exlusiveImage from '../../../public/otherImg/exclusiveImage.png'
+const exlusiveImage = '/otherImg/exclusiveImage.png'
 import { WideContent } from '../Layouts/WideContent'
 
 export const Offers = (): JSX.Element => {

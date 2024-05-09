@@ -61,7 +61,6 @@ export const styles = {
 		maxWidth: '500px',
 		marginLeft: '3rem',
 		border: 'none',
-		outline: 'none',
 		fontSize: '1.6rem',
 		paddingRight: '1rem',
 		background: 'none',

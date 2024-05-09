@@ -84,7 +84,7 @@ export const ContactForm = () => {
 			<motion.div
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
-				transition={{ duration: 1.5 }}
+				transition={{ duration: 1.5, delay: 0.3 }}
 				className={styles.contactHeading}>
 				<h4 className={styles.contactHeadingH4}>Contact</h4>
 				<h1 className={styles.contactHeadingH1}>Contact Us</h1>

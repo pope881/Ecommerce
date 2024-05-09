@@ -44,11 +44,11 @@ export const styles = {
 		gap: '1rem',
 	}),
 	footerAboutUsImg: css({
-		width: '100px',
-		height: '100px',
+		width: '70px',
+		height: '70px',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			width: '70px',
-			height: '70px',
+			width: '50px',
+			height: '50px',
 		},
 	}),
 	footerSectionH2: css({

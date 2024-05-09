@@ -49,23 +49,45 @@ export const styles = {
 
 	contactContainer: css({
 		width: '100%',
-		display: 'flex',
+		display: 'grid',
 		justifyContent: 'space-between',
 		alignItems: 'center',
 		marginTop: '3rem',
+		gridTemplateColumns: '1fr 450px 450px',
+		columnGap: '2rem',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			gridTemplateColumns: '1fr 1fr',
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr',
+			rowGap: '2rem',
+		},
 	}),
 
 	contactMapContainerIframe: css({
 		width: '400px',
 		height: '300px',
 		borderRadius: '16px',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			width: '100%',
+			gridRow: 2,
+			gridColumn: 1,
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '100%',
+			gridRow: 2,
+			gridColumn: 1,
+		},
 	}),
 
 	contactInfo: css({
-		width: '20%',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			gridRow: 1,
+			gridColumn: 1,
+		},
 	}),
 
 	contactInfoBox: css({
@@ -110,10 +132,21 @@ export const styles = {
 	}),
 
 	contactForm: css({
-		width: '40%',
 		padding: '4rem',
 		background: theme.colors.white.main,
 		borderRadius: '16px',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			width: '100%',
+			gridRow: '1 / 3',
+			gridColumn: 2,
+			height: '100%',
+		},
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '100%',
+			gridRow: 3,
+			gridColumn: 1,
+			height: '100%',
+		},
 	}),
 
 	contactFormH2: css({
@@ -164,12 +197,19 @@ export const styles = {
 			color: isClicked ? theme.colors.red.dark : theme.colors.grey.main,
 			fontSize: isClicked ? '1.3rem' : '1.6rem',
 			transform: isClicked ? 'translateY(-24px)' : 'translateY(0px)',
+			[`@media (max-width: ${theme.breakpoints.xs})`]: {
+				transform: isClicked ? 'translateY(-26px)' : 'translateY(0px)',
+				fontSize: isClicked ? '1rem' : '1.4rem',
+			},
 		}),
 
 	contactFormActions: css({
 		display: 'flex',
 		justifyContent: 'flex-start',
 		gap: '1rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			flexDirection: 'column',
+		},
 	}),
 
 	contactFormActionsButton: css({

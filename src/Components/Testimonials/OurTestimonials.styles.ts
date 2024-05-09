@@ -45,7 +45,6 @@ export const styles = {
 	}),
 
 	testimonialsHeaderTextP: css({
-		minWidth: '600px',
 		color: theme.colors.white.main,
 		fontSize: '1.6rem',
 		fontWeight: '400',
@@ -55,7 +54,8 @@ export const styles = {
 
 	testimonialsItems: css({
 		marginTop: '2rem',
-		width: '900px',
+		width: '100%',
+		maxWidth: 900,
 		height: 'auto',
 	}),
 
@@ -77,6 +77,8 @@ export const styles = {
 		borderRadius: '50%',
 		width: '250px',
 		height: '250px',
+		objectFit: 'cover',
+		objectPosition: "50% 50%"
 	}),
 
 	testimonialsItemTop: css({

@@ -4,6 +4,7 @@ import { Checkout } from '../Checkout/Checkout'
 import { CartContext } from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
 import { CartContextType } from '../../Context/cart-context'
+import { WideContent } from '../Layouts/WideContent'
 
 type AuthState = {
 	auth: {
@@ -74,44 +75,47 @@ export const CartItems = () => {
 		)
 	}
 	return (
-		<div className={styles.cartitems}>
-			<div className={styles.cartitemsLayout}>
-				<p className={styles.cartitemsLayoutP}>Products</p>
-				<p className={styles.cartitemsLayoutP}>Name</p>
-				<p className={styles.cartitemsLayoutP}>Price</p>
-				<p className={styles.cartitemsLayoutP}>Size</p>
-				<p className={styles.cartitemsLayoutP}>Color</p>
-				<p className={styles.cartitemsLayoutP}>Quantity</p>
-				<p className={styles.cartitemsLayoutP}>Total</p>
-				<p className={styles.cartitemsLayoutP}>Remove</p>
-			</div>
-			<hr />
-			{items.map(product => {
-				return (
-					<div key={product.id}>
-						<div className={`${styles.cartitemsFormat} ${styles.cartitemsLayout} `}>
-							<img src={product.image} alt="display of each product" className={styles.cartitemsImg} />
-							<p className={styles.cartitemsLayoutP}>{product.name}</p>
-							<p className={styles.cartitemsLayoutP}>${product.price}</p>
-							<p className={styles.cartitemsLayoutP}>{product.size}</p>
-							<p className={styles.cartitemsLayoutP}>{product.color}</p>
-							<p className={styles.cartitemsQuantity}>{product.amount}</p>
-							<p className={styles.cartitemsLayoutP}>${product.price * product.amount}</p>
-							<img
-								className={styles.cartitemsRemoveIcon}
-								src="/otherImg/cartCrossIcon.png"
-								onClick={() => {
-									removeItem({
-										...product,
-									})
-								}}
-								alt="cart's remove icon"
-							/>
-						</div>
-						<hr className={styles.cartitemsHr} />
-					</div>
-				)
-			})}
+		<WideContent>
+			<table className={styles.cartitemsLayout}>
+				<tr>
+					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Products</th>
+					<th className={styles.cartitemsLayoutP}>Name</th>
+					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Price</th>
+					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Size</th>
+					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Color</th>
+					<th className={styles.cartitemsLayoutP}>Quantity</th>
+					<th className={styles.cartitemsLayoutP}>Total</th>
+					<th className={styles.cartitemsLayoutP}>Remove</th>
+				</tr>
+				{items.map(product => {
+					return (
+						<tr key={product.id}>
+							<td>
+								<img src={product.image} alt="display of each product" className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`} />
+
+							</td>
+							<td className={styles.cartitemsLayoutP}>{product.name}</td>
+							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>${product.price}</td>
+							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.size}</td>
+							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.color}</td>
+							<td className={styles.cartitemsQuantity}>{product.amount}</td>
+							<td className={styles.cartitemsLayoutP}>${product.price * product.amount}</td>
+							<td>
+								<img
+									className={styles.cartitemsRemoveIcon}
+									src="/otherImg/cartCrossIcon.png"
+									onClick={() => {
+										removeItem({
+											...product,
+										})
+									}}
+									alt="cart's remove icon"
+								/>
+							</td>
+						</tr>
+					)
+				})}
+			</table>
 			<div className={styles.cartitemsTotals}>
 				<div className={styles.cartitemsTotal}>
 					<h1 className={styles.cartitemsTotalH1}>cart Totals</h1>
@@ -139,31 +143,29 @@ export const CartItems = () => {
 				<div className={styles.cartitemsPromocode}>
 					<p className={styles.cartitemsPromocodeP}>If you have a promo code, enter it here (5 characters):</p>
 					<div className={styles.cartitemsPromobox}>
-						<form onSubmit={promoCodeHandler}>
-							<div>
+						<form onSubmit={promoCodeHandler} className={styles.cartItemsFormWrapper}>
+							<div className={styles.cartItemsPromoboxContainer}>
 								<input
-									className={`${styles.cartitemsPromoboxInput} ${
-										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
-									}`}
+									className={`${styles.cartitemsPromoboxInput} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
+										}`}
 									type="text"
 									placeholder="promo code"
 									ref={promoCodeInputRef}
 									name="promo code input"
 								/>
 								<button className={styles.cartitemsPromoboxButton}>Submit</button>
-								{!promoCodeValidity && (
-									<p
-										className={`${styles.cartitemsPromocodeP} ${
-											promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
-										}`}>
-										Please enter a valid promo code.
-									</p>
-								)}
 							</div>
+							{!promoCodeValidity && (
+								<p
+									className={`${styles.cartitemsPromocodeP} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
+										}`}>
+									Please enter a valid promo code.
+								</p>
+							)}
 						</form>
 					</div>
 				</div>
 			</div>
-		</div>
+		</WideContent>
 	)
 }

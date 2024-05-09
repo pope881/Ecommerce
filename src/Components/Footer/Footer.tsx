@@ -1,6 +1,6 @@
 import { styles } from './Footer.styles'
 import { Link } from 'react-router-dom'
-import logoShop from '../../../public/otherImg/logoShop.png'
+const logoShop = '/otherImg/logoShop.png'
 
 export const Footer = () => {
 	const scrollToTop = () => {

@@ -96,6 +96,7 @@ export const styles = {
 		transition: '0.3s',
 		'> img': {
 			filter: 'brightness(0%) invert(1)',
+			transition: '0.3s',
 		},
 		'&:hover, &:active': {
 			backgroundColor: theme.colors.white.main,

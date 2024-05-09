@@ -3,7 +3,7 @@ import { theme } from '../../theme'
 
 export const styles = {
 	cartitems: css({
-		margin: '10rem 10rem',
+		padding: '10rem',
 	}),
 
 	cartitemsHr: css({
@@ -13,17 +13,16 @@ export const styles = {
 	}),
 
 	cartitemsLayout: css({
-		display: 'grid',
-		gridTemplateColumns: '0.5fr 2fr 1fr 1fr 1fr 1fr 1fr 1fr',
-		alignItems: 'center',
-		gap: '2.5rem',
-		padding: '2rem 0',
 		color: theme.colors.grey.main,
 		fontWeight: '600',
+		width: '100%'
 	}),
 
 	cartitemsLayoutP: css({
 		fontSize: '1.6rem',
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '1.2rem'
+		}
 	}),
 
 	cartitemsFormat: css({
@@ -53,13 +52,18 @@ export const styles = {
 	cartitemsTotals: css({
 		display: 'flex',
 		margin: '10rem 0',
+		gap: '10rem',
+		width: '100%',
+		[`@media (max-width: ${theme.breakpoints.xl})`]: {
+			flexDirection: 'column-reverse',
+			alignItems: 'flex-end'
+		},
 	}),
 
 	cartitemsTotal: css({
-		minWidth: '700px',
+		width: '100%',
 		display: 'flex',
 		flexDirection: 'column',
-		marginRight: '10rem',
 		gap: '4rem',
 	}),
 
@@ -108,6 +112,8 @@ export const styles = {
 	cartitemsPromocode: css({
 		flex: '1',
 		fontWeight: '500',
+		width: '100%',
+		maxWidth: 500
 	}),
 
 	cartitemsPromocodeP: css({
@@ -119,19 +125,19 @@ export const styles = {
 		display: 'flex',
 		width: '500px',
 		marginTop: '1.6rem',
-		paddingLeft: '2rem',
-		height: '58px',
-		background: theme.colors.grey.light,
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			width: '100%',
+			maxWidth: 500
+		}
 	}),
 
 	cartitemsPromoboxInput: css({
 		border: 'none',
-		outline: 'none',
 		background: 'transparent',
-		width: '360px',
-		height: '50px',
+		width: '100%',
 		fontSize: '1.6rem',
 		borderRadius: '4px',
+		paddingLeft: '2rem'
 	}),
 
 	cartitemsPromoboxInvalidP: css({
@@ -150,10 +156,27 @@ export const styles = {
 		cursor: 'pointer',
 		transition: '0.3s',
 		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
+
 	}),
 
 	cartitemsLogInfo: css({
 		marginTop: '1.6rem',
 		fontSize: '1.1rem',
 	}),
+
+	cartItemsPromoboxContainer: css({
+		display: 'flex',
+		height: '58px',
+		background: theme.colors.grey.light,
+	}),
+
+	cartItemsFormWrapper: css({
+		width: '100%',
+	}),
+
+	cellHideOnMobile: css({
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			display: 'none'
+		}
+	})
 }

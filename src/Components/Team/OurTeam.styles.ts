@@ -10,7 +10,6 @@ export const styles = {
 		backgroundColor: theme.colors.black.main,
 		width: '100%',
 		padding: '6% 10% 10%',
-		overflowX: 'hidden'
 	}),
 
 	teamText: css({
@@ -46,7 +45,6 @@ export const styles = {
 	}),
 
 	teamTextP: css({
-		minWidth: '600px',
 		color: theme.colors.white.main,
 		fontSize: '1.5rem',
 		fontWeight: '400',
