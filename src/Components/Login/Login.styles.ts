@@ -40,7 +40,7 @@ export const styles = {
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
-		maxWidth: '56rem',
+		maxWidth: '55rem',
 		margin: 'auto',
 		padding: '5rem',
 		background: theme.colors.white.main,
