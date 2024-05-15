@@ -7,9 +7,9 @@ export const styles = {
 		justifyContent: 'center',
 		alignItems: 'center',
 		width: '100%',
+		margin: '6rem auto'
 	}),
 	accordion: css({
-		margin: '12rem 17rem',
 		width: '100%',
 	}),
 	accordionItem: css({

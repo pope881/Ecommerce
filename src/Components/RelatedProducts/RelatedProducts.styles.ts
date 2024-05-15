@@ -25,7 +25,19 @@ export const styles = {
 
 	relatedproductsItem: css({
 		marginTop: '5rem',
-		display: 'flex',
 		gap: '3rem',
+		display: 'grid',
+		gridTemplateColumns: '1fr 1fr 1fr 1fr',
+		rowGap: '8rem',
+
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridTemplateColumns: '1fr 1fr',
+			rowGap: '5rem',
+		},
+
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			gridTemplateColumns: '1fr',
+			rowGap: '3rem',
+		},
 	}),
 }

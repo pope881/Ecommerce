@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { styles } from './DescriptionBox.styles'
+import { WideContent } from '../Layouts/WideContent'
 
 type Props = {
 	product: {
@@ -53,7 +54,7 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 	}
 
 	return (
-		<div className={styles.wrapper}>
+		<WideContent className={styles.wrapper}>
 			<div className={styles.accordion}>
 				{dataDescription.map((item, i) => (
 					<div key={item.id} className={styles.accordionItem}>
@@ -72,6 +73,6 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 					</div>
 				))}
 			</div>
-		</div>
+		</WideContent>
 	)
 }

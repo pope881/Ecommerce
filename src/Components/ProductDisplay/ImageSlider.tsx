@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { styles } from './ImageSlider.styles'
 
 type Props = {
@@ -14,31 +13,34 @@ type Props = {
 		description: string
 		madeOf: string
 		maintenance: { feature: string }[]
-	}
+	},
+	currentImage: string;
+	onImageChange: (newImage: string) => void;
 }
 
 export const ImageSlider = (props: Props): JSX.Element => {
-	const [currentIndex, setCurrentIndex] = useState(0)
-	const { product } = props
+	const { product, onImageChange, currentImage } = props
 
 	const bgcImg = {
-		backgroundImage: `url(${product.image_slide[currentIndex].url})`,
+		backgroundImage: `url(${currentImage})`,
 	}
 
 	const goToPreviousSlide = () => {
-		const isFirstSlide = currentIndex === 0
-		const newIndex = isFirstSlide ? product.image_slide.length - 1 : currentIndex - 1
-		setCurrentIndex(newIndex)
+		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage);
+		const { length } = product.image_slide
+		if (slideIndex === 0) {
+			return onImageChange(product.image_slide[length - 1].url)
+		}
+		onImageChange(product.image_slide[slideIndex - 1].url)
 	}
 
 	const goToNextSlide = () => {
-		const isLastSlide = currentIndex === product.image_slide.length - 1
-		const newIndex = isLastSlide ? 0 : currentIndex + 1
-		setCurrentIndex(newIndex)
-	}
-
-	const goToSlide = (slideIndex: number) => {
-		setCurrentIndex(slideIndex)
+		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage);
+		const { length } = product.image_slide
+		if (slideIndex === length - 1) {
+			return onImageChange(product.image_slide[0].url)
+		}
+		onImageChange(product.image_slide[slideIndex + 1].url)
 	}
 
 	return (
@@ -51,8 +53,8 @@ export const ImageSlider = (props: Props): JSX.Element => {
 			</div>
 			<div style={bgcImg} className={styles.imgSliderSlide}></div>
 			<div className={styles.imgSliderDots}>
-				{product.image_slide.map((slide, slideIndex) => (
-					<div key={slideIndex} className={styles.imgSliderDot} onClick={() => goToSlide(slideIndex)}>
+				{product.image_slide.map((image, slideIndex) => (
+					<div key={slideIndex} className={styles.imgSliderDot} onClick={() => onImageChange(image.url)}>
 						<i className="fa-solid fa-circle"></i>
 					</div>
 				))}

@@ -9,8 +9,11 @@ export const styles = {
 		color: theme.colors.black.main,
 		fontSize: '1.6rem',
 		fontWeight: '600',
-		margin: '6rem 17rem',
+		margin: '6rem auto',
 		textTransform: 'capitalize',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			margin: '2rem auto'
+		}
 	}),
 	breadcrumA: css({
 		fontSize: '1.6rem',

@@ -77,7 +77,7 @@ export const CartItems = () => {
 	return (
 		<WideContent>
 			<table className={styles.cartitemsLayout}>
-				<tr>
+				<tr className={styles.cartItemsRow}>
 					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Products</th>
 					<th className={styles.cartitemsLayoutP}>Name</th>
 					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Price</th>
@@ -89,8 +89,8 @@ export const CartItems = () => {
 				</tr>
 				{items.map(product => {
 					return (
-						<tr key={product.id}>
-							<td>
+						<tr key={product.id} className={styles.cartItemsRow}>
+							<td className={styles.cellHideOnMobile}>
 								<img src={product.image} alt="display of each product" className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`} />
 
 							</td>
@@ -98,7 +98,7 @@ export const CartItems = () => {
 							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>${product.price}</td>
 							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.size}</td>
 							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.color}</td>
-							<td className={styles.cartitemsQuantity}>{product.amount}</td>
+							<td className={styles.cartitemsLayoutP}>{product.amount}</td>
 							<td className={styles.cartitemsLayoutP}>${product.price * product.amount}</td>
 							<td>
 								<img

@@ -4,22 +4,56 @@ import { theme } from '../../theme'
 export const styles = {
 	productdisplay: css({
 		display: 'flex',
-		margin: '0 10rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			display: 'grid'
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			display: 'flex',
+			flexDirection: 'column',
+		}
 	}),
 
 	productdisplaySliderContainer: css({
 		margin: '0 2rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			margin: 0,
+			gridColumn: '2',
+			justifySelf: 'end'
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			alignSelf: 'center',
+			width: '100%',
+			display: 'flex',
+			justifyContent: 'center',
+			alignItems: 'center',
+		}
 	}),
 
 	productdisplayLeft: css({
 		display: 'flex',
 		gap: '1.6rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridColumn: '1',
+			alignSelf: 'center'
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			order: 2,
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '100%'
+		}
 	}),
 
 	productdisplayImgList: css({
 		display: 'flex',
 		flexDirection: 'column',
 		gap: '1.6rem',
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			flexDirection: 'row',
+			display: 'grid',
+			gridTemplateColumns: '1fr 1fr',
+			width: '100%'
+		},
 	}),
 
 	productdisplayImgListImg: css({
@@ -29,7 +63,12 @@ export const styles = {
 	productdisplayRight: css({
 		display: 'flex',
 		flexDirection: 'column',
-		margin: '0 3rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			gridColumn: '1 / 3',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			order: 3,
+		}
 	}),
 
 	productdisplayRightH1: css({

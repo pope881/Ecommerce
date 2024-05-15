@@ -2,10 +2,11 @@ import { Item } from '../Item/Item'
 import { dataProductWomen } from '../../../public/dataWomen'
 import { styles } from './RelatedProducts.styles'
 import { AllProduct } from '../../../public/allProduct'
+import { WideContent } from '../Layouts/WideContent'
 
 export const RelatedProducts = (): JSX.Element => {
 	return (
-		<div className={styles.relatedproducts}>
+		<WideContent className={styles.relatedproducts}>
 			<h1 className={styles.relatedproductsH1}>Other Products</h1>
 			<hr className={styles.relatedproductsHr} />
 			<div className={styles.relatedproductsItem}>
@@ -23,6 +24,6 @@ export const RelatedProducts = (): JSX.Element => {
 					)
 				})}
 			</div>
-		</div>
+		</WideContent>
 	)
 }

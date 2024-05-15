@@ -17,8 +17,9 @@ const styles = {
 }
 
 type PropsWideContent = {
-	children: React.ReactNode
+	children: React.ReactNode;
+	className?: string;
 }
-export const WideContent = ({ children }: PropsWideContent) => {
-	return <section className={styles.wideContent}>{children}</section>
+export const WideContent = ({ children, className }: PropsWideContent) => {
+	return <section className={`${styles.wideContent} ${className}`}>{children}</section>
 }

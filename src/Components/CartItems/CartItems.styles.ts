@@ -15,14 +15,17 @@ export const styles = {
 	cartitemsLayout: css({
 		color: theme.colors.grey.main,
 		fontWeight: '600',
-		width: '100%'
+		width: '100%',
+		marginTop: '2rem',
+		borderCollapse: "collapse"
 	}),
 
 	cartitemsLayoutP: css({
+		textAlign: 'left',
 		fontSize: '1.6rem',
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			fontSize: '1.2rem'
-		}
+		},
 	}),
 
 	cartitemsFormat: css({
@@ -35,7 +38,7 @@ export const styles = {
 	}),
 
 	cartitemsRemoveIcon: css({
-		width: '20px',
+		width: '12px',
 		margin: '0 1.6rem',
 		cursor: 'pointer',
 	}),
@@ -178,5 +181,11 @@ export const styles = {
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			display: 'none'
 		}
+	}),
+
+	cartItemsRow: css({
+		borderBottom: `1px solid ${theme.colors.grey.light}`,
+		marginBottom: '1rem',
+		marginTop: '1rem',
 	})
 }

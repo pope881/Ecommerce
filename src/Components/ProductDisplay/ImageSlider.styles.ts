@@ -6,6 +6,13 @@ export const styles = {
 		height: '100%',
 		position: 'relative',
 		width: '500px',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: 688,
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			width: '100%',
+			maxWidth: 400
+		}
 	}),
 
 	imgSliderArrow: css({
@@ -32,12 +39,16 @@ export const styles = {
 		borderRadius: '10px',
 		backgroundPosition: 'center',
 		backgroundSize: 'cover',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			height: 'calc(100% - 45px)'
+		}
 	}),
 
 	imgSliderDots: css({
 		display: 'flex',
 		justifyContent: 'center',
 		color: theme.colors.grey.main,
+		height: 45
 	}),
 
 	imgSliderDot: css({

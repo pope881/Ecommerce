@@ -4,6 +4,7 @@ import { CartContext } from '../../Context/cart-context'
 import { ImageSlider } from './ImageSlider'
 import { colorOptions } from '../../../public/mockData/mockData'
 import { sizeOptions } from '../../../public/mockData/mockData'
+import { WideContent } from '../Layouts/WideContent'
 const starIcon = '/otherImg/starIcon.png'
 
 type Props = {
@@ -23,10 +24,11 @@ type Props = {
 }
 
 export const ProductDisplay = (props: Props): JSX.Element => {
+	const { product } = props
 	const [valueSize, setValueSize] = useState('S')
 	const [valueColor, setValueColor] = useState('BLACK')
 
-	const { product } = props
+	const [currentImage, setCurrentImage] = useState(product.image_slide[0].url);
 
 	const cartCtx = useContext(CartContext)
 	const { addItem } = cartCtx
@@ -40,17 +42,16 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 	}
 
 	return (
-		<div className={styles.productdisplay}>
+		<WideContent className={styles.productdisplay}>
 			<div className={styles.productdisplayLeft}>
 				<div className={styles.productdisplayImgList}>
-					<img className={styles.productdisplayImgListImg} src={product.image_slide[0].url} alt="each product nr 1" />
-					<img className={styles.productdisplayImgListImg} src={product.image_slide[1].url} alt="each product nr 2" />
-					<img className={styles.productdisplayImgListImg} src={product.image_slide[2].url} alt="each product nr 3" />
-					<img className={styles.productdisplayImgListImg} src={product.image_slide[3].url} alt="each product nr 4" />
+					{product.image_slide.map((image, index) => (
+						<img className={styles.productdisplayImgListImg} src={image.url} alt={`each product nr ${index + 1}`} onClick={() => setCurrentImage(image.url)} />
+					))}
 				</div>
 			</div>
 			<div className={styles.productdisplaySliderContainer}>
-				<ImageSlider product={product} />
+				<ImageSlider product={product} currentImage={currentImage} onImageChange={setCurrentImage} />
 			</div>
 
 			<div className={styles.productdisplayRight}>
@@ -120,6 +121,6 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 					<span className={styles.productdisplayRightCategorySpan}>Category: {product.clothes_type}</span>
 				</p>
 			</div>
-		</div>
+		</WideContent>
 	)
 }
