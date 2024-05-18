@@ -28,7 +28,7 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 	const [valueSize, setValueSize] = useState('S')
 	const [valueColor, setValueColor] = useState('BLACK')
 
-	const [currentImage, setCurrentImage] = useState(product.image_slide[0].url);
+	const [currentImage, setCurrentImage] = useState(product.image_slide[0].url)
 
 	const cartCtx = useContext(CartContext)
 	const { addItem } = cartCtx
@@ -46,7 +46,13 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 			<div className={styles.productdisplayLeft}>
 				<div className={styles.productdisplayImgList}>
 					{product.image_slide.map((image, index) => (
-						<img className={styles.productdisplayImgListImg} src={image.url} alt={`each product nr ${index + 1}`} onClick={() => setCurrentImage(image.url)} />
+						<img
+							className={styles.productdisplayImgListImg}
+							key={image.url}
+							src={image.url}
+							alt={`each product nr ${index + 1}`}
+							onClick={() => setCurrentImage(image.url)}
+						/>
 					))}
 				</div>
 			</div>
