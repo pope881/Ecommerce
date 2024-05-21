@@ -73,9 +73,9 @@ const NavbarButtons = () => {
 	return (
 		<div className={styles.navbarLoginCart}>
 			<Link className={styles.navbarLoginCartA} to={isAuth ? '/' : '/login'}>
-				<button className={styles.navbarBtn} {...(isAuth && { onClick: logoutHandler })}>
+				<button className={styles.navbarBtn} {...(isAuth && { onClick: logoutHandler })} data-testid="navbarAuthButton">
 					<img src={isAuth ? logoutIcon : loginIcon} className={styles.navbarAuthIcon} alt="login or logout icon" />
-					<span className={styles.navbarAuthBtn}>{isAuth ? 'Logout' : 'Login'}</span>
+					<span className={styles.navbarAuthBtn} data-testid="navbarAuthButtonText">{isAuth ? 'Logout' : 'Login'}</span>
 				</button>
 			</Link>
 			<Link className={styles.navbarLogoA} to="/cart">

@@ -43,7 +43,7 @@ export const NavbarButton = () => {
 			<button onMouseOver={cartColorOver} onMouseLeave={cartColorLeave} className={btnClasses}>
 				<img className={styles.navbarCartIcon} src={cartIcon} alt="basket icon for desktop"></img>
 				<span className={styles.navbarBtnCartSpan}>Your Cart</span>
-				<span className={styles.navbarBadgeSpan(hoverButton === true)}>{numberOfCartItems}</span>
+				<span data-testid="cartItemsCount" className={styles.navbarBadgeSpan(hoverButton === true)}>{numberOfCartItems}</span>
 			</button>
 		</>
 	)

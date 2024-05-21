@@ -1,11 +1,11 @@
 import { useContext } from 'react'
 import { CartContext } from '../Context/cart-context'
 import { useParams } from 'react-router-dom'
-import { Breadcrum } from '../Components/Breadcrums/Breadcrum'
+import { Breadcrumb } from '../Components/Breadcrumbs/Breadcrumb'
 import { ProductDisplay } from '../Components/ProductDisplay/ProductDisplay'
 import { DescriptionBox } from '../Components/DescriptionBox/DescriptionBox'
 import { RelatedProducts } from '../Components/RelatedProducts/RelatedProducts'
-import { AllProduct } from '../../public/allProduct'
+import { type AllProduct } from '../../public/allProduct'
 
 export const Product = () => {
 	const cartCtx = useContext(CartContext)
@@ -15,7 +15,7 @@ export const Product = () => {
 
 	return (
 		<div>
-			<Breadcrum product={product} />
+			<Breadcrumb product={product} />
 			<ProductDisplay product={product} />
 			<DescriptionBox product={product} />
 			<RelatedProducts />

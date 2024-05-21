@@ -55,25 +55,6 @@ export const CartItems = () => {
 		setIsCheckout(false)
 	}
 
-	let btnCheckout
-	if (items.length !== 0 && isAuth) {
-		btnCheckout = (
-			<div className={styles.cartitemsAction}>
-				<button className={styles.cartitemsActionButton} onClick={orderHandler}>
-					Proceed to checkout
-				</button>
-			</div>
-		)
-	} else {
-		btnCheckout = (
-			<div className={styles.cartitemsAction}>
-				<button className={styles.cartitemsActionButton} disabled onClick={orderHandler}>
-					Proceed to checkout
-				</button>
-				<p className={styles.cartitemsLogInfo}>You must be logged in to proceed.</p>
-			</div>
-		)
-	}
 	return (
 		<WideContent>
 			<table className={styles.cartitemsLayout}>
@@ -89,7 +70,7 @@ export const CartItems = () => {
 				</tr>
 				{items.map(product => {
 					return (
-						<tr key={product.id} className={styles.cartItemsRow}>
+						<tr key={product.id} className={styles.cartItemsRow} data-testid="cartItemRow">
 							<td className={styles.cellHideOnMobile}>
 								<img src={product.image} alt="display of each product" className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`} />
 
@@ -110,6 +91,7 @@ export const CartItems = () => {
 										})
 									}}
 									alt="cart's remove icon"
+									data-testid="cartItemRemoveButton"
 								/>
 							</td>
 						</tr>
@@ -134,10 +116,15 @@ export const CartItems = () => {
 						<hr />
 						<div className={styles.cartitemsItem}>
 							<h3 className={styles.cartitemsItemH3}>Total</h3>
-							<h3 className={styles.cartitemsItemH3}>${totalAmount}</h3>
+							<h3 className={styles.cartitemsItemH3} data-testid="cartTotalAmount">${totalAmount}</h3>
 						</div>
 					</div>
-					{btnCheckout}
+					<div className={styles.cartitemsAction}>
+						<button className={styles.cartitemsActionButton} disabled={!isAuth || !items.length} onClick={orderHandler} data-testid="proceedButton">
+							Proceed to checkout
+						</button>
+						{!isAuth && <p className={styles.cartitemsLogInfo}>You must be logged in to proceed.</p>}
+					</div>
 					{isCheckout && <Checkout onSubmitPromoCode={clearPromoCode} onCancel={orderCloseHandler} />}
 				</div>
 				<div className={styles.cartitemsPromocode}>
@@ -152,13 +139,14 @@ export const CartItems = () => {
 									placeholder="promo code"
 									ref={promoCodeInputRef}
 									name="promo code input"
+									data-testid="promocodeInput"
 								/>
-								<button className={styles.cartitemsPromoboxButton}>Submit</button>
+								<button className={styles.cartitemsPromoboxButton} data-testid="promocodeSubmit">Submit</button>
 							</div>
 							{!promoCodeValidity && (
 								<p
 									className={`${styles.cartitemsPromocodeP} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
-										}`}>
+										}`} data-testid="promocodeError">
 									Please enter a valid promo code.
 								</p>
 							)}

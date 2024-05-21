@@ -5,12 +5,12 @@ export const styles = {
 	productdisplay: css({
 		display: 'flex',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			display: 'grid'
+			display: 'grid',
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			display: 'flex',
 			flexDirection: 'column',
-		}
+		},
 	}),
 
 	productdisplaySliderContainer: css({
@@ -18,7 +18,7 @@ export const styles = {
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			margin: 0,
 			gridColumn: '2',
-			justifySelf: 'end'
+			justifySelf: 'auto',
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			alignSelf: 'center',
@@ -26,7 +26,7 @@ export const styles = {
 			display: 'flex',
 			justifyContent: 'center',
 			alignItems: 'center',
-		}
+		},
 	}),
 
 	productdisplayLeft: css({
@@ -34,14 +34,11 @@ export const styles = {
 		gap: '1.6rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridColumn: '1',
-			alignSelf: 'center'
+			alignSelf: 'center',
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			order: 2,
 		},
-		[`@media (max-width: ${theme.breakpoints.xs})`]: {
-			width: '100%'
-		}
 	}),
 
 	productdisplayImgList: css({
@@ -49,10 +46,10 @@ export const styles = {
 		flexDirection: 'column',
 		gap: '1.6rem',
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
-			flexDirection: 'row',
 			display: 'grid',
 			gridTemplateColumns: '1fr 1fr',
-			width: '100%'
+			width: '100%',
+			gap: '1rem',
 		},
 	}),
 
@@ -68,13 +65,23 @@ export const styles = {
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			order: 3,
-		}
+		},
 	}),
 
 	productdisplayRightH1: css({
+		padding: '1rem 0',
 		color: theme.colors.black.main,
 		fontSize: '4rem',
 		fontWeight: '700',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '3.5rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '3rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '2.5rem',
+		},
 	}),
 
 	productdisplayStars: css({
@@ -88,19 +95,40 @@ export const styles = {
 
 	productdisplayPrices: css({
 		display: 'flex',
+		justifyContent: 'flex-start',
+		alignItems: 'center',
 		margin: '3rem 0',
-		gap: '3rem',
-		fontSize: '4rem',
+		gap: '2rem',
 		fontWeight: '700',
 	}),
 
 	productdisplayPriceOld: css({
 		color: theme.colors.grey.main,
 		textDecoration: 'line-through',
+		fontSize: '2.2rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '2rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '1.8rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '1.6rem',
+		},
 	}),
 
 	productdisplayPriceNew: css({
 		color: theme.colors.red.main,
+		fontSize: '3rem',
+		[`@media (max-width: ${theme.breakpoints.md})`]: {
+			fontSize: '2.8rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.sm})`]: {
+			fontSize: '2.6rem',
+		},
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '2rem',
+		},
 	}),
 
 	productdisplaySelectsH1: css({
@@ -112,19 +140,23 @@ export const styles = {
 
 	productdisplayRightButton: css({
 		marginTop: '4rem',
+		marginBottom: '4rem',
 		padding: '1rem 4rem',
 		fontSize: '1.6rem',
 		fontWeight: '600',
 		color: theme.colors.white.main,
 		backgroundColor: theme.colors.red.main,
-		marginBottom: '4rem',
 		border: `1px solid ${theme.colors.red.main}`,
-		outline: 'none',
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
 		'&:hover': { color: theme.colors.red.main, background: theme.colors.white.main },
 		'&:active': { color: theme.colors.red.main, background: theme.colors.white.main },
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '80%',
+			margin: '4rem auto 4rem ',
+			padding: '1.5rem 4rem',
+		},
 	}),
 
 	productdisplayRightCategory: css({
@@ -142,8 +174,12 @@ export const styles = {
 		position: 'relative',
 		minWidth: '250px',
 		width: '100px',
-		height: '45px',
+		height: '40px',
 		marginBottom: '2rem',
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '80%',
+			height: '40px',
+		},
 	}),
 
 	productdisplaySelectBox: css({

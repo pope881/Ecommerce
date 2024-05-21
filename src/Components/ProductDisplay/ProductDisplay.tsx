@@ -25,6 +25,7 @@ type Props = {
 
 export const ProductDisplay = (props: Props): JSX.Element => {
 	const { product } = props
+	
 	const [valueSize, setValueSize] = useState('S')
 	const [valueColor, setValueColor] = useState('BLACK')
 
@@ -71,8 +72,8 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 					<p>(+100)</p>
 				</div>
 				<div className={styles.productdisplayPrices}>
-					<div className={styles.productdisplayPriceOld}>${product.old_price}</div>
-					<div className={styles.productdisplayPriceNew}>New Price: ${product.new_price}</div>
+					<p className={styles.productdisplayPriceOld}>${product.old_price}</p>
+					<p className={styles.productdisplayPriceNew}>New Price: ${product.new_price}</p>
 				</div>
 				<div>
 					<h1 className={styles.productdisplaySelectsH1}>Select size</h1>

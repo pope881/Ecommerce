@@ -1,28 +1,19 @@
-// import { render, screen } from '@testing-library/react'
-// import { Item } from './Item'
-// import React from 'react'
-// import '@testing-library/jest-dom'
+import { render, screen } from '@testing-library/react'
+import { Item } from './Item'
+import '@testing-library/jest-dom'
+import { BrowserRouter } from 'react-router-dom'
 
-// describe('Item', () => {
-// 	test('shows three descriptions sections', () => {
-// 		render(
-// 			<Item
-// 				{{
-//                     key: 23,
-// 					id: 1,
-// 					name: 'item test',
-// 					clothes_type: 'blouse',
-// 					image: 'img',
-// 					new_price: 12,
-// 					old_price: 13,
-// 				}}
-// 			/>
-// 		)
+describe('Item', () => {
+  test('shows three descriptions sections', () => {
+    render(
+      <BrowserRouter>
+        <Item key={23} id={1} name="item test" clothes_type="blouse" image="/abc.svg" new_price={12} old_price={13} />
+      </BrowserRouter>
+    );
 
-// 		// screen.debug()
-
-// 		expect(screen.getByText('Washing and maintenance rules')).toBeInTheDocument()
-// 		expect(screen.getByText('Material composition')).toBeInTheDocument()
-// 		expect(screen.getByText('Description')).toBeInTheDocument()
-// 	})
-// })
+    expect(screen.getByTestId('itemImage')).toHaveProperty('src', 'http://localhost:3000/abc.svg');
+    expect(screen.getByTestId('itemName')).toHaveTextContent('item test');
+    expect(screen.getByTestId('oldPrice')).toHaveTextContent('$13');
+    expect(screen.getByTestId('newPrice')).toHaveTextContent('$12');
+  })
+})

@@ -4,20 +4,6 @@ import { Item } from '../Item/Item'
 import { type AllProduct } from '../../../public/allProduct'
 import { WideContent } from '../Layouts/WideContent'
 
-// export type GroupProduct = {
-// 	id: number
-// 	name: string
-// 	category: string
-// 	clothes_type: string
-// 	image: string
-// 	image_slide: { url: string }[]
-// 	new_price: number
-// 	old_price: number
-// 	description: string
-// 	madeOf: string
-// 	maintenance: { item: string }[]
-// }
-
 type Props = {
 	groupProducts: AllProduct[]
 	banner: string

@@ -11,21 +11,15 @@ type Props = {
 	clothes_type: string
 }
 
-const scrollTop = () => {
-	window.scrollTo(0, 0)
-}
-
-export const Item = (props: Props): JSX.Element => {
-	return (
-		<div className={styles.item}>
-			<Link to={`/product/${props.id}`}>
-				<img className={styles.itemImg} onClick={scrollTop} src={props.image} alt="each product" />
-			</Link>
-			<p className={styles.itemP}>{props.name}</p>
-			<div className={styles.itemPrices}>
-				<div className={styles.itemPriceNew}>${props.new_price}</div>
-				<div className={styles.itemPriceOld}>${props.old_price}</div>
-			</div>
+export const Item = (props: Props): JSX.Element => (
+	<div className={styles.item} data-testid="item">
+		<Link to={`/product/${props.id}`}>
+			<img className={styles.itemImg} onClick={() => window.scrollTo(0, 0)} src={props.image} alt="each product" data-testid="itemImage" />
+		</Link>
+		<p className={styles.itemP} data-testid="itemName">{props.name}</p>
+		<div className={styles.itemPrices}>
+			<div className={styles.itemPriceNew} data-testid="newPrice">${props.new_price}</div>
+			<div className={styles.itemPriceOld} data-testid="oldPrice">${props.old_price}</div>
 		</div>
-	)
-}
+	</div>
+)

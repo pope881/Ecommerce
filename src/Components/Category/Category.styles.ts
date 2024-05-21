@@ -23,7 +23,6 @@ export const styles = {
 			flexDirection: 'column',
 			alignItems: 'flex-start',
 			gap: '2rem',
-			//width: '100%'
 		},
 	}),
 

@@ -14,17 +14,17 @@ export type CartItem = {
 	color: string
 }
 
-type AddAction = {
+export type AddAction = {
 	item: CartItem
 	type: 'ADD'
 }
 
-type RemoveAction = {
+export type RemoveAction = {
 	item: CartItem
 	type: 'REMOVE'
 }
 
-type ClearAction = {
+export type ClearAction = {
 	type: 'CLEAR'
 }
 
