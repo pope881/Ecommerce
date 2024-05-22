@@ -2,7 +2,7 @@ import { css } from '@emotion/css'
 import { theme } from '../../theme'
 
 export const styles = {
-	relatedproducts: css({
+	OtherProducts: css({
 		display: 'flex',
 		flexDirection: 'column',
 		alignItems: 'center',
@@ -10,7 +10,7 @@ export const styles = {
 		marginBottom: '8rem',
 	}),
 
-	relatedproductsH1: css({
+	OtherProductsH1: css({
 		color: theme.colors.black.main,
 		fontSize: '5rem',
 		fontWeight: '600',
@@ -25,7 +25,7 @@ export const styles = {
 		},
 	}),
 
-	relatedproductsHr: css({
+	OtherProductsHr: css({
 		width: '200px',
 		height: '6px',
 		borderRadius: '10px',
@@ -44,7 +44,7 @@ export const styles = {
 		},
 	}),
 
-	relatedproductsItem: css({
+	OtherProductsItem: css({
 		gap: '3rem',
 		display: 'grid',
 		margin: '2rem 0',

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import { styles } from './ProductDisplay.styles'
 import { CartContext } from '../../Context/cart-context'
 import { ImageSlider } from './ImageSlider'
@@ -25,14 +25,17 @@ type Props = {
 
 export const ProductDisplay = (props: Props): JSX.Element => {
 	const { product } = props
-	
+
 	const [valueSize, setValueSize] = useState('S')
 	const [valueColor, setValueColor] = useState('BLACK')
-
 	const [currentImage, setCurrentImage] = useState(product.image_slide[0].url)
 
 	const cartCtx = useContext(CartContext)
 	const { addItem } = cartCtx
+
+	useEffect(() => {
+		setCurrentImage(product.image_slide[0].url)
+	}, [product.id])
 
 	const handleSelectSize = (event: React.ChangeEvent<HTMLSelectElement>) => {
 		setValueSize(event.target.value)

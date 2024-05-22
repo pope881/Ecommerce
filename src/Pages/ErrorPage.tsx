@@ -1,5 +1,6 @@
 import { Navbar } from '../Components/Navbar/Navbar'
 import { Footer } from '../Components/Footer/Footer'
+import { theme } from '../theme'
 
 export function ErrorPage() {
 	return (

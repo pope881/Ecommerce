@@ -1,15 +1,15 @@
 import { Item } from '../Item/Item'
 import { dataProductWomen } from '../../../public/dataWomen'
-import { styles } from './RelatedProducts.styles'
+import { styles } from './OtherProducts.styles'
 import { AllProduct } from '../../../public/allProduct'
 import { WideContent } from '../Layouts/WideContent'
 
-export const RelatedProducts = (): JSX.Element => {
+export const OtherProducts = (): JSX.Element => {
 	return (
-		<WideContent className={styles.relatedproducts}>
-			<h1 className={styles.relatedproductsH1}>Other Products</h1>
-			<hr className={styles.relatedproductsHr} />
-			<div className={styles.relatedproductsItem}>
+		<WideContent className={styles.OtherProducts}>
+			<h1 className={styles.OtherProductsH1}>Other Products</h1>
+			<hr className={styles.OtherProductsHr} />
+			<div className={styles.OtherProductsItem}>
 				{dataProductWomen.map((item: AllProduct, i: number) => {
 					return (
 						<Item

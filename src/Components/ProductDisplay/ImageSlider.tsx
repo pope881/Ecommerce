@@ -13,20 +13,19 @@ type Props = {
 		description: string
 		madeOf: string
 		maintenance: { feature: string }[]
-	},
-	currentImage: string;
-	onImageChange: (newImage: string) => void;
+	}
+	currentImage: string
+	onImageChange: (newImage: string) => void
 }
 
-export const ImageSlider = (props: Props): JSX.Element => {
-	const { product, onImageChange, currentImage } = props
-
+export const ImageSlider = ({ product, onImageChange, currentImage }: Props): JSX.Element => {
 	const bgcImg = {
 		backgroundImage: `url(${currentImage})`,
 	}
 
 	const goToPreviousSlide = () => {
-		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage);
+		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage)
+		console.log(product.image_slide)
 		const { length } = product.image_slide
 		if (slideIndex === 0) {
 			return onImageChange(product.image_slide[length - 1].url)
@@ -35,7 +34,7 @@ export const ImageSlider = (props: Props): JSX.Element => {
 	}
 
 	const goToNextSlide = () => {
-		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage);
+		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage)
 		const { length } = product.image_slide
 		if (slideIndex === length - 1) {
 			return onImageChange(product.image_slide[0].url)

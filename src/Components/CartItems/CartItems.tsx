@@ -58,43 +58,51 @@ export const CartItems = () => {
 	return (
 		<WideContent>
 			<table className={styles.cartitemsLayout}>
-				<tr className={styles.cartItemsRow}>
-					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Products</th>
-					<th className={styles.cartitemsLayoutP}>Name</th>
-					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Price</th>
-					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Size</th>
-					<th className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>Color</th>
-					<th className={styles.cartitemsLayoutP}>Quantity</th>
-					<th className={styles.cartitemsLayoutP}>Total</th>
-					<th className={styles.cartitemsLayoutP}>Remove</th>
-				</tr>
+				<tbody>
+					<tr className={styles.cartItemsRow}>
+						<th className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>Products</th>
+						<th className={styles.cartitemsLayoutCol}>Name</th>
+						<th className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>Price</th>
+						<th className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>Size</th>
+						<th className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>Color</th>
+						<th className={styles.cartitemsLayoutCol}>Quantity</th>
+						<th className={styles.cartitemsLayoutCol}>Total</th>
+						<th className={styles.cartitemsLayoutCol}>Remove</th>
+					</tr>
+				</tbody>
+
 				{items.map(product => {
 					return (
-						<tr key={product.id} className={styles.cartItemsRow} data-testid="cartItemRow">
-							<td className={styles.cellHideOnMobile}>
-								<img src={product.image} alt="display of each product" className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`} />
-
-							</td>
-							<td className={styles.cartitemsLayoutP}>{product.name}</td>
-							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>${product.price}</td>
-							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.size}</td>
-							<td className={`${styles.cartitemsLayoutP} ${styles.cellHideOnMobile}`}>{product.color}</td>
-							<td className={styles.cartitemsLayoutP}>{product.amount}</td>
-							<td className={styles.cartitemsLayoutP}>${product.price * product.amount}</td>
-							<td>
-								<img
-									className={styles.cartitemsRemoveIcon}
-									src="/otherImg/cartCrossIcon.png"
-									onClick={() => {
-										removeItem({
-											...product,
-										})
-									}}
-									alt="cart's remove icon"
-									data-testid="cartItemRemoveButton"
-								/>
-							</td>
-						</tr>
+						<tbody>
+							<tr key={product.id} className={styles.cartItemsRow} data-testid="cartItemRow">
+								<td className={styles.cellHideOnMobile}>
+									<img
+										src={product.image}
+										alt="display of each product"
+										className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`}
+									/>
+								</td>
+								<td className={styles.cartitemsLayoutCol}>{product.name}</td>
+								<td className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>${product.price}</td>
+								<td className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>{product.size}</td>
+								<td className={`${styles.cartitemsLayoutCol} ${styles.cellHideOnMobile}`}>{product.color}</td>
+								<td className={styles.cartitemsLayoutCol}>{product.amount}</td>
+								<td className={styles.cartitemsLayoutCol}>${product.price * product.amount}</td>
+								<td className={styles.cartitemsLayoutCol}>
+									<img
+										className={styles.cartitemsRemoveIcon}
+										src="/otherImg/cartCrossIcon.png"
+										onClick={() => {
+											removeItem({
+												...product,
+											})
+										}}
+										alt="cart's remove icon"
+										data-testid="cartItemRemoveButton"
+									/>
+								</td>
+							</tr>
+						</tbody>
 					)
 				})}
 			</table>
@@ -116,11 +124,17 @@ export const CartItems = () => {
 						<hr />
 						<div className={styles.cartitemsItem}>
 							<h3 className={styles.cartitemsItemH3}>Total</h3>
-							<h3 className={styles.cartitemsItemH3} data-testid="cartTotalAmount">${totalAmount}</h3>
+							<h3 className={styles.cartitemsItemH3} data-testid="cartTotalAmount">
+								${totalAmount}
+							</h3>
 						</div>
 					</div>
 					<div className={styles.cartitemsAction}>
-						<button className={styles.cartitemsActionButton} disabled={!isAuth || !items.length} onClick={orderHandler} data-testid="proceedButton">
+						<button
+							className={styles.cartitemsActionButton}
+							disabled={!isAuth || !items.length}
+							onClick={orderHandler}
+							data-testid="proceedButton">
 							Proceed to checkout
 						</button>
 						{!isAuth && <p className={styles.cartitemsLogInfo}>You must be logged in to proceed.</p>}
@@ -133,20 +147,25 @@ export const CartItems = () => {
 						<form onSubmit={promoCodeHandler} className={styles.cartItemsFormWrapper}>
 							<div className={styles.cartItemsPromoboxContainer}>
 								<input
-									className={`${styles.cartitemsPromoboxInput} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
-										}`}
+									className={`${styles.cartitemsPromoboxInput} ${
+										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
+									}`}
 									type="text"
 									placeholder="promo code"
 									ref={promoCodeInputRef}
 									name="promo code input"
 									data-testid="promocodeInput"
 								/>
-								<button className={styles.cartitemsPromoboxButton} data-testid="promocodeSubmit">Submit</button>
+								<button className={styles.cartitemsPromoboxButton} data-testid="promocodeSubmit">
+									Submit
+								</button>
 							</div>
 							{!promoCodeValidity && (
 								<p
-									className={`${styles.cartitemsPromocodeP} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
-										}`} data-testid="promocodeError">
+									className={`${styles.cartitemsPromocodeP} ${
+										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
+									}`}
+									data-testid="promocodeError">
 									Please enter a valid promo code.
 								</p>
 							)}

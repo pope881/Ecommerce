@@ -2,10 +2,6 @@ import { css } from '@emotion/css'
 import { theme } from '../../theme'
 
 export const styles = {
-	cartitems: css({
-		padding: '10rem',
-	}),
-
 	cartitemsHr: css({
 		height: '2px',
 		background: theme.colors.grey.light,
@@ -14,23 +10,27 @@ export const styles = {
 
 	cartitemsLayout: css({
 		color: theme.colors.grey.main,
-		fontWeight: '600',
 		width: '100%',
-		marginTop: '2rem',
-		borderCollapse: "collapse"
+		marginTop: '4rem',
+		borderCollapse: 'collapse',
 	}),
 
-	cartitemsLayoutP: css({
+	cartItemsRow: css({
+		borderBottom: `1px solid ${theme.colors.grey.light}`,
+	}),
+
+	cartitemsLayoutCol: css({
+		maxWidth: '10rem',
 		textAlign: 'left',
 		fontSize: '1.6rem',
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
-			fontSize: '1.2rem'
+			fontSize: '1.5rem',
+			textAlign: 'center',
 		},
-	}),
-
-	cartitemsFormat: css({
-		fontSize: '1.6rem',
-		fontWeight: '500',
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			fontSize: '1.2rem',
+			textAlign: 'center',
+		},
 	}),
 
 	cartitemsImg: css({
@@ -38,18 +38,12 @@ export const styles = {
 	}),
 
 	cartitemsRemoveIcon: css({
-		width: '12px',
-		margin: '0 1.6rem',
+		width: '1.2rem',
+		// margin: '0 1.6rem',
 		cursor: 'pointer',
-	}),
-
-	cartitemsQuantity: css({
-		width: '64px',
-		height: '50px',
-		display: 'flex',
-		alignItems: 'center',
-		justifyContent: 'center',
-		fontSize: '1.6rem',
+		[`@media (max-width: ${theme.breakpoints.xs})`]: {
+			width: '1rem',
+		},
 	}),
 
 	cartitemsTotals: css({
@@ -59,7 +53,6 @@ export const styles = {
 		width: '100%',
 		[`@media (max-width: ${theme.breakpoints.xl})`]: {
 			flexDirection: 'column-reverse',
-			alignItems: 'flex-end'
 		},
 	}),
 
@@ -116,22 +109,23 @@ export const styles = {
 		flex: '1',
 		fontWeight: '500',
 		width: '100%',
-		maxWidth: 500
+		maxWidth: 500,
 	}),
 
 	cartitemsPromocodeP: css({
 		color: theme.colors.grey.main,
 		fontSize: '1.1rem',
+		marginLeft: '3rem',
 	}),
 
 	cartitemsPromobox: css({
 		display: 'flex',
 		width: '500px',
-		marginTop: '1.6rem',
+		marginTop: '1rem',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			width: '100%',
-			maxWidth: 500
-		}
+			maxWidth: 500,
+		},
 	}),
 
 	cartitemsPromoboxInput: css({
@@ -140,7 +134,7 @@ export const styles = {
 		width: '100%',
 		fontSize: '1.6rem',
 		borderRadius: '4px',
-		paddingLeft: '2rem'
+		paddingLeft: '2rem',
 	}),
 
 	cartitemsPromoboxInvalidP: css({
@@ -158,8 +152,8 @@ export const styles = {
 		color: theme.colors.white.main,
 		cursor: 'pointer',
 		transition: '0.3s',
+		borderRadius: '50px',
 		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.black.main },
-
 	}),
 
 	cartitemsLogInfo: css({
@@ -169,7 +163,7 @@ export const styles = {
 
 	cartItemsPromoboxContainer: css({
 		display: 'flex',
-		height: '58px',
+		borderRadius: '50px',
 		background: theme.colors.grey.light,
 	}),
 
@@ -179,13 +173,7 @@ export const styles = {
 
 	cellHideOnMobile: css({
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
-			display: 'none'
-		}
+			display: 'none',
+		},
 	}),
-
-	cartItemsRow: css({
-		borderBottom: `1px solid ${theme.colors.grey.light}`,
-		marginBottom: '1rem',
-		marginTop: '1rem',
-	})
 }

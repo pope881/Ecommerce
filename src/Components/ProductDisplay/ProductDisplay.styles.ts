@@ -55,6 +55,8 @@ export const styles = {
 
 	productdisplayImgListImg: css({
 		height: '160px',
+		cursor: 'pointer',
+		borderRadius: '8px',
 	}),
 
 	productdisplayRight: css({
