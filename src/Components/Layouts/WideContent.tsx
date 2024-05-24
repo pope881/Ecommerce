@@ -21,5 +21,5 @@ type PropsWideContent = {
 	className?: string;
 }
 export const WideContent = ({ children, className }: PropsWideContent) => {
-	return <section className={`${styles.wideContent} ${className}`}>{children}</section>
+	return <section className={`${styles.wideContent} ${className}`} data-testid="wideContent">{children}</section>
 }

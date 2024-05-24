@@ -12,6 +12,7 @@ export const Newsletter = (): JSX.Element => {
 		event.preventDefault()
 
 		const enteredEmail = emailInputRef.current?.value
+
 		const enteredEmailIsValid = hasEmailSign(enteredEmail ?? '')
 
 		setFormInputsValidity(enteredEmailIsValid)
