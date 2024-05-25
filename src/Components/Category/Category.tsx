@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import { styles } from './Category.styles'
 import { Item } from '../Item/Item'
 import { type AllProduct } from '../../../public/allProduct'
@@ -15,11 +15,17 @@ export const capitalizeFirstLetter = (text: string) => {
 }
 
 export const Category = (props: Props): JSX.Element => {
-	const [category, setCategory] = useState(props.category);
+	const [category, setCategory] = useState(props.category)
 
 	const destinationPerson = capitalizeFirstLetter(props.category)
-	const filteredItems = props.groupProducts.filter(item => item.clothes_type === category || category === props.category)
-	const capitalizedCategory = capitalizeFirstLetter(props.category);
+	const filteredItems = props.groupProducts.filter(
+		item => item.clothes_type === category || category === props.category
+	)
+	const capitalizedCategory = capitalizeFirstLetter(props.category)
+
+	useEffect(() => {
+		setCategory(props.category)
+	}, [props.category])
 
 	return (
 		<WideContent>
