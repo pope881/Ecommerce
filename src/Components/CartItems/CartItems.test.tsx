@@ -34,11 +34,11 @@ describe('cartItems', () => {
 			</Provider>
 		)
 
-		const proceedButton = screen.getByTestId('cartTotalAmount')
-		expect(proceedButton).toHaveTextContent('$0')
+		const cartTotalAmount = screen.getByTestId('cartTotalAmount')
+		expect(cartTotalAmount).toHaveTextContent('$0')
 	})
 
-	test('checks if there are no rows initially', () => {
+	test('checks if there are no cart item rows initially', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>

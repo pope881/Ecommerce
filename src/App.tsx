@@ -19,8 +19,8 @@ import { store } from './Components/store'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme'
 const menBanner = '/bannerImg/bannerMens.png'
-const womanBanner = '/bannerImg/bannerWomen.png'
-const kidBanner = '/bannerImg/bannerKids.png'
+const womenBanner = '/bannerImg/bannerWomen.png'
+const kidsBanner = '/bannerImg/bannerKids.png'
 
 const router = createBrowserRouter([
 	{
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
 		children: [
 			{ index: true, element: <Shop /> },
 			{ path: '/men', element: <ShopCategory banner={menBanner} category="men" groupProducts={menProduct} /> },
-			{ path: '/kids', element: <ShopCategory banner={kidBanner} category="kids" groupProducts={kidsProduct} /> },
-			{ path: '/women', element: <ShopCategory banner={womanBanner} category="women" groupProducts={womenProduct} /> },
+			{ path: '/kids', element: <ShopCategory banner={kidsBanner} category="kids" groupProducts={kidsProduct} /> },
+			{ path: '/women', element: <ShopCategory banner={womenBanner} category="women" groupProducts={womenProduct} /> },
 			{ path: '/product/:productId', element: <Product /> },
 			{ path: '/cart', element: <Cart /> },
 			{ path: '/login', element: <LoginSignup /> },
