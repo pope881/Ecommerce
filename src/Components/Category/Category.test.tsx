@@ -4,7 +4,7 @@ import { Category, capitalizeFirstLetter } from './Category'
 import menProduct from '../../../public/menProduct'
 
 describe('Category', () => {
-	test('check category rendering', () => {
+	test('checks category rendering', () => {
 		render(
 			<BrowserRouter>
 				<Category banner="/bannerImg/bannerMens.png" category="men" groupProducts={menProduct} />
@@ -17,7 +17,12 @@ describe('Category', () => {
 		expect(bannerImg).toHaveProperty('src', 'http://localhost:3000/bannerImg/bannerMens.png')
 	})
 
-	test('check capitalize function', () => {
+	test('checks capitalize function', () => {
+		render(
+			<BrowserRouter>
+				<Category banner="/bannerImg/bannerMens.png" category="men" groupProducts={menProduct} />
+			</BrowserRouter>
+		)
 		const capitalizedText = capitalizeFirstLetter('abc')
 		expect(capitalizedText).toEqual('Abc')
 	})

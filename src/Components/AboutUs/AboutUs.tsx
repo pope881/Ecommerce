@@ -1,7 +1,7 @@
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
 
-export const AboutUs = () => {
+export const AboutUs = (): JSX.Element => {
 	return (
 		<div className={styles.about}>
 			<motion.div

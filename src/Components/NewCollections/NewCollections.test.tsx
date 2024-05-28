@@ -1,18 +1,18 @@
 import { render, screen } from '@testing-library/react'
-import { OtherProducts } from './OtherProducts'
-import { dataProductWomen } from '../../../public/dataWomen'
 import { BrowserRouter } from 'react-router-dom'
+import { NewCollections } from './NewCollections'
+import { newCollections } from '../../../public/newCollections'
 
-describe('OtherProducts', () => {
+describe('NewCollections', () => {
 	test('checks other products items amount (length of array)', () => {
 		render(
 			<BrowserRouter>
-				<OtherProducts />
+				<NewCollections />
 			</BrowserRouter>
 		)
 
 		const items = screen.getAllByTestId('itemId')
 		console.log(items.length)
-		expect(items.length).toEqual(dataProductWomen.length)
+		expect(items.length).toEqual(newCollections.length)
 	})
 })

@@ -8,7 +8,7 @@ describe('Breadcrumb', () => {
 
 	test('check breadcrumb category and item', () => {
 		render(
-			<BrowserRouter> 
+			<BrowserRouter>
 				<Breadcrumb product={allProduct[28]} />
 			</BrowserRouter>
 		)

@@ -2,7 +2,7 @@ import { styles } from './Hero.styles'
 const heroWomanImage = '/otherImg/heroWomanImage.png'
 const heroManImage = '/otherImg/heroManImage.png'
 
-export const Hero = () => {
+export const Hero = (): JSX.Element => {
 	const handleClickScroll = () => {
 		const element = document.getElementById('new-collections')
 		if (element) {

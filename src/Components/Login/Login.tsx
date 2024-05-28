@@ -14,7 +14,7 @@ type HasBeenEdited = {
 	password: boolean
 }
 
-export const Login = () => {
+export const Login = (): JSX.Element => {
 	const [enteredValues, setEnteredValues] = useState<Credentials>({ email: '', password: '' })
 	const [didEdit, setDidEdit] = useState<HasBeenEdited>({ email: false, password: false })
 	const [loginIsValid, setLoginIsValid] = useState(false)

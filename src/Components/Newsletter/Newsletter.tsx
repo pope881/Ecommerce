@@ -38,6 +38,8 @@ export const Newsletter = (): JSX.Element => {
 				<form onSubmit={subscribeHandler} className={styles.newsletterForm}>
 					<div className={styles.newsletterControl}>
 						<input
+							// value="test@mail.com"
+							data-testid="email-input"
 							name="subscribe input"
 							className={styles.newsletterControlInput}
 							type="text"
@@ -47,7 +49,9 @@ export const Newsletter = (): JSX.Element => {
 					</div>
 					<div>
 						{!formInputsValidity && (
-							<p className={`${formInputsValidity ? '' : styles.newsletterInvalidP}`}>Please enter a valid email.</p>
+							<p data-testid="error-msg" className={`${formInputsValidity ? '' : styles.newsletterInvalidP}`}>
+								Please enter a valid email.
+							</p>
 						)}
 					</div>
 				</form>

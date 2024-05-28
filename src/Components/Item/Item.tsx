@@ -13,7 +13,7 @@ type Props = {
 
 export const Item = (props: Props): JSX.Element => {
 	return (
-		<div className={styles.item} data-testid="item">
+		<div className={styles.item} data-testid="itemId">
 			<Link to={`/product/${props.id}`}>
 				<img
 					className={styles.itemImg}
@@ -27,10 +27,10 @@ export const Item = (props: Props): JSX.Element => {
 				{props.name}
 			</p>
 			<div className={styles.itemPrices}>
-				<div className={styles.itemPriceNew} data-testid="newPrice">
+				<div className={styles.itemPriceNew} data-testid="itemNewPrice">
 					${props.new_price}
 				</div>
-				<div className={styles.itemPriceOld} data-testid="oldPrice">
+				<div className={styles.itemPriceOld} data-testid="itemOldPrice">
 					${props.old_price}
 				</div>
 			</div>

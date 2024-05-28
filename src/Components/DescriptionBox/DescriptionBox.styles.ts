@@ -17,7 +17,7 @@ export const styles = {
 		marginBottom: '0.5rem',
 		padding: '1.5rem 2.5rem',
 		borderRadius: '5px',
-		transition: 'background-color 0.4s',
+		transition: 'background-color 0.3s',
 		'&:hover': { backgroundColor: theme.colors.grey.dark },
 	}),
 	accordionItemTitle: css({

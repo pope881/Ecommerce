@@ -2,7 +2,7 @@ import { styles } from './Footer.styles'
 import { Link } from 'react-router-dom'
 const logoShop = '/otherImg/logoShop.png'
 
-export const Footer = () => {
+export const Footer = (): JSX.Element => {
 	const scrollToTop = () => {
 		window.scrollTo(0, 0)
 	}
@@ -24,7 +24,9 @@ export const Footer = () => {
 						</p>
 					</div>
 					<div className={styles.footerQuicklinks}>
-						<h2 className={styles.footerSectionH2}>Support</h2>
+						<h2 data-testid="supportSection" className={styles.footerSectionH2}>
+							Support
+						</h2>
 						<ul>
 							<Link className={styles.footerQuicklinksUlA} to="/about">
 								<li className={styles.footerQuicklinksUlLi} onClick={scrollToTop}>

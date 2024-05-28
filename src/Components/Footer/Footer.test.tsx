@@ -3,17 +3,15 @@ import { Footer } from './Footer'
 import '@testing-library/jest-dom'
 import { BrowserRouter } from 'react-router-dom'
 
-describe('Item', () => {
-	test('shows three footer sections', () => {
+describe('Footer', () => {
+	test('renders footer section', () => {
 		render(
 			<BrowserRouter>
 				<Footer />
 			</BrowserRouter>
 		)
 
-		expect(screen.getByTestId('itemImage')).toHaveProperty('src', 'http://localhost:3000/abc.svg')
-		expect(screen.getByTestId('itemName')).toHaveTextContent('item test')
-		expect(screen.getByTestId('oldPrice')).toHaveTextContent('$13')
-		expect(screen.getByTestId('newPrice')).toHaveTextContent('$12')
+		const supportSection = screen.getByTestId('supportSection')
+		expect(supportSection).toHaveTextContent('Support')
 	})
 })

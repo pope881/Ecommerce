@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { styles } from './BackgroundSlider.styles'
 import { imageSlide } from '../../../public/mockData/mockData'
 
-export const BackgroundSlider = () => {
+export const BackgroundSlider = (): JSX.Element => {
 	const [currentState, setCurrentState] = useState<number>(0)
 	useEffect(() => {
 		const timer = setTimeout(() => {

@@ -7,7 +7,7 @@ import { CartItems } from './CartItems'
 import { CartContext } from '../../Context/cart-context'
 import { allProduct } from '../../../public/allProduct'
 
-describe('cartItems', () => {
+describe('CartItems', () => {
 	test('checks proceed button state', () => {
 		render(
 			<Provider store={store}>

@@ -8,7 +8,7 @@ type FormInputValidity = {
 	email: boolean
 }
 
-export const ContactForm = () => {
+export const ContactForm = (): JSX.Element => {
 	const [clickInput, setClickInput] = useState<boolean | null>(false)
 
 	const [formInputsValidity, setFormInputsValidity] = useState<FormInputValidity>({
