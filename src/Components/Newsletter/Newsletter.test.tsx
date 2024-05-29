@@ -36,6 +36,7 @@ describe('Newsletter', () => {
 		fireEvent.change(input, { target: { value: 'test' } })
 		expect(input).toHaveValue('test')
 		const errorP = screen.queryByTestId('error-msg')
+		console.log(errorP)
 
 		// expect(errorP).toBeInTheDocument()
 		// expect(screen.queryByTestId('error-msg').textContent).toEqual('Please enter a valid email.')
