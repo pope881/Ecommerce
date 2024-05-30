@@ -45,7 +45,9 @@ export const Newsletter = (): JSX.Element => {
 							type="text"
 							placeholder="Your email id"
 							ref={emailInputRef}></input>
-						<button className={styles.newsletterControlButton}>Subscribe</button>
+						<button data-testid="subscribeBtn" className={styles.newsletterControlButton}>
+							Subscribe
+						</button>
 					</div>
 					<div>
 						{!formInputsValidity && (

@@ -146,6 +146,7 @@ export const ContactForm = (): JSX.Element => {
 						<h2 className={styles.contactFormH2}>Send Message</h2>
 						<div className={styles.contactInputBox}>
 							<input
+								data-testid="form-input-name"
 								name="input name"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxInput}
@@ -155,13 +156,14 @@ export const ContactForm = (): JSX.Element => {
 							{formInputsValidity.name ? (
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>Name</span>
 							) : (
-								<span className={styles.contactInputBoxSpan(clickInput === true)}>
+								<span data-testid="error-msg-name" className={styles.contactInputBoxSpan(clickInput === true)}>
 									Name must contains min. 3 characters.
 								</span>
 							)}
 						</div>
 						<div className={styles.contactInputBox}>
 							<input
+								data-testid="form-input-email"
 								name="input email"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxInput}
@@ -171,11 +173,14 @@ export const ContactForm = (): JSX.Element => {
 							{formInputsValidity.email ? (
 								<span className={styles.contactInputBoxSpan(clickInput === true)}>Email</span>
 							) : (
-								<span className={styles.contactInputBoxSpan(clickInput === true)}>Email must contains '@'.</span>
+								<span data-testid="error-msg-email" className={styles.contactInputBoxSpan(clickInput === true)}>
+									Email must contains '@'.
+								</span>
 							)}
 						</div>
 						<div className={styles.contactInfoBox}>
 							<textarea
+								data-testid="form-textarea-message"
 								name="textarea message"
 								onClick={() => setClickInput(true)}
 								className={styles.contactInputBoxTextarea}

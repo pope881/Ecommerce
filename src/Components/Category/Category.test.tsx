@@ -11,7 +11,7 @@ describe('Category', () => {
 			</BrowserRouter>
 		)
 
-		const itemsList = screen.getAllByTestId('item')
+		const itemsList = screen.getAllByTestId('itemId')
 		expect(itemsList.length).toEqual(menProduct.length)
 		const bannerImg = screen.getByTestId('bannerImg')
 		expect(bannerImg).toHaveProperty('src', 'http://localhost:3000/bannerImg/bannerMens.png')
