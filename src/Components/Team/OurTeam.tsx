@@ -15,6 +15,7 @@ export const OurTeam = (): JSX.Element => {
 			<div className={styles.teamContainer}>
 				{teamPeople.map((person, id) => (
 					<div
+						data-testid="ourTeam-id"
 						key={id}
 						className={styles.teamCard}
 						style={{

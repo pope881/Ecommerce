@@ -71,24 +71,31 @@ describe('ContactForm', () => {
 		expect(screen.queryByTestId('error-msg-email')).not.toBeInTheDocument()
 	})
 
-	// dm,sd,,ms,md,sd,m,sdm,
+	test('should have empty input when confirm button is cliced and all inputs and text area are valid', () => {
+		render(
+			<BrowserRouter>
+				<ContactForm />
+			</BrowserRouter>
+		)
 
-	// test('checks if user can pass invalid email to test email input field', () => {
-	// 	render(
-	// 		<BrowserRouter>
-	// 			<ContactForm />
-	// 		</BrowserRouter>
-	// 	)
+		const nameInput = screen.getByTestId('form-input-name')
+		const emailInput = screen.getByTestId('form-input-email')
+		const messageTextArea = screen.getByTestId('form-textarea-message')
+		const confirmButton = screen.getByRole('button', { name: 'Confirm' })
+		fireEvent.change(nameInput, { target: { value: 'joe smith' } })
+		fireEvent.change(emailInput, { target: { value: 'joesmith@gmail.com' } })
+		fireEvent.change(messageTextArea, { target: { value: 'I am writing with complain about' } })
+		fireEvent.click(confirmButton)
+		expect(nameInput).toHaveValue('')
+		expect(emailInput).toHaveValue('')
+		expect(messageTextArea).toHaveValue('')
+	})
 
-	// 	const input = screen.getByTestId('form-input-email')
-	// 	fireEvent.change(input, { target: { value: 'test' } })
-	// 	expect(input).toHaveValue('test')
-
-	// 	const subscribeBtn = screen.getByTestId('subscribeBtn')
-	// 	fireEvent.click(subscribeBtn)
-
-	// 	const errorP = screen.getByTestId('error-msg')
-	// 	expect(errorP).toBeInTheDocument()
-	// 	expect(errorP.textContent).toEqual('Please enter a valid email.')
-	// })
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
+	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
 })

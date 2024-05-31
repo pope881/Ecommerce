@@ -151,12 +151,12 @@ export const CartItems = () => {
 										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
 									}`}
 									type="text"
-									placeholder="promo code"
+									placeholder="Promo code"
 									ref={promoCodeInputRef}
 									name="promo code input"
-									data-testid="promocodeInput"
+									data-testid="promocode-input"
 								/>
-								<button className={styles.cartitemsPromoboxButton} data-testid="promocodeSubmit">
+								<button className={styles.cartitemsPromoboxButton} data-testid="promocode-Submit">
 									Submit
 								</button>
 							</div>
@@ -165,7 +165,7 @@ export const CartItems = () => {
 									className={`${styles.cartitemsPromocodeP} ${
 										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
 									}`}
-									data-testid="promocodeError">
+									data-testid="promocode-error">
 									Please enter a valid promo code.
 								</p>
 							)}

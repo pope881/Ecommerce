@@ -82,14 +82,19 @@ export const Login = (): JSX.Element => {
 							id="email"
 							type="email"
 							name="email"
-							placeholder="Email address..."
+							placeholder="Email address"
 							onBlur={() => handleInputBlur('email')}
 							onChange={event => handleInputChange('email', event.target.value)}
 							value={enteredValues.email}
+							data-testid="login-input-email"
 						/>
 
 						<div className={styles.loginControlError}>
-							{emailIsInvalid && <p className={styles.loginControlErrorP}>Please enter a valid email address.</p>}
+							{emailIsInvalid && (
+								<p data-testid="error-msg-login-mail" className={styles.loginControlErrorP}>
+									Please enter a valid email address.
+								</p>
+							)}
 						</div>
 					</div>
 
@@ -104,12 +109,13 @@ export const Login = (): JSX.Element => {
 							name="password"
 							onBlur={() => handleInputBlur('password')}
 							onChange={event => handleInputChange('password', event.target.value)}
-							placeholder="Password..."
+							placeholder="Password"
 							value={enteredValues.password}
+							data-testid="login-input-password"
 						/>
 						<div className={styles.loginControlError}>
 							{passwordIsInvalid && (
-								<p className={styles.loginControlErrorP}>Password must contains min. 10 characters.</p>
+								<p data-testid="error-msg-login-password" className={styles.loginControlErrorP}>Password must contains min. 10 characters.</p>
 							)}
 						</div>
 					</div>

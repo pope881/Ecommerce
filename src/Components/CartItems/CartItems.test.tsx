@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { store } from '../store'
@@ -60,4 +60,77 @@ describe('CartItems', () => {
 		const cartItemRow = screen.queryByTestId('cartItemRow')
 		expect(cartItemRow).not.toBeInTheDocument()
 	})
+
+	test('renders promo code input', () => {
+		render(
+			<Provider store={store}>
+				<BrowserRouter>
+					<CartContext.Provider
+						value={{
+							items: [],
+							addItem: () => {},
+							allProduct: allProduct,
+							totalAmount: 0,
+							removeItem: () => {},
+							clearCart: () => {},
+						}}>
+						<CartItems />
+					</CartContext.Provider>
+				</BrowserRouter>
+			</Provider>
+		)
+		const promoCodeInput = screen.getByTestId('promocode-input')
+		expect(promoCodeInput).toBeInTheDocument()
+		expect(promoCodeInput).toHaveAttribute('type', 'text')
+	})
+	test('checks if user can pass valid promo code to test promo code input field', () => {
+		render(
+			<Provider store={store}>
+				<BrowserRouter>
+					<CartContext.Provider
+						value={{
+							items: [],
+							addItem: () => {},
+							allProduct: allProduct,
+							totalAmount: 0,
+							removeItem: () => {},
+							clearCart: () => {},
+						}}>
+						<CartItems />
+					</CartContext.Provider>
+				</BrowserRouter>
+			</Provider>
+		)
+
+		const promoCodeInput = screen.getByTestId('promocode-input')
+		fireEvent.change(promoCodeInput, { target: { value: 'abcde' } })
+		expect(promoCodeInput).toHaveValue('abcde')
+		expect(screen.queryByTestId('error-msg-name')).not.toBeInTheDocument()
+	})
+	test('should have empty input when submit button is cliced and the input value is valid (5 characters)', () => {
+		render(
+			<Provider store={store}>
+				<BrowserRouter>
+					<CartContext.Provider
+						value={{
+							items: [],
+							addItem: () => {},
+							allProduct: allProduct,
+							totalAmount: 0,
+							removeItem: () => {},
+							clearCart: () => {},
+						}}>
+						<CartItems />
+					</CartContext.Provider>
+				</BrowserRouter>
+			</Provider>
+		)
+
+		const promoCodeInput = screen.getByPlaceholderText('Promo code')
+		const promoCodeButton = screen.getByRole('button', { name: 'Submit' })
+		fireEvent.change(promoCodeInput, { target: { value: 'abcde' } })
+		fireEvent.click(promoCodeButton)
+		expect(promoCodeInput).toHaveValue('')
+	})
 })
+ 
