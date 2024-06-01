@@ -107,7 +107,7 @@ describe('CartItems', () => {
 		expect(promoCodeInput).toHaveValue('abcde')
 		expect(screen.queryByTestId('error-msg-name')).not.toBeInTheDocument()
 	})
-	test('should have empty input when submit button is cliced and the input value is valid (5 characters)', () => {
+	test('should have empty input when submit button is clicked and the input value is valid (5 characters)', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>

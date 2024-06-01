@@ -9,7 +9,12 @@ export const AboutUs = (): JSX.Element => {
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2 }}>
-				<img className={styles.aboutMainImgImg} src="/aboutImg/1.png" alt="men with black sunglasses" />
+				<img
+					data-testid="aboutImage"
+					className={styles.aboutMainImgImg}
+					src="/aboutImg/1.png"
+					alt="men with black sunglasses"
+				/>
 			</motion.div>
 			<motion.div
 				className={styles.aboutText}

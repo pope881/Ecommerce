@@ -18,7 +18,12 @@ export const Hero = (): JSX.Element => {
 			</div>
 			<div className={styles.hero}>
 				<div className={styles.heroImgWoman}>
-					<img className={styles.heroImgWomanImg} src={heroWomanImage} alt="young girl dressed in sports clothes" />
+					<img
+						data-testid="womenImage"
+						className={styles.heroImgWomanImg}
+						src={heroWomanImage}
+						alt="young girl dressed in sports clothes"
+					/>
 				</div>
 				<div className={styles.heroText}>
 					<div>
@@ -35,7 +40,12 @@ export const Hero = (): JSX.Element => {
 					</div>
 				</div>
 				<div className={styles.heroImgMan}>
-					<img className={styles.heroImgManImg} src={heroManImage} alt="men dressed in sports clothes" />
+					<img
+						data-testid="menImage"
+						className={styles.heroImgManImg}
+						src={heroManImage}
+						alt="men dressed in sports clothes"
+					/>
 				</div>
 			</div>
 		</div>

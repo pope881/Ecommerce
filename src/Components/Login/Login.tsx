@@ -9,22 +9,26 @@ type Credentials = {
 	password: string
 }
 
-type HasBeenEdited = {
+type HasBeenEditted = {
 	email: boolean
 	password: boolean
 }
 
 export const Login = (): JSX.Element => {
 	const [enteredValues, setEnteredValues] = useState<Credentials>({ email: '', password: '' })
-	const [didEdit, setDidEdit] = useState<HasBeenEdited>({ email: false, password: false })
+	const [didEdit, setDidEdit] = useState<HasBeenEditted>({ email: false, password: false })
 	const [loginIsValid, setLoginIsValid] = useState(false)
 
 	const emailIsInvalid = didEdit.email && !enteredValues.email.includes('@')
 	const passwordIsInvalid = didEdit.password && enteredValues.password.trim().length < 10
 
 	const emailIsValid = enteredValues.email.includes('@')
+	console.log(emailIsValid)
 	const passwordIsValid = enteredValues.password.trim().length >= 10
+	console.log(passwordIsValid)
+
 	const formIsValid = emailIsValid && passwordIsValid
+	console.log(formIsValid)
 
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -48,12 +52,13 @@ export const Login = (): JSX.Element => {
 		navigateHandler()
 	}
 
-	const handleInputChange = (identifier: any, value: any) => {
+	const handleInputChange = (identifier: string, value: string) => {
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
+		console.log(value)
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}
 
-	const handleInputBlur = (identifier: any) => {
+	const handleInputBlur = (identifier: string) => {
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: true }))
 	}
 
@@ -115,7 +120,9 @@ export const Login = (): JSX.Element => {
 						/>
 						<div className={styles.loginControlError}>
 							{passwordIsInvalid && (
-								<p data-testid="error-msg-login-password" className={styles.loginControlErrorP}>Password must contains min. 10 characters.</p>
+								<p data-testid="error-msg-login-password" className={styles.loginControlErrorP}>
+									Password must contains min. 10 characters.
+								</p>
 							)}
 						</div>
 					</div>

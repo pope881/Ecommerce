@@ -23,7 +23,7 @@ export const BackgroundSlider = (): JSX.Element => {
 		width: '100%',
 	}
 
-	const goToNext = (currentState: number) => {
+	const changeSlide = (currentState: number) => {
 		setCurrentState(currentState)
 	}
 
@@ -42,7 +42,7 @@ export const BackgroundSlider = (): JSX.Element => {
 							<span
 								className={styles.carouselCarouselSpan}
 								key={currentState}
-								onClick={() => goToNext(currentState)}></span>
+								onClick={() => changeSlide(currentState)}></span>
 						))}
 					</div>
 				</div>
