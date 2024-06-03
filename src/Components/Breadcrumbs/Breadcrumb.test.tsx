@@ -4,7 +4,6 @@ import { Breadcrumb } from './Breadcrumb'
 import { allProduct } from '../../../public/allProduct'
 
 describe('Breadcrumb', () => {
-	console.log(allProduct[26])
 
 	test('check breadcrumb category and item', () => {
 		render(

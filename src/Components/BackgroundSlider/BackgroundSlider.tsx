@@ -30,19 +30,19 @@ export const BackgroundSlider = (): JSX.Element => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.containerBackground}>
-				<div style={bgImageStyle}></div>
-				<div className={styles.containerBackgroundTransparent}></div>
+				<div style={bgImageStyle} data-testid="imageSlideBg" />
+				<div className={styles.containerBackgroundTransparent} />
 				<div className={styles.containerDescription}>
 					<div>
 						<h1 className={styles.containerDescriptionH1}>{imageSlide[currentState].title}</h1>
-						<p className={styles.containerDescriptionP}>{imageSlide[currentState].body}</p>
+						<p className={styles.containerDescriptionP} data-testid="imageSlideBody">{imageSlide[currentState].body}</p>
 					</div>
 					<div className={styles.carouselCarousel}>
 						{imageSlide.map((_, currentState) => (
-							<span
+							<button
 								className={styles.carouselCarouselSpan}
 								key={currentState}
-								onClick={() => changeSlide(currentState)}></span>
+								onClick={() => changeSlide(currentState)}></button>
 						))}
 					</div>
 				</div>

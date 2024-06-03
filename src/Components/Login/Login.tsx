@@ -23,12 +23,9 @@ export const Login = (): JSX.Element => {
 	const passwordIsInvalid = didEdit.password && enteredValues.password.trim().length < 10
 
 	const emailIsValid = enteredValues.email.includes('@')
-	console.log(emailIsValid)
 	const passwordIsValid = enteredValues.password.trim().length >= 10
-	console.log(passwordIsValid)
 
 	const formIsValid = emailIsValid && passwordIsValid
-	console.log(formIsValid)
 
 	const dispatch = useDispatch()
 	const navigate = useNavigate()
@@ -54,7 +51,6 @@ export const Login = (): JSX.Element => {
 
 	const handleInputChange = (identifier: string, value: string) => {
 		setEnteredValues(prevValues => ({ ...prevValues, [identifier]: value }))
-		console.log(value)
 		setDidEdit(prevEdit => ({ ...prevEdit, [identifier]: false }))
 	}
 

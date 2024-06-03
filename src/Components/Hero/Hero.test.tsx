@@ -1,6 +1,7 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { Hero } from './Hero'
+import '@testing-library/dom';
 
 describe('Hero', () => {
 	test('renders button element', () => {
@@ -25,12 +26,5 @@ describe('Hero', () => {
 		const womenImage = screen.getByTestId('womenImage')
 		expect(menImage).toHaveProperty('alt', 'men dressed in sports clothes')
 		expect(womenImage).toHaveProperty('alt', 'young girl dressed in sports clothes')
-	})
-	test('renders new collections after the button was clicked', () => {
-		render(
-			<BrowserRouter>
-				<Hero />
-			</BrowserRouter>
-		)
 	})
 })

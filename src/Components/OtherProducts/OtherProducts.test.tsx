@@ -12,7 +12,6 @@ describe('OtherProducts', () => {
 		)
 
 		const items = screen.getAllByTestId('itemId')
-		console.log(items.length)
 		expect(items.length).toEqual(dataProductWomen.length)
 	})
 })

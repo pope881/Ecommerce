@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { DescriptionBox } from './DescriptionBox'
 
 describe('DescriptionBox', () => {
@@ -45,9 +45,10 @@ describe('DescriptionBox', () => {
 			/>
 		)
 
-		// const materialCompositionBtn = screen.getAllByTestId('materialCompositionBtn')
-		// console.log(materialCompositionBtn)
-		// expect(materialCompositionBtn).toBeInTheDocument()
-		// fireEvent.click(materialCompositionBtn)
+		const materialCompositionBtns = screen.getAllByTestId('materialCompositionBtn')
+		expect(materialCompositionBtns[1]).toBeInTheDocument()
+		fireEvent.click(materialCompositionBtns[1])
+		const accordion = screen.getAllByTestId('accordion')
+		expect(accordion[1]).toHaveClass('visible')
 	})
 })

@@ -25,7 +25,6 @@ export const ImageSlider = ({ product, onImageChange, currentImage }: Props): JS
 
 	const goToPreviousSlide = () => {
 		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage)
-		console.log(product.image_slide)
 		const { length } = product.image_slide
 		if (slideIndex === 0) {
 			return onImageChange(product.image_slide[length - 1].url)

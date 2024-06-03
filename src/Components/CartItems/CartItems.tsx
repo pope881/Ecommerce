@@ -147,9 +147,8 @@ export const CartItems = () => {
 						<form onSubmit={promoCodeHandler} className={styles.cartItemsFormWrapper}>
 							<div className={styles.cartItemsPromoboxContainer}>
 								<input
-									className={`${styles.cartitemsPromoboxInput} ${
-										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
-									}`}
+									className={`${styles.cartitemsPromoboxInput} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
+										}`}
 									type="text"
 									placeholder="Promo code"
 									ref={promoCodeInputRef}
@@ -162,9 +161,8 @@ export const CartItems = () => {
 							</div>
 							{!promoCodeValidity && (
 								<p
-									className={`${styles.cartitemsPromocodeP} ${
-										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
-									}`}
+									className={`${styles.cartitemsPromocodeP} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
+										}`}
 									data-testid="promocode-error">
 									Please enter a valid promo code.
 								</p>

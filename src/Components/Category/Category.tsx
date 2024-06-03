@@ -29,7 +29,7 @@ export const Category = (props: Props): JSX.Element => {
 
 	return (
 		<WideContent>
-			<div className={styles.shopCategory}>
+			<div className={styles.shopCategory} data-testid={`shopCategory_${props.category}`}>
 				<img className={styles.shopCategoryBanner} src={props.banner} alt="banner" data-testid="bannerImg" />
 				<div className={styles.shopCategoryIndexSort}>
 					<div className={styles.shopCategoryActions}>

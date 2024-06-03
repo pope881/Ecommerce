@@ -30,7 +30,9 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 						to="/"
 						onClick={onClick}
 						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
-						end>
+						end
+						data-testid="navShop"
+					>
 						SHOP
 					</NavLink>
 				</li>
@@ -38,7 +40,9 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 					<NavLink
 						onClick={onClick}
 						to="/men"
-						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}>
+						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
+						data-testid="navMen"
+					>
 						MEN
 					</NavLink>
 				</li>
@@ -46,7 +50,9 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 					<NavLink
 						onClick={onClick}
 						to="/women"
-						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}>
+						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
+						data-testid="navWomen"
+					>
 						WOMEN
 					</NavLink>
 				</li>
@@ -54,7 +60,9 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 					<NavLink
 						onClick={onClick}
 						to="/kids"
-						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}>
+						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
+						data-testid="navKids"
+					>
 						KIDS
 					</NavLink>
 				</li>

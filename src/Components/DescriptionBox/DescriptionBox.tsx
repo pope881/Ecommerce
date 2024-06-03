@@ -63,9 +63,10 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 							<span className={styles.accordionItemTitleSpan}>{selected === i ? '-' : '+'}</span>
 						</div>
 						<div
+							data-testid="accordion"
 							className={
 								selected === i
-									? `${styles.accordionItemContent} ${styles.accordionItemShow}`
+									? `${styles.accordionItemContent} ${styles.accordionItemShow} visible`
 									: `${styles.accordionItemContent}`
 							}>
 							<div className={styles.accordionItemContentDiv}>{item.text}</div>

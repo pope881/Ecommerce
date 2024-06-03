@@ -17,6 +17,7 @@ type FormInputValidity = {
 export const Checkout = (props: Props): JSX.Element => {
 	const cartCtx = useContext(CartContext)
 	const { totalAmount, clearCart } = cartCtx
+	const showCheckout = !!totalAmount
 
 	const [formInputsValidity, setFormInputsValidity] = useState<FormInputValidity>({
 		name: true,
@@ -32,13 +33,6 @@ export const Checkout = (props: Props): JSX.Element => {
 
 	const isEmpty = (value: string) => value.trim() === ''
 	const isFiveChars = (value: string) => value.trim().length === 5
-
-	let showCheckout
-	if (totalAmount !== 0) {
-		showCheckout = true
-	} else {
-		showCheckout = false
-	}
 
 	const confirmHandler = (event: FormEvent) => {
 		event.preventDefault()
@@ -92,7 +86,7 @@ export const Checkout = (props: Props): JSX.Element => {
 	return (
 		<div>
 			{showCheckout && (
-				<form className={styles.form} onSubmit={confirmHandler}>
+				<form className={styles.form} onSubmit={confirmHandler} data-testid="checkout">
 					<div className={styles.formControl}>
 						<label className={styles.formControlLabel} htmlFor="name">
 							Your Name
@@ -102,6 +96,7 @@ export const Checkout = (props: Props): JSX.Element => {
 							type="text"
 							id="name"
 							ref={nameInputRef}
+							data-testid="checkoutInputName"
 						/>
 						{!formInputsValidity.name && (
 							<p className={`${formInputsValidity.name ? '' : styles.invalidP}`}>Please enter a valid name.</p>
@@ -116,6 +111,7 @@ export const Checkout = (props: Props): JSX.Element => {
 							type="text"
 							id="street"
 							ref={streetInputRef}
+							data-testid="checkoutInputStreet"
 						/>
 						{!formInputsValidity.street && (
 							<p className={`${formInputsValidity.street ? '' : styles.invalidP}`}>Please enter a valid street.</p>
@@ -130,6 +126,7 @@ export const Checkout = (props: Props): JSX.Element => {
 							type="text"
 							id="postal"
 							ref={postalCodeInputRef}
+							data-testid="checkoutInputPostalCode"
 						/>
 						{!formInputsValidity.postalCode && (
 							<p className={`${formInputsValidity.postalCode ? '' : styles.invalidP}`}>
@@ -146,6 +143,7 @@ export const Checkout = (props: Props): JSX.Element => {
 							type="text"
 							id="city"
 							ref={cityInputRef}
+							data-testid="checkoutInputCity"
 						/>
 						{!formInputsValidity.city && (
 							<p className={`${formInputsValidity.city ? '' : styles.invalidP}`}>Please enter a valid city.</p>
@@ -156,7 +154,7 @@ export const Checkout = (props: Props): JSX.Element => {
 						<button className={styles.formActionsButton} type="button" onClick={props.onCancel}>
 							Cancel
 						</button>
-						<button className={`${styles.formActionsButton}  ${styles.formSubmit}`}>Confirm</button>
+						<button className={`${styles.formActionsButton}  ${styles.formSubmit}`} data-testid="checkoutSubmit">Confirm</button>
 					</div>
 				</form>
 			)}

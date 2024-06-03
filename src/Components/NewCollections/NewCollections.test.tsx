@@ -12,7 +12,6 @@ describe('NewCollections', () => {
 		)
 
 		const items = screen.getAllByTestId('itemId')
-		console.log(items.length)
 		expect(items.length).toEqual(newCollections.length)
 	})
 })
