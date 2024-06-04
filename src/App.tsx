@@ -4,7 +4,7 @@ import { CartProvider } from './Context/CartProvider'
 import { store } from './Components/store'
 import { ThemeProvider } from '@emotion/react'
 import { theme } from './theme'
-import { router } from './router2.tsx'
+import { router } from './router.tsx'
 
 function App() {
 	return (
