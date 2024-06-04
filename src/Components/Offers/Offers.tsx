@@ -1,7 +1,9 @@
 import { styles } from './Offers.styles'
 import { useNavigate } from 'react-router-dom'
-const exlusiveImage = '/otherImg/exclusiveImage.png'
 import { WideContent } from '../Layouts/WideContent'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+const exclusiveImage = cld.image('Ecommerce/exclusiveImage').format('auto').quality('auto')
 
 export const Offers = (): JSX.Element => {
 	const navigate = useNavigate()
@@ -22,9 +24,9 @@ export const Offers = (): JSX.Element => {
 					</div>
 				</div>
 				<div className={styles.offersRight}>
-					<img
+					<AdvancedImage
 						data-testid="offersImage"
-						src={exlusiveImage}
+						cldImg={exclusiveImage}
 						alt="woman dressed jeans and black t-shirt"
 						className={styles.offersWomanImg}
 					/>

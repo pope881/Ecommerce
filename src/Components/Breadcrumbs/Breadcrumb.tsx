@@ -1,7 +1,10 @@
 import { Link } from 'react-router-dom'
 import { styles } from './Breadcrumb.styles'
 import { WideContent } from '../Layouts/WideContent'
-const breadcrumbArrow = '/otherImg/breadcrumArrow.png'
+import { AdvancedImage } from '@cloudinary/react'
+import { cld } from '../../cloudinary'
+const breadcrumbArrow = cld.image('Ecommerce/breadcrumArrow').format('auto').quality('auto')
+
 type Props = {
 	product: {
 		category: string
@@ -17,11 +20,11 @@ export const Breadcrumb = (props: Props): JSX.Element => {
 			<Link className={styles.breadcrumbA} to="/">
 				SHOP
 			</Link>
-			<img src={breadcrumbArrow} alt="link arrow icon" />
+			<AdvancedImage cldImg={breadcrumbArrow} alt="link arrow icon" />
 			<Link className={styles.breadcrumbA} to={`/${product.category}`} data-testid="breadcrumbCategory">
 				{product.category}
 			</Link>
-			<img src={breadcrumbArrow} alt="arrow icon" />
+			<AdvancedImage cldImg={breadcrumbArrow} alt="arrow icon" />
 			<span data-testid="breadcrumbItemName" className={styles.breadcrumbA}>
 				{product.name}
 			</span>

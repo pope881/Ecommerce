@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { teamPeople } from '../../../public/mockData/mockData'
 import { styles } from './OurTeam.styles'
+import { AdvancedImage } from '@cloudinary/react'
+import { cld } from '../../cloudinary'
 
 export const OurTeam = (): JSX.Element => {
 	const [hoverIndex, setHoverIndex] = useState<number | null>(null)
@@ -13,26 +15,30 @@ export const OurTeam = (): JSX.Element => {
 				<p className={styles.teamTextP}>Meet our team. Diversity is our strength.</p>
 			</div>
 			<div className={styles.teamContainer}>
-				{teamPeople.map((person, id) => (
-					<div
-						data-testid="ourTeam-id"
-						key={id}
-						className={styles.teamCard}
-						style={{
-							backgroundImage: `url(${person.img})`,
-						}}>
-						<button
-							className={styles.teamBtn}
-							onMouseEnter={() => setHoverIndex(id)}
-							onMouseLeave={() => setHoverIndex(null)}>
-							<i className="far fa-question-circle"></i>
-						</button>
-						<div className={styles.teamCardText(hoverIndex === id)}>
-							<h1 className={styles.teamCardTextH1}>{person.name}</h1>
-							<h2 className={styles.teamCardTextH2}>{person.job}</h2>
+				{teamPeople.map((person, id) => {
+					const imageURL = cld.image(person.img).format('auto').quality('auto')
+					return (
+						<div
+							data-testid="ourTeam-id"
+							key={id}
+							className={styles.teamCard}
+							style={{
+								backgroundImage: `url(${person.img})`,
+							}}>
+							<AdvancedImage cldImg={imageURL} className={styles.teamCardImg} />
+							<button
+								className={styles.teamBtn}
+								onMouseEnter={() => setHoverIndex(id)}
+								onMouseLeave={() => setHoverIndex(null)}>
+								<i className="far fa-question-circle"></i>
+							</button>
+							<div className={styles.teamCardText(hoverIndex === id)}>
+								<h1 className={styles.teamCardTextH1}>{person.name}</h1>
+								<h2 className={styles.teamCardTextH2}>{person.job}</h2>
+							</div>
 						</div>
-					</div>
-				))}
+					)
+				})}
 			</div>
 		</div>
 	)

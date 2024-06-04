@@ -3,6 +3,8 @@ import 'slick-carousel/slick/slick.css'
 import 'slick-carousel/slick/slick-theme.css'
 import { styles } from './OurTestimonials.styles'
 import { testimonialData } from '../../../public/mockData/mockData'
+import { AdvancedImage } from '@cloudinary/react'
+import { cld } from '../../cloudinary'
 
 const SETTINGS: Settings = {
 	autoplay: true,
@@ -47,17 +49,24 @@ export const OurTestimonials = (): JSX.Element => {
 			</div>
 			<div className={styles.testimonialsItems}>
 				<Slider {...SETTINGS}>
-					{testimonialData.map(data => (
-						<div key={data.name} className={styles.testimonialsItem}>
-							<div className={styles.testimonialsItemTop}>
-								<img src={data.img} alt="person expressing opinions" className={styles.testimonialsItemImg} />
+					{testimonialData.map(data => {
+						const imageURL = cld.image(data.img).format('auto').quality('auto')
+						return (
+							<div key={data.name} className={styles.testimonialsItem}>
+								<div className={styles.testimonialsItemTop}>
+									<AdvancedImage
+										cldImg={imageURL}
+										alt="person expressing opinions"
+										className={styles.testimonialsItemImg}
+									/>
+								</div>
+								<div className={styles.testimonialsItemDown}>
+									<h3 className={styles.testimonialsName}>{data.name}</h3>
+									<p className={styles.testimonialsItemDownP}>{data.review}</p>
+								</div>
 							</div>
-							<div className={styles.testimonialsItemDown}>
-								<h3 className={styles.testimonialsName}>{data.name}</h3>
-								<p className={styles.testimonialsItemDownP}>{data.review}</p>
-							</div>
-						</div>
-					))}
+						)
+					})}
 				</Slider>
 			</div>
 		</div>

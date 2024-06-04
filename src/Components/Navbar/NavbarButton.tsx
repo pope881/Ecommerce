@@ -1,7 +1,9 @@
 import { useContext, useEffect, useState } from 'react'
 import { styles } from './NavbarButton.styles'
 import { CartContext } from '../../Context/cart-context'
-const cartIcon = '/otherImg/cartIcon.png'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+const cartIcon = cld.image('Ecommerce/cartIcon').format('auto').quality('auto')
 
 export const NavbarButton = () => {
 	const [btnIsBump, setBtnIsBump] = useState<boolean>(false)
@@ -41,9 +43,11 @@ export const NavbarButton = () => {
 	return (
 		<>
 			<button onMouseOver={cartColorOver} onMouseLeave={cartColorLeave} className={btnClasses}>
-				<img className={styles.navbarCartIcon} src={cartIcon} alt="basket icon for desktop"></img>
+				<AdvancedImage className={styles.navbarCartIcon} cldImg={cartIcon} alt="basket icon for desktop" />
 				<span className={styles.navbarBtnCartSpan}>Your Cart</span>
-				<span data-testid="cartItemsCount" className={styles.navbarBadgeSpan(hoverButton === true)}>{numberOfCartItems}</span>
+				<span data-testid="cartItemsCount" className={styles.navbarBadgeSpan(hoverButton === true)}>
+					{numberOfCartItems}
+				</span>
 			</button>
 		</>
 	)

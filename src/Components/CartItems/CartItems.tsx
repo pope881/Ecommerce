@@ -5,6 +5,9 @@ import { CartContext } from '../../Context/cart-context'
 import { useSelector } from 'react-redux'
 import { CartContextType } from '../../Context/cart-context'
 import { WideContent } from '../Layouts/WideContent'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+const cartCrossIcon = cld.image('Ecommerce/cartCrossIcon').format('auto').quality('auto')
 
 type AuthState = {
 	auth: {
@@ -89,9 +92,9 @@ export const CartItems = () => {
 								<td className={styles.cartitemsLayoutCol}>{product.amount}</td>
 								<td className={styles.cartitemsLayoutCol}>${product.price * product.amount}</td>
 								<td className={styles.cartitemsLayoutCol}>
-									<img
+									<AdvancedImage
+										cldImg={cartCrossIcon}
 										className={styles.cartitemsRemoveIcon}
-										src="/otherImg/cartCrossIcon.png"
 										onClick={() => {
 											removeItem({
 												...product,
@@ -147,8 +150,9 @@ export const CartItems = () => {
 						<form onSubmit={promoCodeHandler} className={styles.cartItemsFormWrapper}>
 							<div className={styles.cartItemsPromoboxContainer}>
 								<input
-									className={`${styles.cartitemsPromoboxInput} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
-										}`}
+									className={`${styles.cartitemsPromoboxInput} ${
+										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidInput
+									}`}
 									type="text"
 									placeholder="Promo code"
 									ref={promoCodeInputRef}
@@ -161,8 +165,9 @@ export const CartItems = () => {
 							</div>
 							{!promoCodeValidity && (
 								<p
-									className={`${styles.cartitemsPromocodeP} ${promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
-										}`}
+									className={`${styles.cartitemsPromocodeP} ${
+										promoCodeValidity ? '' : styles.cartitemsPromoboxInvalidP
+									}`}
 									data-testid="promocode-error">
 									Please enter a valid promo code.
 								</p>

@@ -1,6 +1,8 @@
 import { styles } from './Hero.styles'
-const heroWomanImage = '/otherImg/heroWomanImage.png'
-const heroManImage = '/otherImg/heroManImage.png'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+const heroWomanImage = cld.image('Ecommerce/heroWomanImage').format('auto').quality('auto')
+const heroManImage = cld.image('Ecommerce/heroManImage').format('auto').quality('auto')
 
 export const Hero = (): JSX.Element => {
 	const handleClickScroll = () => {
@@ -18,10 +20,10 @@ export const Hero = (): JSX.Element => {
 			</div>
 			<div className={styles.hero}>
 				<div className={styles.heroImgWoman}>
-					<img
+					<AdvancedImage
 						data-testid="womenImage"
 						className={styles.heroImgWomanImg}
-						src={heroWomanImage}
+						cldImg={heroWomanImage}
 						alt="young girl dressed in sports clothes"
 					/>
 				</div>
@@ -40,10 +42,10 @@ export const Hero = (): JSX.Element => {
 					</div>
 				</div>
 				<div className={styles.heroImgMan}>
-					<img
+					<AdvancedImage
 						data-testid="menImage"
 						className={styles.heroImgManImg}
-						src={heroManImage}
+						cldImg={heroManImage}
 						alt="men dressed in sports clothes"
 					/>
 				</div>

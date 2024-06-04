@@ -5,7 +5,9 @@ import { ImageSlider } from './ImageSlider'
 import { colorOptions } from '../../../public/mockData/mockData'
 import { sizeOptions } from '../../../public/mockData/mockData'
 import { WideContent } from '../Layouts/WideContent'
-const starIcon = '/otherImg/starIcon.png'
+import { AdvancedImage } from '@cloudinary/react'
+import { cld } from '../../cloudinary'
+const starIcon = cld.image('Ecommerce/starIcon').format('auto').quality('auto')
 
 type Props = {
 	product: {
@@ -49,15 +51,18 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 		<WideContent className={styles.productdisplay}>
 			<div className={styles.productdisplayLeft}>
 				<div className={styles.productdisplayImgList}>
-					{product.image_slide.map((image, index) => (
-						<img
-							className={styles.productdisplayImgListImg}
-							key={image.url}
-							src={image.url}
-							alt={`each product nr ${index + 1}`}
-							onClick={() => setCurrentImage(image.url)}
-						/>
-					))}
+					{product.image_slide.map((image, index) => {
+						const imageURL = cld.image(image.url).format('auto').quality('auto')
+						return (
+							<AdvancedImage
+								onClick={() => setCurrentImage(image.url)}
+								key={image.url}
+								className={styles.productdisplayImgListImg}
+								cldImg={imageURL}
+								alt={`each product nr ${index + 1}`}
+							/>
+						)
+					})}
 				</div>
 			</div>
 			<div className={styles.productdisplaySliderContainer}>
@@ -67,11 +72,11 @@ export const ProductDisplay = (props: Props): JSX.Element => {
 			<div className={styles.productdisplayRight}>
 				<h1 className={styles.productdisplayRightH1}>{product.name}</h1>
 				<div className={styles.productdisplayStars}>
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
-					<img src={starIcon} alt="star icon" />
+					<AdvancedImage cldImg={starIcon} alt="star icon" />
+					<AdvancedImage cldImg={starIcon} alt="star icon" />
+					<AdvancedImage cldImg={starIcon} alt="star icon" />
+					<AdvancedImage cldImg={starIcon} alt="star icon" />
+					<AdvancedImage cldImg={starIcon} alt="star icon" />
 					<p>(+100)</p>
 				</div>
 				<div className={styles.productdisplayPrices}>

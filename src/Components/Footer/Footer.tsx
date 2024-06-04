@@ -1,6 +1,8 @@
 import { styles } from './Footer.styles'
 import { Link } from 'react-router-dom'
-const logoShop = '/otherImg/logoShop.png'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+const logoShop = cld.image('Ecommerce/logoShop').format('auto').quality('auto')
 
 export const Footer = (): JSX.Element => {
 	const scrollToTop = () => {
@@ -14,7 +16,12 @@ export const Footer = (): JSX.Element => {
 					<div className={styles.footerAboutUs}>
 						<div className={styles.footerLogo}>
 							<Link to="/">
-								<img className={styles.footerAboutUsImg} onClick={scrollToTop} src={logoShop} alt="company logo" />
+								<AdvancedImage
+									className={styles.footerAboutUsImg}
+									onClick={scrollToTop}
+									cldImg={logoShop}
+									alt="company logo"
+								/>
 							</Link>
 						</div>
 						<p className={styles.footerQualityText}>Quality matters. Always.</p>

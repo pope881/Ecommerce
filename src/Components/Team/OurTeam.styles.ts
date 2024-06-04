@@ -82,6 +82,12 @@ export const styles = {
 		overflow: 'hidden',
 	}),
 
+	teamCardImg: css({
+		width: '100%',
+		height: '100%',
+		objectFit: 'cover',
+	}),
+
 	teamBtn: css({
 		position: 'absolute',
 		top: '10px',

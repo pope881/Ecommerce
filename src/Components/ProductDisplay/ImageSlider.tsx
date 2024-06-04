@@ -1,3 +1,5 @@
+import { AdvancedImage } from '@cloudinary/react'
+import { cld } from '../../cloudinary'
 import { styles } from './ImageSlider.styles'
 
 type Props = {
@@ -19,9 +21,7 @@ type Props = {
 }
 
 export const ImageSlider = ({ product, onImageChange, currentImage }: Props): JSX.Element => {
-	const bgcImg = {
-		backgroundImage: `url(${currentImage})`,
-	}
+	const mainImageURL = cld.image(currentImage).format('auto').quality('auto')
 
 	const goToPreviousSlide = () => {
 		const slideIndex = product.image_slide.findIndex(slide => slide.url === currentImage)
@@ -49,7 +49,7 @@ export const ImageSlider = ({ product, onImageChange, currentImage }: Props): JS
 			<div className={`${styles.imgSliderArrow} ${styles.imgSliderArrowRight}`} onClick={goToNextSlide}>
 				<i className="fa-solid fa-circle-arrow-right"></i>
 			</div>
-			<div style={bgcImg} className={styles.imgSliderSlide}></div>
+			<AdvancedImage cldImg={mainImageURL} className={styles.imgSliderSlide} />
 			<div className={styles.imgSliderDots}>
 				{product.image_slide.map((image, slideIndex) => (
 					<div key={slideIndex} className={styles.imgSliderDot} onClick={() => onImageChange(image.url)}>

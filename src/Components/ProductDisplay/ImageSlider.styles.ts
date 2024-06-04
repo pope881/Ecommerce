@@ -11,8 +11,8 @@ export const styles = {
 		},
 		[`@media (max-width: ${theme.breakpoints.sm})`]: {
 			width: '100%',
-			maxWidth: 400
-		}
+			maxWidth: 400,
+		},
 	}),
 
 	imgSliderArrow: css({
@@ -37,18 +37,17 @@ export const styles = {
 		width: '100%',
 		height: '100%',
 		borderRadius: '10px',
-		backgroundPosition: 'center',
-		backgroundSize: 'cover',
+		objectFit: 'cover',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			height: 'calc(100% - 45px)'
-		}
+			height: 'calc(100% - 45px)',
+		},
 	}),
 
 	imgSliderDots: css({
 		display: 'flex',
 		justifyContent: 'center',
 		color: theme.colors.grey.main,
-		height: 45
+		height: 45,
 	}),
 
 	imgSliderDot: css({

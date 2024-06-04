@@ -4,11 +4,17 @@ import { useSelector, useDispatch } from 'react-redux'
 import { authActions } from '../store/auth'
 import { NavbarButton } from './NavbarButton'
 import { useState } from 'react'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+
 const loginIcon = '/otherImg/loginIcon.png'
 const logoutIcon = '/otherImg/logoutIcon.png'
-const logoShop = '/otherImg/logoShop.png'
-const crossIcon = '/otherImg/crossIcon.png'
-const burgerIcon = '/otherImg/burgerIcon.png'
+
+// const loginIcon = cld.image('Ecommerce/loginIcon').format('auto').quality('auto')
+// const logoutIcon = cld.image('Ecommerce/logoutIcon').format('auto').quality('auto')
+const logoShop = cld.image('Ecommerce/logoShop').format('auto').quality('auto')
+const crossIcon = cld.image('Ecommerce/crossIcon').format('auto').quality('auto')
+const burgerIcon = cld.image('Ecommerce/burgerIcon').format('auto').quality('auto')
 
 type AuthState = {
 	auth: {
@@ -31,8 +37,7 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 						onClick={onClick}
 						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
 						end
-						data-testid="navShop"
-					>
+						data-testid="navShop">
 						SHOP
 					</NavLink>
 				</li>
@@ -41,8 +46,7 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 						onClick={onClick}
 						to="/men"
 						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
-						data-testid="navMen"
-					>
+						data-testid="navMen">
 						MEN
 					</NavLink>
 				</li>
@@ -51,8 +55,7 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 						onClick={onClick}
 						to="/women"
 						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
-						data-testid="navWomen"
-					>
+						data-testid="navWomen">
 						WOMEN
 					</NavLink>
 				</li>
@@ -61,8 +64,7 @@ const NavbarLinks = ({ isDesktop, onClick }: NavbarLinksProps) => {
 						onClick={onClick}
 						to="/kids"
 						className={({ isActive }) => (isActive ? `${styles.navbarMenuActive}` : `${styles.navbarMenuA}`)}
-						data-testid="navKids"
-					>
+						data-testid="navKids">
 						KIDS
 					</NavLink>
 				</li>
@@ -83,7 +85,14 @@ const NavbarButtons = () => {
 			<Link className={styles.navbarLoginCartA} to={isAuth ? '/' : '/login'}>
 				<button className={styles.navbarBtn} {...(isAuth && { onClick: logoutHandler })} data-testid="navbarAuthButton">
 					<img src={isAuth ? logoutIcon : loginIcon} className={styles.navbarAuthIcon} alt="login or logout icon" />
-					<span className={styles.navbarAuthBtn} data-testid="navbarAuthButtonText">{isAuth ? 'Logout' : 'Login'}</span>
+					{/* <AdvancedImage
+						cldImg={isAuth ? logoutIcon : loginIcon}
+						className={styles.navbarAuthIcon}
+						alt="login or logout icon"
+					/> */}
+					<span className={styles.navbarAuthBtn} data-testid="navbarAuthButtonText">
+						{isAuth ? 'Logout' : 'Login'}
+					</span>
 				</button>
 			</Link>
 			<Link className={styles.navbarLogoA} to="/cart">
@@ -106,13 +115,13 @@ const BurgerMenu = () => {
 	return (
 		<div className={styles.brugerWrapper}>
 			<button className={styles.burgerBarsBtn} onClick={burgerMenuHandler}>
-				<img src={burgerIcon} alt="burger menu icon" />
+				<AdvancedImage cldImg={burgerIcon} alt="burger menu icon" />
 			</button>
 			{isOpen && (
 				<div className={styles.burgerMenuWrapper}>
 					<NavbarLinks onClick={burgerMenuHandler} />
 					<button onClick={burgerMenuHandler} className={styles.burgerMenuCloseBtn}>
-						<img src={crossIcon} className={styles.burgerMenuCrossIcon} alt="burger menu cross icon" />
+						<AdvancedImage cldImg={crossIcon} className={styles.burgerMenuCrossIcon} alt="burger menu cross icon" />
 					</button>
 				</div>
 			)}
@@ -124,7 +133,7 @@ export const Navbar = () => (
 	<div className={styles.navbar}>
 		<div className={styles.navbarLogo}>
 			<Link className={styles.navbarLogoA} to="/">
-				<img className={styles.navbarLogoImg} src={logoShop} alt="company logo" />
+				<AdvancedImage className={styles.navbarLogoImg} cldImg={logoShop} alt="company logo" />
 			</Link>
 		</div>
 		<div className={styles.navbarMobileDivider} />

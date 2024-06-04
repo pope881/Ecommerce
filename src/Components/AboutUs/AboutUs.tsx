@@ -1,5 +1,11 @@
 import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
+import { cld } from '../../cloudinary'
+import { AdvancedImage } from '@cloudinary/react'
+
+// const aboutImg = '/aboutImg/about_1.png'
+// import AdvancedImage
+const aboutImg = cld.image('Ecommerce/about_1').format('auto').quality('auto')
 
 export const AboutUs = (): JSX.Element => {
 	return (
@@ -9,12 +15,19 @@ export const AboutUs = (): JSX.Element => {
 				initial={{ opacity: 1, scale: 0 }}
 				animate={{ opacity: 1, scale: 1 }}
 				transition={{ duration: 2 }}>
-				<img
-					data-testid="aboutImage"
+				<AdvancedImage
 					className={styles.aboutMainImgImg}
-					src="/aboutImg/1.png"
+					cldImg={aboutImg}
+					data-testid="aboutImage"
 					alt="men with black sunglasses"
 				/>
+
+				{/* <img
+					data-testid="aboutImage"
+					className={styles.aboutMainImgImg}
+					src={aboutImg}
+					alt="men with black sunglasses"
+				/> */}
 			</motion.div>
 			<motion.div
 				className={styles.aboutText}
