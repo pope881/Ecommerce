@@ -15,6 +15,7 @@ import { Root } from './Pages/Root.tsx'
 import { ErrorPage } from './Pages/ErrorPage.tsx'
 const menBanner = '/bannerImg/bannerMens.png'
 const womenBanner = '/bannerImg/bannerWomen.png'
+
 const kidsBanner = '/bannerImg/bannerKids.png'
 
 
