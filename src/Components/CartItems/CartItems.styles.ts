@@ -39,7 +39,6 @@ export const styles = {
 
 	cartitemsRemoveIcon: css({
 		width: '1.2rem',
-		// margin: '0 1.6rem',
 		cursor: 'pointer',
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			width: '1rem',

@@ -76,11 +76,4 @@ describe('Login', () => {
 		expect(passwordInput).toHaveValue('')
 		expect(emailInput).toHaveValue('')
 	})
-
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
-	// ADD ON BLUR PROPERTY TO ALL INPUTS
 })

@@ -1,13 +1,8 @@
-import { AllProduct } from './allProduct'
-
+import { type AllProduct } from './allProduct'
 const product_13a = 'Ecommerce/product_13a.png'
 const product_14a = 'Ecommerce/product_14a.png'
 const product_15a = 'Ecommerce/product_15a.png'
 const product_16a = 'Ecommerce/product_16a.png'
-// const product_13a = '/allProductsImg/product_13a.png'
-// const product_14a = '/allProductsImg/product_14a.png'
-// const product_15a = '/allProductsImg/product_15a.png'
-// const product_16a = '/allProductsImg/product_16a.png'
 
 export const dataProductMen: AllProduct[] = [
 	{

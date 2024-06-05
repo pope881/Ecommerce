@@ -1,13 +1,8 @@
 import { type AllProduct } from './allProduct'
-
 const product_25a = 'Ecommerce/product_25a.png'
 const product_26a = 'Ecommerce/product_26a.png'
 const product_27a = 'Ecommerce/product_27a.png'
 const product_28a = 'Ecommerce/product_28a.png'
-// const product_25a = '/allProductsImg/product_25a.png'
-// const product_26a = '/allProductsImg/product_26a.png'
-// const product_27a = '/allProductsImg/product_27a.png'
-// const product_28a = '/allProductsImg/product_28a.png'
 
 export const dataProductKids: AllProduct[] = [
 	{

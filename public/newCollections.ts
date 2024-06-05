@@ -1,5 +1,4 @@
-import { AllProduct } from './allProduct'
-
+import { type AllProduct } from './allProduct'
 const product_12a = 'Ecommerce/product_12a.png'
 const product_35a = 'Ecommerce/product_35a.png'
 const product_14a = 'Ecommerce/product_14a.png'
@@ -8,14 +7,6 @@ const product_15a = 'Ecommerce/product_15a.png'
 const product_2a = 'Ecommerce/product_2a.png'
 const product_17a = 'Ecommerce/product_17a.png'
 const product_28a = 'Ecommerce/product_28a.png'
-// const product_12a = '/allProductsImg/product_12a.png'
-// const product_35a = '/allProductsImg/product_35a.png'
-// const product_14a = '/allProductsImg/product_14a.png'
-// const product_8a = '/allProductsImg/product_8a.png'
-// const product_15a = '/allProductsImg/product_15a.png'
-// const product_2a = '/allProductsImg/product_2a.png'
-// const product_17a = '/allProductsImg/product_17a.png'
-// const product_28a = '/allProductsImg/product_28a.png'
 
 export const newCollections: AllProduct[] = [
 	{

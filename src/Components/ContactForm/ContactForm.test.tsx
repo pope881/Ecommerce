@@ -1,4 +1,4 @@
-import { fireEvent, getAllByRole, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { ContactForm } from './ContactForm'
 
@@ -82,7 +82,6 @@ describe('ContactForm', () => {
 		const emailInput = screen.getByTestId('form-input-email')
 		const messageTextArea = screen.getByTestId('form-textarea-message')
 		const confirmButton = screen.getByRole('button', { name: 'Confirm' })
-		// const windowAlert = screen.getAllByRole('alert', { name: 'Your message has been sent!' })
 		fireEvent.change(nameInput, { target: { value: 'joe smith' } })
 		fireEvent.change(emailInput, { target: { value: 'joesmith@gmail.com' } })
 		fireEvent.change(messageTextArea, { target: { value: 'I am writing with complain about' } })

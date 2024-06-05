@@ -3,10 +3,6 @@ const product_1a = 'Ecommerce/product_1a.png'
 const product_2a = 'Ecommerce/product_2a.png'
 const product_3a = 'Ecommerce/product_3a.png'
 const product_4a = 'Ecommerce/product_4a.png'
-// const product_1a = '/allProductsImg/product_1a.png'
-// const product_2a = '/allProductsImg/product_2a.png'
-// const product_3a = '/allProductsImg/product_3a.png'
-// const product_4a = '/allProductsImg/product_4a.png'
 
 export const dataProductWomen: AllProduct[] = [
 	{

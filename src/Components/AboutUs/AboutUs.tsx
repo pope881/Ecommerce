@@ -2,9 +2,6 @@ import { styles } from './AboutUs.styles'
 import { motion } from 'framer-motion'
 import { cld } from '../../cloudinary'
 import { AdvancedImage } from '@cloudinary/react'
-
-// const aboutImg = '/aboutImg/about_1.png'
-// import AdvancedImage
 const aboutImg = cld.image('Ecommerce/about_1').format('auto').quality('auto')
 
 export const AboutUs = (): JSX.Element => {

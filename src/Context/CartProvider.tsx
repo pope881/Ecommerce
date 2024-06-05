@@ -1,4 +1,3 @@
-//BEFORE DELETING MODE
 import { useReducer } from 'react'
 import { allProduct } from '../../public/allProduct'
 import { CartContext } from './cart-context'

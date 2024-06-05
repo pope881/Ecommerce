@@ -7,7 +7,7 @@ type Props = {
 	key: number
 	id: number
 	name: string
-	image: string | CloudinaryImage
+	image: CloudinaryImage
 	new_price: number
 	old_price: number
 	clothes_type: string

@@ -9,7 +9,7 @@ import { AdvancedImage } from '@cloudinary/react'
 
 type Props = {
 	groupProducts: AllProduct[]
-	banner: string | CloudinaryImage
+	banner: CloudinaryImage
 	category: string
 }
 
