@@ -21,13 +21,6 @@ export const AboutUs = (): JSX.Element => {
 					data-testid="aboutImage"
 					alt="men with black sunglasses"
 				/>
-
-				{/* <img
-					data-testid="aboutImage"
-					className={styles.aboutMainImgImg}
-					src={aboutImg}
-					alt="men with black sunglasses"
-				/> */}
 			</motion.div>
 			<motion.div
 				className={styles.aboutText}

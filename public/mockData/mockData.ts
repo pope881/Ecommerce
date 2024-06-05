@@ -3,23 +3,15 @@ const Person2 = 'Ecommerce/testimonials_2.jpg'
 const Person3 = 'Ecommerce/testimonials_3.jpg'
 const Person4 = 'Ecommerce/testimonials_4.jpg'
 const Person5 = 'Ecommerce/testimonials_5.jpg'
-
-// const teamPerson1 = '/teamImg/team_1.png'
-// const teamPerson2 = '/teamImg/team_2.png'
-// const teamPerson3 = '/teamImg/team_3.png'
-// const teamPerson4 = '/teamImg/team_4.png'
-// const teamPerson5 = '/teamImg/team_5.png'
-// const teamPerson6 = '/teamImg/team_6.png'
 const teamPerson1 = 'Ecommerce/team_1.png'
 const teamPerson2 = 'Ecommerce/team_2.png'
 const teamPerson3 = 'Ecommerce/team_3.png'
 const teamPerson4 = 'Ecommerce/team_4.png'
 const teamPerson5 = 'Ecommerce/team_5.png'
 const teamPerson6 = 'Ecommerce/team_6.png'
-
-const menBackground = '/backgroundSliderImg/menBackground.jpg'
-const womanBackground = '/backgroundSliderImg/womanBackground.jpg'
-const kidsBackground = '/backgroundSliderImg/kidsBackground.jpg'
+const menBackground = 'Ecommerce/menBackground.jpg'
+const womanBackground = 'Ecommerce/womanBackground.jpg'
+const kidsBackground = 'Ecommerce/kidsBackground.jpg'
 
 type Testimonial = {
 	name: string

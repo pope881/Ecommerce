@@ -24,6 +24,7 @@ describe('BackgroundSlider Component', () => {
 
 		const backgroundDiv = screen.getByTestId('imageSlideBg')
 		expect(backgroundDiv).toHaveStyle(`background-image: url(${firstImage.url})`)
+		// expect(backgroundDiv).toHaveAttribute('cldImg', `cld.image(${firstImage.url}).format('auto').quality('auto')`)
 	})
 
 	it('changes background image after 6000ms', async () => {

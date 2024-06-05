@@ -5,6 +5,7 @@ import { dataProductKids } from '../../../public/dataKids'
 import { Item } from '../Item/Item'
 import { AllProduct } from '../../../public/allProduct'
 import { WideContent } from '../Layouts/WideContent'
+import { cld } from '../../cloudinary'
 
 export const Popular = (): JSX.Element => {
 	return (
@@ -14,12 +15,13 @@ export const Popular = (): JSX.Element => {
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
 					{dataProductWomen.map((item: AllProduct, i: number) => {
+						const imageURL = cld.image(item.image).format('auto').quality('auto')
 						return (
 							<Item
 								key={i}
 								id={item.id}
 								name={item.name}
-								image={item.image}
+								image={imageURL}
 								new_price={item.new_price}
 								old_price={item.old_price}
 								clothes_type={item.clothes_type}
@@ -33,12 +35,13 @@ export const Popular = (): JSX.Element => {
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
 					{dataProductMen.map((item: AllProduct, i: number) => {
+						const imageURL = cld.image(item.image).format('auto').quality('auto')
 						return (
 							<Item
 								key={i}
 								id={item.id}
 								name={item.name}
-								image={item.image}
+								image={imageURL}
 								new_price={item.new_price}
 								old_price={item.old_price}
 								clothes_type={item.clothes_type}
@@ -52,12 +55,13 @@ export const Popular = (): JSX.Element => {
 				<hr className={styles.popularHr}></hr>
 				<div className={styles.popularItem}>
 					{dataProductKids.map((item: AllProduct, i: number) => {
+						const imageURL = cld.image(item.image).format('auto').quality('auto')
 						return (
 							<Item
 								key={i}
 								id={item.id}
 								name={item.name}
-								image={item.image}
+								image={imageURL}
 								new_price={item.new_price}
 								old_price={item.old_price}
 								clothes_type={item.clothes_type}

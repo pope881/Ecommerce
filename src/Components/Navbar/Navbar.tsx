@@ -6,12 +6,8 @@ import { NavbarButton } from './NavbarButton'
 import { useState } from 'react'
 import { cld } from '../../cloudinary'
 import { AdvancedImage } from '@cloudinary/react'
-
-const loginIcon = '/otherImg/loginIcon.png'
-const logoutIcon = '/otherImg/logoutIcon.png'
-
-// const loginIcon = cld.image('Ecommerce/loginIcon').format('auto').quality('auto')
-// const logoutIcon = cld.image('Ecommerce/logoutIcon').format('auto').quality('auto')
+const loginIcon = cld.image('Ecommerce/loginIcon').format('auto').quality('auto')
+const logoutIcon = cld.image('Ecommerce/logoutIcon').format('auto').quality('auto')
 const logoShop = cld.image('Ecommerce/logoShop').format('auto').quality('auto')
 const crossIcon = cld.image('Ecommerce/crossIcon').format('auto').quality('auto')
 const burgerIcon = cld.image('Ecommerce/burgerIcon').format('auto').quality('auto')
@@ -79,17 +75,15 @@ const NavbarButtons = () => {
 	const logoutHandler = () => {
 		dispatch(authActions.logout())
 	}
-
 	return (
 		<div className={styles.navbarLoginCart}>
 			<Link className={styles.navbarLoginCartA} to={isAuth ? '/' : '/login'}>
 				<button className={styles.navbarBtn} {...(isAuth && { onClick: logoutHandler })} data-testid="navbarAuthButton">
-					<img src={isAuth ? logoutIcon : loginIcon} className={styles.navbarAuthIcon} alt="login or logout icon" />
-					{/* <AdvancedImage
+					<AdvancedImage
 						cldImg={isAuth ? logoutIcon : loginIcon}
 						className={styles.navbarAuthIcon}
 						alt="login or logout icon"
-					/> */}
+					/>
 					<span className={styles.navbarAuthBtn} data-testid="navbarAuthButtonText">
 						{isAuth ? 'Logout' : 'Login'}
 					</span>
@@ -111,7 +105,6 @@ const BurgerMenu = () => {
 		}
 		scrollToTop()
 	}
-
 	return (
 		<div className={styles.brugerWrapper}>
 			<button className={styles.burgerBarsBtn} onClick={burgerMenuHandler}>

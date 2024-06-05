@@ -13,15 +13,10 @@ import { menProduct } from '../public/menProduct.ts'
 import { womenProduct } from '../public/womenProduct.ts'
 import { Root } from './Pages/Root.tsx'
 import { ErrorPage } from './Pages/ErrorPage.tsx'
-// import { cld } from '../../cloudinary'
-// import { AdvancedImage } from '@cloudinary/react'
-const menBanner = '/bannerImg/bannerMen.png'
-const womenBanner = '/bannerImg/bannerWomen.png'
-const kidsBanner = '/bannerImg/bannerKids.png'
-
-// const menBanner = cld.image('Ecommerce/bannerMen').format('auto').quality('auto')
-// const womenBanner = cld.image('Ecommerce/bannerWomen').format('auto').quality('auto')
-// const kidsBanner = cld.image('Ecommerce/bannerKids').format('auto').quality('auto')
+import { cld } from './cloudinary.ts'
+const menBanner = cld.image('Ecommerce/bannerMen').format('auto').quality('auto')
+const womenBanner = cld.image('Ecommerce/bannerWomen').format('auto').quality('auto')
+const kidsBanner = cld.image('Ecommerce/bannerKids').format('auto').quality('auto')
 
 export const router = createBrowserRouter([
 	{

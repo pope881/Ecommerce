@@ -3,10 +3,13 @@ import { styles } from './Category.styles'
 import { Item } from '../Item/Item'
 import { type AllProduct } from '../../../public/allProduct'
 import { WideContent } from '../Layouts/WideContent'
+import { cld } from '../../cloudinary'
+import { CloudinaryImage } from '@cloudinary/url-gen/index'
+import { AdvancedImage } from '@cloudinary/react'
 
 type Props = {
 	groupProducts: AllProduct[]
-	banner: string
+	banner: string | CloudinaryImage
 	category: string
 }
 
@@ -30,7 +33,12 @@ export const Category = (props: Props): JSX.Element => {
 	return (
 		<WideContent>
 			<div className={styles.shopCategory} data-testid={`shopCategory_${props.category}`}>
-				<img className={styles.shopCategoryBanner} src={props.banner} alt="banner" data-testid="bannerImg" />
+				<AdvancedImage
+					className={styles.shopCategoryBanner}
+					cldImg={props.banner}
+					alt="banner"
+					data-testid="bannerImg"
+				/>
 				<div className={styles.shopCategoryIndexSort}>
 					<div className={styles.shopCategoryActions}>
 						<button className={styles.shopCategoryBtn} onClick={() => setCategory(props.category)}>
@@ -49,17 +57,20 @@ export const Category = (props: Props): JSX.Element => {
 					<p className={styles.shopCategoryIndexSortPSpan}>{`Showing ${filteredItems.length} out of 12 products`}</p>
 				</div>
 				<div className={styles.shopCategoryProducts}>
-					{filteredItems.map((item, i) => (
-						<Item
-							key={i}
-							id={item.id}
-							name={item.name}
-							image={item.image}
-							new_price={item.new_price}
-							old_price={item.old_price}
-							clothes_type={item.clothes_type}
-						/>
-					))}
+					{filteredItems.map((item, i) => {
+						const imageURL = cld.image(item.image).format('auto').quality('auto')
+						return (
+							<Item
+								key={i}
+								id={item.id}
+								name={item.name}
+								image={imageURL}
+								new_price={item.new_price}
+								old_price={item.old_price}
+								clothes_type={item.clothes_type}
+							/>
+						)
+					})}
 				</div>
 				<div className={styles.shopCategoryActions}>
 					<button className={`${styles.shopCategoryBtn} ${styles.shopCategoryBtnDisabled}`}>Explore more</button>

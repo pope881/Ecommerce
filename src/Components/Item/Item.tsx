@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom'
 import { styles } from './Item.styles'
+import { AdvancedImage } from '@cloudinary/react'
+import { CloudinaryImage } from '@cloudinary/url-gen/index'
 
 type Props = {
 	key: number
 	id: number
 	name: string
-	image: string
+	image: string | CloudinaryImage
 	new_price: number
 	old_price: number
 	clothes_type: string
@@ -15,10 +17,10 @@ export const Item = (props: Props): JSX.Element => {
 	return (
 		<div className={styles.item} data-testid="itemId">
 			<Link to={`/product/${props.id}`}>
-				<img
+				<AdvancedImage
 					className={styles.itemImg}
 					onClick={() => window.scrollTo(0, 0)}
-					src={props.image}
+					cldImg={props.image}
 					alt="each product"
 					data-testid="itemImage"
 				/>

@@ -18,13 +18,7 @@ export const OurTeam = (): JSX.Element => {
 				{teamPeople.map((person, id) => {
 					const imageURL = cld.image(person.img).format('auto').quality('auto')
 					return (
-						<div
-							data-testid="ourTeam-id"
-							key={id}
-							className={styles.teamCard}
-							style={{
-								backgroundImage: `url(${person.img})`,
-							}}>
+						<div data-testid="ourTeam-id" key={id} className={styles.teamCard}>
 							<AdvancedImage cldImg={imageURL} className={styles.teamCardImg} />
 							<button
 								className={styles.teamBtn}

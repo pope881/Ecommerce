@@ -1,10 +1,10 @@
 import { Category } from '../Components/Category/Category'
-
+import { CloudinaryImage } from '@cloudinary/url-gen/index'
 import { AllProduct } from '../../public/allProduct'
 
 type Props = {
 	groupProducts: AllProduct[]
-	banner: string
+	banner: string | CloudinaryImage
 	category: string
 }
 

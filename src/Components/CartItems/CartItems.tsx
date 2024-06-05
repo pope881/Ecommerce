@@ -75,12 +75,13 @@ export const CartItems = () => {
 				</tbody>
 
 				{items.map(product => {
+					const imageURL = cld.image(product.image).format('auto').quality('auto')
 					return (
 						<tbody>
 							<tr key={product.id} className={styles.cartItemsRow} data-testid="cartItemRow">
 								<td className={styles.cellHideOnMobile}>
-									<img
-										src={product.image}
+									<AdvancedImage
+										cldImg={imageURL}
 										alt="display of each product"
 										className={`${styles.cartitemsImg} ${styles.cellHideOnMobile}`}
 									/>

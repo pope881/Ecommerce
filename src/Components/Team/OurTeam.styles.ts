@@ -75,8 +75,6 @@ export const styles = {
 		height: '45rem',
 		borderRadius: '2rem',
 		textAlign: 'center',
-		backgroundPosition: 'center',
-		backgroundSize: 'cover',
 		color: theme.colors.white.main,
 		boxShadow: `4px 4px 30px 0px ${theme.colors.white.main}`,
 		overflow: 'hidden',

@@ -10,7 +10,7 @@ export const styles = {
 	}),
 
 	itemImg: css({
-		borderRadius: '8px',
+		borderRadius: '12px',
 		boxShadow: '4px 4px 20px 0px rgb(188, 166, 166)',
 		width: '100%',
 	}),

@@ -17,6 +17,12 @@ export const styles = {
 		position: 'relative',
 	}),
 
+	imageSlideBg: css({
+		height: '100%',
+		width: '100%',
+		objectFit: 'cover',
+	}),
+
 	containerDescription: css({
 		position: 'absolute',
 		zIndex: '999',
@@ -55,7 +61,7 @@ export const styles = {
 		borderRadius: '10px',
 		cursor: 'pointer',
 		boxShadow: '3px 2px 2px rgba(73, 72, 72, 0.338)',
-		border: 'none'
+		border: 'none',
 	}),
 
 	containerBackgroundTransparent: css({
