@@ -15,7 +15,6 @@ export const styles = {
 	}),
 
 	offersLeft: css({
-		/* flex: 1, */
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'center',
@@ -66,8 +65,7 @@ export const styles = {
 		padding: '1rem 4rem',
 		transition: '0.3s',
 		marginTop: '2rem',
-		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
-		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 
 	offersRight: css({

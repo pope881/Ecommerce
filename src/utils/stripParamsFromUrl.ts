@@ -1,0 +1,1 @@
+export const stripParamsFromUrl = (url: string): string => url.split('?')[0];

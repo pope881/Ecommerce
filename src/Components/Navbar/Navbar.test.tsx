@@ -6,7 +6,7 @@ import { Provider } from 'react-redux'
 import { store } from '../store'
 import App from '../../App'
 
-describe('Navbar Component', () => {
+describe('Navbar', () => {
 	test('Navbar renders correctly', () => {
 		render(
 			<BrowserRouter>

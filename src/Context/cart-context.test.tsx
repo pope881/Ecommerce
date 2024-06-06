@@ -1,4 +1,4 @@
-import { AddAction, ClearAction, RemoveAction, cartReducer } from './CartProvider' // Make sure to import the cartReducer function from the correct path
+import { AddAction, ClearAction, RemoveAction, cartReducer } from './CartProvider'
 
 describe('cartReducer', () => {
 	test('adds an item to the cart', () => {

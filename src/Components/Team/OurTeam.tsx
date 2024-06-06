@@ -19,7 +19,7 @@ export const OurTeam = (): JSX.Element => {
 					const imageURL = cld.image(person.img).format('auto').quality('auto')
 					return (
 						<div data-testid="ourTeam-id" key={id} className={styles.teamCard}>
-							<AdvancedImage cldImg={imageURL} className={styles.teamCardImg} />
+							<AdvancedImage cldImg={imageURL} className={styles.teamCardImg} alt="team person image" />
 							<button
 								className={styles.teamBtn}
 								onMouseEnter={() => setHoverIndex(id)}

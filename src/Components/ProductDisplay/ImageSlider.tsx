@@ -49,7 +49,7 @@ export const ImageSlider = ({ product, onImageChange, currentImage }: Props): JS
 			<div className={`${styles.imgSliderArrow} ${styles.imgSliderArrowRight}`} onClick={goToNextSlide}>
 				<i className="fa-solid fa-circle-arrow-right"></i>
 			</div>
-			<AdvancedImage cldImg={mainImageURL} className={styles.imgSliderSlide} />
+			<AdvancedImage cldImg={mainImageURL} className={styles.imgSliderSlide} alt="product main image " />
 			<div className={styles.imgSliderDots}>
 				{product.image_slide.map((image, slideIndex) => (
 					<div key={slideIndex} className={styles.imgSliderDot} onClick={() => onImageChange(image.url)}>

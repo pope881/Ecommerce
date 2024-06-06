@@ -152,8 +152,7 @@ export const styles = {
 		cursor: 'pointer',
 		transition: '0.3s',
 		borderRadius: '25px',
-		'&:hover': { color: theme.colors.red.main, background: theme.colors.white.main },
-		'&:active': { color: theme.colors.red.main, background: theme.colors.white.main },
+		'&:hover, &:active': { color: theme.colors.red.main, background: theme.colors.white.main },
 		[`@media (max-width: ${theme.breakpoints.xs})`]: {
 			width: '80%',
 			margin: '4rem auto 4rem ',

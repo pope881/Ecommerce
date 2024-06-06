@@ -4,7 +4,7 @@ import { OurTeam } from './OurTeam'
 import { teamPeople } from '../../../public/mockData/mockData'
 
 describe('OurTeam', () => {
-	test('checks our team members amount (length of array)', () => {
+	test('Checks our team members amount (length of array)', () => {
 		render(
 			<BrowserRouter>
 				<OurTeam />

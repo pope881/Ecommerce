@@ -8,7 +8,7 @@ import { store } from '../store'
 import { CartProvider } from '../../Context/CartProvider'
 
 describe('ProductDisplay', () => {
-	test('adds an item to the cart', () => {
+	test('Adds an item to the cart', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>

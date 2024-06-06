@@ -57,8 +57,7 @@ export const styles = {
 		color: theme.colors.black.main,
 		fontWeight: '500',
 		transition: '0.2s',
-		'&:hover': { color: theme.colors.red.main },
-		'&:active': { color: theme.colors.red.main },
+		'&:hover, &:active': { color: theme.colors.red.main },
 	}),
 
 	navbarMenuActive: css({
@@ -174,6 +173,7 @@ export const styles = {
 			height: '4rem',
 		},
 	}),
+
 	burgerMenuWrapper: css({
 		position: 'fixed',
 		display: 'flex',
@@ -186,6 +186,7 @@ export const styles = {
 		background: theme.colors.white.main,
 		zIndex: 1000,
 	}),
+
 	burgerMenuCloseBtn: css({
 		position: 'absolute',
 		top: '4rem',

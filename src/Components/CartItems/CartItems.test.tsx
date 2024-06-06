@@ -9,7 +9,7 @@ import '@testing-library/jest-dom'
 import { fireEvent, render, screen } from '@testing-library/react'
 
 describe('CartItems', () => {
-	test('checks proceed button state', () => {
+	test('Checks proceed button state', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -24,7 +24,7 @@ describe('CartItems', () => {
 		expect(proceedButton).toBeDisabled()
 	})
 
-	test('checks if initial total is $0', () => {
+	test('Checks if initial total is $0', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -39,7 +39,7 @@ describe('CartItems', () => {
 		expect(cartTotalAmount).toHaveTextContent('$0')
 	})
 
-	test('checks if there are no cart item rows initially', () => {
+	test('Checks if there are no cart item rows initially', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -62,7 +62,7 @@ describe('CartItems', () => {
 		expect(cartItemRow).not.toBeInTheDocument()
 	})
 
-	test('renders promo code input', () => {
+	test('Renders promo code input', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -84,7 +84,7 @@ describe('CartItems', () => {
 		expect(promoCodeInput).toBeInTheDocument()
 		expect(promoCodeInput).toHaveAttribute('type', 'text')
 	})
-	test('checks if user can pass valid promo code to test promo code input field', () => {
+	test('Checks if user can pass valid promo code to test promo code input field', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -108,7 +108,7 @@ describe('CartItems', () => {
 		expect(promoCodeInput).toHaveValue('abcde')
 		expect(screen.queryByTestId('error-msg-name')).not.toBeInTheDocument()
 	})
-	test('should have empty input when submit button is clicked and the input value is valid (5 characters)', async () => {
+	test('Should have empty input when submit button is clicked and the input value is valid (5 characters)', async () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>

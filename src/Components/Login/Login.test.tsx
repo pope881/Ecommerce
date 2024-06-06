@@ -5,7 +5,7 @@ import { Provider } from 'react-redux'
 import { store } from '../store'
 
 describe('Login', () => {
-	test('renders email input', () => {
+	test('Renders email input', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -17,7 +17,7 @@ describe('Login', () => {
 		expect(emailInput).toBeInTheDocument()
 		expect(emailInput).toHaveAttribute('type', 'email')
 	})
-	test('checks if user can pass valid email to test email input field', () => {
+	test('Checks if user can pass valid email to test email input field', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -31,7 +31,7 @@ describe('Login', () => {
 		expect(emailInput).toHaveValue('test@test.com')
 		expect(screen.queryByTestId('error-msg-login-mail')).not.toBeInTheDocument()
 	})
-	test('renders passowrd input', () => {
+	test('Renders passowrd input', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -43,7 +43,7 @@ describe('Login', () => {
 		expect(passwordInput).toBeInTheDocument()
 		expect(passwordInput).toHaveAttribute('type', 'password')
 	})
-	test('checks if user can pass valid password to test password input field', () => {
+	test('Checks if user can pass valid password to test password input field', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>
@@ -58,7 +58,7 @@ describe('Login', () => {
 		expect(screen.queryByTestId('error-msg-login-password')).not.toBeInTheDocument()
 	})
 
-	test('should have empty inputs when login button is clicked and all inputs are valid', () => {
+	test('Should have empty inputs when login button is clicked and all inputs are valid', () => {
 		render(
 			<Provider store={store}>
 				<BrowserRouter>

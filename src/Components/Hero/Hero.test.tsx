@@ -1,10 +1,10 @@
 import { render, screen } from '@testing-library/react'
 import { BrowserRouter } from 'react-router-dom'
 import { Hero } from './Hero'
-import '@testing-library/dom';
+import '@testing-library/dom'
 
 describe('Hero', () => {
-	test('renders button element', () => {
+	test('Renders button element', () => {
 		render(
 			<BrowserRouter>
 				<Hero />
@@ -15,7 +15,7 @@ describe('Hero', () => {
 		expect(buttonElement).toBeInTheDocument
 	})
 
-	test('renders images', () => {
+	test('Renders images', () => {
 		render(
 			<BrowserRouter>
 				<Hero />

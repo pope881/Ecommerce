@@ -12,9 +12,10 @@ export const styles = {
 		margin: '6rem auto',
 		textTransform: 'capitalize',
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
-			margin: '2rem auto'
-		}
+			margin: '2rem auto',
+		},
 	}),
+
 	breadcrumbA: css({
 		fontSize: '1.6rem',
 		textDecoration: 'none',

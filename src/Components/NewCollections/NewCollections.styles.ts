@@ -52,7 +52,6 @@ export const styles = {
 		display: 'grid',
 		gridTemplateColumns: '1fr 1fr 1fr 1fr',
 		rowGap: '8rem',
-
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			gridTemplateColumns: '1fr 1fr',
 			rowGap: '5rem',

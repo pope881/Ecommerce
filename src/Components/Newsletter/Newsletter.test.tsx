@@ -13,17 +13,26 @@ describe('Newsletter', () => {
 		expect(input).toBeInTheDocument()
 		expect(input).toHaveAttribute('type', 'text')
 	})
-	test('checks if user can pass valid email to test email input field', () => {
+	test('checks if user can pass valid email to test email input field and click the subscribe button', () => {
 		render(
 			<BrowserRouter>
 				<Newsletter />
 			</BrowserRouter>
 		)
 
+		const originalAlert = window.alert
+		let alertMessage = ''
+		window.alert = message => {
+			alertMessage = message
+		}
+
 		const input = screen.getByTestId('email-input')
+		const button = screen.getByRole('button', { name: 'Subscribe' })
 		fireEvent.change(input, { target: { value: 'test@mail.com' } })
-		expect(input).toHaveValue('test@mail.com')
+		fireEvent.click(button)
 		expect(screen.queryByTestId('error-msg')).not.toBeInTheDocument()
+		expect(alertMessage).toBe('You have subscribed to our newsletter!')
+		window.alert = originalAlert
 	})
 	test('checks if user can pass invalid email to test email input field', () => {
 		render(

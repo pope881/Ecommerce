@@ -71,12 +71,18 @@ describe('ContactForm', () => {
 		expect(screen.queryByTestId('error-msg-email')).not.toBeInTheDocument()
 	})
 
-	test('should have empty input when confirm button is cliced and all inputs and text area are valid', () => {
+	test('Checks contact form successful validation', () => {
 		render(
 			<BrowserRouter>
 				<ContactForm />
 			</BrowserRouter>
 		)
+
+		const originalAlert = window.alert
+		let alertMessage = ''
+		window.alert = message => {
+			alertMessage = message
+		}
 
 		const nameInput = screen.getByTestId('form-input-name')
 		const emailInput = screen.getByTestId('form-input-email')
@@ -89,14 +95,7 @@ describe('ContactForm', () => {
 		expect(nameInput).toHaveValue('')
 		expect(emailInput).toHaveValue('')
 		expect(messageTextArea).toHaveValue('')
-		// expect(windowAlert).toBeInTheDocument
+		expect(alertMessage).toEqual('Your message has been sent!')
+		window.alert = originalAlert
 	})
-
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
-	// ADD ANOTHER LINE TO IMPLEMENT ALERT WINDOW
 })

@@ -4,8 +4,7 @@ import { Breadcrumb } from './Breadcrumb'
 import { allProduct } from '../../../public/allProduct'
 
 describe('Breadcrumb', () => {
-
-	test('check breadcrumb category and item', () => {
+	test('Check breadcrumb category and item', () => {
 		render(
 			<BrowserRouter>
 				<Breadcrumb product={allProduct[28]} />

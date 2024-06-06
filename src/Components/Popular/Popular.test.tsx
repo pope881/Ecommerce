@@ -5,7 +5,7 @@ import { dataProductWomen } from '../../../public/dataWomen'
 import { dataProductMen } from '../../../public/dataMen'
 import { dataProductKids } from '../../../public/dataKids'
 describe('Popular', () => {
-	test('checks popular items amount (length of array)', () => {
+	test('Checks popular items amount (length of array)', () => {
 		render(
 			<BrowserRouter>
 				<Popular />

@@ -2,7 +2,7 @@ import { fireEvent, render, screen } from '@testing-library/react'
 import { DescriptionBox } from './DescriptionBox'
 
 describe('DescriptionBox', () => {
-	test('shows three descriptions sections', () => {
+	test('Shows three descriptions sections', () => {
 		render(
 			<DescriptionBox
 				product={{
@@ -26,7 +26,7 @@ describe('DescriptionBox', () => {
 		expect(screen.getByText('Description')).toBeInTheDocument()
 	})
 
-	test('shows material composition text if the material composition button was clicked', () => {
+	test('Shows material composition text if the material composition button was clicked', () => {
 		render(
 			<DescriptionBox
 				product={{

@@ -3,10 +3,10 @@ import { About } from '../../Pages/About'
 import { BrowserRouter } from 'react-router-dom'
 
 describe('About', () => {
-	test('renders three headings descriptions', () => {
+	test('Renders three headings descriptions', () => {
 		render(
 			<BrowserRouter>
-				<About />{' '}
+				<About />
 			</BrowserRouter>
 		)
 
@@ -15,7 +15,7 @@ describe('About', () => {
 		expect(screen.getByText('Countries')).toBeInTheDocument()
 	})
 
-	test('renders image', () => {
+	test('Renders image', () => {
 		render(
 			<BrowserRouter>
 				<About />

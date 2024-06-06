@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom'
 import { Offers } from './Offers'
 
 describe('Offers', () => {
-	test('renders heading, paragraph and button', () => {
+	test('Renders heading, paragraph and button', () => {
 		render(
 			<BrowserRouter>
 				<Offers />
@@ -18,7 +18,7 @@ describe('Offers', () => {
 		expect(button).toBeInTheDocument()
 	})
 
-	test('renders image', () => {
+	test('Renders image', () => {
 		render(
 			<BrowserRouter>
 				<Offers />

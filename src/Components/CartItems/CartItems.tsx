@@ -73,7 +73,6 @@ export const CartItems = () => {
 						<th className={styles.cartitemsLayoutCol}>Remove</th>
 					</tr>
 				</tbody>
-
 				{items.map(product => {
 					const imageURL = cld.image(product.image).format('auto').quality('auto')
 					return (

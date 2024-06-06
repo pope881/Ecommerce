@@ -42,7 +42,7 @@ export const OurTestimonials = (): JSX.Element => {
 				<h4 className={styles.testimonialsHeaderTextH4}>testimonials</h4>
 				<h1 className={styles.testimonialsHeaderTextH1}>What Our Customers Say</h1>
 				<hr className={styles.testimonialsHeaderTextHr} />
-				<p className={styles.testimonialsHeaderTextP}>
+				<p data-testid='testimonial-paragraph' className={styles.testimonialsHeaderTextP}>
 					We are always super happy when we receive positive feedback, and we are constantly amazed by the demand for
 					our fabrics with orders coming from all corners of the globe.
 				</p>
@@ -55,6 +55,7 @@ export const OurTestimonials = (): JSX.Element => {
 							<div key={data.name} className={styles.testimonialsItem}>
 								<div className={styles.testimonialsItemTop}>
 									<AdvancedImage
+										data-testid="testimonial-id"
 										cldImg={imageURL}
 										alt="person expressing opinions"
 										className={styles.testimonialsItemImg}

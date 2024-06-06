@@ -94,6 +94,7 @@ export const styles = {
 		justifyContent: 'center',
 		overflow: 'hidden',
 	}),
+
 	heroImgWomanImg: css({
 		display: 'flex',
 		flex: '1',
@@ -101,6 +102,7 @@ export const styles = {
 		justifyContent: 'center',
 		overflow: 'hidden',
 	}),
+
 	heroImgMan: css({
 		display: 'flex',
 		flex: '1',
@@ -108,6 +110,7 @@ export const styles = {
 		justifyContent: 'center',
 		overflow: 'hidden',
 	}),
+
 	heroImgManImg: css({
 		display: 'flex',
 		flex: '1',
@@ -125,7 +128,6 @@ export const styles = {
 		border: `1px solid ${theme.colors.red.main}`,
 		backgroundColor: theme.colors.red.main,
 		color: theme.colors.white.main,
-		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
-		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 }

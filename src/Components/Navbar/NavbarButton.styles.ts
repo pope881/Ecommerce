@@ -33,8 +33,7 @@ export const styles = {
 		alignItems: 'center',
 		borderRadius: '25px',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.red.main },
-		'&:active': { backgroundColor: theme.colors.red.main },
+		'&:hover, &:active': { backgroundColor: theme.colors.red.main },
 		[`@media (max-width: ${theme.breakpoints.md})`]: {
 			background: 'transparent',
 			color: theme.colors.black.main,

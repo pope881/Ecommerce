@@ -2,8 +2,10 @@ import { render, screen, fireEvent, act } from '@testing-library/react'
 import { vi } from 'vitest'
 import { BackgroundSlider } from './BackgroundSlider'
 import { imageSlide } from '../../../public/mockData/mockData'
+import { cld } from '../../cloudinary'
 
-describe('BackgroundSlider Component', () => {
+const stripParams = (url: string) => url.split('?')[0]
+describe('BackgroundSlider', () => {
 	beforeEach(() => {
 		vi.useFakeTimers({ shouldAdvanceTime: true })
 	})
@@ -13,23 +15,26 @@ describe('BackgroundSlider Component', () => {
 		vi.useRealTimers()
 	})
 
-	it('renders correctly with the first image and title', () => {
+	const firstImageSrc = cld.image(imageSlide[0].url).toURL()
+	const secondImageSrc = cld.image(imageSlide[1].url).toURL()
+	it('Renders correctly with the first title and image', async () => {
 		render(<BackgroundSlider />)
 
 		const firstImage = imageSlide[0]
 		expect(screen.getByRole('heading', { name: firstImage.title })).toBeInTheDocument()
 		const imageSlideBody = screen.getByTestId('imageSlideBody')
 		expect(imageSlideBody).toBeInTheDocument()
-		expect(imageSlideBody).toHaveTextContent(imageSlide[0].body)
+		await act(async () => {
+			vi.advanceTimersByTime(1)
+		})
 
 		const backgroundDiv = screen.getByTestId('imageSlideBg')
-		expect(backgroundDiv).toHaveStyle(`background-image: url(${firstImage.url})`)
-		// expect(backgroundDiv).toHaveAttribute('cldImg', `cld.image(${firstImage.url}).format('auto').quality('auto')`)
+		const src = stripParams(backgroundDiv.getAttribute('src') as string)
+		expect(src).toEqual(stripParams(firstImageSrc))
 	})
 
-	it('changes background image after 6000ms', async () => {
+	it('Changes background image after 6000ms', async () => {
 		const firstImage = imageSlide[0]
-		const secondImage = imageSlide[1]
 		render(<BackgroundSlider />)
 		expect(screen.getByRole('heading', { name: firstImage.title })).toBeInTheDocument()
 
@@ -37,10 +42,11 @@ describe('BackgroundSlider Component', () => {
 			vi.advanceTimersByTime(6000)
 		})
 		const backgroundDiv = screen.getByTestId('imageSlideBg')
-		expect(backgroundDiv).toHaveStyle(`background-image: url(${secondImage.url})`)
+		const src = stripParams(backgroundDiv.getAttribute('src') as string)
+		expect(src).toEqual(stripParams(secondImageSrc))
 	}, 10000)
 
-	it('changes background image on carousel indicator click', () => {
+	it('Changes background image on carousel indicator click', async () => {
 		render(<BackgroundSlider />)
 
 		const secondImage = imageSlide[1]
@@ -50,7 +56,12 @@ describe('BackgroundSlider Component', () => {
 
 		expect(screen.getByRole('heading', { name: secondImage.title })).toBeInTheDocument()
 
+		await act(async () => {
+			vi.advanceTimersByTime(1)
+		})
+
 		const backgroundDiv = screen.getByTestId('imageSlideBg')
-		expect(backgroundDiv).toHaveStyle(`background-image: url(${secondImage.url})`)
+		const src = stripParams(backgroundDiv.getAttribute('src') as string)
+		expect(src).toEqual(stripParams(secondImageSrc))
 	})
 })

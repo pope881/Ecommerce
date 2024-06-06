@@ -4,7 +4,7 @@ import '@testing-library/jest-dom'
 import { BrowserRouter } from 'react-router-dom'
 
 describe('Footer', () => {
-	test('renders footer section', () => {
+	test('Renders footer section', () => {
 		render(
 			<BrowserRouter>
 				<Footer />

@@ -57,8 +57,7 @@ export const styles = {
 		backgroundColor: theme.colors.red.light,
 		color: theme.colors.white.main,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
-		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 
 	shopCategoryBtnDisabled: css({

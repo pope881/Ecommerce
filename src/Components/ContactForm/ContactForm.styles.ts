@@ -221,8 +221,7 @@ export const styles = {
 		borderRadius: '25px',
 		padding: '1rem 4rem',
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.white.light },
-		'&:active': { backgroundColor: theme.colors.white.light },
+		'&:hover, &:active ': { backgroundColor: theme.colors.white.light },
 	}),
 
 	contactFormActionsSubmit: css({
@@ -230,7 +229,6 @@ export const styles = {
 		backgroundColor: theme.colors.red.main,
 		color: theme.colors.white.main,
 		transition: '0.4s',
-		'&:hover': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
-		'&:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
+		'&:hover, &:active': { backgroundColor: theme.colors.white.main, color: theme.colors.red.main },
 	}),
 }

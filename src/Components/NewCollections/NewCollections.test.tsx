@@ -4,7 +4,7 @@ import { NewCollections } from './NewCollections'
 import { newCollections } from '../../../public/newCollections'
 
 describe('NewCollections', () => {
-	test('checks other products items amount (length of array)', () => {
+	test('Checks other products items amount (length of array)', () => {
 		render(
 			<BrowserRouter>
 				<NewCollections />
