@@ -45,9 +45,9 @@ describe('DescriptionBox', () => {
 			/>
 		)
 
-		const materialCompositionBtns = screen.getAllByTestId('materialCompositionBtn')
-		expect(materialCompositionBtns[1]).toBeInTheDocument()
-		fireEvent.click(materialCompositionBtns[1])
+		const accordionBtns = screen.getAllByTestId('accordionBtn')
+		expect(accordionBtns[1]).toBeInTheDocument()
+		fireEvent.click(accordionBtns[1])
 		const accordion = screen.getAllByTestId('accordion')
 		expect(accordion[1]).toHaveClass('visible')
 	})

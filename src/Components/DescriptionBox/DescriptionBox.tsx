@@ -58,7 +58,7 @@ export const DescriptionBox = (props: Props): JSX.Element => {
 			<div className={styles.accordion}>
 				{dataDescription.map((item, i) => (
 					<div key={item.id} className={styles.accordionItem}>
-						<div data-testid="materialCompositionBtn" className={styles.accordionItemTitle} onClick={() => toggle(i)}>
+						<div data-testid="accordionBtn" className={styles.accordionItemTitle} onClick={() => toggle(i)}>
 							<h2 className={styles.accordionItemTitleH2}>{item.feature}</h2>
 							<span className={styles.accordionItemTitleSpan}>{selected === i ? '-' : '+'}</span>
 						</div>
