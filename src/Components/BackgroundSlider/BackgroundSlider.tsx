@@ -25,7 +25,12 @@ export const BackgroundSlider = (): JSX.Element => {
 	return (
 		<div className={styles.container}>
 			<div className={styles.containerBackground}>
-				<AdvancedImage cldImg={imageURL} className={styles.imageSlideBg} alt='background image' data-testid="imageSlideBg" />
+				<AdvancedImage
+					cldImg={imageURL}
+					className={styles.imageSlideBg}
+					alt="background image"
+					data-testid="imageSlideBg"
+				/>
 				<div className={styles.containerBackgroundTransparent} />
 				<div className={styles.containerDescription}>
 					<div>
