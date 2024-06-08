@@ -1,30 +1,27 @@
-# React + TypeScript + Vite
+<div align='center'><img style="width:30%" src='https://res.cloudinary.com/drevyqjao/image/upload/v1717496237/Ecommerce/logoShop.png'/></div>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<h2>About the project</h2>
 
-Currently, two official plugins are available:
+  <p>A <b>Ecommerce shop4u</b> website is an online platform that allows users to choose clothes for women, men or kids. The website provides an easy-to-use interface for searching, comparing, and ordering clothes from a wide selection of items that vary in category, price, size, and color. Users can click on any product to get more information including description, color and size. Users can select items and add/remove them to their shopping cart.</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+👉 Live Demo: <a href='https://car-rental-ten.vercel.app/'>Live Demo</a>
 
-## Expanding the ESLint configuration
+<h3>Build with:</h3>
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+» React JS <br>
+» Emotion CSS <br>
+» TypeScript
 
-- Configure the top-level `parserOptions` property like this:
+<h3>Getting Started:</h3>
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+» Clone the Ecommerce repository using git: https://github.com/pope881/Ecommerce.git <br>
+» Install dependencies with this command: npm install <br>
+» Run the application with this command: npm run dev <br/>
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+<h2>Screenshots of the Project 📸</h2>
+<br>
+<h3 align='center'>Home Page 🏡</h3>
+
+<div align='center'>
+<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1717759780/GitHub%20Images/screen_rqgfoa.jpg'/>
+</div>
