@@ -4,7 +4,7 @@
 
   <p>A <b>Ecommerce shop4u</b> website is an online platform that allows users to choose clothes for women, men or kids. The website provides an easy-to-use interface for searching, comparing, and ordering clothes from a wide selection of items that vary in category, price, size, and color. Users can click on any product to get more information including description, color and size. Users can select items and add/remove them to their shopping cart.</p>
 
-👉 Live Demo: <a href='https://car-rental-ten.vercel.app/'>Live Demo</a>
+👉 Live Demo: <a href=''>Live Demo</a>
 
 <h3>Build with:</h3>
 
@@ -21,7 +21,21 @@
 <h2>Screenshots of the Project 📸</h2>
 <br>
 <h3 align='center'>Home Page 🏡</h3>
-
 <div align='center'>
-<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1717759780/GitHub%20Images/screen_rqgfoa.jpg'/>
+<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1718028658/GitHub%20Images/home_page_zulyif.jpg'/>
+</div>
+
+<h3 align='center'>Shop Category Page 🏡</h3>
+<div align='center'>
+<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1718028655/GitHub%20Images/shop_category_page_gk8nvh.jpg'/>
+</div>
+
+<h3 align='center'>Product Page 🏡</h3>
+<div align='center'>
+<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1718028654/GitHub%20Images/product_page_wvjv8v.jpg'/>
+</div>
+
+<h3 align='center'>Team Page 🏡</h3>
+<div align='center'>
+<img src='https://res.cloudinary.com/drevyqjao/image/upload/v1718028654/GitHub%20Images/team_page_trrsne.jpg'/>
 </div>
