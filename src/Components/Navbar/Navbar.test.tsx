@@ -24,7 +24,7 @@ describe('Navbar', () => {
 	})
 
 	test('Navbar auth button behavior', () => {
-		const { getByTestId } = render(
+		render(
 			<BrowserRouter>
 				<CartProvider>
 					<Provider store={store}>
@@ -34,7 +34,7 @@ describe('Navbar', () => {
 			</BrowserRouter>
 		)
 
-		fireEvent.click(getByTestId('navbarAuthButton'))
+		fireEvent.click(screen.getByTestId('navbarAuthButton'))
 	})
 
 	test('Navbar links navigation', () => {
